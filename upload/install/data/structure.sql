@@ -116,7 +116,7 @@ CREATE TABLE `ecs_admin_user` (
   `action_list` text NOT NULL,
   `nav_list` text NOT NULL,
   `lang_type` varchar(50) NOT NULL default '',
-  `agency_id` smallint(5) unsigned NOT NULL,
+  `agency_id` smallint(5) unsigned NOT NULL default 0,
   `suppliers_id` smallint(5) unsigned default '0',
   `todolist` LONGTEXT NULL,
   `role_id` smallint(5) default NULL,
@@ -630,7 +630,7 @@ CREATE TABLE `ecs_goods_type` (
   `cat_id` smallint(5) unsigned NOT NULL auto_increment,
   `cat_name` varchar(60) NOT NULL default '',
   `enabled` tinyint(1) unsigned NOT NULL default '1',
-  `attr_group` VARCHAR( 255 ) NOT NULL,
+  `attr_group` VARCHAR( 255 ) NOT NULL default '0',
   PRIMARY KEY  (`cat_id`)
 )  TYPE=MyISAM;
 
@@ -980,11 +980,11 @@ CREATE TABLE `ecs_sessions` (
   `userid` mediumint(8) unsigned NOT NULL default '0',
   `adminid` mediumint(8) unsigned NOT NULL default '0',
   `ip` char(15) NOT NULL default '',
-  `user_name` varchar(60) NOT NULL,
-  `user_rank` tinyint(3) NOT NULL,
-  `discount` decimal(3,2) NOT NULL,
-  `email` varchar(60) NOT NULL,
-  `data` char(255) NOT NULL default '',
+  `user_name` varchar(60) NOT NULL default '',
+  `user_rank` tinyint(3) NOT NULL default '0',
+  `discount` decimal(3,2) NOT NULL default '0.00',
+  `email` varchar(60) DEFAULT NULL,
+  `data` char(255) DEFAULT '',
   PRIMARY KEY  (`sesskey`),
   KEY `expiry` (`expiry`)
 ) TYPE=HEAP;

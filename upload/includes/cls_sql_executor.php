@@ -422,7 +422,7 @@ class sql_executor
         $auto_incr = preg_match($pattern, $postfix, $matches) ? $matches[1] : '';
 
         /* 重新设置表属性声明串 */
-        $postfix = $this->db->version() > '4.1' ? " ENGINE=$type DEFAULT CHARACTER SET " . $this->db_charset
+        $postfix = $this->db->version() > '4.1' || strstr($this->db->version(), 'MariaDB') ? " ENGINE=$type DEFAULT CHARACTER SET " . $this->db_charset
                                                 : " TYPE=$type";
         $postfix .= ' ' . $auto_incr;
 
