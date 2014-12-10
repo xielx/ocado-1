@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="gbk"?>
+<?xml version="1.0" encoding="utf-8"?>
 <help>
     <section id="list">
-        <title>标签管理</title>
+        <title>鏍囩绠＄悊</title>
         <content>
             <![CDATA[
-<p>这里你可以查看用户添加的标签</p>
-<p>或者对标签进行删除操作</p>
+<p>杩欓噷浣犲彲浠ユ煡鐪嬬敤鎴锋坊鍔犵殑鏍囩</p>
+<p>鎴栬�呭鏍囩杩涜鍒犻櫎鎿嶄綔</p>
             ]]>
         </content>
     </section>

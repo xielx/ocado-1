@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="gbk"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <help>
 
   <section id="list">
-    <title>��װ�б�</title>
+    <title>包装列表</title>
     <content>
     <![CDATA[
-	<p><strong>��װ�б�</strong></p>
-	<p>�г�������ʹ�õİ�װ������ϴ�����װԤ��ͼ��װ���Ƶ�Сͼ��Ϊ��ɫ�����Сͼ�꼴��Ԥ����װͼƬ����װ���ơ���װ���úͰ�װ���ȿ���ֱ�ӱ༭��</p>
+	<p><strong>包装列表</strong></p>
+	<p>列出所有能使用的包装。如果上传过包装预览图包装名称的小图标为彩色，点击小图标即可预览包装图片。包装名称、包装费用和包装免额度可以直接编辑。</p>
 	]]>
     </content>
   </section>
 
   <section id="add">
-    <title>���Ӱ�װ</title>
+    <title>添加包装</title>
     <content>
     <![CDATA[
-	<p><strong>���Ӱ�װ</strong></p>
-	<p>���������ͼ��ɲ鿴��ǰѡ��İ�����</p>
+	<p><strong>添加包装</strong></p>
+	<p>点击“？”图标可查看当前选项的帮助。</p>
 	]]>
     </content>
   </section>
 
   <section id="edit">
-    <title>�༭��װ</title>
+    <title>编辑包装</title>
     <content>
     <![CDATA[
-	<p><strong>�༭��װ</strong></p>
-	<p>��װͼֽǰ����л�ɫ��̾�ţ�˵�����Ѿ��ϴ�����װͼֽ���ٴ��ϴ�������ԭ��ͼֽ��</p>
+	<p><strong>编辑包装</strong></p>
+	<p>包装图纸前如果有黄色感叹号，说明你已经上传过包装图纸。再次上传将覆盖原来图纸。</p>
 	]]>
     </content>
   </section>

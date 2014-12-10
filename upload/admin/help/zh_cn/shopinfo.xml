@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="gbk"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <help>
 
   <section id="list">
-    <title>мЬ╣Йпео╒╧эюМ</title>
+    <title>Г╫▒Е╨≈Д©║Ф│╞Г╝║Г░├</title>
     <content>
     <![CDATA[
-	<p><strong>мЬ╣Йпео╒╧эюМ</strong></p>
-	<p>╠╬рЁцФапЁЖкЫспмЬ╣Йпео╒ндуб║ёндуб╠ЙлБ©итз╠╬рЁцФж╠╫с╠Ю╪╜</p>
+	<p><strong>Г╫▒Е╨≈Д©║Ф│╞Г╝║Г░├</strong></p>
+	<p>Ф°╛И║╣И²╒Е┬≈Е┤╨Ф┴─Ф°┴Г╫▒Е╨≈Д©║Ф│╞Ф√┤Г╚═Ц─┌Ф√┤Г╚═Ф═┤И╒≤Е▐╞Е°╗Ф°╛И║╣И²╒Г⌡╢Ф▌╔Г╪√Х╬▒</p>
 	]]>
     </content>
   </section>
 
   <section id="add">
-    <title>лМ╪спбмЬ╣Йпео╒ндуб</title>
+    <title>Ф╥╩Е┼═Ф√╟Г╫▒Е╨≈Д©║Ф│╞Ф√┤Г╚═</title>
     <content>
     <![CDATA[
-	<p><strong>лМ╪спбмЬ╣Йпео╒ндуб</strong></p>
-	<p>тз╠╬рЁцФ©илМ╪спбмЬ╣Йпео╒ндуб</p>
+	<p><strong>Ф╥╩Е┼═Ф√╟Г╫▒Е╨≈Д©║Ф│╞Ф√┤Г╚═</strong></p>
+	<p>Е°╗Ф°╛И║╣И²╒Е▐╞Ф╥╩Е┼═Ф√╟Г╫▒Е╨≈Д©║Ф│╞Ф√┤Г╚═</p>
 	]]>
     </content>
   </section>
 
   <section id="edit">
-    <title>╠Ю╪╜мЬ╣Йндуб</title>
+    <title>Г╪√Х╬▒Г╫▒Е╨≈Ф√┤Г╚═</title>
     <content>
     <![CDATA[
-	<p><strong>╠Ю╪╜пбмЬ╣Йпео╒ндуб</strong></p>
-	<p>тз╠╬рЁцФ©и╠Ю╪╜мЬ╣Йпео╒ндуб</p>
+	<p><strong>Г╪√Х╬▒Ф√╟Г╫▒Е╨≈Д©║Ф│╞Ф√┤Г╚═</strong></p>
+	<p>Е°╗Ф°╛И║╣И²╒Е▐╞Г╪√Х╬▒Г╫▒Е╨≈Д©║Ф│╞Ф√┤Г╚═</p>
 	]]>
     </content>
   </section>

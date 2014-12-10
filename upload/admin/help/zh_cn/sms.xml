@@ -1,46 +1,46 @@
-<?xml version="1.0" encoding="gbk"?>
+<?xml version="1.0" encoding="utf-8"?>
 <help>
   <section id="display_my_info">
-    <title>ук╨епео╒</title>
+    <title>Х╢╕Е▐╥Д©║Ф│╞</title>
     <content>
     <![CDATA[
-	<p>╠╬рЁцФотй╬ак╥╒км╤лпе╣дук╨епео╒║ё</p>
+	<p>Ф°╛И║╣И²╒Ф≤╬Г╓╨Д╨├Е▐▒И─│Г÷╜Д©║Г └Х╢╕Е▐╥Д©║Ф│╞Ц─┌</p>
 	]]>
     </content>
   </section>
 
   <section id="display_send_ui">
-    <title>╤лпе╥╒кмрЁцФ</title>
+    <title>Г÷╜Д©║Е▐▒И─│И║╣И²╒</title>
     <content>
     <![CDATA[
-	<p>╠╬рЁцФн╙ж╦╤╗╣дйж╩З╨ебК╥╒км╤лпе║ё</p>
+	<p>Ф°╛И║╣И²╒Д╦╨Ф▄┤Е╝ Г └Ф┴▀Ф°╨Е▐╥Г═│Е▐▒И─│Г÷╜Д©║Ц─┌</p>
 	]]>
     </content>
   </section>
   
   <section id="display_charge_ui">
-    <title>ук╩╖ЁДж╣</title>
+    <title>Х╢╕Ф┬╥Е┘┘Е─╪</title>
     <content>
     <![CDATA[
-	<p>╠╬рЁцФлА╧╘ук╩╖ЁДж╣╣д╡ывВё╛йДхКпХр╙ЁДж╣╣д╫П╤Нё╛╟╢о╣мЁлАй╬╡ывВ╪╢©имЙЁиЁДж╣╡ывВ║ё</p>
+	<p>Ф°╛И║╣И²╒Ф▐░Д╬⌡Х╢╕Ф┬╥Е┘┘Е─╪Г └Ф⌠█Д╫°О╪▄Х╬⌠Е┘╔И°─Х╕│Е┘┘Е─╪Г └И┤▒И╒²О╪▄Ф▄┴ГЁ╩Г╩÷Ф▐░Г╓╨Ф⌠█Д╫°Е█ЁЕ▐╞Е╝▄Ф┬░Е┘┘Е─╪Ф⌠█Д╫°Ц─┌</p>
 	]]>
     </content>
   </section>
   
   <section id="display_send_history_ui">
-    <title>╤лпе╥╒км╪гб╪</title>
+    <title>Г÷╜Д©║Е▐▒И─│Х╝╟Е╫∙</title>
     <content>
     <![CDATA[
-	<p>тз╢крЁцФ©ирт╡Ия╞╤лпе╣д╥╒км╪гб╪║ё</p>
+	<p>Е°╗Ф╜╓И║╣И²╒Е▐╞Д╩╔Ф÷╔Х╞╒Г÷╜Д©║Г └Е▐▒И─│Х╝╟Е╫∙Ц─┌</p>
 	]]>
     </content>
   </section>
   
   <section id="display_charge_history_ui">
-    <title>ЁДж╣╪гб╪</title>
+    <title>Е┘┘Е─╪Х╝╟Е╫∙</title>
     <content>
     <![CDATA[
-	<p>тз╢крЁцФ©ирт╡Ия╞дЗ╣дЁДж╣╪гб╪║ё</p>
+	<p>Е°╗Ф╜╓И║╣И²╒Е▐╞Д╩╔Ф÷╔Х╞╒Ф┌╗Г └Е┘┘Е─╪Х╝╟Е╫∙Ц─┌</p>
 	]]>
     </content>
   </section>

@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="gbk"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <help>
 
   <section id="list">
-    <title>ндуб╥жюЮ╧эюМ</title>
+    <title>Ф√┤Г╚═Е┬├Г╠╩Г╝║Г░├</title>
     <content>
     <![CDATA[
-	<p><strong>ндуб╥жюЮ╧эюМ</strong></p>
-	<p>╦црЁцФапЁЖкЫспндуб╥жюЮ║ё╥жюЮцШЁф╨меепР©иртж╠╫с╠Ю╪╜║ёеепРж╣п║╣деег╟цФ║ё<br />лМ╪спб╥жюЮгК╣Ц╩Всрио╫г<a href="articlecat.php?act=add" target="main-frame"><span class="link">лМ╪спбндуб╥жюЮ</span>а╢╫с</p>
+	<p><strong>Ф√┤Г╚═Е┬├Г╠╩Г╝║Г░├</strong></p>
+	<p>Х╞╔И║╣И²╒Е┬≈Е┤╨Ф┴─Ф°┴Ф√┤Г╚═Е┬├Г╠╩Ц─┌Е┬├Г╠╩Е░█Г╖╟Е▓▄Ф▌▓Е╨▐Е▐╞Д╩╔Г⌡╢Ф▌╔Г╪√Х╬▒Ц─┌Ф▌▓Е╨▐Е─╪Е╟▐Г └Ф▌▓Е┴█И²╒Ц─┌<br />Ф╥╩Е┼═Ф√╟Е┬├Г╠╩Х╞╥Г┌╧Е┤╩Е▐ЁД╦┼Х╖▓<a href="articlecat.php?act=add" target="main-frame"><span class="link">Ф╥╩Е┼═Ф√╟Ф√┤Г╚═Е┬├Г╠╩</span>И⌠╬Ф▌╔</p>
 	]]>
     </content>
   </section>
 
   <section id="add">
-    <title>лМ╪спбндуб╥жюЮ</title>
+    <title>Ф╥╩Е┼═Ф√╟Ф√┤Г╚═Е┬├Г╠╩</title>
     <content>
     <![CDATA[
-	<p><strong>лМ╪спбндуб╥жюЮ</strong></p>
-	<p>я║оНг╟ср║╟ё©║╠м╪╠Й╣д╣ь╥╫©и╣Ц╩В╡И©╢╟ОжЗ
-	<br />╣Ц╩Всрио╫г<a href="articlecat.php?act=list" target="main-frame"><span class="link">ндуб╥жюЮ╧эюМ</span>╪╢©и╥╣╩ьап╠МрЁцФ║ё</p>
+	<p><strong>Ф╥╩Е┼═Ф√╟Ф√┤Г╚═Е┬├Г╠╩</strong></p>
+	<p>И─┴И║╧Е┴█Е▐ЁБ─°О╪÷Б─²Е⌡╬Ф═┤Г └Е°╟Ф√╧Е▐╞Г┌╧Е┤╩Ф÷╔Г°▀Е╦╝Е┼╘
+	<br />Г┌╧Е┤╩Е▐ЁД╦┼Х╖▓<a href="articlecat.php?act=list" target="main-frame"><span class="link">Ф√┤Г╚═Е┬├Г╠╩Г╝║Г░├</span>Е█ЁЕ▐╞Х©■Е⌡·Е┬≈Х║╗И║╣И²╒Ц─┌</p>
 	]]>
     </content>
   </section>
