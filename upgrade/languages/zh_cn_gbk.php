@@ -1,141 +1,141 @@
 <?php
 
 /**
- * ECSHOP Éı¼¶³ÌĞòÓïÑÔÎÄ¼ş
+ * ECSHOP å‡çº§ç¨‹åºè¯­è¨€æ–‡ä»¶
  * ============================================================================
- * °æÈ¨ËùÓĞ 2005-2011 ÉÏº£ÉÌÅÉÍøÂç¿Æ¼¼ÓĞÏŞ¹«Ë¾£¬²¢±£ÁôËùÓĞÈ¨Àû¡£
- * ÍøÕ¾µØÖ·: http://www.ecshop.com
+ * ç‰ˆæƒæ‰€æœ‰ 2005-2011 ä¸Šæµ·å•†æ´¾ç½‘ç»œç§‘æŠ€æœ‰é™å…¬å¸ï¼Œå¹¶ä¿ç•™æ‰€æœ‰æƒåˆ©ã€‚
+ * ç½‘ç«™åœ°å€: http://www.ecshop.com
  * ----------------------------------------------------------------------------
- * Õâ²»ÊÇÒ»¸ö×ÔÓÉÈí¼ş£¡ÄúÖ»ÄÜÔÚ²»ÓÃÓÚÉÌÒµÄ¿µÄµÄÇ°ÌáÏÂ¶Ô³ÌĞò´úÂë½øĞĞĞŞ¸ÄºÍ
- * Ê¹ÓÃ£»²»ÔÊĞí¶Ô³ÌĞò´úÂëÒÔÈÎºÎĞÎÊ½ÈÎºÎÄ¿µÄµÄÔÙ·¢²¼¡£
+ * è¿™ä¸æ˜¯ä¸€ä¸ªè‡ªç”±è½¯ä»¶ï¼æ‚¨åªèƒ½åœ¨ä¸ç”¨äºå•†ä¸šç›®çš„çš„å‰æä¸‹å¯¹ç¨‹åºä»£ç è¿›è¡Œä¿®æ”¹å’Œ
+ * ä½¿ç”¨ï¼›ä¸å…è®¸å¯¹ç¨‹åºä»£ç ä»¥ä»»ä½•å½¢å¼ä»»ä½•ç›®çš„çš„å†å‘å¸ƒã€‚
  * ============================================================================
  * $Author: liubo $
  * $Date: 2008-07-16 14:54:08 +0800$
  * $Id: zh_cn_gbk.php 17217 2011-01-19 06:29:08Z liubo $
 */
 
-$_LANG['prev_step']         = 'ÉÏÒ»²½£º';
-$_LANG['next_step']         = 'ÏÂÒ»²½£º';
-$_LANG['select_language_title']       =  'ECSHOPÉı¼¶³ÌĞò µÚ1²½/¹²3²½ Ñ¡ÔñÓïÑÔ±àÂë';
-$_LANG['readme_title']                =  'ECSHOPÉı¼¶³ÌĞò µÚ2²½/¹²3²½ ËµÃ÷Ò³';
-$_LANG['checking_title']                =  'ECShopÉı¼¶³ÌĞò µÚ3²½/¹²3²½ »·¾³¼ì²â';
-$_LANG['check_system_environment']          = '¼ì²âÏµÍ³»·¾³';
+$_LANG['prev_step']         = 'ä¸Šä¸€æ­¥ï¼š';
+$_LANG['next_step']         = 'ä¸‹ä¸€æ­¥ï¼š';
+$_LANG['select_language_title']       =  'ECSHOPå‡çº§ç¨‹åº ç¬¬1æ­¥/å…±3æ­¥ é€‰æ‹©è¯­è¨€ç¼–ç ';
+$_LANG['readme_title']                =  'ECSHOPå‡çº§ç¨‹åº ç¬¬2æ­¥/å…±3æ­¥ è¯´æ˜é¡µ';
+$_LANG['checking_title']                =  'ECShopå‡çº§ç¨‹åº ç¬¬3æ­¥/å…±3æ­¥ ç¯å¢ƒæ£€æµ‹';
+$_LANG['check_system_environment']          = 'æ£€æµ‹ç³»ç»Ÿç¯å¢ƒ';
 
-$_LANG['copyright']                     = '&copy; 2005-2011 <a href="http://www.ecshop.com" target="_blank">ÉÏº£ÉÌÅÉÍøÂç¿Æ¼¼ÓĞÏŞ¹«Ë¾</a>¡£±£ÁôËùÓĞÈ¨Àû¡£';
-$_LANG['is_last_version']             = 'ÄúµÄECSHOPÒÑÊÇ×îĞÂ°æ±¾£¬ÎŞĞèÉı¼¶¡£';
+$_LANG['copyright']                     = '&copy; 2005-2011 <a href="http://www.ecshop.com" target="_blank">ä¸Šæµ·å•†æ´¾ç½‘ç»œç§‘æŠ€æœ‰é™å…¬å¸</a>ã€‚ä¿ç•™æ‰€æœ‰æƒåˆ©ã€‚';
+$_LANG['is_last_version']             = 'æ‚¨çš„ECSHOPå·²æ˜¯æœ€æ–°ç‰ˆæœ¬ï¼Œæ— éœ€å‡çº§ã€‚';
 
-$_LANG['readme_page']                =  'ËµÃ÷Ò³';
-$_LANG['notice'] = '±¾³ÌĞòÓÃÓÚ½« ECSHOP Éı¼¶µ½ <strong>%s</strong>¡£ÇëÎğ±Ø°´ÕÕÒÔÏÂµÄÉı¼¶·½·¨½øĞĞÉı¼¶£¬·ñÔò¿ÉÄÜ²úÉúÎŞ·¨»Ö¸´µÄºó¹û¡£Èç¹ûÄãÒÑ¾­ÕûºÏÁËÂÛÌ³Èí¼ş£¬±¾´ÎÉı¼¶½«È¡ÏûÕûºÏ£¬ÒÔºó»áÔ±ÕûºÏÇëµ½ucenrerÖĞ½øĞĞÕûºÏ¡£';
-$_LANG['usage1'] = 'ÇëÈ·ÈÏÒÑ¾­°²×°ÁË UCenter£¬·ñÔò£¬Çëµ½ <a href="http://www.discuz.com" target="_blank">Comsenz ²úÆ·ÖĞĞÄ</a> ÏÂÔØ²¢ÇÒ°²×°£¬È»ºóÔÙ¼ÌĞø¡£<br />';
-$_LANG['usage2']  = '<a href="../admin">µÇÂ¼ºóÌ¨</a>£¬<span style="color:red;font-weight:bold;font-size:18px;">±¸·İ</span>Êı¾İ¿â×ÊÁÏ£»';
-$_LANG['usage3']  = '¹Ø±ÕÏÖÓĞµÄ ECSHOP %s ÏµÍ³£»';
-$_LANG['usage4']  = '¸²¸ÇĞÔÉÏ´« ECSHOP %s µÄÈ«²¿ÎÄ¼şµ½·şÎñÆ÷£»';
-$_LANG['usage5']  = 'ÉÏ´«±¾³ÌĞòµ½ ECSHOP ËùÔÚµÄÄ¿Â¼ÖĞ£»';
-$_LANG['usage6']  = 'ÔËĞĞ±¾³ÌĞò£¬Ö±µ½³öÏÖÉı¼¶Íê³ÉµÄÌáÊ¾¡£';
-$_LANG['method']  = 'Éı¼¶·½·¨';
-$_LANG['charset']  = '±àÂëÈ·ÈÏ';
+$_LANG['readme_page']                =  'è¯´æ˜é¡µ';
+$_LANG['notice'] = 'æœ¬ç¨‹åºç”¨äºå°† ECSHOP å‡çº§åˆ° <strong>%s</strong>ã€‚è¯·å‹¿å¿…æŒ‰ç…§ä»¥ä¸‹çš„å‡çº§æ–¹æ³•è¿›è¡Œå‡çº§ï¼Œå¦åˆ™å¯èƒ½äº§ç”Ÿæ— æ³•æ¢å¤çš„åæœã€‚å¦‚æœä½ å·²ç»æ•´åˆäº†è®ºå›è½¯ä»¶ï¼Œæœ¬æ¬¡å‡çº§å°†å–æ¶ˆæ•´åˆï¼Œä»¥åä¼šå‘˜æ•´åˆè¯·åˆ°ucenrerä¸­è¿›è¡Œæ•´åˆã€‚';
+$_LANG['usage1'] = 'è¯·ç¡®è®¤å·²ç»å®‰è£…äº† UCenterï¼Œå¦åˆ™ï¼Œè¯·åˆ° <a href="http://www.discuz.com" target="_blank">Comsenz äº§å“ä¸­å¿ƒ</a> ä¸‹è½½å¹¶ä¸”å®‰è£…ï¼Œç„¶åå†ç»§ç»­ã€‚<br />';
+$_LANG['usage2']  = '<a href="../admin">ç™»å½•åå°</a>ï¼Œ<span style="color:red;font-weight:bold;font-size:18px;">å¤‡ä»½</span>æ•°æ®åº“èµ„æ–™ï¼›';
+$_LANG['usage3']  = 'å…³é—­ç°æœ‰çš„ ECSHOP %s ç³»ç»Ÿï¼›';
+$_LANG['usage4']  = 'è¦†ç›–æ€§ä¸Šä¼  ECSHOP %s çš„å…¨éƒ¨æ–‡ä»¶åˆ°æœåŠ¡å™¨ï¼›';
+$_LANG['usage5']  = 'ä¸Šä¼ æœ¬ç¨‹åºåˆ° ECSHOP æ‰€åœ¨çš„ç›®å½•ä¸­ï¼›';
+$_LANG['usage6']  = 'è¿è¡Œæœ¬ç¨‹åºï¼Œç›´åˆ°å‡ºç°å‡çº§å®Œæˆçš„æç¤ºã€‚';
+$_LANG['method']  = 'å‡çº§æ–¹æ³•';
+$_LANG['charset']  = 'ç¼–ç ç¡®è®¤';
 
-$_LANG['faq']  = '³£¼ûÎÊÌâ';
+$_LANG['faq']  = 'å¸¸è§é—®é¢˜';
 
-$_LANG['basic_config']                           = '»ù±¾ÅäÖÃĞÅÏ¢';
-$_LANG['config_path']                           = 'ÅäÖÃÎÄ¼şÂ·¾¶';
-$_LANG['db_host']                           = 'Êı¾İ¿âÖ÷»ú';
-$_LANG['db_name']                           = 'Êı¾İ¿âÃû';
-$_LANG['db_user']                           = 'ÓÃ»§Ãû';
-$_LANG['db_pass']                           = 'ÃÜÂë';
-$_LANG['db_prefix']                         = '±íÇ°×º';
-$_LANG['timezone']                         = 'Ê±ÇøÉèÖÃ';
-$_LANG['cookie_path']                      = 'COOKIEÂ·¾¶';
-$_LANG['admin_dir']                        = '¹ÜÀíÖĞĞÄ¸ùÂ·¾¶';
+$_LANG['basic_config']                           = 'åŸºæœ¬é…ç½®ä¿¡æ¯';
+$_LANG['config_path']                           = 'é…ç½®æ–‡ä»¶è·¯å¾„';
+$_LANG['db_host']                           = 'æ•°æ®åº“ä¸»æœº';
+$_LANG['db_name']                           = 'æ•°æ®åº“å';
+$_LANG['db_user']                           = 'ç”¨æˆ·å';
+$_LANG['db_pass']                           = 'å¯†ç ';
+$_LANG['db_prefix']                         = 'è¡¨å‰ç¼€';
+$_LANG['timezone']                         = 'æ—¶åŒºè®¾ç½®';
+$_LANG['cookie_path']                      = 'COOKIEè·¯å¾„';
+$_LANG['admin_dir']                        = 'ç®¡ç†ä¸­å¿ƒæ ¹è·¯å¾„';
 
-$_LANG['dir_priv_checking']                 = 'Ä¿Â¼È¨ÏŞ¼ì²â';
-$_LANG['template_writable_checking']        = 'Ä£°å¿ÉĞ´ĞÔ¼ì²é';
-$_LANG['rename_priv_checking']              = 'ÌØ¶¨Ä¿Â¼ĞŞ¸ÄÈ¨ÏŞ¼ì²é';
-$_LANG['cannt_write']                     =  '²»¿ÉĞ´';
-$_LANG['can_write']                       = '¿ÉĞ´';
-$_LANG['cannt_modify']                    = '²»¿ÉĞŞ¸Ä';
-$_LANG['not_exists']                      = '²»´æÔÚ';
-$_LANG['recheck']                         = 'ÖØĞÂ¼ì²é';
-$_LANG['all_are_writable']                = 'ËùÓĞÄ£°å£¬È«²¿¿ÉĞ´';
+$_LANG['dir_priv_checking']                 = 'ç›®å½•æƒé™æ£€æµ‹';
+$_LANG['template_writable_checking']        = 'æ¨¡æ¿å¯å†™æ€§æ£€æŸ¥';
+$_LANG['rename_priv_checking']              = 'ç‰¹å®šç›®å½•ä¿®æ”¹æƒé™æ£€æŸ¥';
+$_LANG['cannt_write']                     =  'ä¸å¯å†™';
+$_LANG['can_write']                       = 'å¯å†™';
+$_LANG['cannt_modify']                    = 'ä¸å¯ä¿®æ”¹';
+$_LANG['not_exists']                      = 'ä¸å­˜åœ¨';
+$_LANG['recheck']                         = 'é‡æ–°æ£€æŸ¥';
+$_LANG['all_are_writable']                = 'æ‰€æœ‰æ¨¡æ¿ï¼Œå…¨éƒ¨å¯å†™';
 
-$_LANG['update_now']                    = 'Á¢¼´Éı¼¶';
-$_LANG['done'] = '¹§Ï²£¬ÄúÒÑ¾­³É¹¦Éı¼¶µ½ECSHOP <strong>%s</strong>';
-$_LANG['upgrade_error_title']                    = 'ECShopÉı¼¶³ÌĞò Éı¼¶Ê§°Ü';
-$_LANG['upgrade_done_title'] = 'ECShopÉı¼¶³ÌĞò Éı¼¶³É¹¦';
-$_LANG['go_to_view_my_ecshop'] = 'Ç°Íù ECSHOP Ê×Ò³';
-$_LANG['go_to_view_control_panel'] = 'Ç°Íù ECSHOP ºóÌ¨¹ÜÀíÖĞĞÄ ';
-$_LANG['dir_readonly']          = '%s ÎÄ¼ş²»¿ÉĞ´£¬Çë¼ì²éÄúµÄ·şÎñÆ÷ÉèÖÃ¡£';
-$_LANG['monitor_title']          = 'Éı¼¶³ÌĞò¼àÊÓÆ÷';
-$_LANG['wait_please']          = 'ÕıÔÚÉı¼¶ÖĞ£¬ÇëÉÔºò¡­¡­¡­¡­';
-$_LANG['js_error']          = '¿Í»§¶ËJavaScript½Å±¾·¢Éú´íÎó¡£';
-$_LANG['create_ver_failed']          = '´´½¨°æ±¾¶ÔÏóÊ§°Ü';
-$_LANG['goto_charset_convert']  = '×ªÏò£ºÊı¾İ¿â±àÂë×ª»»';
-$_LANG['goto_members_import']  = '×ªÏò£º´ÓUCenterµ¼Èë»áÔ±Êı¾İ';
+$_LANG['update_now']                    = 'ç«‹å³å‡çº§';
+$_LANG['done'] = 'æ­å–œï¼Œæ‚¨å·²ç»æˆåŠŸå‡çº§åˆ°ECSHOP <strong>%s</strong>';
+$_LANG['upgrade_error_title']                    = 'ECShopå‡çº§ç¨‹åº å‡çº§å¤±è´¥';
+$_LANG['upgrade_done_title'] = 'ECShopå‡çº§ç¨‹åº å‡çº§æˆåŠŸ';
+$_LANG['go_to_view_my_ecshop'] = 'å‰å¾€ ECSHOP é¦–é¡µ';
+$_LANG['go_to_view_control_panel'] = 'å‰å¾€ ECSHOP åå°ç®¡ç†ä¸­å¿ƒ ';
+$_LANG['dir_readonly']          = '%s æ–‡ä»¶ä¸å¯å†™ï¼Œè¯·æ£€æŸ¥æ‚¨çš„æœåŠ¡å™¨è®¾ç½®ã€‚';
+$_LANG['monitor_title']          = 'å‡çº§ç¨‹åºç›‘è§†å™¨';
+$_LANG['wait_please']          = 'æ­£åœ¨å‡çº§ä¸­ï¼Œè¯·ç¨å€™â€¦â€¦â€¦â€¦';
+$_LANG['js_error']          = 'å®¢æˆ·ç«¯JavaScriptè„šæœ¬å‘ç”Ÿé”™è¯¯ã€‚';
+$_LANG['create_ver_failed']          = 'åˆ›å»ºç‰ˆæœ¬å¯¹è±¡å¤±è´¥';
+$_LANG['goto_charset_convert']  = 'è½¬å‘ï¼šæ•°æ®åº“ç¼–ç è½¬æ¢';
+$_LANG['goto_members_import']  = 'è½¬å‘ï¼šä»UCenterå¯¼å…¥ä¼šå‘˜æ•°æ®';
 
-/* ¿Í»§¶ËJSÓïÑÔÏî */
-$_LANG['js_languages']['display_detail']                   = 'ÏÔÊ¾Ï¸½Ú';
-$_LANG['js_languages']['exception']                   = '·¢ÉúÒì³£';
-$_LANG['js_languages']['hide_detail']                   = 'Òş²ØÏ¸½Ú';
-$_LANG['js_languages']['suspension_points']                   = '¡­¡­¡­¡­';
-$_LANG['js_languages']['initialize']                   = '³õÊ¼»¯';
-$_LANG['js_languages']['wait_please']               = 'ÕıÔÚÉı¼¶ÖĞ£¬ÇëÉÔºò¡­¡­¡­¡­';
-$_LANG['js_languages']['has_been_stopped']                    = 'Éı¼¶½ø³ÌÒÑÖĞÖ¹';
-$_LANG['js_languages']['is_last_version']                   = 'ÄúµÄECSHOPÒÑÊÇ×îĞÂ°æ±¾£¬ÎŞĞèÉı¼¶¡£';
-$_LANG['js_languages']['from']                   = 'ÕıÔÚ´Ó';
-$_LANG['js_languages']['to']                   = 'Éı¼¶µ½';
-$_LANG['js_languages']['update_files']                   = 'Éı¼¶ÎÄ¼ş';
-$_LANG['js_languages']['update_structure']                   = 'Éı¼¶Êı¾İ½á¹¹';
-$_LANG['js_languages']['update_others']                   = 'Éı¼¶ÆäËü';
-$_LANG['js_languages']['success']                   = 'Íê³É';
-$_LANG['js_languages']['fail']                      = 'Ê§°Ü';
-$_LANG['js_languages']['notice']                      = '³ö´í';
-$_LANG['js_languages']['dump_database'] = '±¸·İÊı¾İ';
-$_LANG['js_languages']['rollback'] = '»Ö¸´Êı¾İ';
-$_LANG['js_languages']['uc_api'] = 'ÇëÌîĞ´ UCenter µÄURL';
-$_LANG['js_languages']['uc_ip'] = 'ÇëÌîĞ´ UCenter µÄIP';
-$_LANG['js_languages']['uc_pwd'] = 'ÇëÌîĞ´ UCenter ´´Ê¼ÈËµÄÃÜÂë';
+/* å®¢æˆ·ç«¯JSè¯­è¨€é¡¹ */
+$_LANG['js_languages']['display_detail']                   = 'æ˜¾ç¤ºç»†èŠ‚';
+$_LANG['js_languages']['exception']                   = 'å‘ç”Ÿå¼‚å¸¸';
+$_LANG['js_languages']['hide_detail']                   = 'éšè—ç»†èŠ‚';
+$_LANG['js_languages']['suspension_points']                   = 'â€¦â€¦â€¦â€¦';
+$_LANG['js_languages']['initialize']                   = 'åˆå§‹åŒ–';
+$_LANG['js_languages']['wait_please']               = 'æ­£åœ¨å‡çº§ä¸­ï¼Œè¯·ç¨å€™â€¦â€¦â€¦â€¦';
+$_LANG['js_languages']['has_been_stopped']                    = 'å‡çº§è¿›ç¨‹å·²ä¸­æ­¢';
+$_LANG['js_languages']['is_last_version']                   = 'æ‚¨çš„ECSHOPå·²æ˜¯æœ€æ–°ç‰ˆæœ¬ï¼Œæ— éœ€å‡çº§ã€‚';
+$_LANG['js_languages']['from']                   = 'æ­£åœ¨ä»';
+$_LANG['js_languages']['to']                   = 'å‡çº§åˆ°';
+$_LANG['js_languages']['update_files']                   = 'å‡çº§æ–‡ä»¶';
+$_LANG['js_languages']['update_structure']                   = 'å‡çº§æ•°æ®ç»“æ„';
+$_LANG['js_languages']['update_others']                   = 'å‡çº§å…¶å®ƒ';
+$_LANG['js_languages']['success']                   = 'å®Œæˆ';
+$_LANG['js_languages']['fail']                      = 'å¤±è´¥';
+$_LANG['js_languages']['notice']                      = 'å‡ºé”™';
+$_LANG['js_languages']['dump_database'] = 'å¤‡ä»½æ•°æ®';
+$_LANG['js_languages']['rollback'] = 'æ¢å¤æ•°æ®';
+$_LANG['js_languages']['uc_api'] = 'è¯·å¡«å†™ UCenter çš„URL';
+$_LANG['js_languages']['uc_ip'] = 'è¯·å¡«å†™ UCenter çš„IP';
+$_LANG['js_languages']['uc_pwd'] = 'è¯·å¡«å†™ UCenter åˆ›å§‹äººçš„å¯†ç ';
 
-/* UCenter °²×°ÅäÖÃ */
-$_LANG['configure_uc'] = 'ÅäÖÃUCenter';
-$_LANG['check_ucenter'] = 'ÌîĞ´Íê±Ï£¬½øĞĞÏÂÒ»²½';
-$_LANG['ucapi'] = 'UCenter µÄ URL£º';
-$_LANG['ucip'] = 'UCenter µÄ IP£º';
-$_LANG['ucenter'] = 'ÇëÌîĞ´ UCenter Ïà¹ØĞÅÏ¢£º';
-$_LANG['ucfounderpw'] = 'UCenter ´´Ê¼ÈËÃÜÂë£º';
-$_LANG['uc_intro'] = 'UCenter ÊÇ Comsenz ¹«Ë¾²úÆ·µÄºËĞÄ·şÎñ³ÌĞò£¬Discuz! Board µÄ°²×°ºÍÔËĞĞÒÀÀµ´Ë³ÌĞò¡£Èç¹ûÄúÒÑ¾­°²×°ÁË UCenter£¬ÇëÌîĞ´ÒÔÏÂĞÅÏ¢¡£·ñÔò£¬Çëµ½ <a href="http://www.discuz.com" target="_blank">Comsenz ²úÆ·ÖĞĞÄ</a> ÏÂÔØ²¢ÇÒ°²×°£¬È»ºóÔÙ¼ÌĞø¡£<br /><br />';
-$_LANG['ucip_intro'] = 'Á¬½ÓµÄ¹ı³ÌÖĞ³öÁËµãÎÊÌâ£¬ÇëÄúÌîĞ´·şÎñÆ÷ IP µØÖ·£¬Èç¹ûÄúµÄ UC Óë ECShop ×°ÔÚÍ¬Ò»·şÎñÆ÷ÉÏ£¬ÎÒÃÇ½¨ÒéÄú³¢ÊÔÌîĞ´ 127.0.0.1';
+/* UCenter å®‰è£…é…ç½® */
+$_LANG['configure_uc'] = 'é…ç½®UCenter';
+$_LANG['check_ucenter'] = 'å¡«å†™å®Œæ¯•ï¼Œè¿›è¡Œä¸‹ä¸€æ­¥';
+$_LANG['ucapi'] = 'UCenter çš„ URLï¼š';
+$_LANG['ucip'] = 'UCenter çš„ IPï¼š';
+$_LANG['ucenter'] = 'è¯·å¡«å†™ UCenter ç›¸å…³ä¿¡æ¯ï¼š';
+$_LANG['ucfounderpw'] = 'UCenter åˆ›å§‹äººå¯†ç ï¼š';
+$_LANG['uc_intro'] = 'UCenter æ˜¯ Comsenz å…¬å¸äº§å“çš„æ ¸å¿ƒæœåŠ¡ç¨‹åºï¼ŒDiscuz! Board çš„å®‰è£…å’Œè¿è¡Œä¾èµ–æ­¤ç¨‹åºã€‚å¦‚æœæ‚¨å·²ç»å®‰è£…äº† UCenterï¼Œè¯·å¡«å†™ä»¥ä¸‹ä¿¡æ¯ã€‚å¦åˆ™ï¼Œè¯·åˆ° <a href="http://www.discuz.com" target="_blank">Comsenz äº§å“ä¸­å¿ƒ</a> ä¸‹è½½å¹¶ä¸”å®‰è£…ï¼Œç„¶åå†ç»§ç»­ã€‚<br /><br />';
+$_LANG['ucip_intro'] = 'è¿æ¥çš„è¿‡ç¨‹ä¸­å‡ºäº†ç‚¹é—®é¢˜ï¼Œè¯·æ‚¨å¡«å†™æœåŠ¡å™¨ IP åœ°å€ï¼Œå¦‚æœæ‚¨çš„ UC ä¸ ECShop è£…åœ¨åŒä¸€æœåŠ¡å™¨ä¸Šï¼Œæˆ‘ä»¬å»ºè®®æ‚¨å°è¯•å¡«å†™ 127.0.0.1';
 
-$_LANG['users_importto_ucenter'] = '»áÔ±Êı¾İµ¼Èëµ½ UCenter';
-$_LANG['user_startid'] = '»áÔ± ID ÆğÊ¼Öµ£º';
-$_LANG['user_startid_intro'] = '<p>´ËÆğÊ¼»áÔ±IDÎª%s¡£ÈçÔ­ ID Îª 888 µÄ»áÔ±½«±äÎª %s+888 µÄÖµ¡£</p><br /><p><span style="color:#F00;font-size:1.2em;font-weight:bold;">ÌáĞÑ£ºµ¼Èë»áÔ±Êı¾İÇ°ÇëÔİÍ£¸÷¸öÓ¦ÓÃ(ÈçDiscuz!, SupeSiteµÈ)</span></p><br />';
-$_LANG['maxuid_err'] = 'ÆğÊ¼»áÔ± ID ±ØĞë´óÓÚµÈÓÚ';
-$_LANG['ucenter_import_members'] = 'µ¼Èë»áÔ±Êı¾İµ½UCenter';
-$_LANG['ucenter_no_database'] = '<span style="color:#F00;font-size:1.5em;"><b>²»ÄÜÁ¬½Óµ½UCenterµÄÊı¾İ¿â£¬Éı¼¶²»ÄÜÍê³É£¬ÇëÁªÏµ¹ÜÀíÔ±£¡</b></span>';
-$_LANG['user_merge_method'] = '»áÔ±ºÏ²¢·½Ê½£º';
-$_LANG['user_merge_method_1'] = '½«ÓëUCÓÃ»§ÃûºÍÃÜÂëÏàÍ¬µÄÓÃ»§Ç¿ÖÆÎªÍ¬Ò»ÓÃ»§';
-$_LANG['user_merge_method_2'] = '½«ÓëUCÓÃ»§ÃûºÍÃÜÂëÏàÍ¬µÄÓÃ»§²»µ¼ÈëUCÓÃ»§';
-$_LANG['ucenter_not_match'] = '<span style="color:#F00;font-size:1.2em;"><b>UCenterÓëECShop×Ö·û±àÂë²»Æ¥Åä£¬Éı¼¶²»ÄÜÍê³É£¬ÇëÁªÏµ¹ÜÀíÔ±£¡</b></span>';
+$_LANG['users_importto_ucenter'] = 'ä¼šå‘˜æ•°æ®å¯¼å…¥åˆ° UCenter';
+$_LANG['user_startid'] = 'ä¼šå‘˜ ID èµ·å§‹å€¼ï¼š';
+$_LANG['user_startid_intro'] = '<p>æ­¤èµ·å§‹ä¼šå‘˜IDä¸º%sã€‚å¦‚åŸ ID ä¸º 888 çš„ä¼šå‘˜å°†å˜ä¸º %s+888 çš„å€¼ã€‚</p><br /><p><span style="color:#F00;font-size:1.2em;font-weight:bold;">æé†’ï¼šå¯¼å…¥ä¼šå‘˜æ•°æ®å‰è¯·æš‚åœå„ä¸ªåº”ç”¨(å¦‚Discuz!, SupeSiteç­‰)</span></p><br />';
+$_LANG['maxuid_err'] = 'èµ·å§‹ä¼šå‘˜ ID å¿…é¡»å¤§äºç­‰äº';
+$_LANG['ucenter_import_members'] = 'å¯¼å…¥ä¼šå‘˜æ•°æ®åˆ°UCenter';
+$_LANG['ucenter_no_database'] = '<span style="color:#F00;font-size:1.5em;"><b>ä¸èƒ½è¿æ¥åˆ°UCenterçš„æ•°æ®åº“ï¼Œå‡çº§ä¸èƒ½å®Œæˆï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼</b></span>';
+$_LANG['user_merge_method'] = 'ä¼šå‘˜åˆå¹¶æ–¹å¼ï¼š';
+$_LANG['user_merge_method_1'] = 'å°†ä¸UCç”¨æˆ·åå’Œå¯†ç ç›¸åŒçš„ç”¨æˆ·å¼ºåˆ¶ä¸ºåŒä¸€ç”¨æˆ·';
+$_LANG['user_merge_method_2'] = 'å°†ä¸UCç”¨æˆ·åå’Œå¯†ç ç›¸åŒçš„ç”¨æˆ·ä¸å¯¼å…¥UCç”¨æˆ·';
+$_LANG['ucenter_not_match'] = '<span style="color:#F00;font-size:1.2em;"><b>UCenterä¸ECShopå­—ç¬¦ç¼–ç ä¸åŒ¹é…ï¼Œå‡çº§ä¸èƒ½å®Œæˆï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼</b></span>';
 
-/* ÓïÑÔ×Ö·û¼¯Ñ¡Ôñ */
-$_LANG['lang_title'] = 'ECShopÓïÑÔ±àÂë';
-$_LANG['lang_description'] = 'ÉùÃ÷';
-$_LANG['lang_charset']['zh_cn_gbk'] = '¼òÌåÖĞÎÄ GBK';
-$_LANG['lang_charset']['zh_cn_utf-8'] = '¼òÌåÖĞÎÄ UTF-8';
-$_LANG['lang_charset']['zh_tw_utf-8'] = '·±ÌåÖĞÎÄ UTF-8';
-$_LANG['lang_charset']['en_us_utf-8'] = 'Ó¢Óï UTF-8';
-$_LANG['lang_desc']['desc1'] = 'ÇëÈ·ÈÏÄúµÄECShop³ÌĞòÓëÄúÑ¡ÔñµÄÓïÑÔ±àÂëÒ»ÖÂ£»';
-$_LANG['lang_desc']['desc2'] = 'Èç¹ûÄúµÄÊı¾İ¿âÓëECShop³ÌĞò±àÂë²»Ò»ÖÂ£¬¿ÉÒÔÏÈ½øĞĞÊı¾İ¿â±àÂë×ª»»¡£';
-$_LANG['lang_desc']['desc3'] = '<font color="red">Èç¹ûÄúÊÇ´ÓECShop v2.6.0°æ±¾½øĞĞÉı¼¶£¬²¢Ñ¡ÔñECShop½Ó¿Ú·½Ê½£¬ÇëÏÈ½øĞĞ»áÔ±Êı¾İµÄµ¼Èë£¬·ñÔòÔ­»áÔ±½«ÎŞ·¨µÇÂ¼¡£</font>';
+/* è¯­è¨€å­—ç¬¦é›†é€‰æ‹© */
+$_LANG['lang_title'] = 'ECShopè¯­è¨€ç¼–ç ';
+$_LANG['lang_description'] = 'å£°æ˜';
+$_LANG['lang_charset']['zh_cn_gbk'] = 'ç®€ä½“ä¸­æ–‡ GBK';
+$_LANG['lang_charset']['zh_cn_utf-8'] = 'ç®€ä½“ä¸­æ–‡ UTF-8';
+$_LANG['lang_charset']['zh_tw_utf-8'] = 'ç¹ä½“ä¸­æ–‡ UTF-8';
+$_LANG['lang_charset']['en_us_utf-8'] = 'è‹±è¯­ UTF-8';
+$_LANG['lang_desc']['desc1'] = 'è¯·ç¡®è®¤æ‚¨çš„ECShopç¨‹åºä¸æ‚¨é€‰æ‹©çš„è¯­è¨€ç¼–ç ä¸€è‡´ï¼›';
+$_LANG['lang_desc']['desc2'] = 'å¦‚æœæ‚¨çš„æ•°æ®åº“ä¸ECShopç¨‹åºç¼–ç ä¸ä¸€è‡´ï¼Œå¯ä»¥å…ˆè¿›è¡Œæ•°æ®åº“ç¼–ç è½¬æ¢ã€‚';
+$_LANG['lang_desc']['desc3'] = '<font color="red">å¦‚æœæ‚¨æ˜¯ä»ECShop v2.6.0ç‰ˆæœ¬è¿›è¡Œå‡çº§ï¼Œå¹¶é€‰æ‹©ECShopæ¥å£æ–¹å¼ï¼Œè¯·å…ˆè¿›è¡Œä¼šå‘˜æ•°æ®çš„å¯¼å…¥ï¼Œå¦åˆ™åŸä¼šå‘˜å°†æ— æ³•ç™»å½•ã€‚</font>';
 
-/* ÓÃ»§½Ó¿Ú²å¼şÓïÑÔÏî */
-$_LANG['ui_title'] = 'ÇëÑ¡ÔñECShopÊ¹ÓÃµÄÓÃ»§½Ó¿Ú²å¼ş';
-$_LANG['ui_ecshop'] = 'ECShop·½Ê½';
-$_LANG['ui_ucenter'] = 'UCenter·½Ê½';
+/* ç”¨æˆ·æ¥å£æ’ä»¶è¯­è¨€é¡¹ */
+$_LANG['ui_title'] = 'è¯·é€‰æ‹©ECShopä½¿ç”¨çš„ç”¨æˆ·æ¥å£æ’ä»¶';
+$_LANG['ui_ecshop'] = 'ECShopæ–¹å¼';
+$_LANG['ui_ucenter'] = 'UCenteræ–¹å¼';
 
 
 
-/* Éı¼¶ÎÄ¼şÊ¹ÓÃÖĞÎÄµÄÓïÑÔÏî */
-$_LANG['update_v250']['zh_cn'] = array('ÕÊ»§³åÖµ', 'ÕÊ»§Ìá¿î', '¹ºÂòÉÌÆ·', '¶©µ¥ÍË¿î', 'init' => '³õÊ¼»¯');
-$_LANG['update_v250']['zh_tw'] = array('¤‘ô›_Öµ', '¤‘ôÌá¿î', 'ÙÙIÉÌÆ·', 'Ó††ÎÍË¿î', 'init' => '³õÊ¼»¯');
+/* å‡çº§æ–‡ä»¶ä½¿ç”¨ä¸­æ–‡çš„è¯­è¨€é¡¹ */
+$_LANG['update_v250']['zh_cn'] = array('å¸æˆ·å†²å€¼', 'å¸æˆ·ææ¬¾', 'è´­ä¹°å•†å“', 'è®¢å•é€€æ¬¾', 'init' => 'åˆå§‹åŒ–');
+$_LANG['update_v250']['zh_tw'] = array('å¸³æˆ¶æ²–å€¼', 'å¸³æˆ¶ææ¬¾', 'è³¼è²·å•†å“', 'è¨‚å–®é€€æ¬¾', 'init' => 'åˆå§‹åŒ–');
 $_LANG['update_v250']['en_us'] = array('saving', 'drawing', 'buying', 'refundment',  'init' => 'initialize');
 ?>
