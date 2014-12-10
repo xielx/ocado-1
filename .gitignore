@@ -1,3 +1,4 @@
 upload/temp
 upload/data/config.php
 upload/data/install.lock
+.DS_Store

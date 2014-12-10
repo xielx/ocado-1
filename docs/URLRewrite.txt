@@ -1,34 +1,34 @@
-ECSHOP v2.0 ÒÔÉÏ°æ±¾ URL Rewrite Ê¹ÓÃËµÃ÷
+ECSHOP v2.0 ä»¥ä¸Šç‰ˆæœ¬ URL Rewrite ä½¿ç”¨è¯´æ˜Ž
 
 *******************************************************************************
-* Ò»¡¢Apache ·þÎñÆ÷
+* ä¸€ã€Apache æœåŠ¡å™¨
 *******************************************************************************
 
-   1¡¢Ê×ÏÈÄúÐèÒªÕÒµ½ Apache °²×°Ä¿Â¼£¬Ö®ºóÕÒµ½ conf Ä¿Â¼ÏÂµÄ httpd.conf ÎÄ¼þ¡£
-   2¡¢½«ÏÂÃæµÄ´úÂë¸´ÖÆµ½ httpd.conf ÎÄ¼þÖÐ£¬×¢Òâ½« /ecshop Ìæ»»ÎªÄúµÄÉÌµêµÄÊµ¼Ê
-   °²×°Ä¿Â¼¡£
+   1ã€é¦–å…ˆæ‚¨éœ€è¦æ‰¾åˆ° Apache å®‰è£…ç›®å½•ï¼Œä¹‹åŽæ‰¾åˆ° conf ç›®å½•ä¸‹çš„ httpd.conf æ–‡ä»¶ã€‚
+   2ã€å°†ä¸‹é¢çš„ä»£ç å¤åˆ¶åˆ° httpd.conf æ–‡ä»¶ä¸­ï¼Œæ³¨æ„å°† /ecshop æ›¿æ¢ä¸ºæ‚¨çš„å•†åº—çš„å®žé™…
+   å®‰è£…ç›®å½•ã€‚
 
 <Directory /ecshop>
     Options FollowSymLinks
     AllowOverride All
 </Directory>
 
-   3¡¢ÔÚ httpd.conf ÖÐËÑË÷ LoadModule rewrite_module£¬½«¸ÃÐÐÇ°ÃæµÄ # ºÅÉ¾³ý¡£
-      Èç¹ûÄúµÄ Apache ÊÇ1.3.x°æ±¾»¹ÐèÒª²éÕÒ AddModule mod_rewrite.c£¬
-      Çë½«Ç°ÃæµÄ#É¾³ý¡£
-   4¡¢±£´æ httpd.conf¡£
-   5¡¢½« ecshop Ä¿Â¼ÏÂµÄ htaccess.txt ÖØÃüÃûÎª .htaccess¡£
-   6¡¢ÖØÐÂÆô¶¯ Apache¡£
-   7¡¢½øÈë ecshop ¹ÜÀíÖÐÐÄ->ÉÌµêÉèÖÃ£¬½« URL ÖØÐ´ÉèÖÃÎªÆôÓÃ¡£
+   3ã€åœ¨ httpd.conf ä¸­æœç´¢ LoadModule rewrite_moduleï¼Œå°†è¯¥è¡Œå‰é¢çš„ # å·åˆ é™¤ã€‚
+      å¦‚æžœæ‚¨çš„ Apache æ˜¯1.3.xç‰ˆæœ¬è¿˜éœ€è¦æŸ¥æ‰¾ AddModule mod_rewrite.cï¼Œ
+      è¯·å°†å‰é¢çš„#åˆ é™¤ã€‚
+   4ã€ä¿å­˜ httpd.confã€‚
+   5ã€å°† ecshop ç›®å½•ä¸‹çš„ htaccess.txt é‡å‘½åä¸º .htaccessã€‚
+   6ã€é‡æ–°å¯åŠ¨ Apacheã€‚
+   7ã€è¿›å…¥ ecshop ç®¡ç†ä¸­å¿ƒ->å•†åº—è®¾ç½®ï¼Œå°† URL é‡å†™è®¾ç½®ä¸ºå¯ç”¨ã€‚
 
-   Èç¹ûÄúÏëÍ¨¹ý httpd.conf À´ÉèÖÃÖØÐ´¹æÔò£¬Çë°´ÕÕÏÂÃæµÄ²½Öè²Ù×÷£º
-   1¡¢Ö´ÐÐÉÏÃæµÚ1-3²½²Ù×÷¡£
-   2¡¢ÕÒµ½ÄúµÄÉÌµêËùÔÚµÄÐéÄâÖ÷»ú¶Î£¬Èç£º
+   å¦‚æžœæ‚¨æƒ³é€šè¿‡ httpd.conf æ¥è®¾ç½®é‡å†™è§„åˆ™ï¼Œè¯·æŒ‰ç…§ä¸‹é¢çš„æ­¥éª¤æ“ä½œï¼š
+   1ã€æ‰§è¡Œä¸Šé¢ç¬¬1-3æ­¥æ“ä½œã€‚
+   2ã€æ‰¾åˆ°æ‚¨çš„å•†åº—æ‰€åœ¨çš„è™šæ‹Ÿä¸»æœºæ®µï¼Œå¦‚ï¼š
     <VirtualHost 127.0.0.1>
         DocumentRoot "/home/ecshop/"
         ServerName www.ecshop.com
     </VirtualHost>
-   3¡¢½«ÏÂÃæµÄÄÚÈÝ¼ÓÈëÔÚ</VirtualHost>Ö®Ç°
+   3ã€å°†ä¸‹é¢çš„å†…å®¹åŠ å…¥åœ¨</VirtualHost>ä¹‹å‰
 
     <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -66,30 +66,30 @@ ECSHOP v2.0 ÒÔÉÏ°æ±¾ URL Rewrite Ê¹ÓÃËµÃ÷
     </IfModule>
 
 *******************************************************************************
-* ¶þ¡¢IIS ·þÎñÆ÷
+* äºŒã€IIS æœåŠ¡å™¨
 *******************************************************************************
 
-    1¡¢Ê×ÏÈÇë½øÈëÒÔÏÂÍøÖ· http://www.helicontech.com/download/£¬ÏÂÔØÃâ·Ñ°æµÄ
-    ISAPI_Rewrite×é¼þ£ºISAPI_Rewrite Lite ( freeware )¡£Èç¹ûÄú½ö½öÊÇ²âÊÔÓÃÍ¾Ê¹ÓÃ
-    Õâ¸ö¾Í×ã¹»ÁË£¬Èç¹ûÄúÊÇÉÌÒµÓ¦ÓÃ½¨ÒéÄú¹ºÂòÍêÕû°æµÄ ISAPI_Rewrite Full¡£
+    1ã€é¦–å…ˆè¯·è¿›å…¥ä»¥ä¸‹ç½‘å€ http://www.helicontech.com/download/ï¼Œä¸‹è½½å…è´¹ç‰ˆçš„
+    ISAPI_Rewriteç»„ä»¶ï¼šISAPI_Rewrite Lite ( freeware )ã€‚å¦‚æžœæ‚¨ä»…ä»…æ˜¯æµ‹è¯•ç”¨é€”ä½¿ç”¨
+    è¿™ä¸ªå°±è¶³å¤Ÿäº†ï¼Œå¦‚æžœæ‚¨æ˜¯å•†ä¸šåº”ç”¨å»ºè®®æ‚¨è´­ä¹°å®Œæ•´ç‰ˆçš„ ISAPI_Rewrite Fullã€‚
 
-    Èç¹ûÄúÎÞ·¨·ÃÎÊÒÔÉÏÍøÖ·£¬ÄúÒ²¿ÉÒÔµ½ÎÒÃÇµÄÍøÕ¾ÉÏÏÂÔØ£ºhttp://www.ecshop.com
+    å¦‚æžœæ‚¨æ— æ³•è®¿é—®ä»¥ä¸Šç½‘å€ï¼Œæ‚¨ä¹Ÿå¯ä»¥åˆ°æˆ‘ä»¬çš„ç½‘ç«™ä¸Šä¸‹è½½ï¼šhttp://www.ecshop.com
 
-    2¡¢µã»÷ÏÂÔØµ½±¾µØµÄÎÄ¼þ isapi_rwl_x86_0064.msi £¨¸ÃÎÄ¼þÃûºÍÄúÏÂÔØµÄ°æ±¾ÓÐ¹Ø£©
-    ½øÐÐ°²×°£¬°²×°³É¹¦Ö®ºó½øÈë°²×°Ä¿Â¼£¨Ä¬ÈÏÔÚ
-    C:/Program Files/Helicon/ISAPI_Rewrite£©ÕÒµ½httpd.iniÎÄ¼þ£¬µã»÷ÓÒ¼ü½«ÎÄ¼þÖ»¶Á
-    ÊôÐÔÈ¥µô¡£È»ºó½øÈë£º ¿ªÊ¼²Ëµ¥->³ÌÐò->Helicon->ISAPI_Rewrite->httpd.ini£¬
-    µã»÷´ò¿ª httpd.ini ÎÄ¼þ¡£
+    2ã€ç‚¹å‡»ä¸‹è½½åˆ°æœ¬åœ°çš„æ–‡ä»¶ isapi_rwl_x86_0064.msi ï¼ˆè¯¥æ–‡ä»¶åå’Œæ‚¨ä¸‹è½½çš„ç‰ˆæœ¬æœ‰å…³ï¼‰
+    è¿›è¡Œå®‰è£…ï¼Œå®‰è£…æˆåŠŸä¹‹åŽè¿›å…¥å®‰è£…ç›®å½•ï¼ˆé»˜è®¤åœ¨
+    C:/Program Files/Helicon/ISAPI_Rewriteï¼‰æ‰¾åˆ°httpd.iniæ–‡ä»¶ï¼Œç‚¹å‡»å³é”®å°†æ–‡ä»¶åªè¯»
+    å±žæ€§åŽ»æŽ‰ã€‚ç„¶åŽè¿›å…¥ï¼š å¼€å§‹èœå•->ç¨‹åº->Helicon->ISAPI_Rewrite->httpd.iniï¼Œ
+    ç‚¹å‡»æ‰“å¼€ httpd.ini æ–‡ä»¶ã€‚
 
-    3¡¢¸´ÖÆÏÂÃæµÄÄÚÈÝµ½httpd.iniÎÄ¼þ
+    3ã€å¤åˆ¶ä¸‹é¢çš„å†…å®¹åˆ°httpd.iniæ–‡ä»¶
 
-    4¡¢±£´æ httpd.ini£¬½øÈë ecshop ¹ÜÀíÖÐÐÄ->ÉÌµêÉèÖÃ£¬½« URL ÖØÐ´ÉèÖÃÎªÆôÓÃ¡£
+    4ã€ä¿å­˜ httpd.iniï¼Œè¿›å…¥ ecshop ç®¡ç†ä¸­å¿ƒ->å•†åº—è®¾ç½®ï¼Œå°† URL é‡å†™è®¾ç½®ä¸ºå¯ç”¨ã€‚
 
 
 [ISAPI_Rewrite]
 
-# ÎªÁËÈ·±£ÖØÐ´¹æÔò²»Ó°Ïì·þÎñÆ÷ÉÏµÄÆäËûÕ¾µã
-# Çë½«ÏÂÃæµÄÓï¾äÇ°µÄ#ºÅÈ¥µô£¬²¢½«(?:www\.)?site1\.com¸ÄÎªÉÌµêËùÔÚÓòÃû
+# ä¸ºäº†ç¡®ä¿é‡å†™è§„åˆ™ä¸å½±å“æœåŠ¡å™¨ä¸Šçš„å…¶ä»–ç«™ç‚¹
+# è¯·å°†ä¸‹é¢çš„è¯­å¥å‰çš„#å·åŽ»æŽ‰ï¼Œå¹¶å°†(?:www\.)?site1\.comæ”¹ä¸ºå•†åº—æ‰€åœ¨åŸŸå
 
 #RewriteCond %{HTTP:Host} (?:www\.)?site1\.com
 
