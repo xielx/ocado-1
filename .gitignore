@@ -3,3 +3,5 @@ upload/data/config.php
 upload/data/install.lock
 .DS_Store
 aposocn.komodoproject
+.tags*
+upload/*
