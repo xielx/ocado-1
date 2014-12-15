@@ -4,4 +4,5 @@ upload/data/install.lock
 .DS_Store
 aposocn.komodoproject
 .tags*
-upload/*
+upload/data/sitemap.dat
+upload/images/*
