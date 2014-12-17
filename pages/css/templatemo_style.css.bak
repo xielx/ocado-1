@@ -1,0 +1,255 @@
+
+
+body {
+    font-family:"微软雅黑", Helvetica, Arial, sans-serif;
+}
+
+.templatemo_clear { clear: both; }
+
+.container_wapper {
+    width: 100%;
+}
+.section_header  {
+    height: 150px;
+    background: url("../images/section-header.png") center center no-repeat;
+}
+.section_header  h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* templatemo_mobile_menu_wap */
+
+#templatemo_mobile_menu_wap {
+    width: 50px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background: none repeat scroll 0 0 #cf3341;
+}
+#templatemo_mobile_menu_wap p#mobile_menu_btn {
+    padding-top: 3px;
+    font-size: 20px;
+    text-align: right;
+    width: 100%;
+}
+#templatemo_mobile_menu_wap p#mobile_menu_btn span {
+    color: #fff;
+}
+#templatemo_mobile_menu_wap #mobile_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background:#e7eaef;
+    margin-top: 44px;
+    border-radius: 4px;
+}
+#templatemo_mobile_menu_wap .nav-stacked li a {
+    color: #000;
+}
+#templatemo_mobile_menu_wap .nav-stacked li:hover a {
+    background-color: #67cbf2;
+    color: #000;
+}
+#templatemo_mobile_menu_wap .nav-stacked li a.focus {
+    background-color: transparent;
+}
+/* templatemo_banner_top */
+#templatemo_banner_top {
+    background: #f5f5f5;
+    height: auto;
+}
+#templatemo_banner_top p ,
+#templatemo_banner_top a {
+    color: #666666;
+    font-size: 12px;
+    line-height: 30px;
+	margin: 0;
+}
+#templatemo_banner_top p span{padding-right:20px;}
+#templatemo_banner_top p.right {
+    text-align: left;
+}
+
+/* templatemo_banner_logo */
+#templatemo_banner_logo {
+    background: #ffffff;
+	position:relative;
+	margin:15px auto;
+}
+#templatemo_banner_logo img {
+	max-width:100%;
+	margin:0 auto;
+	display:block;
+}
+
+/* templatemo_banner_slide */
+#templatemo_banner_slide {
+	background:#fdf9ee;
+    position:relative;
+	margin:15px auto;
+	text-align:center;
+}
+#templatemo_banner_slide img{max-width:100%;}
+/* templatemo_main_menu */
+#templatemo_main_menu {
+    position:relative;
+    z-index: 1500;
+}
+#templatemo_main_menu ul {
+    background: #e06d98;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 0 15px;
+}
+#templatemo_main_menu .nav-justified li {
+}
+#templatemo_main_menu .nav-justified li a {
+    font-size: 15px;
+    color: #ffffff;
+	font-weight:bold;
+}
+#templatemo_main_menu .nav-justified li a.current,
+#templatemo_main_menu .nav-justified li a:hover {
+    background: #d1394a;
+    color: #fff;
+}
+#templatemo_main_menu .nav-justified li.search_input{}
+#templatemo_main_menu .nav-justified li input{
+	background: none repeat scroll 0 0 #f4f4f4;
+    border: 0 none;
+    border-radius: 4px;
+    padding: 2px 5px;
+    width: 165px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+/* templatemo_upcomming_event */
+.product_title{
+	border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.product_title h3{
+	background:url(../images/cake_icon.gif) no-repeat 0 50%;
+	border-bottom: 4px solid #cf3341;
+    color: #333333;
+    display: inline;
+    font-size: 17px;
+    padding: 6px 26px 7px 26px;
+}
+.product_title p{float: right;}
+.product_title p a{color:#666666;}
+.product_title p a.all_pro{color:#cf3341;}
+#templatemo_upcomming_event {
+    background: #ffffff;
+    overflow: hidden;
+}
+#templatemo_upcomming_event .event_box {   
+    position: relative;
+    text-align: center;
+}
+#templatemo_upcomming_event .event_box ul {
+    list-style: none;    
+    padding: 6px 30px 18px;    
+    margin: 0;    
+    line-height: 20px;
+}
+#templatemo_upcomming_event .event_box ul li span.title{
+	color:#666666;
+	font-size:16px;
+	font-weight:bold;
+	display:block;
+}
+#templatemo_upcomming_event .event_box ul li span.intro{
+	color:#666666;
+	font-size:12px;
+}
+#templatemo_upcomming_event .event_box ul li span.price{
+	color:#cf3341;
+	font-size:16px;
+}
+#templatemo_upcomming_event #prev_event_btn ,
+#templatemo_upcomming_event #next_event_btn {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+#templatemo_upcomming_event #prev_event_btn a  ,
+#templatemo_upcomming_event #next_event_btn a {
+    background: #eeeeee;
+    width: 60px;
+    height: 60px;
+	padding: 12px;
+    font-size: 28px;
+    display: block;
+    float: left;
+    color: #0eb1dc;
+}
+#templatemo_upcomming_event #prev_event_btn a:hover ,
+#templatemo_upcomming_event #next_event_btn a:hover {
+    background: #e2e2e2;
+}
+#templatemo_upcomming_event #prev_event_btn a {
+    float: right;
+}
+#templatemo_upcomming_event #next_event_btn a {
+    float: left;
+}
+
+
+/* templatemo_footer */
+
+#templatemo_footer {
+    background: none repeat scroll 0 0 #ffffff;
+    border-top: 1px solid #cf3341;
+    padding: 15px 0;
+}
+#templatemo_footer p {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+#templatemo_footer a {
+    color: #666666;
+}
+
+/*  Extra small devices (phones, less than 768px)  */
+@media (max-width: 768px ) { 
+    #templatemo_banner_logo h1 {
+        font-size: 46px;
+        text-align: left;
+    }
+    #templatemo_banner_logo span {
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+        text-align: left;
+    }
+	#templatemo_pricing .pricing_icon_wapper {
+		margin-bottom: 50px;
+	}
+    #templatemo_contact form button {
+		width: 100%;
+		padding: 15px;
+    }
+}
+/*  Small devices (tablets, 768px and up)  */
+@media (min-width: 768px ) { 
+
+}
+/*  Medium devices (desktops, 992px and up)  */
+@media (min-width: 992px ) {
+    #templatemo_banner_top p.right {
+        text-align: right;
+    }
+    #templatemo_banner_top {
+        height: 30px;
+    }
+}
+/*  Large devices (large desktops, 1200px and up)  */
+@media (min-width: 1200px ) {
+}
