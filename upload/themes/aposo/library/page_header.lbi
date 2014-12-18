@@ -44,32 +44,30 @@ var process_request = "{$lang.process_request}";
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-justified">
-						<li><a href="../index.php">{$lang.home}</a></li>
+						<li><a href="../index.php"{if $navigator_list.config.index eq 1} class="active"{/if}>{$lang.home}</a></li>
 						<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
-						<li><a href="{$nav.url}">{$nav.name}</a></li>
+						<li><a href="{$nav.url}"{if $nav.opennew eq 1} target="_blank" {/if}{if $nav.active eq 1} class="cur"{/if}>{$nav.name}</a></li>
 						<!-- {/foreach} -->
 						<li class="search_input">
 							<!-- search start -->
 							<script type="text/javascript">
-							 {literal}
-							 <!--
-							 function checkSearchForm()
-							 {
-							     if(document.getElementById('keyword').value)
-							     {
-							         return true;
-							     }
-							     else
-							     {
-							         alert("{$lang.no_keywords}");
-							         return false;
-							     }
-							 }
-							 -->
-							 {/literal}
-							 </script>
-							 
-							<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r"  style="_position:relative; top:5px;">
+								{literal}
+								<!--
+								function checkSearchForm()
+								{
+									var return_value = true;
+									if(!document.getElementById('keyword').value)
+									{
+										alert("{$lang.no_keywords}");
+										return_value = false;
+									}
+									return return_value;
+								}	 
+								-->
+								{/literal}
+							</script>
+
+							<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="javascript: return checkSearchForm()" class="f_r"  style="_position:relative; top:5px;">
 								<input type="text" name="keywords" id="keyword" value="{$search_keywords|escape}" placeholder="搜索" />
 							</form>
 							<!-- search end -->

@@ -114,7 +114,8 @@ body {
 	font-weight:bold;
 }
 #templatemo_main_menu .nav-justified li a.current,
-#templatemo_main_menu .nav-justified li a:hover {
+#templatemo_main_menu .nav-justified li a:hover, 
+#templatemo_main_menu .nav-justified li a.active {
     background: #d1394a;
     color: #fff;
 }
