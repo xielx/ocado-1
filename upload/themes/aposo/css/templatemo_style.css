@@ -50,7 +50,8 @@ body {
 #templatemo_mobile_menu_wap .nav-stacked li a {
     color: #000;
 }
-#templatemo_mobile_menu_wap .nav-stacked li:hover a {
+#templatemo_mobile_menu_wap .nav-stacked li:hover a,
+#templatemo_mobile_menu_wap .nav-stacked li a.active {
     background-color: #67cbf2;
     color: #000;
 }

@@ -14,24 +14,28 @@ jQuery(function()
 	});
 	//banner slider height window height 
 	//(top banner height + logo height + main menu height )
-	banner_slider_height = $(window).outerHeight()-285;
-	banner_slider_height = (banner_slider_height<540) ? 540 : banner_slider_height;
-	$("#templatemo_banner_slide > div").height(banner_slider_height);
-	$("#templatemo_banner_slide").height(banner_slider_height);
-	$(window).resize(function(){
-		banner_slider_height = $(window).outerHeight()-285;
-		banner_slider_height = (banner_slider_height<540) ? 540 : banner_slider_height;
-		$("#templatemo_banner_slide > div").height(banner_slider_height);
-		$("#templatemo_banner_slide").height(banner_slider_height);
-	});
+	
+
+	// banner_slider_height = $(window).outerHeight()-285;
+	// banner_slider_height = (banner_slider_height<540) ? 540 : banner_slider_height;
+	// $("#templatemo_banner_slide > div").height(banner_slider_height);
+	// $("#templatemo_banner_slide").height(banner_slider_height);
+	// $(window).resize(function(){
+	// 	banner_slider_height = $(window).outerHeight()-285;
+	// 	banner_slider_height = (banner_slider_height<540) ? 540 : banner_slider_height;
+	// 	$("#templatemo_banner_slide > div").height(banner_slider_height);
+	// 	$("#templatemo_banner_slide").height(banner_slider_height);
+	// });
+
+
 	//banner slider caption margin top
 	//(window height - (top banner height + logo height + main menu height ) - caption height ) / 2
-	banner_h1_margin_top = (($(window).height()-280) - 285)/2;
-	$(".camera_caption h1").css("marginTop",banner_h1_margin_top);
-	$(window).resize(function(){
-		banner_h1_margin_top = (($(window).height()-280) - 285)/2;
-		$(".camera_caption h1").css("marginTop",banner_h1_margin_top);
-	});
+	// banner_h1_margin_top = (($(window).height()-280) - 285)/2;
+	// $(".camera_caption h1").css("marginTop",banner_h1_margin_top);
+	// $(window).resize(function(){
+	// 	banner_h1_margin_top = (($(window).height()-280) - 285)/2;
+	// 	$(".camera_caption h1").css("marginTop",banner_h1_margin_top);
+	// });
 	//mobile menu and desktop menu
 	hide_left = $(document).width();
 	$("#mobile_menu").css({left: hide_left});

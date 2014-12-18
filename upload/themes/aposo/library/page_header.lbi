@@ -7,11 +7,10 @@ var process_request = "{$lang.process_request}";
 		<p id="mobile_menu_btn"> <a href="#"><span class="glyphicon glyphicon-align-justify"></span></a> </p>
 		<div id="mobile_menu">
 			<ul class="nav nav-pills nav-stacked">
-				<li><a href="#">Welcome</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">Pricing</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="../index.php"{if $navigator_list.config.index eq 1} class="active"{/if}>{$lang.home}</a></li>
+				<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+				<li><a href="{$nav.url}"{if $nav.opennew eq 1} target="_blank" {/if}{if $nav.active eq 1} class="active"{/if}>{$nav.name}</a></li>
+				<!-- {/foreach} -->
 			</ul>
 		</div>
 	</div>
@@ -19,8 +18,10 @@ var process_request = "{$lang.process_request}";
 	<div id="templatemo_banner_top" class="container_wapper">
 		<div class="container">
 			<div class="row">
+				{insert_scripts files='transport.js,utils.js'}
 				<div class="col-md-8">
-					<p><span>您好，欢迎光临艾波索</span><a href="#">LOG IN 登录</a> | <a href="#">SIGN UP 注册</a> | <a href="#">订单</a></p>
+					{* <p><span>您好，欢迎光临艾波索</span><a href="#">LOG IN 登录</a> | <a href="#">SIGN UP 注册</a> | <a href="#">订单</a></p> *}
+					<p>{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'}</p>
 				</div>
 				<div class="col-md-4">
 					<p class="right">
@@ -47,7 +48,7 @@ var process_request = "{$lang.process_request}";
 						<ul class="nav nav-justified">
 							<li><a href="../index.php"{if $navigator_list.config.index eq 1} class="active"{/if}>{$lang.home}</a></li>
 							<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
-							<li><a href="{$nav.url}"{if $nav.opennew eq 1} target="_blank" {/if}{if $nav.active eq 1} class="cur"{/if}>{$nav.name}</a></li>
+							<li><a href="{$nav.url}"{if $nav.opennew eq 1} target="_blank" {/if}{if $nav.active eq 1} class="active"{/if}>{$nav.name}</a></li>
 							<!-- {/foreach} -->
 							<li class="search_input">
 								<!-- search start -->
