@@ -7,13 +7,14 @@ Object.extend = function(destination, source)
   return destination;
 }
 
-Object.prototype.extend = function(object)
-{
-  return Object.extend.apply(this, [this, object]);
-}
+// Object.prototype.extend = function(object)
+// {
+//   return Object.extend.apply(this, [this, object]);
+// }
 
 //封装getEelementById函数
-function $()
+// function $()
+function $e()
 {
   var elements = new Array();
   for (var i = 0; i < arguments.length; i++) {
@@ -111,7 +112,8 @@ Object.extend(Event, {
   },
 
   observe: function(element, name, observer, useCapture) {
-    var element = $(element);
+    // var element = $(element);
+    var element = $e(element);
     useCapture = useCapture || false;
 
     if (name == 'keypress' &&
@@ -123,7 +125,8 @@ Object.extend(Event, {
   },
 
   stopObserving: function(element, name, observer, useCapture) {
-    var element = $(element);
+    // var element = $(element);
+    var element = $e(element);
     useCapture = useCapture || false;
 
     if (name == 'keypress' &&

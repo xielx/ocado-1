@@ -14,6 +14,7 @@
 <link href="{$cat_style}" rel="stylesheet" type="text/css" />
 <!-- {/if} -->
 {* 包含脚本文件 *}
+{insert_scripts files=’jquery.min.js,jquery.json.js’}
 {insert_scripts files='common.js,global.js,compare.js'}
 </head>
 <body>

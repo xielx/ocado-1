@@ -135,7 +135,8 @@
           goods.goods_id = goodsId;
           goods.number   = number;
           goods.parent   = 0;
-          Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), collect_to_flow_response, 'POST', 'JSON');
+          // Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), collect_to_flow_response, 'POST', 'JSON');
+          Ajax.call('flow.php?step=add_to_cart', 'goods=' + $.toJSON(goods), collect_to_flow_response, 'POST', 'JSON');
         }
         function collect_to_flow_response(result)
         {
@@ -196,7 +197,8 @@
     goods.goods_id = goodsId;
     goods.number   = number;
     goods.parent   = parentId;
-    Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), fittings_to_flow_response, 'POST', 'JSON');
+    // Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), fittings_to_flow_response, 'POST', 'JSON');
+    Ajax.call('flow.php?step=add_to_cart', 'goods=' + $.toJSON(goods), fittings_to_flow_response, 'POST', 'JSON');
   }
   function fittings_to_flow_response(result)
   {
