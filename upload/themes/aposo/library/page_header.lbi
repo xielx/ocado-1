@@ -25,10 +25,10 @@ var process_request = "{$lang.process_request}";
 				<!--{if $navigator_list.top}-->
 				<div class="col-md-5">
 					<p class="right">
+						<!-- <span class="glyphicon glyphicon-shopping-cart"></span><a href="#">0 件</a> -->
 						<!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
 							<a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
 						<!-- {/foreach} -->
-						<!-- <span class="glyphicon glyphicon-shopping-cart"></span><a href="#">0 件</a> -->
 						<span class="order_line">订购热线：0512-88888888</span> 
 						<span><img src="images/weixin.png" alt=""><img src="images/weibo.png" alt=""></span></p>
 				</div>
