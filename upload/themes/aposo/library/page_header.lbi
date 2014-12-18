@@ -19,16 +19,20 @@ var process_request = "{$lang.process_request}";
 		<div class="container">
 			<div class="row">
 				{insert_scripts files='transport.js,utils.js'}
-				<div class="col-md-8">
-					{* <p><span>您好，欢迎光临艾波索</span><a href="#">LOG IN 登录</a> | <a href="#">SIGN UP 注册</a> | <a href="#">订单</a></p> *}
+				<div class="col-md-7">
 					<p>{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'}</p>
 				</div>
-				<div class="col-md-4">
+				<!--{if $navigator_list.top}-->
+				<div class="col-md-5">
 					<p class="right">
-						<span class="glyphicon glyphicon-shopping-cart"></span><a href="#">0 件</a>
+						<!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+							<a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+						<!-- {/foreach} -->
+						<!-- <span class="glyphicon glyphicon-shopping-cart"></span><a href="#">0 件</a> -->
 						<span class="order_line">订购热线：0512-88888888</span> 
 						<span><img src="images/weixin.png" alt=""><img src="images/weibo.png" alt=""></span></p>
 				</div>
+				<!-- {/if} -->
 			</div>
 		</div>
 	</div>
