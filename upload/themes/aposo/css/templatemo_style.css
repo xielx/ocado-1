@@ -222,6 +222,10 @@ body {
     color: #666666;
 }
 
+#menu_container {
+    height: 47px;
+}
+
 /*  Extra small devices (phones, less than 768px)  */
 @media (max-width: 768px ) { 
     #templatemo_banner_logo h1 {
