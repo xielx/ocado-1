@@ -9,12 +9,12 @@
 <!-- TemplateEndEditable -->
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" href="animated_favicon.gif" type="image/gif" />
 	<meta name="keywords" content="{$keywords}" />
 	<meta name="description" content="{$description}" />
 	<!-- Bootstrap -->
 	<link href="themes/aposo/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Camera -->
-	<!-- Template  -->
 	<link href="themes/aposo/css/templatemo_style.css" rel="stylesheet">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,100 +34,13 @@
 					<div class="product_title">
 						<h3>热销产品</h3>
 						<p><a class="all_pro" href="#">全部产品</a> | <a href="#">黑金砖系列</a> | <a href="#">瑞士卷系列</a> | <a href="#">经典派类</a> | <a href="#">伴手礼盒</a> | <a href="#">千层泡芙</a> | <a href="#">生日蛋糕</a> | <a href="#">弥月精选</a>   <a href="#">更多>></a> </p>
-					</div>     
-				</div>       
+					</div>
+				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-6 col-md-3">
-					<div class="event_box event_animate_left">
-						<img src="images/pro01.jpg" alt="" class="img-responsive" />
-						<ul>
-							<li>
-									<span class="title">巧克力黑金砖</span>
-									<span class="intro">会员价： <span class="price">￥280</span>	</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="event_box event_animate_left">
-						<img src="images/pro02.jpg" alt="Event 2" class="img-responsive" />
-						<ul>
-							<li>
-									<span class="title">牛奶千层冰心泡芙</span>
-									<span class="intro">会员价： <span class="price">￥240</span>	</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="event_box event_animate_right">
-						<img src="images/pro03.jpg" alt="Event 3" class="img-responsive" />
-						<ul>
-							<li>
-									<span class="title">抹茶碧螺春卷</span>
-									<span class="intro">会员价： <span class="price">￥260</span>	</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="event_box event_animate_right">
-						<img src="images/pro04.jpg" alt="Event 4" class="img-responsive" />
-						<ul>
-						   <li>
-									<span class="title">碧螺春凤梨酥</span>
-									<span class="intro">会员价： <span class="price">￥420</span>	</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="event_box event_animate_left">
-						<img src="images/pro01.jpg" alt="" class="img-responsive" />
-						<ul>
-							<li>
-									<span class="title">巧克力黑金砖</span>
-									<span class="intro">会员价： <span class="price">￥280</span>	</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="event_box event_animate_left">
-						<img src="images/pro02.jpg" alt="Event 2" class="img-responsive" />
-						<ul>
-							<li>
-									<span class="title">牛奶千层冰心泡芙</span>
-									<span class="intro">会员价： <span class="price">￥240</span>	</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="event_box event_animate_right">
-						<img src="images/pro03.jpg" alt="Event 3" class="img-responsive" />
-						<ul>
-							<li>
-									<span class="title">抹茶碧螺春卷</span>
-									<span class="intro">会员价： <span class="price">￥260</span>	</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="event_box event_animate_right">
-						<img src="images/pro04.jpg" alt="Event 4" class="img-responsive" />
-						<ul>
-						   <li>
-									<span class="title">碧螺春凤梨酥</span>
-									<span class="intro">会员价： <span class="price">￥420</span>	</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			   
-			</div>
+
+			<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
+			<!-- #EndLibraryItem -->
+
 		</div>
 	</div>
    
@@ -145,7 +58,7 @@
 		</div>
 	</div>
 	{* 包含脚本文件 *}
-	{insert_scripts files='jquery.min.js,jquery.json.js,common.js,index.js'}
+	{insert_scripts files='common.js,index.js'}
 	<script src="themes/aposo/js/bootstrap.min.js"></script>
 	<script src="themes/aposo/js/jquery.mobile.customized.min.js"></script>
 	<script src="themes/aposo/js/templatemo_script.js"></script>
