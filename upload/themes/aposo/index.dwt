@@ -33,7 +33,13 @@
 				<div class="col-sm-12 col-md-12">
 					<div class="product_title">
 						<h3>热销产品</h3>
-						<p><a class="all_pro" href="#">全部产品</a> | <a href="#">黑金砖系列</a> | <a href="#">瑞士卷系列</a> | <a href="#">经典派类</a> | <a href="#">伴手礼盒</a> | <a href="#">千层泡芙</a> | <a href="#">生日蛋糕</a> | <a href="#">弥月精选</a>   <a href="#">更多>></a> </p>
+						<p>
+						<a class="all_pro" href="catalog.php">全部产品</a> | 
+						<!--{foreach from=$categories item=cat}-->
+						<a href="{$cat.url}">{$cat.name|escape:html}</a> | 
+						<!--{/foreach}--> 
+						<a href="catalog.php">更多>></a> 
+						</p>
 					</div>
 				</div>
 			</div>
