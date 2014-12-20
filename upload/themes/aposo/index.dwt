@@ -22,8 +22,6 @@
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-{* 包含脚本文件 *}
-{insert_scripts files='common.js,index.js'}
   </head>
 <body>
 	
@@ -146,9 +144,11 @@
 			</div>
 		</div>
 	</div>
-	<script src="themes/aposo/js/jquery.min.js"></script>
+	{* 包含脚本文件 *}
+	{insert_scripts files='jquery.min.js,jquery.json.js,common.js,index.js'}
 	<script src="themes/aposo/js/bootstrap.min.js"></script>
 	<script src="themes/aposo/js/jquery.mobile.customized.min.js"></script>
 	<script src="themes/aposo/js/templatemo_script.js"></script>
+	
 </body>
 </html>

@@ -556,7 +556,7 @@ $_LANG['p_y']['link_start'] = '<a href="http://www.ecshop.com" target="_blank" s
 $_LANG['p_y']['link_p'] = 'Powe';
 $_LANG['p_y']['link_r'] = 'red&nbsp;';
 $_LANG['p_y']['link_b'] = 'by&nbsp;';
-$_LANG['p_y']['main_start'] = '<strong><span style="color: #3366FF">';
+$_LANG['p_y']['main_start'] = '<strong><span style="color: #3366FF;;;">';
 $_LANG['p_y']['main_e'] = 'E';
 $_LANG['p_y']['main_c'] = 'CSho';
 $_LANG['p_y']['main_p'] = 'p</span>&nbsp;';

@@ -1,7 +1,7 @@
 <!-- $Id -->
 
 {include file="pageheader.htm"}
-{insert_scripts files="../js/utils.js,../js/transport.js,validator.js"}
+{insert_scripts files="../js/utils.js,../js/transport.orig.js,validator.js"}
 {if $step eq "consignee"}
 {insert_scripts files="../js/region.js"}
 {/if}
@@ -117,7 +117,7 @@
 </form>
 
 {elseif $step eq "consignee"}
-{insert_scripts files="../js/transport.js,../js/region.js"}
+{insert_scripts files="../js/transport.orig.js,../js/region.js"}
 <script type="text/javascript">
 region.isAdmin=true;
 </script>
