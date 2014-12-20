@@ -28,7 +28,7 @@ var process_request = "{$lang.process_request}";
 						<!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
 							<a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
 						<!-- {/foreach} -->
-						<span class="order_line">订购热线：0512-88888888</span> 
+						<span class="order_line">订购热线：{$service_phone}</span> 
 						<span><img src="images/weixin.png" alt=""><img src="images/weibo.png" alt=""></span></p>
 				</div>
 				<!-- {/if} -->
@@ -84,6 +84,4 @@ var process_request = "{$lang.process_request}";
 		</div>
 	</div>
 
-	<div id="templatemo_banner_slide" class="container_wapper">   
-			<img src="images/banner_slide_01.jpg" alt=""/>  
-	</div>
+	

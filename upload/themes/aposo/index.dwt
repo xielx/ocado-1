@@ -26,7 +26,8 @@
 <body>
 	
 	<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-	
+	<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+
 	<div id="templatemo_upcomming_event" class="container_wapper">
 		<div class="container">
 			<div class="row">
@@ -50,19 +51,8 @@
 		</div>
 	</div>
    
-	
-	
-	<div id="templatemo_footer" class="container_wapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<p><a href="#">帮助中心</a>  |  <a href="#">会员中心</a>   |  <a href="#">关于我们</a>  |  <a href="#">联系我们</a> </p>
-					<p>地 址：江苏省苏州市江苏省苏州市江苏省苏州市        TEL: 02-3501-2035     FAX: 02-8671-6721     EMAIL: aposo2035@gmail.com</br>
-© 2014 Aposo2035艾波索 版权所有，并保留所有权利  苏ICP备888888号 </p>
-				</div>
-			</div>
-		</div>
-	</div>
+	<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
 	{* 包含脚本文件 *}
 	{insert_scripts files='common.js,index.js'}
 	<script src="themes/aposo/js/bootstrap.min.js"></script>

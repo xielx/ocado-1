@@ -6,3 +6,5 @@ aposocn.komodoproject
 .tags*
 upload/data/sitemap.dat
 upload/images/*
+upload/data/afficheimg/*
+upload/data/*
