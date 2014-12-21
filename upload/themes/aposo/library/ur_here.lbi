@@ -1,2 +1,11 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-{$lang.ur_here} {$ur_here}
+<div id="templatemo_bread_crumbs" class="container_wapper">
+  <div class="container">
+    <div class="row">
+    	<div class="col-md-12">
+    	   <p>{$lang.ur_here} {$ur_here}</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+ 

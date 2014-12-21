@@ -79,6 +79,7 @@ hr {
 	box-sizing:content-box;
 	height:0
 }
+ul,li,ol{list-style:none;margin:0;padding:0;}
 pre {
 	overflow:auto
 }
@@ -594,7 +595,7 @@ width:970px
 }
 @media (min-width:1200px) {
 .container {
-width:1000px
+width:1030px
 }
 }
 .container-fluid {
