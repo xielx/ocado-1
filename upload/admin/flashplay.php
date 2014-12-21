@@ -42,7 +42,7 @@ if ($_REQUEST['act']== 'list')
 
     /* 标签初始化 */
     $group_list = array(
-        'sys' => array('text' => $_LANG['system_set'], 'url' => ''),
+        // 'sys' => array('text' => $_LANG['system_set'], 'url' => ''),
         'cus' => array('text' => $_LANG['custom_set'], 'url' => 'flashplay.php?act=custom_list')
                        );
 
@@ -321,7 +321,7 @@ elseif ($_REQUEST['act']== 'custom_list')
 {
     /* 标签初始化 */
     $group_list = array(
-        'sys' => array('text' => $_LANG['system_set'], 'url' => ($_CFG['index_ad'] == 'cus') ? 'javascript:system_set();void(0);' : 'flashplay.php?act=list'),
+        // 'sys' => array('text' => $_LANG['system_set'], 'url' => ($_CFG['index_ad'] == 'cus') ? 'javascript:system_set();void(0);' : 'flashplay.php?act=list'),
         'cus' => array('text' => $_LANG['custom_set'], 'url' => '')
                        );
 
@@ -360,7 +360,7 @@ elseif ($_REQUEST['act']== 'custom_add')
 {
     /* 标签初始化 */
     $group_list = array(
-        'sys' => array('text' => $_LANG['system_set'], 'url' => ($_CFG['index_ad'] == 'cus') ? 'javascript:system_set();void(0);' : 'flashplay.php?act=list'),
+        // 'sys' => array('text' => $_LANG['system_set'], 'url' => ($_CFG['index_ad'] == 'cus') ? 'javascript:system_set();void(0);' : 'flashplay.php?act=list'),
         'cus' => array('text' => $_LANG['custom_set'], 'url' => '')
                        );
 
@@ -561,7 +561,7 @@ elseif ($_REQUEST['act'] == 'custom_status')
         $sql = "SELECT  value FROM " . $ecs->table("shop_config") . " WHERE id =337";
         $shop_config = $db->getRow($sql);
         $group_list = array(
-            'sys' => array('text' => $_LANG['system_set'], 'url' => ($shop_config['value'] == 'cus') ? 'javascript:system_set();void(0);' : 'flashplay.php?act=list'),
+            // 'sys' => array('text' => $_LANG['system_set'], 'url' => ($shop_config['value'] == 'cus') ? 'javascript:system_set();void(0);' : 'flashplay.php?act=list'),
             'cus' => array('text' => $_LANG['custom_set'], 'url' => '')
                            );
 
