@@ -28,16 +28,24 @@
 	<div id="templatemo_banner_slide" class="container_wapper" style="display: none; position: relative; margin: 0 auto; width: 980px; height: 380px; overflow: hidden;">
 		<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1140px; height: 442px; overflow: hidden;">
 			 <div>
-				<a href="javascript: void(0);"><img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/></a>
+				<a href="javascript: void(0);">
+					<img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/>
+				</a>
 			 </div>
 			 <div>
-				<a href="javascript: void(0);"><img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/></a>
+				<a href="javascript: void(0);">
+					<img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/>
+				</a>
 			 </div>
 			 <div>
-				<a href="javascript: void(0);"><img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/></a>
+				<a href="javascript: void(0);">
+					<img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/>
+				</a>
 			 </div>
 			 <div>
-				<a href="javascript: void(0);"><img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/></a>
+				<a href="javascript: void(0);">
+					<img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/>
+				</a>
 			 </div>
 		 </div>
 		<!-- bullet navigator container -->
