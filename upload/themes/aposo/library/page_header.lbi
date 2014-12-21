@@ -49,7 +49,7 @@ var process_request = "{$lang.process_request}";
 				<div class="row">
 					<div class="col-xs-12">
 						<ul class="nav nav-justified">
-							<li><a href="../index.php"{if $navigator_list.config.index eq 1} class="active"{/if}>{$lang.home}</a></li>
+							<li><a href="../"{if $navigator_list.config.index eq 1} class="active"{/if}>{$lang.home}</a></li>
 							<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
 							<li><a href="{$nav.url}"{if $nav.opennew eq 1} target="_blank" {/if}{if $nav.active eq 1} class="active"{/if}>{$nav.name}</a></li>
 							<!-- {/foreach} -->

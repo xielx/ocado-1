@@ -1,10 +1,10 @@
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  {if $index_ad eq 'sys'} -->
-	// <script type="text/javascript">
+	<!-- script type="text/javascript">
 	// var swf_width=1200;
 	// var swf_height=505;
-	// </script>
-	// <script type="text/javascript" src="data/flashdata/{$flash_theme}/cycle_image.js"></script>
+	// </ -->
+	<!-- // <script type="text/javascript" src="data/flashdata/{$flash_theme}/cycle_image.js"></script> -->
 <!-- {elseif $index_ad eq 'cus'} -->
 	<!-- {if $ad.ad_type eq 0} -->
 		<!-- aaa<a href="{$ad.url}" target="_blank"><img src="{$ad.content}" width="1200" height="505" border="0"></a> -->
