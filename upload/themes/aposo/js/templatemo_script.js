@@ -21,14 +21,14 @@ jQuery(function(){
     });
 
 	var position_type = "relative";
-	if($(document).scrollTop() > 110){
+	if($(document).scrollTop() > 119){
 		position_type = "fixed";
 	}
 	$("#templatemo_main_menu").css({"position": position_type,"top": 0});
 
 	$(window).scroll(function(){
 		var position_type = "relative";
-		if($(this).scrollTop() > 110){
+		if($(this).scrollTop() > 119){
 			position_type = "fixed";
 		}
 		$("#templatemo_main_menu").css({"position": position_type, "top": 0});
