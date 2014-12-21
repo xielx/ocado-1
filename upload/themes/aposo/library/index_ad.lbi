@@ -27,26 +27,14 @@
 <div class="container">
 	<div id="templatemo_banner_slide" class="container_wapper" style="display: none; position: relative; margin: 0 auto; width: 980px; height: 380px; overflow: hidden;">
 		<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1140px; height: 442px; overflow: hidden;">
+			<!-- {foreach name=index_ad_block from=$ad item=adv} -->
 			 <div>
-				<a href="javascript: void(0);">
-					<img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/>
+				<a href="{$adv.url}">
+					<img u="image" src2="{$adv.content}" alt="{$adv.ad_name}"/>
 				</a>
 			 </div>
-			 <div>
-				<a href="javascript: void(0);">
-					<img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/>
-				</a>
-			 </div>
-			 <div>
-				<a href="javascript: void(0);">
-					<img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/>
-				</a>
-			 </div>
-			 <div>
-				<a href="javascript: void(0);">
-					<img u="image" src2="themes/aposo/images/banner_slide_01.jpg" alt=""/>
-				</a>
-			 </div>
+			<!-- {/foreach} -->
+
 		 </div>
 		<!-- bullet navigator container -->
 		<div u="navigator" class="jssorb05" style="position: absolute; bottom: 16px; right: 6px;">

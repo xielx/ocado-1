@@ -129,12 +129,9 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
 
     /* 首页主广告设置 */
     $smarty->assign('index_ad',     $_CFG['index_ad']);
-    if ($_CFG['index_ad'] == 'cus')
-    {
-        $sql = 'SELECT ad_type, content, url FROM ' . $ecs->table("ad_custom") . ' WHERE ad_status = 1';
-        $ad = $db->getRow($sql, true);
-        $smarty->assign('ad', $ad);
-    }
+    $sql = 'SELECT ad_type, content, url FROM ' . $ecs->table("ad_custom"). ' order by ad_id desc' ;
+    $ad = $db->getAll($sql, true);
+    $smarty->assign('ad', $ad);
 
     /* links */
     $links = index_get_links();

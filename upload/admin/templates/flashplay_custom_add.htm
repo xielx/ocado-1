@@ -1,4 +1,4 @@
- {include file="pageheader.htm"}
+{include file="pageheader.htm"}
 {insert_scripts files="validator.js"}
 <div class="main-div">
   <form action="flashplay.php" method="post" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
@@ -11,7 +11,7 @@
         <input type="text" name="ad[ad_name]" id="ad_name" value="{$ad.ad_name}" size="35" /><span class="require-field">*</span>
       </td>
     </tr>
-    <tr>
+    <tr style="display:none;">
       <td class="label">{$lang.lable_flash_type}</td>
       <td>
        <select name="ad[ad_type]" id="ad_type" onchange="showMedia(this.value)">
@@ -62,11 +62,11 @@
   </tbody>
 
   <tbody>
-    <tr>
+    <!-- <tr>
       <td class="label">{$lang.lable_flash_status}</td>
       <td><input type="radio" name="ad[ad_status]" id="ad_status" value="0" {if $ad.ad_status eq 0}checked="checked"{/if}>关闭
       <input type="radio" name="ad[ad_status]" id="ad_status" value="1" {if $ad.ad_status eq 1}checked="checked"{/if}>启用</td>
-    </tr>
+    </tr> -->
     <tr>
        <td class="label">&nbsp;</td>
        <td>
