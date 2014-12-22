@@ -242,6 +242,7 @@ function reg(str){
       <!-- {/foreach} -->
       </li>
       <!-- {/if} -->
+
       <li class="clearfix">
        <dd>
        <!-- {if $cfg.show_goodssn} 显示商品货号-->
@@ -260,6 +261,7 @@ function reg(str){
       <!-- {/if} -->
        </dd>
       </li>
+
       <li class="clearfix">
        <dd>
        <!-- {if $goods.goods_brand neq "" and $cfg.show_brand} 显示商品品牌-->
@@ -272,6 +274,7 @@ function reg(str){
        <!-- {/if} -->
        </dd>
       </li>
+
       <li class="clearfix">
        <dd>
        <!-- {if $cfg.show_addtime} 上架时间-->
@@ -283,6 +286,7 @@ function reg(str){
        <strong>{$lang.goods_click_count}：</strong>{$goods.click_count}
        </dd>
       </li>
+      
       <li class="clearfix">
        <dd class="ddL">
        <!-- {if $cfg.show_marketprice} 市场价格-->

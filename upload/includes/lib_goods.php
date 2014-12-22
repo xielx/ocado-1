@@ -594,6 +594,8 @@ function get_goods_info($goods_id)
         $row['goods_img']   = get_image_path($goods_id, $row['goods_img']);
         $row['goods_thumb'] = get_image_path($goods_id, $row['goods_thumb'], true);
 
+        $row['seller_note'] = str_replace("\n", "<br />", $row['seller_note']);
+
         return $row;
     }
     else

@@ -1,49 +1,51 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+{insert_scripts files='jssor.slider.mini.js'}
 <div class="view_pro_img">
-  <!--大图展示-->
-  <div class="pro_big_img">
-    <img id="pro_big_img" src="{$goods.goods_img}" data-zoom-image="themes/aposo/images/logo.png" alt="{$goods.goods_name|escape:html}"/>
-  </div>
+	<div class="pro_big_img">
+	<!-- {if $pictures} -->
+		<img width="100%" id="pro_big_img" src="{$pictures[0].thumb_url}" data-zoom-image="{$pictures[0].img_url}" alt="{$goods.goods_name|escape:html}"/>
+	<!-- {else} -->
+		<!-- {if $goods.goods_img} -->
+		<img width="100%" id="pro_big_img" src="{$goods.goods_img}" data-zoom-image="{$goods.original_img}" alt="{$goods.goods_name|escape:html}"/>
+		<!-- {/if} -->
+	<!-- {/if} -->
+	</div>
 </div>
 
 <!--小图列表-->
 <!-- {if $pictures}-->
-
 <div class="samll_img_box">
  <ul class="pro_small_img" id="pro_small_imgs">
-  <!-- {foreach from=$pictures item=picture}-->
-  <!-- <li class="cur"> -->
-  <li>
-    <a href="#" data-update="" data-image="{$picture.img_url}" data-zoom-image="{$picture.img_url}">
-      <img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" alt="{$goods.goods_name}" />
-    </a>
-  </li>
-   <!-- {/foreach} -->
+	<!-- {foreach from=$pictures item=picture}-->
+	<li>
+		<a href="#" data-update="" data-image="{$picture.img_url}" data-zoom-image="{$picture.img_url}">
+			<img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" alt="{$goods.goods_name}" />
+		</a>
+	</li>
+	 <!-- {/foreach} -->
  </ul>
 </div>
 <!-- {/if}-->
 
 <script type="text/javascript">
-  $(document).ready(function(){
-    $("#pro_big_img").elevateZoom({
-      // constrainType:"height", 
-      constrainSize:274,
-      zoomWindowHeight: 300,
-      zoomWindowWidth: 300,
-      zoomType: "lens", 
-      containLensZoom: true,
-      gallery:'pro_small_imgs', 
-      cursor: 'pointer', 
-      galleryActiveClass: "cur"
-    }); 
+	$(document).ready(function(){
+		$("#pro_big_img").elevateZoom({
+			// constrainType:"height", 
+			constrainSize:274,
+			zoomWindowHeight: 400,
+			zoomWindowWidth: 400,
+			// zoomType: "lens", 
+			containLensZoom: false,
+			gallery:'pro_small_imgs', 
+			cursor: 'pointer', 
+			galleryActiveClass: "cur",
+			zoomWindowFadeIn: 500, 
+			zoomWindowFadeOut: 500, 
+			lensFadeIn: 500, 
+			lensFadeOut: 500,
+			scrollZoom : true
+		}); 
 
-    $("#pro_small_imgs li a:first").click();
-  });
+		$("#pro_small_imgs li a:first").click();
+	});
 </script>
-
-<style>
-  .zoomContainer {
-
-  }
-</style>
