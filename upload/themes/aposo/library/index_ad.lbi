@@ -1,28 +1,3 @@
-<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
- {if $index_ad eq 'sys'} -->
-	<!-- script type="text/javascript">
-	// var swf_width=1200;
-	// var swf_height=505;
-	// </ -->
-	<!-- // <script type="text/javascript" src="data/flashdata/{$flash_theme}/cycle_image.js"></script> -->
-<!-- {elseif $index_ad eq 'cus'} -->
-	<!-- {if $ad.ad_type eq 0} -->
-		<!-- aaa<a href="{$ad.url}" target="_blank"><img src="{$ad.content}" width="1200" height="505" border="0"></a> -->
-	<!-- {elseif $ad.ad_type eq 1} -->
-		bb<!-- b<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1200" height="505">
-			<param name="movie" value="{$ad.content}" />
-			<param name="quality" value="high" />
-			<embed src="{$ad.content}" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1200" height="505"></embed>
-		</object> -->
-	<!-- {elseif $ad.ad_type eq 2} -->
-		<!-- ccc{$ad.content} -->
-	<!-- {elseif $ad.ad_type eq 3} -->
-		<!-- ddd<a href="{$ad.url}" target="_blank">{$ad.content}</a> -->
-	<!-- {/if} -->
-<!-- {else} -->
-<!-- {/if} --> 
-
-
 <link href="themes/aposo/css/jssor_slider.css" rel="stylesheet">
 <div class="container">
 	<div id="templatemo_banner_slide" class="container_wapper" style="display: none; position: relative; margin: 0 auto; width: 980px; height: 380px; overflow: hidden;">
@@ -49,7 +24,7 @@
 
 	</div>
 </div>
-
+{insert_scripts files='jssor.slider.mini.js'}
 <script type="text/javascript">
 	$(document).ready(function(){
 		var options = {
