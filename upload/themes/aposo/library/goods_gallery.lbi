@@ -42,8 +42,8 @@
 			zoomWindowFadeIn: 500, 
 			zoomWindowFadeOut: 500, 
 			lensFadeIn: 500, 
-			lensFadeOut: 500,
-			scrollZoom : true
+			// scrollZoom : true,
+			lensFadeOut: 500
 		}); 
 
 		$("#pro_small_imgs li a:first").click();
