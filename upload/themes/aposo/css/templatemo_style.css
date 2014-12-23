@@ -286,7 +286,7 @@ body {
     text-decoration: none;
     white-space: nowrap;
 }
-.pro_sku ul li.cur{
+.pro_sku ul li.cur {
 	background: url("../images/sku_icon.png") no-repeat scroll right bottom #f0f4f5;
     border: 1px solid #d1394a;
 }

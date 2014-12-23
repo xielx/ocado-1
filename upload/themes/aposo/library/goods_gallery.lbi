@@ -18,7 +18,7 @@
  <ul class="pro_small_img" id="pro_small_imgs">
 	<!-- {foreach from=$pictures item=picture}-->
 	<li>
-		<a href="#" data-update="" data-image="{$picture.img_url}" data-zoom-image="{$picture.img_url}">
+		<a href="javascript: void(0);" data-update="" data-image="{$picture.img_url}" data-zoom-image="{$picture.img_url}">
 			<img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" alt="{$goods.goods_name}" />
 		</a>
 	</li>
