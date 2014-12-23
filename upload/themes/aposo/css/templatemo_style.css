@@ -5,7 +5,7 @@ body {
 }
 
 .templatemo_clear { clear: both; }
-
+.red{color:#d1394a;}
 .container_wapper {
     width: 100%;
 }
@@ -19,7 +19,6 @@ body {
 }
 
 /* templatemo_mobile_menu_wap */
-
 #templatemo_mobile_menu_wap {
     width: 50px;
     height: 40px;
@@ -146,8 +145,9 @@ body {
 	text-decoration:underline;
 }
 #templatemo_bread_crumbs p span{color:#cf3341;}
+
 /* templatemo_upcomming_event */
-#templatemo_product_detail{
+#templatemo_product_detail,#templatemo_product_category{
 	margin:10px 0 30px;
 }
 .product_title{
@@ -224,6 +224,7 @@ body {
 #templatemo_upcomming_event #next_event_btn a {
     float: left;
 }
+
 /* Product_details_box */
 .pro_big_img{
 	width: 100%;;
@@ -332,8 +333,8 @@ body {
     display: inline;
     float: left;
     font-size: 14px;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
     margin-right: 9px;
     text-align: center;
     width: 125px;
@@ -374,6 +375,158 @@ body {
 	padding-left:10px;
 }
 
+/* templatemo_login */
+.form_detail{
+	margin: 50px auto;
+    width: 500px;
+}
+.form_detail ul li{
+	line-height:28px;
+	padding: 10px 5px;
+	position: relative;
+	overflow: hidden;
+	text-align:center;
+}
+.form_detail_form ul li p span.glyphicon-user{
+	color: #e06d98;
+    display:inline-block;
+    font-size: 25px;
+    padding-right: 6px;
+	vertical-align: sub;
+}
+.form_detail ul li p.top_border {
+	color: #d1394a;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+}
+#reg_form ul li p.top_border span.click_login{
+	color: #666666;
+    font-size: 12px;
+}
+.form_detail ul li .input_content {
+    left: 20px;
+    line-height: 50px;
+    position: absolute;
+    top: 5px;
+}
+.form_detail ul li .input_content span{padding-right:6px;}
+.form_detail ul li .input_content label{
+	color: #666666;
+    font-size: 14px;
+	font-weight: normal;
+}
+.form_detail ul li input.input_txt {
+	background:#f0f4f5;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	font-size: 18px;
+	color: #767676;
+	margin: 0;
+	border: none;
+	width: 100%;
+	padding: 5px 10px 5px 45px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+.form_detail ul li input.input_txt:focus{
+	border: 1px solid #e06d98;
+	background:#ffffff;
+}
+.form_detail ul li input.login_btn,.form_detail ul li a.start_shop{
+	background: none repeat scroll 0 0 #595a6b;
+    border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border:0;
+	cursor:pointer;
+    color: #fff;
+	display:inline-block;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 9px;
+    text-align: center;
+    width: 100%;
+}
+.form_detail ul li input.login_btn:hover,.form_detail ul li a.start_shop:hover{background: none repeat scroll 0 0 #d1394a;}
+.send {
+    position: absolute;
+    right: 15px;
+    text-align: right;
+    top: 15px;
+}
+.reg_form ul li span.err{
+	color: #d1394a;
+    display: inline-block;
+    float: right;
+}
+.form_detail ul li.Agreement{
+	text-align:left;
+}
+#login_form ul li.Agreement a{float:right;}
+.form_detail ul li.Agreement input{
+	margin: 0 10px 0 0;
+    vertical-align: middle;
+}
+.img_verify{
+	position: absolute;
+    right: 15px;
+    top: 17px;
+}
+.form_detail ul li span.forgotmobile{font-size: 18px;}
+.form_detail ul li span.set_password{
+	color: #60ad05;
+    font-size: 20px;
+}
+
+/* templatemo_catagory */
+.list .goods{
+	border-bottom: 1px solid #efeeee;
+    clear: both;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.list .goods .goods_img img {
+    width: 100%;
+}
+.list .goods_name{
+	line-height: 18px;
+    margin-bottom: 10px;
+}
+.list .goods_name a{
+	color:#cf3341;
+	font-size:16px;
+}
+.list .goods_depict{
+	font-size:14px;
+	line-height:20px;
+}
+.list .sub{
+	padding-top: 30px;
+    text-align: right;
+}
+.list .submit_goods{
+	margin:10px 0;
+}
+.list .submit_goods a{
+	background: none repeat scroll 0 0 #595a6b;
+    border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    width: 125px;
+}
+.list .submit_goods a:hover,.list .submit_goods a.active{background: none repeat scroll 0 0 #d1394a;}
+
 /* templatemo_footer */
 
 #templatemo_footer {
@@ -388,10 +541,6 @@ body {
 }
 #templatemo_footer a {
     color: #666666;
-}
-
-#menu_container {
-    height: 47px;
 }
 
 /*  Extra small devices (phones, less than 768px)  */
@@ -413,6 +562,23 @@ body {
 		width: 100%;
 		padding: 15px;
     }
+	#login_form,#reg_form{
+		margin: 40px auto;
+		width: 100%;
+	}
+	.list .goods_name{padding-top:20px;}
+	.list .sub {
+		padding-top: 10px;
+		text-align: left;
+	}
+	.list .submit_goods{
+		display: inline-block;
+		margin: 0 5px 0 0;
+	}
+
+}
+@media (max-width: 480px ){
+	.list .submit_goods a{width:100px;}
 }
 /*  Small devices (tablets, 768px and up)  */
 @media (min-width: 768px ) { 
@@ -426,6 +592,7 @@ body {
     #templatemo_banner_top {
         height: 30px;
     }
+
 }
 /*  Large devices (large desktops, 1200px and up)  */
 @media (min-width: 1200px ) {
