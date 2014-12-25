@@ -10,3 +10,4 @@ upload/data/afficheimg/*
 upload/data/*
 upload/includes/config.php
 tmtags*
+.phpintel*
