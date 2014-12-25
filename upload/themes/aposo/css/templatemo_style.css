@@ -290,6 +290,9 @@ body {
 	background: url("../images/sku_icon.png") no-repeat scroll right bottom #f0f4f5;
     border: 1px solid #d1394a;
 }
+.pro_sku ul li label {
+	cursor: pointer;
+}
 .pro_desc p{
 	color: #9b9b9b;
     font-size: 12px;
@@ -319,7 +322,7 @@ body {
 	vertical-align: middle;
 }
 .cake_num a.add_right{
-	background: url("../images/add_left_bg.png") no-repeat scroll center center #eaeaea;
+	background: url("../images/add_right_bg.png") no-repeat scroll center center #eaeaea;
     display: inline-block;
     height: 30px;
     text-align: center;
@@ -597,3 +600,5 @@ body {
 /*  Large devices (large desktops, 1200px and up)  */
 @media (min-width: 1200px ) {
 }
+
+
