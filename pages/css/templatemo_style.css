@@ -299,14 +299,16 @@ body {
 	margin:22px 0 25px;
 }
 .cake_num a.add_left{
-	background: url("../images/add_left_bg.png") no-repeat scroll center center #eaeaea;
+	background: url("../images/decrease_icon.gif") no-repeat scroll center center #eaeaea;
     display: inline-block;
 	border: 1px solid #eaeaea;
     height: 30px;
     text-align: center;
     vertical-align: middle;
     width: 30px;
+	text-indent: -9999px;
 }
+.cake_num a.add_left:hover{background: url("../images/decrease_icon_hover.gif") no-repeat scroll center center #d1394a;}
 .cake_num input{
 	border: 1px solid #eaeaea;
     color: #999999;
@@ -318,13 +320,15 @@ body {
 	vertical-align: middle;
 }
 .cake_num a.add_right{
-	background: url("../images/add_left_bg.png") no-repeat scroll center center #eaeaea;
+	background: url("../images/crease_icon.gif") no-repeat scroll center center #eaeaea;
     display: inline-block;
     height: 30px;
     text-align: center;
     vertical-align: middle;
     width: 30px;
+	text-indent: -9999px;
 }
+.cake_num a.add_right:hover{background: url("../images/crease_icon_hover.gif") no-repeat scroll center center #d1394a;}
 .buy_btn_box ul li a{
     background: none repeat scroll 0 0 #595a6b;
     border-radius: 4px;
@@ -375,47 +379,52 @@ body {
 }
 
 /* templatemo_login */
+.login_title{
+	margin: 50px auto 0;
+    width: 500px;
+	text-align:center;
+}
 .form_detail{
-	margin: 50px auto;
+	margin: 0 auto 50px;
     width: 500px;
 }
 .form_detail ul li{
-	line-height:28px;
-	padding: 10px 5px;
-	position: relative;
-	overflow: hidden;
-	text-align:center;
+	line-height: 30px;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    text-align: center;
 }
-.form_detail_form ul li p span.glyphicon-user{
+.login_title p span.glyphicon-user{
 	color: #e06d98;
     display:inline-block;
     font-size: 25px;
     padding-right: 6px;
 	vertical-align: sub;
 }
-.form_detail ul li p.top_border {
+.login_title p.top_border {
 	color: #d1394a;
     font-size: 20px;
     height: 30px;
     line-height: 30px;
 }
-#reg_form ul li p.top_border span.click_login{
+.login_title p.top_border span.click_login{
 	color: #666666;
     font-size: 12px;
 }
 .form_detail ul li .input_content {
-    left: 20px;
-    line-height: 50px;
+    left: 15px;
+    line-height: 40px;
     position: absolute;
     top: 5px;
 }
 .form_detail ul li .input_content span{padding-right:6px;}
-.form_detail ul li .input_content label{
+.form_detail ul li .input_content label,.form_detail ul li.pass_tip label,.form_detail ul li.pass_tip select{
 	color: #666666;
     font-size: 14px;
 	font-weight: normal;
 }
-.form_detail ul li input.input_txt {
+.form_detail ul li input.inputBg {
 	background:#f0f4f5;
 	height: 40px;
 	line-height: 40px;
@@ -430,7 +439,7 @@ body {
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 }
-.form_detail ul li input.input_txt:focus{
+.form_detail ul li input.inputBg:focus{
 	border: 1px solid #e06d98;
 	background:#ffffff;
 }
@@ -451,6 +460,38 @@ body {
     width: 100%;
 }
 .form_detail ul li input.login_btn:hover,.form_detail ul li a.start_shop:hover{background: none repeat scroll 0 0 #d1394a;}
+.form_detail ul li.pass_tip{
+	text-align:left;
+}
+.form_detail ul li.pass_tip select{
+	background: none repeat scroll 0 0 #f0f4f5;
+    border: 0 none;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    width: 100%;
+}
+.form_detail ul li.pass_tip span{padding-left: 15px;}
+.pass_email{
+	margin: 30px auto;
+    text-align: center;
+}
+.pass_email ul li{display:inline;}
+.pass_email label{
+	color: #d1394a;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0 15px 0 5px;
+}
+.form_detail ul li strong{
+	display: block;
+    font-size: 13px;
+    text-align: left;
+}
+.form_detail ul li.tip_quest{
+	line-height:16px;
+	text-align:left;
+}
 .send {
     position: absolute;
     right: 15px;
@@ -465,6 +506,7 @@ body {
 .form_detail ul li.Agreement{
 	text-align:left;
 }
+.form_detail ul li.Agreement label{font-weight:normal;}
 #login_form ul li.Agreement a{float:right;}
 .form_detail ul li.Agreement input{
 	margin: 0 10px 0 0;
@@ -478,10 +520,41 @@ body {
 .form_detail ul li span.forgotmobile{font-size: 18px;}
 .form_detail ul li span.set_password{
 	color: #60ad05;
+    display: block;
     font-size: 20px;
+    margin: 20px auto 15px;
 }
 
 /* templatemo_catagory */
+.classify{
+	clear: both;
+    margin: 5px 0 10px;
+    overflow: hidden;
+}
+.classify .classify_text{
+	float: left;
+	font-weight:bold;
+    font-size: 12px;
+    line-height: 21px;
+    width: 60px;
+}
+.classify ul{
+	float:left;
+}
+.classify ul li {
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    margin: 0 10px;
+}
+.classify ul li a{
+	color:#666666;
+	padding:2px 5px;
+}
+.classify ul li a:hover,.classify ul li.active a{
+	background:#cf3341;
+	color:#ffffff;
+}
 .list .goods{
 	border-bottom: 1px solid #efeeee;
     clear: both;
@@ -511,7 +584,7 @@ body {
 .list .submit_goods{
 	margin:10px 0;
 }
-.list .submit_goods a{
+.list .submit_goods a,.cart-main .submit a{
 	background: none repeat scroll 0 0 #595a6b;
     border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -524,7 +597,150 @@ body {
     text-align: center;
     width: 125px;
 }
-.list .submit_goods a:hover,.list .submit_goods a.active{background: none repeat scroll 0 0 #d1394a;}
+.list .submit_goods a:hover,.list .submit_goods a.active,.cart-main .submit a:hover,.cart-main .submit a.active{background: none repeat scroll 0 0 #d1394a;}
+
+/* templatemo_shop_cart */
+#templatemo_shopping_cart{
+	overflow:hidden;
+	margin-bottom:30px;
+}
+.order_cart_main .order_step{
+	margin: 50px auto;
+    overflow: hidden;
+    text-align: center;
+    width: 75%;
+}
+.order_cart_main .order_step div {
+    float: left;
+    font-size: 18px;
+    height: 55px;
+    line-height: 55px;
+}
+.order_cart_main .order_step .step1 {
+    background: url("../images/order_01.png") no-repeat scroll 0 -165px rgba(0, 0, 0, 0);
+    padding: 0 0 0 120px;
+}
+.order_cart_main .order_step .step2 {
+    background: url("../images/order_01.png") no-repeat scroll 0 -55px rgba(0, 0, 0, 0);
+    margin: 0 0 0 30px;
+    padding: 0 0 0 120px;
+}
+
+.order_cart_main .order_step .step3 {
+    background: url("../images/order_01.png") no-repeat scroll 0 -110px rgba(0, 0, 0, 0);
+    margin: 0 0 0 30px;
+    padding: 0 0 0 120px;
+}
+.cart-container{
+	clear:both;
+}
+.cart-container .title h2, .order-container .title h2, .payment-container .title h2 {
+    color: #666666;
+    font-size: 20px;
+}
+.cart-main{
+	font-size:14px;
+	color:#666666;
+}
+.cart-main thead tr {
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    height: 30px;
+    line-height: 30px;
+}
+.cart-main thead th {
+    background: none repeat scroll 0 0 #f7f7f7;
+    color: #cf3341;
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+}
+.cart-main .cart-item td.p-info {
+    text-align: left;
+}
+.cart-main .cart-item {
+    border-bottom: 1px solid #efefef;
+}
+.cart-main .cart-item td {
+    text-align: center;
+    vertical-align: middle;
+	padding:10px 0;
+}
+.cart-main .p-pic {
+    height: 120px;
+    width: 120px;
+}
+.cart-main .p-pic img {
+    height: 120px;
+    min-height: 120px;
+    min-width: 120px;
+    width: 120px;
+}
+.cart-main .p-title a {
+    color: #cf3341;
+}
+.cart-main .p-title span{
+    display:block;
+}
+.p-action .btn-delete {
+    background: url("delete.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    text-indent: -9999px;
+    width: 20px;
+}
+.cart-main .order-price {
+    line-height: 30px;
+    padding: 15px 1px 10px;
+    white-space: nowrap;
+}
+.cart-main .order-price ul {
+    float: right;
+}
+.cart-main .order-price li {
+    clear: both;
+    overflow: hidden;
+}
+.cart-main .order-price .label {
+    float: left;
+    text-align: right;
+    width: 200px;
+}
+.cart-main .submit{
+	display: inline-block;
+    margin-left: 10px;
+}
+.cart-main tr td.total_price{
+	clear: both;
+    font-weight: bold;
+    padding: 20px 0 15px;
+}
+.cart-main tr td.total_price span.cart_num,.cart-main tr td.total_price span.cost{
+	color: #cf3341;
+}
+.cart-main tr td.total_price span.cost{font-size:16px;}
+.cart-main .p-quantity a {
+    border: 1px solid #d5c2b9;
+}
+.cart-main .p-quantity .btn-decrease,.cart-main .p-quantity .btn-increase {
+    background: url("../btn-decrease.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #d5c2b9;
+    display: inline-block;
+    font-size: 24px;
+    height: 24px;
+    margin-right: 4px;
+    text-indent: -9999px;
+    width: 24px;
+}
+.cart-main .p-quantity input {
+    border: 1px solid #d5c2b9;
+    color: #8e6a55;
+    height: 24px;
+    line-height: 24px;
+    width: 40px;
+	text-align:center;
+}
 
 /* templatemo_footer */
 
@@ -543,6 +759,16 @@ body {
 }
 
 /*  Extra small devices (phones, less than 768px)  */
+@media (max-width: 992px ) { 
+	.list .submit_goods{
+		display: inline-block;
+		margin: 0 5px 0 0;
+	}
+	.list .sub {
+		padding-top: 10px;
+		text-align: left;
+	}
+}
 @media (max-width: 768px ) { 
     #templatemo_banner_logo h1 {
         font-size: 46px;
@@ -561,23 +787,21 @@ body {
 		width: 100%;
 		padding: 15px;
     }
-	#login_form,#reg_form{
+	#login_form,#reg_form,#forget_form,.login_title{
 		margin: 40px auto;
 		width: 100%;
 	}
 	.list .goods_name{padding-top:20px;}
-	.list .sub {
-		padding-top: 10px;
-		text-align: left;
-	}
-	.list .submit_goods{
-		display: inline-block;
-		margin: 0 5px 0 0;
-	}
+	
 
 }
 @media (max-width: 480px ){
 	.list .submit_goods a{width:100px;}
+}
+@media (max-width: 380px ){
+	.pass_email ul li {
+	 display: block;
+	}
 }
 /*  Small devices (tablets, 768px and up)  */
 @media (min-width: 768px ) { 
@@ -591,6 +815,7 @@ body {
     #templatemo_banner_top {
         height: 30px;
     }
+	
 
 }
 /*  Large devices (large desktops, 1200px and up)  */

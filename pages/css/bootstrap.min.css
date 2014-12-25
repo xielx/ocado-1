@@ -226,7 +226,7 @@ html {
 	-webkit-tap-highlight-color:rgba(0, 0, 0, 0)
 }
 body {
-	font-family:"å¾®è½¯é›…é»‘", Helvetica, Arial, sans-serif;
+	font-family:"Î¢ÈíÑÅºÚ", Helvetica, Arial, sans-serif;
 	font-size:12px;
 	line-height:1.8;
 	color:#666666;
@@ -2928,7 +2928,7 @@ border-top-left-radius:0
 }
 .nav>li>a:hover, .nav>li>a:focus {
 	text-decoration:none;
-	background-color:#eee
+	background-color:#d1394a;
 }
 .nav>li.disabled>a {
 	color:#999

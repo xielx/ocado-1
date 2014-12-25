@@ -75,27 +75,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
+                <div class="login_title">
+            		 <p class="top_border">
+                        <span class="glyphicon glyphicon-user"></span>会员登录
+                     </p>
+       			 </div>
                 	<form id="login_form" class="form_detail">
                 <!--登录开始-->
                 <ul>
                     <li>
-                        <p class="top_border">
-                            <span class="glyphicon glyphicon-user"></span>会员登录
-                        </p>
+                      <div class="input_content"><span class="glyphicon glyphicon-user"></span><label for="username">用户名</label></div>
+                      <input type="text" class="inputBg" size="25" name="username" id="username">
                     </li>
                     <li>
-                      <div class="input_content"><span class="glyphicon glyphicon-user"></span><label for="loginName">手机号码</label></div>
-                      <input type="text" class="input_txt user_icon" id="loginName" name="loginName">
-                    </li>
-                    <li>
-                        <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="loginPwd">请输入密码</label></div>
-                        <input type="password" class="input_txt password_icon" id="loginPwd" name="loginPwd">
-                        <span class="err" id="loginPwd_error"></span>
+                        <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="loginPwd">密码</label></div>
+                        <input type="password" class="inputBg" size="15" name="password" id="loginPwd">
                     </li>
                     <li class="Agreement">
-                        <span class="account_number"><input type="checkbox" checked="checked" class="action-remember-account" id="for_remember" name="is_remember">记住账号</span>
+                        <input type="checkbox" checked id="remember" name="remember" value="1"><label>记住账号</label>
                         <a href="forget-password.html" class="grey">忘记密码 ?</a>
-                        <span class="err" id="loginPwd_error"></span>
                     </li>
                     <li>
                         <input type="button" value="登录" class="login_btn" id="login_btn">

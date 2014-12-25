@@ -70,35 +70,51 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        <div class="login_title">
+             <p class="top_border"> <span class="glyphicon glyphicon-user"></span>会员注册<span class="click_login">（ 如已有帐号，请 <a href="login.html">点此登录</a> ）</span> </p>
+        </div>
         <form id="reg_form" class="form_detail">
           <div class="reg_form">
             <ul>
-              <li>
-                <p class="top_border"> <span class="glyphicon glyphicon-user"></span>会员注册<span class="click_login">（ 如已有帐号，请 <a href="login.html">点此登录</a> ）</span> </p>
+               <li>
+               <div class="input_content"><span class="glyphicon glyphicon-user"></span> <label for="username">用户名</label></div>
+                <input type="text" class="inputBg" onblur="is_registered(this.value);" id="username" size="25" name="username">
+                <span style="color:#FF0000" id="username_notice">用户名长度不能少于 3 个字符。</span>
               </li>
               <li>
-               <div class="input_content"><span class="glyphicon glyphicon-phone"></span> <label for="smsyzm">手机号码</label></div>
-                <input type="text" maxlength="6" name="smsyzm" id="" class="input_txt Mobile_code_icon">
+               <div class="input_content"><span class="glyphicon glyphicon-user"></span> <label for="email">Email</label></div>
+                <input type="text" class="inputBg" onblur="checkEmail(this.value);" id="email" size="25" name="email">
               </li>
               <li>
-                <div class="input_content"><span class="glyphicon glyphicon-phone"></span><label for="smsyzm">手机验证码</label></div>
-                <input type="text" maxlength="6" name="smsyzm" id="" class="input_txt Mobile_code_icon">
-                <div class="send"> <a id="reg_sms_btn" class="go" href="#">获取手机验证码</a></div>
+               <div class="input_content"><span class="glyphicon glyphicon-phone"></span> <label for="phonenumber">手机号码</label></div>
+                <input type="text" class="inputBg" size="25" name="extend_field5" id="phonenumber">
               </li>
               <li>
-                <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="regPwd">密码</label></div>
-                <input type="password" name="regPwd" id="" class="input_txt password_icon">
-                <span id="regPwd_error" class="err">密码必须是6-30位字符，可使用字母、数字</span> </li>
+                <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="password1">密码</label></div>
+                <input type="password" class="inputBg" onkeyup="checkIntensity(this.value)" onblur="check_password(this.value);" id="password1" name="password">
+              </li>
               <li>
-                <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="regPwd2">密码确认</label></div>
-                <input type="password" name="regPwd2" id="" class="input_txt Confirm_password_icon">
-                <span id="regPwd2_error" class="err"></span> </li>
+                <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="conform_password">密码确认</label></div>
+                <input type="password" class="inputBg" onblur="check_conform_password(this.value);" id="conform_password" name="confirm_password">
+              </li>
+              <li class="pass_tip"><span class="glyphicon glyphicon-lock"></span>
+                <label for="">密码提示问题</label>
+                    <select name="sel_question">
+                      <option value="0">请选择密码提示问题</option>
+                      <option value="friend_birthday">我最好朋友的生日？</option><option value="old_address">我儿时居住地的地址？</option><option value="motto">我的座右铭是？</option><option value="favorite_movie">我最喜爱的电影？</option><option value="favorite_song">我最喜爱的歌曲？</option><option value="favorite_food">我最喜爱的食物？</option><option value="interest">我最大的爱好？</option><option value="favorite_novel">我最喜欢的小说？</option><option value="favorite_equipe">我最喜欢的运动队？</option>	  
+                    </select>
+              </li>
+              <li>
+                <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="">密码问题答案</label></div>
+                    <input type="text" maxlengt="20" class="inputBg" size="25" name="passwd_answer">
+              </li>
+                
               <li class="Agreement">
                 <p><input type="checkbox" class="x-check" id="xieyi_check" checked="checked" name="license">我已阅读并同意 <a href="#" target="_blank">会员注册协议</a> 和 <a href="#" target="_blank">隐私保护政策</a></p>
               </li>
               <li>
                 <div class="btn_c_box">
-                  <input type="button" id="reg_btn" class="login_btn" value="提交">
+                  <input type="button" id="reg_btn" class="login_btn" value="马上注册">
                 </div>
               </li>
             </ul>
