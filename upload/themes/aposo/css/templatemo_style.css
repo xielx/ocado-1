@@ -512,7 +512,7 @@ body {
 	text-align:left;
 }
 .form_detail ul li.Agreement label{font-weight:normal;}
-#login_form ul li.Agreement a{float:right;}
+#formLogin ul li.Agreement a{float:right;}
 .form_detail ul li.Agreement input{
 	margin: 0 10px 0 0;
     vertical-align: middle;
@@ -920,7 +920,7 @@ body {
 		width: 100%;
 		padding: 15px;
     }
-	#login_form,#reg_form,#forget_form,.login_title{
+	#formLogin,#reg_form,#forget_form,.login_title{
 		margin: 40px auto;
 		width: 100%;
 	}

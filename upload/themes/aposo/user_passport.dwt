@@ -31,7 +31,7 @@
 <body> 
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 
-
+<!-- {if $action eq 'login'} -->
 <div id="templatemo_login" class="container_wapper">
     <div class="container">
         <div class="row">
@@ -41,25 +41,34 @@
                     <span class="glyphicon glyphicon-user"></span>会员登录
                  </p>
          </div>
-              <form id="login_form" class="form_detail">
+              <form id="formLogin" name="formLogin" class="form_detail" action="user.php" method="post" onSubmit="return userLogin();">
             <!--登录开始-->
             <ul>
                 <li>
-                  <div class="input_content"><span class="glyphicon glyphicon-user"></span><label for="username">用户名</label></div>
-                  <input type="text" class="inputBg" size="25" name="username" id="username">
+                  <div class="input_content"><span class="glyphicon glyphicon-user"></span><label style="display: none;" for="username">{$lang.label_username}</label></div>
+                  <input type="text" class="inputBg" size="25" name="username" id="username" placeholder="{$lang.label_username}" />
                 </li>
                 <li>
-                    <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="loginPwd">密码</label></div>
-                    <input type="password" class="inputBg" size="15" name="password" id="loginPwd">
+                    <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label style="display: none;" for="loginPwd">{$lang.label_password}</label></div>
+                    <input type="password" class="inputBg" size="15" name="password" id="loginPwd" placeholder="{$lang.label_password}" />
                 </li>
+                <!-- 判断是否启用验证码{if $enabled_captcha} -->
+                <li>
+                    <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label style="display: none" for="captcha">{$lang.comment_captcha}</label></div>
+                    <input type="text" size="8" name="captcha" id="captcha" class="inputBg" placeholder="{$lang.comment_captcha}" />
+            <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random();" />
+                </li>
+                <!-- {/if} -->
                 <li class="Agreement">
-                    <input type="checkbox" checked id="remember" name="remember" value="1"><label>记住账号</label>
-                    <a href="forget-password.html" class="grey">忘记密码 ?</a>
+                    <label for="remember"><input type="checkbox" checked id="remember" name="remember" value="1" />记住账号</label>
+                    <a href="user.php?act=get_password" class="grey">忘记密码 ?</a>
                 </li>
                 <li>
-                    <input type="button" value="登录" class="login_btn" id="login_btn">
+                    <input type="submit" value="登录" class="login_btn" id="login_btn" />
+                    <input type="hidden" name="act" value="act_login" />
+                    <input type="hidden" name="back_act" value="{$back_act}" />
                 </li>
-                <li>提示：还不是会员？   <a href="register.html" class="red">立即注册</a></li>
+                <li>提示：还不是会员？   <a href="user.php?act=register" class="red">立即注册</a></li>
             </ul>
             <!--登录 end-->
               </form>
@@ -67,69 +76,9 @@
         </div>
     </div>
 </div>
+<!-- {/if} -->
+<!-- line of the end of design -->
 
-
-
-
-<div class="blank"></div>
-<!--#登录界面 start-->
-<!-- {if $action eq 'login'} -->
-<div class="usBox clearfix">
-  <div class="usBox_1 f_l">
-   <div class="logtitle"></div>
-   <form name="formLogin" action="user.php" method="post" onSubmit="return userLogin()">
-        <table width="100%" border="0" align="left" cellpadding="3" cellspacing="5">
-          <tr>
-            <td width="15%" align="right">{$lang.label_username}</td>
-            <td width="85%"><input name="username" type="text" size="25" class="inputBg" /></td>
-          </tr>
-          <tr>
-            <td align="right">{$lang.label_password}</td>
-            <td>
-            <input name="password" type="password" size="15"  class="inputBg"/>
-            </td>
-          </tr>
-          <!-- 判断是否启用验证码{if $enabled_captcha} -->
-          <tr>
-            <td align="right">{$lang.comment_captcha}</td>
-            <td><input type="text" size="8" name="captcha" class="inputBg" />
-            <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /> </td>
-          </tr>
-          <!--{/if}-->
-          <tr>
-            <td colspan="2"><input type="checkbox" value="1" name="remember" id="remember" /><label for="remember">{$lang.remember}</label></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td align="left">
-            <input type="hidden" name="act" value="act_login" />
-            <input type="hidden" name="back_act" value="{$back_act}" />
-            <input type="submit" name="submit" value="" class="us_Submit" />
-            </td>
-          </tr>
-	  <tr><td></td><td><a href="user.php?act=qpassword_name" class="f3">{$lang.get_password_by_question}</a>&nbsp;&nbsp;&nbsp;<a href="user.php?act=get_password" class="f3">{$lang.get_password_by_mail}</a></td></tr>
-      </table>
-    </form>
-  </div>
-  <div class="usTxt">
-    <strong>{$lang.user_reg_info[0]}</strong>  <br />
-    <strong class="f4">{$lang.user_reg_info[1]}：</strong><br />
-    <!-- {if $car_off eq 1} -->
-    {$lang.user_reg_info[2]}<br />
-    <!--{/if}-->
-    <!-- {if $car_off eq 0} -->
-    {$lang.user_reg_info[8]}<br />
-    <!--{/if}-->
-    {$lang.user_reg_info[3]}：<br />
-    1. {$lang.user_reg_info[4]}<br />
-    2. {$lang.user_reg_info[5]}<br />
-    3. {$lang.user_reg_info[6]}<br />
-    4. {$lang.user_reg_info[7]}  <br />
-    <a href="user.php?act=register"><img src="images/bnt_ur_reg.gif" /></a>
-  </div>
-</div>
-<!--{/if}-->
-<!--#登录界面 end-->
 
 <!--*会员注册界面 start-->
     <!--{if $action eq 'register'}-->
@@ -391,6 +340,8 @@
 <!--{/if}-->
 <!--#找回密码界面 end-->
 <div class="blank"></div>
+
+
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 </body>
 <script type="text/javascript">
