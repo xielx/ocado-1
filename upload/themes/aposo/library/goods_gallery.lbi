@@ -34,7 +34,7 @@
 			constrainSize:274,
 			zoomWindowHeight: 400,
 			zoomWindowWidth: 400,
-			// zoomType: "lens", 
+			zoomType: "lens", 
 			containLensZoom: false,
 			gallery:'pro_small_imgs', 
 			cursor: 'pointer', 
