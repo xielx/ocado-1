@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>艾波索</title>
+<meta name="description" content="" />
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Camera -->
+<link href="css/camera.css" rel="stylesheet">
+<!-- Template  -->
+<link href="css/templatemo_style.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="col-xs-12 visible-sm visible-xs" id="templatemo_mobile_menu_wap">
+  <p id="mobile_menu_btn"> <a href="#"><span class="glyphicon glyphicon-align-justify"></span></a> </p>
+  <div id="mobile_menu">
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#">Welcome</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>
+<div id="templatemo_banner_top" class="container_wapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p><span>您好，欢迎光临艾波索</span><a href="#">LOG IN 登录</a> | <a href="#">SIGN UP 注册</a> | <a href="#">订单</a></p>
+      </div>
+      <div class="col-md-4">
+        <p class="right"> <span class="glyphicon glyphicon-shopping-cart"></span><a href="#">0 件</a> <span class="order_line">订购热线：0512-88888888</span> <span><img src="images/weixin.png" alt=""><img src="images/weibo.png" alt=""></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="templatemo_banner_logo" class="container_wapper">
+  <div class="container">
+    <div class="row"> <img src="images/logo.png" alt="logo" /> </div>
+  </div>
+</div>
+<div id="templatemo_main_menu" class="container_wapper hidden-sm hidden-xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="nav nav-justified">
+          <li><a href="#">首页</a></li>
+          <li><a href="#">蛋糕名录</a></li>
+          <li><a href="#">产品推荐</a></li>
+          <li><a href="#">品牌故事</a></li>
+          <li><a href="#">会员中心</a></li>
+          <li><a href="#">关于我们</a></li>
+          <li class="search_input">
+            <input type="text" value="搜索"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="templatemo_shopping_cart" class="container_wapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="order_cart_main">
+          <div class="order_step">
+            <div class="step1">我的购物车</div>
+            <div class="step2 step2_active">填写核对订单信息</div>
+            <div class="step3">成功提交订单</div>
+          </div>
+          <div class="cart-container" id="cart_container">
+            <div class="title">
+              <h2>订单信息<a class="modify" href="#">修改</a></h2>
+            </div>
+            <form method="post" action="/cart_checkout.html">
+              <!-- 购物车内容 -->
+              <table width="100%" class="cart-main" id="cart_main">
+                <thead>
+                  <tr>
+                    <th colspan="2">商品名称</th>
+                    <th>规格</th>
+                    <th>数量</th>
+                    <th>单价</th>
+                    <th>小计</th>
+                  </tr>
+                </thead>
+                <!-- 购物车条目 -->
+                <tbody class="cart-item">
+                  <!-- 主商品 -->
+                  <tr>
+                    <td><div class="p-pic"> <a target="_blank" href="#"><img alt="碧螺春凤梨酥" src="images/large_img01.jpg"></a> </div></td>
+                    <td class="p-info"><div class="p-title"> <a href="/product-3159.html" target="_blank">碧螺春凤梨酥<span>Biluochun pineapple cakes</span></a> </div></td>
+                    <td><div class="gg">18×6×4 cm</div></td>
+                    <td><div class="cake_num"> <a href="#" class="add_left">-</a>
+                        <input type="text" name="" value="1" class="num_1" id="buy_number">
+                        <a href="#" class="add_right">-</a> </div></td>
+                    <td>￥490.0</td>
+                    <td>￥490.0</td>
+                  </tr>
+                </tbody>
+                <tbody class="cart-item">
+                  <tr>
+                    <td><div class="p-pic"><a target="_blank" href="#"><a target="_blank" href="#"><img alt="巧克力黑金砖" src="images/pro01.jpg"></a></div></td>
+                    <td class="p-info"><div class="p-title"> <a href="/product-3159.html" target="_blank">巧克力黑金砖<span>Dark chocolate bars</span></a> </div></td>
+                    <td><div class="gg">18×6×4 cm</div></td>
+                    <td><div class="cake_num"> <a href="#" class="add_left">-</a>
+                        <input type="text" name="" value="1" class="num_1" id="buy_number">
+                        <a href="#" class="add_right">-</a> </div></td>
+                    <td>￥280.0</td>
+                    <td>￥280.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+            <div class="title">
+              <h2>收货信息<a class="modify" href="#">修改</a></h2>
+            </div>
+            <form id="order_addr" name="" method="post" action="#">
+              <div class="flowBox">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                  <tbody>
+                    <tr>
+                      <td>收货人:<span>*</span></td>
+                      <td><input type="text" value="" id="consignee_0" class="inputBg" name="consignee"></td>
+                    </tr>
+                    <tr>
+                      <td>配送区域:<span>*</span></td>
+                      <td colspan="3"><select style="border:1px solid #ccc;" onchange="region.changed(this, 1, 'selProvinces_0')" id="selCountries_0" name="country">
+                          <option value="0">请选择国家</option>
+                          <option selected="" value="1">中国</option>
+                        </select>
+                        <select style="border:1px solid #ccc;" onchange="region.changed(this, 2, 'selCities_0')" id="selProvinces_0" name="province">
+                          <option value="0">请选择省</option>
+                          <option value="2">北京</option>
+                          <option value="3">安徽</option>
+                          <option value="4">福建</option>
+                          <option value="5">甘肃</option>
+                          <option value="6">广东</option>
+                          <option value="7">广西</option>
+                          <option value="8">贵州</option>
+                          <option value="9">海南</option>
+                          <option value="10">河北</option>
+                          <option value="11">河南</option>
+                          <option value="12">黑龙江</option>
+                          <option value="13">湖北</option>
+                          <option value="14">湖南</option>
+                          <option value="15">吉林</option>
+                          <option value="16">江苏</option>
+                          <option value="17">江西</option>
+                          <option value="18">辽宁</option>
+                          <option value="19">内蒙古</option>
+                          <option value="20">宁夏</option>
+                          <option value="21">青海</option>
+                          <option value="22">山东</option>
+                          <option value="23">山西</option>
+                          <option value="24">陕西</option>
+                          <option value="25">上海</option>
+                          <option value="26">四川</option>
+                          <option value="27">天津</option>
+                          <option value="28">西藏</option>
+                          <option value="29">新疆</option>
+                          <option value="30">云南</option>
+                          <option value="31">浙江</option>
+                          <option value="32">重庆</option>
+                          <option value="33">香港</option>
+                          <option value="34">澳门</option>
+                          <option value="35">台湾</option>
+                        </select>
+                        <select style="border:1px solid #ccc;" onchange="region.changed(this, 3, 'selDistricts_0')" id="selCities_0" name="city">
+                          <option value="0">请选择市</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                      <td>详细地址:<span>*</span></td>
+                      <td><input type="text" value="" id="address_0" class="inputBg" name="address"></td>
+                    </tr>
+                    <tr>
+                      <td>邮政编码:</td>
+                      <td><input type="text" value="" id="zipcode_0" class="inputBg" name="zipcode"></td>
+                    </tr>
+                    <tr>
+                      <td>手机:<span>*</span></td>
+                      <td><input type="text" value="" id="mobile_0" class="inputBg" name="mobile"></td>
+                    </tr>
+                    <tr>
+                      <td>电话:</td>
+                      <td><input type="text" value="" id="tel_0" class="inputBg" name="tel"></td>
+                    </tr>
+                    <tr>
+                      <td>电子邮件地址:<span>*</span></td>
+                      <td><input type="text" value="bbb@163.com" id="email_0" class="inputBg" name="email"></td>
+                    </tr>
+                    <tr>
+                      <td>最佳送货时间:</td>
+                      <td><input type="text" value="" id="best_time_0" class="inputBg" name="best_time"></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><input type="submit" value="保存收货人信息" class="save_adress" name="Submit">
+                        <span>（温馨提示：请先保存收货人信息，再进行下一步操作。） </span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+            <div class="title">
+              <h2>支付方式</h2>
+            </div>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" id="payment_table">
+              <thead>
+                <tr>
+                  <th width="5%">&nbsp;</th>
+                  <th width="20%">名称</th>
+                  <th>订购描述</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="radio" onclick="selectPayment(this)" iscod="0" value="1" name="payment"></td>
+                  <td align="center"><strong>余额支付</strong></td>
+                  <td>使用帐户余额支付。只有会员才能使用，通过设置信用额度，可以透支。</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" onclick="selectPayment(this)" iscod="0" checked="" value="2" name="payment"></td>
+                  <td align="center"><strong>银行汇款/转帐</strong></td>
+                  <td>银行名称
+                    收款人信息：全称 ××× ；帐号或地址 ××× ；开户行 ×××。
+                    注意事项：办理电汇时，请在电汇单“汇款用途”一栏处注明您的订单号。</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" disabled="true" onclick="selectPayment(this)" iscod="1" value="3" name="payment"></td>
+                  <td align="center"><strong>货到付款</strong></td>
+                  <td>开通城市：×××
+                    货到付款区域：×××</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="payment" value="4"></td>
+                  <td align="center"><strong>支付宝支付</strong></td>
+                  <td>支付宝网站是国内先进的网上支付平台。</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="title">
+              <h2>配送方式</h2>
+            </div>
+            <span style="clear:both; font-size:18px; color:#ff0000;">参考：http://www.wdmcake.cn/flow.php?step=checkout效果，你来做效果吧</span>
+            <div id="order_shipping" class="order_dispatching">
+              <div class="info_text">
+                <div class="change_shipping">
+                  <div id="shipping_list">
+                    <div class="cur">
+                      <input type="radio" insure="0" supportcod="1" checked="true" value="1" name="shipping">
+                      艾波索快递 <span class="red">&nbsp;&nbsp;温馨提示：节日期间配送繁忙，为了避免耽误您的时间，请尽量选择门店自提，谢谢您的理解。 </span>
+                      <div id="div_shiptime">送达时间：
+                        <input type="text" name="bestdate" id="bestdate" value="" class="inputBg" onclick="WdatePicker({minDate:'2014-12-30}',onpicked:set_dp})" readonly="">
+                        <input type="text" name="besttime" id="besttime" class="inputBg" value="" readonly="">
+                        <input type="hidden" id="timelist" class="inputBg" value="{&quot;date&quot;:&quot;2014-12-30&quot;,&quot;cur_timelist&quot;:{&quot;2014-12-30 06:30:00&quot;:&quot;10:00-10:30&quot;,&quot;2014-12-30 07:00:00&quot;:&quot;10:30-11:00&quot;,&quot;2014-12-30 07:30:00&quot;:&quot;11:00-11:30&quot;,&quot;2014-12-30 08:00:00&quot;:&quot;11:30-12:00&quot;,&quot;2014-12-30 08:30:00&quot;:&quot;12:00-12:30&quot;,&quot;2014-12-30 09:00:00&quot;:&quot;12:30-13:00&quot;,&quot;2014-12-30 09:30:00&quot;:&quot;13:00-13:30&quot;,&quot;2014-12-30 10:00:00&quot;:&quot;13:30-14:00&quot;,&quot;2014-12-30 10:30:00&quot;:&quot;14:00-14:30&quot;,&quot;2014-12-30 11:00:00&quot;:&quot;14:30-15:00&quot;,&quot;2014-12-30 11:30:00&quot;:&quot;15:00-15:30&quot;,&quot;2014-12-30 12:00:00&quot;:&quot;15:30-16:00&quot;,&quot;2014-12-30 12:30:00&quot;:&quot;16:00-16:30&quot;,&quot;2014-12-30 13:00:00&quot;:&quot;16:30-17:00&quot;,&quot;2014-12-30 13:30:00&quot;:&quot;17:00-17:30&quot;,&quot;2014-12-30 14:00:00&quot;:&quot;17:30-18:00&quot;,&quot;2014-12-30 14:30:00&quot;:&quot;18:00-18:30&quot;,&quot;2014-12-30 15:00:00&quot;:&quot;18:30-19:00&quot;,&quot;2014-12-30 15:30:00&quot;:&quot;19:00-19:30&quot;,&quot;2014-12-30 16:00:00&quot;:&quot;19:30-20:00&quot;},&quot;all_timelist&quot;:{&quot;2014-12-30 06:30:00&quot;:&quot;10:00-10:30&quot;,&quot;2014-12-30 07:00:00&quot;:&quot;10:30-11:00&quot;,&quot;2014-12-30 07:30:00&quot;:&quot;11:00-11:30&quot;,&quot;2014-12-30 08:00:00&quot;:&quot;11:30-12:00&quot;,&quot;2014-12-30 08:30:00&quot;:&quot;12:00-12:30&quot;,&quot;2014-12-30 09:00:00&quot;:&quot;12:30-13:00&quot;,&quot;2014-12-30 09:30:00&quot;:&quot;13:00-13:30&quot;,&quot;2014-12-30 10:00:00&quot;:&quot;13:30-14:00&quot;,&quot;2014-12-30 10:30:00&quot;:&quot;14:00-14:30&quot;,&quot;2014-12-30 11:00:00&quot;:&quot;14:30-15:00&quot;,&quot;2014-12-30 11:30:00&quot;:&quot;15:00-15:30&quot;,&quot;2014-12-30 12:00:00&quot;:&quot;15:30-16:00&quot;,&quot;2014-12-30 12:30:00&quot;:&quot;16:00-16:30&quot;,&quot;2014-12-30 13:00:00&quot;:&quot;16:30-17:00&quot;,&quot;2014-12-30 13:30:00&quot;:&quot;17:00-17:30&quot;,&quot;2014-12-30 14:00:00&quot;:&quot;17:30-18:00&quot;,&quot;2014-12-30 14:30:00&quot;:&quot;18:00-18:30&quot;,&quot;2014-12-30 15:00:00&quot;:&quot;18:30-19:00&quot;,&quot;2014-12-30 15:30:00&quot;:&quot;19:00-19:30&quot;,&quot;2014-12-30 16:00:00&quot;:&quot;19:30-20:00&quot;}}">
+                      </div>
+                    </div>
+                    <div class="clear">
+                      <input type="radio" insure="0" supportcod="1" value="3" name="shipping">
+                      门店自提
+                      <div id="div_zt">
+                        <ul class="clear">
+                          <li style="padding-right:5px;">
+                            <select name="station_country" id="station_country" onchange="region.changed(this, 1, 'station_province')" class="address">
+                              <option value="0">请选择城市</option>
+                              <option selected="" value="441">苏州</option>
+                            </select>
+                          </li>
+                          <li style="padding-right:5px;">
+                            <select name="station_province" id="station_province" onchange="region.changed(this, 2, 'station_city')" class="address">
+                              <option value="0">请选择</option>
+                              <option selected="" value="806">苏州</option>
+                            </select>
+                          </li>
+                          <li style="padding-right:5px;">
+                            <select name="station_city" id="station_city" onchange="get_station(this);" class="address">
+                              <option value="0">请选择</option>
+                              <option value="808">新区</option>
+                              <option value="809">市区</option>
+                              <option value="810">吴中区</option>
+                              <option value="807">工业园区</option>
+                              <option value="811">沧浪区</option>
+                              <option value="812">金阊区</option>
+                            </select>
+                          </li>
+                          <li style="padding-right:5px;">
+                            <input type="hidden" value="" id="zt_sid" name="zt_sid">
+                            <div id="div_zt_select"> <cite>请选择自提门店</cite>
+                              <ul style="display: none;">
+                                <li><a rel="" href="javascript:;"><span class="sn">站名</span><span class="ar">地址</span></a></li>
+                                <li><a rel="" href="javascript:;"><span class="sn">翰林苑</span><span class="ar">苏州市工业园区翰林苑</span></a></li>
+                                <li><a rel="" href="javascript:;"><span class="sn">翰林苑</span><span class="ar">苏州市工业园区翰林苑</span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title">
+              <h2>其他信息</h2>
+            </div>
+            <div class="nstep_products">
+              <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" id="">
+                <tbody>
+                  <tr>
+                    <td><strong>使用红包:</strong></td>
+                    <td> 选择已有红包
+                      <select style="border:1px solid #ccc;" id="ECS_BONUS" onchange="changeBonus(this.value)" name="bonus">
+                        <option selected="" value="0">请选择</option>
+                        <option value="232">注册送红包[￥26.00]</option>
+                      </select>
+                      或者输入红包序列号
+                      <input type="text" value="" size="15" class="inputBg" name="bonus_sn">
+                      <input type="button" style="vertical-align:middle;" onclick="validateBonus(document.forms['theForm'].elements['bonus_sn'].value)" value="验证红包" class="bnt_blue_1" name="validate_bonus"></td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><strong>订单附言:</strong></td>
+                    <td><textarea style="border:1px solid #ccc;" id="postscript" rows="3" cols="80" name="postscript"></textarea></td>
+                  </tr>
+                  <tr style="display:none;">
+                    <td><strong>缺货处理:</strong></td>
+                    <td><label>
+                        <input type="radio" onclick="changeOOS(this)" checked="" value="0" name="how_oos">
+                        等待所有商品备齐后再发 </label>
+                      <label>
+                        <input type="radio" onclick="changeOOS(this)" value="1" name="how_oos">
+                        取消订单 </label>
+                      <label>
+                        <input type="radio" onclick="changeOOS(this)" value="2" name="how_oos">
+                        与店主协商 </label></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="title">
+              <h2>费用总计</h2>
+            </div>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="total_cost">
+                <tbody><tr>
+                <td>
+                该订单完成后，您将获得 
+                        <span class="red">944</span> 积分，以及价值 <span class="red">￥0.00</span>的红包。
+                      </td>
+              </tr>
+                <tr>
+                <td>
+                  商品总价: <span class="red">￥944.00</span>
+                                                          </td>
+              </tr>
+                <tr>
+                <td> <strong>应付款金额: <span class="red">￥944.00</span></strong>
+                    </td>
+              </tr>
+            </tbody></table>
+            <div class="submit_order">
+				<input type="submit" value="提交订单" class="save_adress">
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="templatemo_footer" class="container_wapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p><a href="#">帮助中心</a> | <a href="#">会员中心</a> | <a href="#">关于我们</a> | <a href="#">联系我们</a> </p>
+        <p>地 址：江苏省苏州市江苏省苏州市江苏省苏州市        TEL: 02-3501-2035     FAX: 02-8671-6721     EMAIL: aposo2035@gmail.com</br>
+          © 2014 Aposo2035艾波索 版权所有，并保留所有权利  苏ICP备888888号 </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mobile.customized.min.js"></script>
+<script src="js/templatemo_script.js"></script>
+</body>
+</html>

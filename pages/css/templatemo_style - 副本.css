@@ -584,7 +584,7 @@ body {
 .list .submit_goods{
 	margin:10px 0;
 }
-.list .submit_goods a,.cart-main .submit a,.operate a{
+.list .submit_goods a,.cart-main .submit a{
 	background: none repeat scroll 0 0 #595a6b;
     border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -597,7 +597,7 @@ body {
     text-align: center;
     width: 125px;
 }
-.list .submit_goods a:hover,.list .submit_goods a.active,.cart-main .submit a:hover,.cart-main .submit a.active,.operate a:hover{background: none repeat scroll 0 0 #d1394a;}
+.list .submit_goods a:hover,.list .submit_goods a.active,.cart-main .submit a:hover,.cart-main .submit a.active{background: none repeat scroll 0 0 #d1394a;}
 
 /* templatemo_shop_cart */
 #templatemo_shopping_cart{
@@ -608,7 +608,7 @@ body {
 	margin: 50px auto;
     overflow: hidden;
     text-align: center;
-    width: 76%;
+    width: 75%;
 }
 .order_cart_main .order_step div {
     float: left;
@@ -617,22 +617,17 @@ body {
     line-height: 55px;
 }
 .order_cart_main .order_step .step1 {
-    background: url("../images/order_01.png") no-repeat scroll 0 0;
+    background: url("../images/order_01.png") no-repeat scroll 0 -165px rgba(0, 0, 0, 0);
     padding: 0 0 0 120px;
-}
-.order_cart_main .order_step .step1_active {
-    background: url("../images/order_01.png") no-repeat scroll 0 -165px;
-    padding: 0 0 0 120px;
-	color: #cf3341;
 }
 .order_cart_main .order_step .step2 {
-    background: url("../images/order_01.png") no-repeat scroll 0 -55px;
+    background: url("../images/order_01.png") no-repeat scroll 0 -55px rgba(0, 0, 0, 0);
     margin: 0 0 0 30px;
     padding: 0 0 0 120px;
 }
 
 .order_cart_main .order_step .step3 {
-    background: url("../images/order_01.png") no-repeat scroll 0 -110px;
+    background: url("../images/order_01.png") no-repeat scroll 0 -110px rgba(0, 0, 0, 0);
     margin: 0 0 0 30px;
     padding: 0 0 0 120px;
 }
@@ -647,13 +642,13 @@ body {
 	font-size:14px;
 	color:#666666;
 }
-.cart-main thead tr{
+.cart-main thead tr {
     background-color: #f8f8f8;
     border: 1px solid #eee;
     height: 30px;
     line-height: 30px;
 }
-.cart-main thead th,#payment_table thead th {
+.cart-main thead th {
     background: none repeat scroll 0 0 #f7f7f7;
     color: #cf3341;
     font-size: 14px;
@@ -678,6 +673,8 @@ body {
 }
 .cart-main .p-pic img {
     height: 120px;
+    min-height: 120px;
+    min-width: 120px;
     width: 120px;
 }
 .cart-main .p-title a {
@@ -726,124 +723,23 @@ body {
 .cart-main .p-quantity a {
     border: 1px solid #d5c2b9;
 }
-.cart-main .cart-item .del,.cart-main .cart-item .collect{
-	cursor: pointer;
-    float: left;
-    height: 22px;
-    margin: 0 0 0 2px;
-    width: 22px;
+.cart-main .p-quantity .btn-decrease,.cart-main .p-quantity .btn-increase {
+    background: url("../btn-decrease.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #d5c2b9;
+    display: inline-block;
+    font-size: 24px;
+    height: 24px;
+    margin-right: 4px;
+    text-indent: -9999px;
+    width: 24px;
 }
-.cart-main .cart-item .del {
-    background: url("../images/cart_01.png") no-repeat scroll 0 0;
-}
-.cart-main .cart-item .del:hover {
-    background: url("../images/cart_01.png") no-repeat scroll 0 -22px;
-}
-.cart-main .cart-item .collect {
-    background: url("../images/cart_01.png") no-repeat scroll -21px 0;
-}
-.cart-main .cart-item .collect:hover {
-    background: url("../images/cart_01.png") no-repeat scroll -21px -22px;
-}
-.cart-main .cart-item .del a,.cart-main .cart-item .collect a {
-    display: block;
-    height: 22px;
-    width: 22px;
-}
-
-/* check out */
-.order_cart_main .order_step .step2_active{
-	background: url("../images/order_01.png") no-repeat scroll 0 -220px;
-    margin: 0 0 0 30px;
-    padding: 0 0 0 120px;
-	color: #cf3341;
-}
-.cart-container .title h2 a.modify{
-	color: #666666;
-    float: right;
-    font-size: 14px;
-    line-height: 22px;
-    text-decoration: underline;
-}
-.cart-container .title h2 a.modify:hover{color: #cf3341;}
-.cart-container .title h2{
-	border-bottom: 1px solid #eee;
-    padding-bottom: 7px;
-}
-#order_addr tr{
-	height:48px;
-	font-size:14px;
-}
-#order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,.nstep_products textarea{
-	background: none repeat scroll 0 0 #f0f4f5;
-    border: medium none;
-    border-radius: 2px;
-    color: #767676;
-    height: 40px;
-    line-height: 40px;
-    margin: 0;
-    padding: 5px 10px;
-    width: 65%;
-}
-#order_addr tr select{width:21%;}
-#order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input{
-	background: none repeat scroll 0 0 #595a6b;
-    border: 0 none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    height: 35px;
-    line-height: 27px;
-    text-align: center;
-    width: 135px;
-}
-#order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,.su input:hover{ background: none repeat scroll 0 0 #d1394a;}
-#order_addr tr span{color:#ff0000;}
-#payment_table tr{
-	height:40px;
-	font-size:14px;
-}
-.order_dispatching,.nstep_products,.total_cost{
-	clear: both;
-    font-size: 14px;
-    line-height: 40px;
-    overflow: hidden;
-}
-#div_zt ul li{
-	float:left;
-}
-.nstep_products input.inputBg{
-    width: 21%;
-}
-.total_cost span{
-	color:#d1394a;
-}
-.order_dispatching input.inputBg{width:30%;}
-.nstep_products input.bnt_blue_1{
-	background: none repeat scroll 0 0 #d1394a;
-	border-radius:0;
-	width:80px;
-}
-.nstep_products textarea{
-	height: 100px;
-    margin-top: 10px;
-}
-
-/* check ok */
-.order_cart_main .order_step .step3_active{
-	background: url("../images/order_01.png") no-repeat scroll 0 -275px;
-    margin: 0 0 0 30px;
-    padding: 0 0 0 120px;
-	color: #cf3341;
-}
-.order_ok{
-	font-size:14px;
-	margin:30px auto;
-}
-.su{
-	clear:both;
-	margin:20px 0 0 0;
+.cart-main .p-quantity input {
+    border: 1px solid #d5c2b9;
+    color: #8e6a55;
+    height: 24px;
+    line-height: 24px;
+    width: 40px;
+	text-align:center;
 }
 
 /* templatemo_footer */
@@ -863,9 +759,6 @@ body {
 }
 
 /*  Extra small devices (phones, less than 768px)  */
-@media (max-width: 1200px ) {
-	.order_cart_main .order_step{width:82%;}
-}
 @media (max-width: 992px ) { 
 	.list .submit_goods{
 		display: inline-block;
@@ -874,27 +767,6 @@ body {
 	.list .sub {
 		padding-top: 10px;
 		text-align: left;
-	}
-	.order_cart_main .order_step div {
-		float: left;
-		font-size: 18px;
-		height: 43px;
-		line-height: 43px;
-	}
-	.order_cart_main .order_step{width:95%;}
-	.order_cart_main .order_step .step1{
-		background: url("../images/order_0101.png") no-repeat scroll 0 -132px;
-		padding: 0 0 0 95px;
-	}
-	.order_cart_main .order_step .step2 {
-		background: url("../images/order_0101.png") no-repeat scroll 0 -45px;
-		margin: 0 0 0 30px;
-		padding: 0 0 0 95px;
-	}
-	.order_cart_main .order_step .step3 {
-		background: url("../images/order_0101.png") no-repeat scroll 0 -90px;
-		margin: 0 0 0 30px;
-		padding: 0 0 0 95px;
 	}
 }
 @media (max-width: 768px ) { 
@@ -920,25 +792,12 @@ body {
 		width: 100%;
 	}
 	.list .goods_name{padding-top:20px;}
-	.order_cart_main .order_step .step3 {
-		margin: 15px 0 0 0;
-		clear:both;
-	}
-	.cart-main .p-pic img{max-width:100%;}
-	#order_addr tr input{
-        width: 100%;
-    }
-	#order_addr tr select{width:32%;}
+	
 
 }
 @media (max-width: 480px ){
 	.list .submit_goods a{width:100px;}
-	.order_cart_main .order_step .step2 {
-		clear:both;
-		margin: 15px 0 0 0;
-	}
 }
-@media (max-width: 479px ){.cart-main .p-pic{display:none;}}
 @media (max-width: 380px ){
 	.pass_email ul li {
 	 display: block;
@@ -956,6 +815,7 @@ body {
     #templatemo_banner_top {
         height: 30px;
     }
+	
 
 }
 /*  Large devices (large desktops, 1200px and up)  */
