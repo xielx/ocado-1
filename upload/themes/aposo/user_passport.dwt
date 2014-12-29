@@ -30,13 +30,47 @@
 
 <body> 
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-<!--当前位置 start-->
-<div class="block box">
- <div id="ur_here">
-  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
-  </div>
+
+
+<div id="templatemo_login" class="container_wapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+            <div class="login_title">
+             <p class="top_border">
+                    <span class="glyphicon glyphicon-user"></span>会员登录
+                 </p>
+         </div>
+              <form id="login_form" class="form_detail">
+            <!--登录开始-->
+            <ul>
+                <li>
+                  <div class="input_content"><span class="glyphicon glyphicon-user"></span><label for="username">用户名</label></div>
+                  <input type="text" class="inputBg" size="25" name="username" id="username">
+                </li>
+                <li>
+                    <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="loginPwd">密码</label></div>
+                    <input type="password" class="inputBg" size="15" name="password" id="loginPwd">
+                </li>
+                <li class="Agreement">
+                    <input type="checkbox" checked id="remember" name="remember" value="1"><label>记住账号</label>
+                    <a href="forget-password.html" class="grey">忘记密码 ?</a>
+                </li>
+                <li>
+                    <input type="button" value="登录" class="login_btn" id="login_btn">
+                </li>
+                <li>提示：还不是会员？   <a href="register.html" class="red">立即注册</a></li>
+            </ul>
+            <!--登录 end-->
+              </form>
+            </div>
+        </div>
+    </div>
 </div>
-<!--当前位置 end-->
+
+
+
+
 <div class="blank"></div>
 <!--#登录界面 start-->
 <!-- {if $action eq 'login'} -->
