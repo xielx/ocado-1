@@ -138,7 +138,7 @@
                   <!-- {else} -->
                         <li>
                           <div class="input_content"><span class="glyphicon glyphicon-asterisk"></span><label style="display:none;" for="conform_password" <!-- {if $field.is_need} -->id="extend_field{$field.id}i"<!--{/if}-->>{$field.reg_field_name}</label></div>
-                          <input name="extend_field{$field.id}" type="text" class="inputBg" onblur="check_conform_password(this.value);" id="conform_password" name="confirm_password" placeholder="{$field.reg_field_name}">
+                          <input name="extend_field{$field.id}" type="text" class="inputBg" id="extend_field{$field.id}" placeholder="{$field.reg_field_name}">
                         </li>
                   <!-- {/if} -->
                   <!-- {/foreach} -->
