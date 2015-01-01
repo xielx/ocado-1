@@ -146,7 +146,6 @@
 
                   <td align="right">{$goods.subtotal}</td>
                   <td align="center">
-
                     <div class="del"><a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_goods&amp;id={$goods.rec_id}'; " title="{$lang.drop}"></a></div>
                     <!-- {if $smarty.session.user_id gt 0 && $goods.extension_code neq 'package_buy'} 如果登录了，可以加入收藏 -->
                     <div class="collect"><a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_to_collect&amp;id={$goods.rec_id}'; " title="{$lang.drop_to_collect}"></a></div>
@@ -194,6 +193,31 @@
     </div>
   </div>
 </div>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+
+    $('.add_left, .add_right').click(function(){
+      var input_type = $(this).attr('class');
+      var num_input = $(this).parent().find('.num_1');
+      var cur_num = num_input.val();
+      switch(input_type) {
+        case 'add_left':
+          cur_num --;
+          if(cur_num < 1) {
+            cur_num = 1;
+          }
+          break;
+
+        case 'add_right':
+          cur_num ++;
+          break;
+      }
+      showdiv(num_input[0]);
+      num_input.val(cur_num);
+    });
+  });
+</script>
+
 <!-- end of cart -->
 
        <!-- {if $smarty.session.user_id gt 0} -->

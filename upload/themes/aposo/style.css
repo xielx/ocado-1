@@ -9,3 +9,26 @@ Logo filename: logo.gif
 Template Type: type_0
 */
 
+
+/*购物车提示点击更新按钮式样2.6.2版本添加*/
+.messageli {
+ list-style-type:none;
+ padding:5px;
+ color:#CF3341;
+}
+.messagediv {
+ font-size:12px;
+ position:absolute;
+ border:1px solid #cf3341;
+ text-align:center;
+ padding:5px;
+ /*background-color:#FFFACD;*/
+ background-color:#EAEAEA;
+ filter:alpha(opacity=50);
+ -moz-opacity:0.7;
+ opacity: 0.7;
+}
+
+#messagea {
+	cursor: pointer;
+}
