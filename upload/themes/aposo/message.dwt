@@ -15,11 +15,6 @@
   <meta name="keywords" content="{$keywords}" />
   <meta name="description" content="{$description}" />
 
-{if $auto_redirect}
-<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
-{/if}
-<!-- TemplateBeginEditable name="doctitle" -->
-<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
 
   <!-- Bootstrap -->
   <link href="themes/aposo/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +25,9 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
 {* 包含脚本文件 *}
 {insert_scripts files='common.js'}
