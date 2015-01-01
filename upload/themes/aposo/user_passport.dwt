@@ -254,41 +254,48 @@
 
 <!--*根据输入账号显示密码问题界面 -->
     <!--{if $action eq 'get_passwd_question'} -->
-<div class="usBox">
-  <div class="usBox_2 clearfix">
-    <form action="user.php" method="post">
-        <br />
-        <table width="70%" border="0" align="center">
-          <tr>
-            <td colspan="2" align="center"><strong>{$lang.input_answer}</strong></td>
-          </tr>
-          <tr>
-            <td width="29%" align="right">{$lang.passwd_question}：</td>
-            <td width="61%">{$passwd_question}</td>
-          </tr>
-          <tr>
-            <td align="right">{$lang.passwd_answer}：</td>
-            <td><input name="passwd_answer" type="text" size="20" class="inputBg" /></td>
-          </tr>
-          <!-- 判断是否启用验证码{if $enabled_captcha} -->
-          <tr>
-            <td align="right">{$lang.comment_captcha}</td>
-            <td><input type="text" size="8" name="captcha" class="inputBg" />
-            <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /> </td>
-          </tr>
-          <!--{/if}-->
-          <tr>
-            <td></td>
-            <td><input type="hidden" name="act" value="check_answer" />
-              <input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
-              <input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
-	    </td>
-          </tr>
-        </table>
-        <br />
-      </form>
-  </div>
-</div>
+
+    <div id="templatemo_login" class="container_wapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                 <div class="login_title">
+                <p class="top_border">
+                            <span class="glyphicon glyphicon-user"></span>找回密码
+                        </p>
+             </div>
+                <form id="forget_form" class="form_detail" action="user.php" method="post">
+                <!--登录开始-->
+               <ul>
+                  <li><strong>{$lang.input_answer}</strong></li>
+                    <li class="tip_quest">
+                        <span>{$lang.passwd_question}：{$passwd_question}</span>
+                     </li>
+                     <li>
+                        <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="">{$lang.passwd_answer}</label></div>
+                        <input type="text" maxlengt="20" class="inputBg" size="25" name="passwd_answer">
+                     </li>
+                    <!-- {if $enabled_captcha} -->
+                     <li>
+                        <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="">{$lang.comment_captcha}</label></div>
+                        <input type="text" size="8" name="captcha" class="inputBg" />
+                        <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" />
+                     </li>
+                     <!-- {/if} -->
+                    <li>
+                        <input type="hidden" name="act" value="check_answer" />
+                        <input type="submit" name="submit" value="下一步" class="login_btn" />
+                    </li>
+                </ul>
+                <!--登录 end-->
+            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 <!--{/if}-->
 
 <!-- {if $action eq 'reset_password'} -->
