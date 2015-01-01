@@ -304,6 +304,42 @@
       var {$key} = "{$item}";
     {/foreach}
     </script>
+
+    <div id="templatemo_login" class="container_wapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                <div class="login_title">
+                <p class="top_border">
+                            <span class="glyphicon glyphicon-user"></span>找回密码
+                    </p>
+             </div>
+                <form action="user.php" method="post" name="getPassword2" onSubmit="return submitPwd()" class="form_detail">
+                <!--登录开始-->
+                <ul>
+                     <li>
+                <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="password1">{$lang.new_password}</label></div>
+                    <input type="password" class="inputBg" size="25" name="new_password" id="new_password">
+                </li>
+                 <li>
+                    <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="conform_password">{$lang.confirm_password}</label></div>
+                    <input type="password" class="inputBg" size="25" name="confirm_password" id="conform_password">
+                </li>
+                    <li>
+                        <input type="hidden" name="act" value="act_edit_password" />
+                        <input type="hidden" name="uid" value="{$uid}" />
+                        <input type="hidden" name="code" value="{$code}" />
+                        <input type="submit" name="submit" class="login_btn" value="{$lang.confirm_submit}" />
+                    </li>
+                </ul>
+                <!--登录 end-->
+            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 <div class="usBox">
   <div class="usBox_2 clearfix">
     <form action="user.php" method="post" name="getPassword2" onSubmit="return submitPwd()">
