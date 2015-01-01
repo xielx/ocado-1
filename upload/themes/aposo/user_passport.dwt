@@ -179,42 +179,79 @@
     <!--{if $action eq 'get_password'} -->
     {insert_scripts files='utils.js'}
     <script type="text/javascript">
+    $(document).ready(function(){
+      $('.pass_email input[type=radio]').change(function(){
+        var form_url = "user.php?act=get_password";
+        if($(this).val() != 'email') {
+
+          form_url = "user.php?act=qpassword_name";
+        }
+        // console.log($(this));
+
+        document.location.href = form_url;
+      });
+    });
     {foreach from=$lang.password_js item=item key=key}
       var {$key} = "{$item}";
     {/foreach}
     </script>
-<div class="usBox">
-  <div class="usBox_2 clearfix">
-    <form action="user.php" method="post" name="getPassword" onsubmit="return submitPwdInfo();">
-        <br />
-        <table width="70%" border="0" align="center">
-          <tr>
-            <td colspan="2" align="center"><strong>{$lang.username_and_email}</strong></td>
-          </tr>
-          <tr>
-            <td width="29%" align="right">{$lang.username}</td>
-            <td width="61%"><input name="user_name" type="text" size="30" class="inputBg" /></td>
-          </tr>
-          <tr>
-            <td align="right">{$lang.email}</td>
-            <td><input name="email" type="text" size="30" class="inputBg" /></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><input type="hidden" name="act" value="send_pwd_email" />
-              <input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
-              <input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
-	    </td>
-          </tr>
-        </table>
-        <br />
-      </form>
-  </div>
-</div>
+    <div id="templatemo_login" class="container_wapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                 <div class="login_title">
+                <p class="top_border">
+                            <span class="glyphicon glyphicon-user"></span>找回密码
+                        </p>
+             </div>
+                 <div class="pass_email">
+                    <ul><li><input type="radio" value="mob" name="lost_pass" id="pass_lost"><label for="pass_lost">密码问题找回密码</label></li>
+            <li><input type="radio" value="email" name="lost_pass" id="email_lost" checked="checked"><label for="email_lost">注册邮件找回密码</label></li>
+                    </ul>
+                 </div>
+                <form id="forget_form" action="user.php" method="post" name="getPassword" onsubmit="return submitPwdInfo();" class="form_detail">
+                <!--登录开始-->
+                <ul>
+                  <li><strong>{$lang.username_and_email}</strong></li>
+                    <li>
+                        <div class="input_content"><span class="glyphicon glyphicon-user"></span><label for="username">{$lang.username}</label></div>
+                        <input type="text" class="inputBg" size="30" name="user_name" id="username">
+                    </li>
+                    <li>
+                        <div class="input_content"><span class="glyphicon glyphicon-user"></span><label for="username">{$lang.email}</label></div>
+                        <input type="text" class="inputBg" size="30" name="email" id="email">
+                    </li>
+                    <li>
+                        <input type="hidden" name="act" value="send_pwd_email" />
+                        <input type="submit" name="submit" value="下一步" class="login_btn" />
+
+                    </li>
+                </ul>
+                <!--登录 end-->
+            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!--{/if}-->
 
 <!--*通过问题找回密码的确认找回账号界面 -->
     <!--{if $action eq 'qpassword_name'} -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.pass_email input[type=radio]').change(function(){
+          var form_url = "user.php?act=get_password";
+          if($(this).val() != 'email') {
+
+            form_url = "user.php?act=qpassword_name";
+          }
+          // console.log($(this));
+
+          document.location.href = form_url;
+        });
+      });
+    </script>
     <div id="templatemo_login" class="container_wapper">
         <div class="container">
             <div class="row">
