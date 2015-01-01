@@ -377,32 +377,6 @@
     </div>
 
 
-<div class="usBox">
-  <div class="usBox_2 clearfix">
-    <form action="user.php" method="post" name="getPassword2" onSubmit="return submitPwd()">
-      <br />
-      <table width="80%" border="0" align="center">
-        <tr>
-          <td>{$lang.new_password}</td>
-          <td><input name="new_password" type="password" size="25" class="inputBg" /></td>
-        </tr>
-        <tr>
-          <td>{$lang.confirm_password}:</td>
-          <td><input name="confirm_password" type="password" size="25"  class="inputBg"/></td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
-            <input type="hidden" name="act" value="act_edit_password" />
-            <input type="hidden" name="uid" value="{$uid}" />
-            <input type="hidden" name="code" value="{$code}" />
-            <input type="submit" name="submit" value="{$lang.confirm_submit}" />
-          </td>
-        </tr>
-      </table>
-      <br />
-    </form>
-  </div>
-</div>
 <!--{/if}-->
 <!--#找回密码界面 end-->
 <div class="blank"></div>
