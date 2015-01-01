@@ -419,12 +419,33 @@
           }
           {/literal}
         </script>
+
+<div id="templatemo_shopping_cart" class="container_wapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="order_cart_main">
+          <div class="order_step">
+            <div class="step1">我的购物车</div>
+            <div class="step2 step2_active">填写核对订单信息</div>
+            <div class="step3">成功提交订单</div>
+          </div>
+          <div class="cart-container" id="cart_container">
+
         <!-- 如果有收货地址，循环显示用户的收获地址 -->
         <!-- {foreach from=$consignee_list item=consignee key=sn} -->
         <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkConsignee(this)">
         <!-- #BeginLibraryItem "/Library/consignee.lbi" --><!-- #EndLibraryItem -->
         </form>
         <!-- {/foreach} -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         <!-- {/if} -->
 
         <!-- {if $step eq "checkout"} 开始订单确认界面 -->
