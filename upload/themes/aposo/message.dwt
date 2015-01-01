@@ -58,7 +58,9 @@ p a{color:#006acd; text-decoration:underline;}
                 <!-- {if $message.url_info} -->
                 <li>
                   <!--{foreach from=$message.url_info key=info item=url}-->
-                    <a class="start_shop" href="{$url}">{$info}</a>
+                    <p>
+                      <a class="start_shop" href="{$url}">{$info}</a>
+                    </p>
                   <!--{/foreach}-->
                 </li>
                 <!--{/if}-->
