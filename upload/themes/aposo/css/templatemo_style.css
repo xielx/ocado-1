@@ -775,11 +775,11 @@ body {
 	border-bottom: 1px solid #eee;
     padding-bottom: 7px;
 }
-#order_addr tr{
+.theForm tr,#order_addr tr{
 	height:48px;
 	font-size:14px;
 }
-#order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,.nstep_products textarea{
+.theForm tr input,.theForm tr select,#order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,.nstep_products textarea{
 	background: none repeat scroll 0 0 #f0f4f5;
     border: medium none;
     border-radius: 2px;
@@ -790,8 +790,8 @@ body {
     padding: 5px 10px;
     width: 65%;
 }
-#order_addr tr select{width:21%;}
-#order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input{
+.theForm tr select, #order_addr tr select{width:21%;}
+.theForm tr input.save_adress, #order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input{
 	background: none repeat scroll 0 0 #595a6b;
     border: 0 none;
     border-radius: 4px;
@@ -803,8 +803,8 @@ body {
     text-align: center;
     width: 135px;
 }
-#order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,.su input:hover{ background: none repeat scroll 0 0 #d1394a;}
-#order_addr tr span{color:#ff0000;}
+.theForm tr input.save_adress:hover, #order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,.su input:hover{ background: none repeat scroll 0 0 #d1394a;}
+.theForm tr span, #order_addr tr span{color:#ff0000;}
 #payment_table tr{
 	height:40px;
 	font-size:14px;
@@ -930,10 +930,10 @@ body {
 		clear:both;
 	}
 	.cart-main .p-pic img{max-width:100%;}
-	#order_addr tr input{
+	.theForm tr input, #order_addr tr input{
         width: 100%;
     }
-	#order_addr tr select{width:32%;}
+	.theForm tr select, #order_addr tr select{width:32%;}
 
 }
 @media (max-width: 480px ){

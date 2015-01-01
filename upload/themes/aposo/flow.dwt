@@ -434,7 +434,7 @@
 
         <!-- 如果有收货地址，循环显示用户的收获地址 -->
         <!-- {foreach from=$consignee_list item=consignee key=sn} -->
-        <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkConsignee(this)">
+        <form action="flow.php" method="post" name="theForm" id="theForm" class="theForm" onsubmit="return checkConsignee(this)">
         <!-- #BeginLibraryItem "/Library/consignee.lbi" --><!-- #EndLibraryItem -->
         </form>
         <!-- {/foreach} -->
@@ -449,7 +449,7 @@
         <!-- {/if} -->
 
         <!-- {if $step eq "checkout"} 开始订单确认界面 -->
-        <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkOrderForm(this)">
+        <form action="flow.php" method="post" name="theForm" id="theForm" class="theForm" onsubmit="return checkOrderForm(this)">
         <script type="text/javascript">
         var flow_no_payment = "{$lang.flow_no_payment}";
         var flow_no_shipping = "{$lang.flow_no_shipping}";
