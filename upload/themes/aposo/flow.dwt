@@ -48,95 +48,154 @@
     var {$key} = "{$item}";
   {/foreach}
   </script>
-  <div class="flowBox">
-    <h6><span>{$lang.goods_list}</span></h6>
-        <form id="formCart" name="formCart" method="post" action="flow.php">
-           <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
-            <tr>
-              <th bgcolor="#ffffff">{$lang.goods_name}</th>
-      <!-- {if $show_goods_attribute eq 1} 显示商品属性 -->
-              <th bgcolor="#ffffff">{$lang.goods_attr}</th>
-              <!-- {/if} -->
-              <!-- {if $show_marketprice} 显示市场价 -->
-              <th bgcolor="#ffffff">{$lang.market_prices}</th>
-              <!-- {/if} -->
-              <th bgcolor="#ffffff">{$lang.shop_prices}</th>
-              <th bgcolor="#ffffff">{$lang.number}</th>
-              <th bgcolor="#ffffff">{$lang.subtotal}</th>
-              <th bgcolor="#ffffff">{$lang.handle}</th>
-            </tr>
-            <!-- {foreach from=$goods_list item=goods} -->
-            <tr>
-              <td bgcolor="#ffffff" align="center">
-                <!-- {if $goods.goods_id gt 0 && $goods.extension_code neq 'package_buy'} 商品 -->
-                  <!-- {if $show_goods_thumb eq 1} -->
-                    <a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6">{$goods.goods_name}</a>
-                  <!-- {elseif $show_goods_thumb eq 2} -->
-                    <a href="goods.php?id={$goods.goods_id}" target="_blank"><img src="{$goods.goods_thumb}" border="0" title="{$goods.goods_name|escape:html}" /></a>
-                  <!-- {else} -->
-                    <a href="goods.php?id={$goods.goods_id}" target="_blank"><img src="{$goods.goods_thumb}" border="0" title="{$goods.goods_name|escape:html}" /></a><br />
-                    <a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6">{$goods.goods_name}</a>
+
+<!-- start of cart -->
+
+<div id="templatemo_shopping_cart" class="container_wapper">
+  <div class="container">
+    <div class="row">
+      <div class="order_cart_main">
+        <div class="order_step">
+              <div class="step1 step1_active">我的购物车</div>
+                <div class="step2">填写核对订单信息</div>
+                <div class="step3">成功提交订单</div>
+            </div>
+        <div class="cart-container" id="cart_container">
+          <div class="title">
+            <h2>我的购物车</h2>
+          </div>
+          <form id="formCart" name="formCart" method="post" action="flow.php">
+            <!-- 购物车内容 -->
+            <table width="100%" class="cart-main" id="cart_main">
+              <thead>
+                <tr>
+                  <th colspan="2">{$lang.goods_name}</th>
+                  <!-- {if $show_goods_attribute eq 1} 显示商品属性 -->
+                  <th>{$lang.goods_attr}</th>
                   <!-- {/if} -->
-                  <!-- {if $goods.parent_id gt 0} 配件 -->
-                  <span style="color:#FF0000">（{$lang.accessories}）</span>
+                  <th>{$lang.market_prices}</th>
+                  <th>{$lang.shop_prices}</th>
+                  <th>{$lang.number}</th>
+                  <th>{$lang.subtotal}</th>
+                  <th>{$lang.handle}</th>
+                </tr>
+              </thead>
+              <!-- 购物车条目 -->
+              <!-- {foreach from=$goods_list item=goods} -->
+              <tbody class="cart-item">
+                <!-- 主商品 -->
+                <tr>
+                  <td>
+                    <div class="p-pic"> 
+                    <!-- <a target="_blank" href="#"><img alt="碧螺春凤梨酥" src="images/large_img01.jpg"></a>  -->
+                    <!-- {if $goods.goods_id gt 0 && $goods.extension_code neq 'package_buy'} 商品 -->
+                      <!-- {if $show_goods_thumb eq 1} -->
+                        <a href="goods.php?id={$goods.goods_id}" target="_blank">{$goods.goods_name}</a>
+                      <!-- {elseif $show_goods_thumb eq 2} -->
+                        <a href="goods.php?id={$goods.goods_id}" target="_blank"><img src="{$goods.goods_thumb}" title="{$goods.goods_name|escape:html}" alt="{$goods.goods_name|escape:html}" /></a>
+                      <!-- {else} -->
+                        <a href="goods.php?id={$goods.goods_id}" target="_blank"><img src="{$goods.goods_thumb}" title="{$goods.goods_name|escape:html}" alt="{$goods.goods_name|escape:html}" /></a><br />
+                        <!-- <a href="goods.php?id={$goods.goods_id}" target="_blank">{$goods.goods_name}2</a> -->
+                      <!-- {/if} -->
+                      <!-- {if $goods.parent_id gt 0} 配件 -->
+                      <span>（{$lang.accessories}）</span>
+                      <!-- {/if} -->
+                      <!-- {if $goods.is_gift gt 0} 赠品 -->
+                      <span>（{$lang.largess}）</span>
+                      <!-- {/if} -->
+                    <!-- {elseif $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'} -->
+                      <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})">{$goods.goods_name}<span>（{$lang.remark_package}）</span></a>
+                      <div id="suit_{$goods.goods_id}" style="display:none">
+                          <!-- {foreach from=$goods.package_goods_list item=package_goods_list} -->
+                            <a href="goods.php?id={$package_goods_list.goods_id}" target="_blank">{$package_goods_list.goods_name}</a><br />
+                          <!-- {/foreach} -->
+                      </div>
+                    <!-- {else} 优惠活动 -->
+                      {$goods.goods_name}
+                    <!-- {/if} -->
+                    </div>
+                  </td>
+                  <td class="p-info">
+                    <div class="p-title"> 
+                      <!-- <a href="/product-3159.html" target="_blank">碧螺春凤梨酥<span>Biluochun pineapple cakes</span></a>  -->
+                      <a href="goods.php?id={$goods.goods_id}" target="_blank">{$goods.goods_name}</a>
+                    </div>
+                  </td>
+
+                  <!-- {if $show_goods_attribute eq 1} 显示商品属性 -->
+                  <td>
+                    <div class="gg">{$goods.goods_attr|nl2br}</div>
+                  </td>
                   <!-- {/if} -->
-                  <!-- {if $goods.is_gift gt 0} 赠品 -->
-                  <span style="color:#FF0000">（{$lang.largess}）</span>
+
+                  <!-- {if $show_marketprice} 显示市场价 -->
+                  <td align="right">{$goods.market_price}</td>
                   <!-- {/if} -->
-                <!-- {elseif $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'} -->
-                  <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})" class="f6">{$goods.goods_name}<span style="color:#FF0000;">（{$lang.remark_package}）</span></a>
-                  <div id="suit_{$goods.goods_id}" style="display:none">
-                      <!-- {foreach from=$goods.package_goods_list item=package_goods_list} -->
-                        <a href="goods.php?id={$package_goods_list.goods_id}" target="_blank" class="f6">{$package_goods_list.goods_name}</a><br />
-                      <!-- {/foreach} -->
-                  </div>
-                <!-- {else} 优惠活动 -->
-                  {$goods.goods_name}
-                <!-- {/if} -->
+                  <td align="right">{$goods.goods_price}</td>
+                  <td align="right">
+                    <div class="cake_num"> 
+                    <!-- {if $goods.goods_id gt 0 && $goods.is_gift eq 0 && $goods.parent_id eq 0} 普通商品可修改数量 -->
+                    <a href="javascript: void(0);" class="add_left">-</a>
+                      <input type="text" name="goods_number[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.goods_number}" size="4" class="num_1" style="text-align:center " onkeydown="showdiv(this)"/>
+                    <a href="javascript: void(0);" class="add_right">-</a>
+                    <!-- {else} -->
+                    {$goods.goods_number}
+                    <!-- {/if} -->
+                    </div>
+                  </td>
+
+                  <td align="right">{$goods.subtotal}</td>
+                  <td align="center">
+
+                    <div class="del"><a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_goods&amp;id={$goods.rec_id}'; " title="{$lang.drop}"></a></div>
+                    <!-- {if $smarty.session.user_id gt 0 && $goods.extension_code neq 'package_buy'} 如果登录了，可以加入收藏 -->
+                    <div class="collect"><a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_to_collect&amp;id={$goods.rec_id}'; " title="{$lang.drop_to_collect}"></a></div>
+                    <!-- {/if} -->
+                  </td>
+
+                </tr>
+                 </tbody>
+                <!-- {/foreach} -->
+
+              <tfoot>
+                <tr>            
+                  <!-- 订单价格 -->
+                  <td class="total_price" colspan="7" align="right">
+                  <!-- {if $discount gt 0} --><span class="cost">{$your_discount}</span><br /><!-- {/if} -->
+                  <span class="cost">{$shopping_money}</span><!-- {if $show_marketprice} -->，<span class="cost">{$market_price_desc}</span><!-- {/if} -->
               </td>
-              <!-- {if $show_goods_attribute eq 1} 显示商品属性 -->
-              <td bgcolor="#ffffff">{$goods.goods_attr|nl2br}</td>
-              <!-- {/if} -->
-              <!-- {if $show_marketprice} 显示市场价 -->
-              <td align="right" bgcolor="#ffffff">{$goods.market_price}</td>
-              <!-- {/if} -->
-              <td align="right" bgcolor="#ffffff">{$goods.goods_price}</td>
-              <td align="right" bgcolor="#ffffff">
-                <!-- {if $goods.goods_id gt 0 && $goods.is_gift eq 0 && $goods.parent_id eq 0} 普通商品可修改数量 -->
-                <input type="text" name="goods_number[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.goods_number}" size="4" class="inputBg" style="text-align:center " onkeydown="showdiv(this)"/>
-                <!-- {else} -->
-                {$goods.goods_number}
-                <!-- {/if} -->
-              </td>
-              <td align="right" bgcolor="#ffffff">{$goods.subtotal}</td>
-              <td align="center" bgcolor="#ffffff">
-                <a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_goods&amp;id={$goods.rec_id}'; " class="f6">{$lang.drop}</a>
-                <!-- {if $smarty.session.user_id gt 0 && $goods.extension_code neq 'package_buy'} 如果登录了，可以加入收藏 -->
-                <a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_to_collect&amp;id={$goods.rec_id}'; " class="f6">{$lang.drop_to_collect}</a>
-                <!-- {/if} -->            </td>
-            </tr>
-            <!-- {/foreach} -->
-          </table>
-          <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
-            <tr>
-              <td bgcolor="#ffffff">
-              <!-- {if $discount gt 0} -->{$your_discount}<br /><!-- {/if} -->
-              {$shopping_money}<!-- {if $show_marketprice} -->，{$market_price_desc}<!-- {/if} -->
-              </td>
-              <td align="right" bgcolor="#ffffff">
-                <input type="button" value="{$lang.clear_cart}" class="bnt_blue_1" onclick="location.href='flow.php?step=clear'" />
-                <input name="submit" type="submit" class="bnt_blue_1" value="{$lang.update_cart}" />
-              </td>
-            </tr>
-          </table>
-          <input type="hidden" name="step" value="update_cart" />
-        </form>
-        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="0" bgcolor="#dddddd">
-          <tr>
-            <td bgcolor="#ffffff"><a href="./"><img src="images/continue.gif" alt="continue" /></a></td>
-            <td bgcolor="#ffffff" align="right"><a href="flow.php?step=checkout"><img src="images/checkout.gif" alt="checkout" /></a></td>
-          </tr>
-        </table>
+                </tr>
+                <tr>
+                  <td colspan="7" align="right">
+                    <!-- <input type="button" value="{$lang.clear_cart}" class="bnt_blue_1" onclick="location.href='flow.php?step=clear'" />
+                    <input name="submit" type="submit" class="bnt_blue_1" value="{$lang.update_cart}" /> -->
+                    
+                    <div class="submit">
+                      <a href="javascript: void(0);" onclick="javascript: $('#formCart').submit();" class="active">{$lang.update_cart}</a>
+                    </div>
+                    <div class="submit">
+                      <a href="flow.php?step=clear" class="active">{$lang.clear_cart}</a>
+                    </div>
+
+                    <div class="submit">
+                      <a href="./" class="active">继续购物</a>
+                    </div>
+                    <div class="submit">
+                      <a href="flow.php?step=checkout">下单结算</a>
+                    </div>
+                    <input type="hidden" value="update_cart" name="step" />
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of cart -->
+
        <!-- {if $smarty.session.user_id gt 0} -->
        {insert_scripts files='transport.js'}
        <script type="text/javascript" charset="utf-8">
