@@ -248,12 +248,12 @@
     <h6><span>{$lang.label_collection}</span></h6>
     <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
       <!-- {foreach from=$collection_goods item=goods} -->
-          <tr>
-            <td bgcolor="#ffffff"><a href="goods.php?id={$goods.goods_id}" class="f6">{$goods.goods_name}</a></td>
-            <td bgcolor="#ffffff" align="center" width="100"><a href="javascript:addToCart({$goods.goods_id})" class="f6">{$lang.collect_to_flow}</a></td>
-          </tr>
+        <tr>
+          <td bgcolor="#ffffff"><a href="goods.php?id={$goods.goods_id}" class="f6">{$goods.goods_name}</a></td>
+          <td bgcolor="#ffffff" align="center" width="100"><a href="javascript:addToCart({$goods.goods_id})" class="f6">{$lang.collect_to_flow}</a></td>
+        </tr>
       <!-- {/foreach} -->
-        </table>
+    </table>
       <!-- {/if} -->
   </div>
     <div class="blank5"></div>
