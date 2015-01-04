@@ -99,7 +99,7 @@
                   <!-- 主商品 -->
                   <tr>
                     <td><div class="p-pic"> <a target="_blank" href="#"><img alt="碧螺春凤梨酥" src="images/large_img01.jpg"></a> </div></td>
-                    <td class="p-info"><div class="p-title"> <a href="/product-3159.html" target="_blank">碧螺春凤梨酥<span>Biluochun pineapple cakes</span></a> </div></td>
+                    <td class="p-info"><div class="p-title"> <a href="#" target="_blank">碧螺春凤梨酥<span>Biluochun pineapple cakes</span></a> </div></td>
                     <td><div class="gg">18×6×4 cm</div></td>
                     <td><div class="cake_num"> <a href="#" class="add_left">-</a>
                         <input type="text" name="" value="1" class="num_1" id="buy_number">
@@ -111,7 +111,7 @@
                 <tbody class="cart-item">
                   <tr>
                     <td><div class="p-pic"><a target="_blank" href="#"><a target="_blank" href="#"><img alt="巧克力黑金砖" src="images/pro01.jpg"></a></div></td>
-                    <td class="p-info"><div class="p-title"> <a href="/product-3159.html" target="_blank">巧克力黑金砖<span>Dark chocolate bars</span></a> </div></td>
+                    <td class="p-info"><div class="p-title"> <a href="#" target="_blank">巧克力黑金砖<span>Dark chocolate bars</span></a> </div></td>
                     <td><div class="gg">18×6×4 cm</div></td>
                     <td><div class="cake_num"> <a href="#" class="add_left">-</a>
                         <input type="text" name="" value="1" class="num_1" id="buy_number">
@@ -135,11 +135,11 @@
                     </tr>
                     <tr>
                       <td>配送区域:<span>*</span></td>
-                      <td colspan="3"><select style="border:1px solid #ccc;" onchange="region.changed(this, 1, 'selProvinces_0')" id="selCountries_0" name="country">
+                      <td colspan="3"><select style="border:1px solid #ccc;" onChange="region.changed(this, 1, 'selProvinces_0')" id="selCountries_0" name="country">
                           <option value="0">请选择国家</option>
                           <option selected="" value="1">中国</option>
                         </select>
-                        <select style="border:1px solid #ccc;" onchange="region.changed(this, 2, 'selCities_0')" id="selProvinces_0" name="province">
+                        <select style="border:1px solid #ccc;" onChange="region.changed(this, 2, 'selCities_0')" id="selProvinces_0" name="province">
                           <option value="0">请选择省</option>
                           <option value="2">北京</option>
                           <option value="3">安徽</option>
@@ -176,7 +176,7 @@
                           <option value="34">澳门</option>
                           <option value="35">台湾</option>
                         </select>
-                        <select style="border:1px solid #ccc;" onchange="region.changed(this, 3, 'selDistricts_0')" id="selCities_0" name="city">
+                        <select style="border:1px solid #ccc;" onChange="region.changed(this, 3, 'selDistricts_0')" id="selCities_0" name="city">
                           <option value="0">请选择市</option>
                         </select></td>
                     </tr>
@@ -226,19 +226,19 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="radio" onclick="selectPayment(this)" iscod="0" value="1" name="payment"></td>
+                  <td><input type="radio" onClick="selectPayment(this)" iscod="0" value="1" name="payment"></td>
                   <td align="center"><strong>余额支付</strong></td>
                   <td>使用帐户余额支付。只有会员才能使用，通过设置信用额度，可以透支。</td>
                 </tr>
                 <tr>
-                  <td><input type="radio" onclick="selectPayment(this)" iscod="0" checked="" value="2" name="payment"></td>
+                  <td><input type="radio" onClick="selectPayment(this)" iscod="0" checked="" value="2" name="payment"></td>
                   <td align="center"><strong>银行汇款/转帐</strong></td>
                   <td>银行名称
                     收款人信息：全称 ××× ；帐号或地址 ××× ；开户行 ×××。
                     注意事项：办理电汇时，请在电汇单“汇款用途”一栏处注明您的订单号。</td>
                 </tr>
                 <tr>
-                  <td><input type="radio" disabled="true" onclick="selectPayment(this)" iscod="1" value="3" name="payment"></td>
+                  <td><input type="radio" disabled="true" onClick="selectPayment(this)" iscod="1" value="3" name="payment"></td>
                   <td align="center"><strong>货到付款</strong></td>
                   <td>开通城市：×××
                     货到付款区域：×××</td>
@@ -262,7 +262,7 @@
                       <input type="radio" insure="0" supportcod="1" checked="true" value="1" name="shipping">
                       艾波索快递 <span class="red">&nbsp;&nbsp;温馨提示：节日期间配送繁忙，为了避免耽误您的时间，请尽量选择门店自提，谢谢您的理解。 </span>
                       <div id="div_shiptime">送达时间：
-                        <input type="text" name="bestdate" id="bestdate" value="" class="inputBg" onclick="WdatePicker({minDate:'2014-12-30}',onpicked:set_dp})" readonly="">
+                        <input type="text" name="bestdate" id="bestdate" value="" class="inputBg" onClick="WdatePicker({minDate:'2014-12-30}',onpicked:set_dp})" readonly="">
                         <input type="text" name="besttime" id="besttime" class="inputBg" value="" readonly="">
                         <input type="hidden" id="timelist" class="inputBg" value="{&quot;date&quot;:&quot;2014-12-30&quot;,&quot;cur_timelist&quot;:{&quot;2014-12-30 06:30:00&quot;:&quot;10:00-10:30&quot;,&quot;2014-12-30 07:00:00&quot;:&quot;10:30-11:00&quot;,&quot;2014-12-30 07:30:00&quot;:&quot;11:00-11:30&quot;,&quot;2014-12-30 08:00:00&quot;:&quot;11:30-12:00&quot;,&quot;2014-12-30 08:30:00&quot;:&quot;12:00-12:30&quot;,&quot;2014-12-30 09:00:00&quot;:&quot;12:30-13:00&quot;,&quot;2014-12-30 09:30:00&quot;:&quot;13:00-13:30&quot;,&quot;2014-12-30 10:00:00&quot;:&quot;13:30-14:00&quot;,&quot;2014-12-30 10:30:00&quot;:&quot;14:00-14:30&quot;,&quot;2014-12-30 11:00:00&quot;:&quot;14:30-15:00&quot;,&quot;2014-12-30 11:30:00&quot;:&quot;15:00-15:30&quot;,&quot;2014-12-30 12:00:00&quot;:&quot;15:30-16:00&quot;,&quot;2014-12-30 12:30:00&quot;:&quot;16:00-16:30&quot;,&quot;2014-12-30 13:00:00&quot;:&quot;16:30-17:00&quot;,&quot;2014-12-30 13:30:00&quot;:&quot;17:00-17:30&quot;,&quot;2014-12-30 14:00:00&quot;:&quot;17:30-18:00&quot;,&quot;2014-12-30 14:30:00&quot;:&quot;18:00-18:30&quot;,&quot;2014-12-30 15:00:00&quot;:&quot;18:30-19:00&quot;,&quot;2014-12-30 15:30:00&quot;:&quot;19:00-19:30&quot;,&quot;2014-12-30 16:00:00&quot;:&quot;19:30-20:00&quot;},&quot;all_timelist&quot;:{&quot;2014-12-30 06:30:00&quot;:&quot;10:00-10:30&quot;,&quot;2014-12-30 07:00:00&quot;:&quot;10:30-11:00&quot;,&quot;2014-12-30 07:30:00&quot;:&quot;11:00-11:30&quot;,&quot;2014-12-30 08:00:00&quot;:&quot;11:30-12:00&quot;,&quot;2014-12-30 08:30:00&quot;:&quot;12:00-12:30&quot;,&quot;2014-12-30 09:00:00&quot;:&quot;12:30-13:00&quot;,&quot;2014-12-30 09:30:00&quot;:&quot;13:00-13:30&quot;,&quot;2014-12-30 10:00:00&quot;:&quot;13:30-14:00&quot;,&quot;2014-12-30 10:30:00&quot;:&quot;14:00-14:30&quot;,&quot;2014-12-30 11:00:00&quot;:&quot;14:30-15:00&quot;,&quot;2014-12-30 11:30:00&quot;:&quot;15:00-15:30&quot;,&quot;2014-12-30 12:00:00&quot;:&quot;15:30-16:00&quot;,&quot;2014-12-30 12:30:00&quot;:&quot;16:00-16:30&quot;,&quot;2014-12-30 13:00:00&quot;:&quot;16:30-17:00&quot;,&quot;2014-12-30 13:30:00&quot;:&quot;17:00-17:30&quot;,&quot;2014-12-30 14:00:00&quot;:&quot;17:30-18:00&quot;,&quot;2014-12-30 14:30:00&quot;:&quot;18:00-18:30&quot;,&quot;2014-12-30 15:00:00&quot;:&quot;18:30-19:00&quot;,&quot;2014-12-30 15:30:00&quot;:&quot;19:00-19:30&quot;,&quot;2014-12-30 16:00:00&quot;:&quot;19:30-20:00&quot;}}">
                       </div>
@@ -273,19 +273,19 @@
                       <div id="div_zt">
                         <ul class="clear">
                           <li style="padding-right:5px;">
-                            <select name="station_country" id="station_country" onchange="region.changed(this, 1, 'station_province')" class="address">
+                            <select name="station_country" id="station_country" onChange="region.changed(this, 1, 'station_province')" class="address">
                               <option value="0">请选择城市</option>
                               <option selected="" value="441">苏州</option>
                             </select>
                           </li>
                           <li style="padding-right:5px;">
-                            <select name="station_province" id="station_province" onchange="region.changed(this, 2, 'station_city')" class="address">
+                            <select name="station_province" id="station_province" onChange="region.changed(this, 2, 'station_city')" class="address">
                               <option value="0">请选择</option>
                               <option selected="" value="806">苏州</option>
                             </select>
                           </li>
                           <li style="padding-right:5px;">
-                            <select name="station_city" id="station_city" onchange="get_station(this);" class="address">
+                            <select name="station_city" id="station_city" onChange="get_station(this);" class="address">
                               <option value="0">请选择</option>
                               <option value="808">新区</option>
                               <option value="809">市区</option>
@@ -321,13 +321,13 @@
                   <tr>
                     <td><strong>使用红包:</strong></td>
                     <td> 选择已有红包
-                      <select style="border:1px solid #ccc;" id="ECS_BONUS" onchange="changeBonus(this.value)" name="bonus">
+                      <select style="border:1px solid #ccc;" id="ECS_BONUS" onChange="changeBonus(this.value)" name="bonus">
                         <option selected="" value="0">请选择</option>
                         <option value="232">注册送红包[￥26.00]</option>
                       </select>
                       或者输入红包序列号
                       <input type="text" value="" size="15" class="inputBg" name="bonus_sn">
-                      <input type="button" style="vertical-align:middle;" onclick="validateBonus(document.forms['theForm'].elements['bonus_sn'].value)" value="验证红包" class="bnt_blue_1" name="validate_bonus"></td>
+                      <input type="button" style="vertical-align:middle;" onClick="validateBonus(document.forms['theForm'].elements['bonus_sn'].value)" value="验证红包" class="bnt_blue_1" name="validate_bonus"></td>
                   </tr>
                   <tr>
                     <td valign="top"><strong>订单附言:</strong></td>
@@ -336,13 +336,13 @@
                   <tr style="display:none;">
                     <td><strong>缺货处理:</strong></td>
                     <td><label>
-                        <input type="radio" onclick="changeOOS(this)" checked="" value="0" name="how_oos">
+                        <input type="radio" onClick="changeOOS(this)" checked="" value="0" name="how_oos">
                         等待所有商品备齐后再发 </label>
                       <label>
-                        <input type="radio" onclick="changeOOS(this)" value="1" name="how_oos">
+                        <input type="radio" onClick="changeOOS(this)" value="1" name="how_oos">
                         取消订单 </label>
                       <label>
-                        <input type="radio" onclick="changeOOS(this)" value="2" name="how_oos">
+                        <input type="radio" onClick="changeOOS(this)" value="2" name="how_oos">
                         与店主协商 </label></td>
                   </tr>
                 </tbody>
