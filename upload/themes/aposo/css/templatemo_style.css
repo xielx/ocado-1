@@ -1,9 +1,6 @@
-
-
 body {
     font-family:"微软雅黑", Helvetica, Arial, sans-serif;
 }
-
 .templatemo_clear { clear: both; }
 .red{color:#d1394a;}
 .container_wapper {
@@ -434,7 +431,7 @@ body {
 	height: 40px;
 	line-height: 40px;
 	float: left;
-	font-size: 18px;
+	font-size: 14px;
 	color: #767676;
 	margin: 0;
 	border: none;
