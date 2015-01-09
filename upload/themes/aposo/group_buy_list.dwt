@@ -38,7 +38,7 @@
 </div>
 <!--当前位置 end-->
 <div class="blank"></div>
-<div class="block clearfix">
+<div class="block clearfix container">
   <!--left start-->
   <div class="AreaL">
     <!-- TemplateBeginEditable name="左边区域" -->

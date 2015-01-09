@@ -35,3 +35,8 @@ Template Type: type_0
 
 .test {
 }
+.box_1 h3{
+	border-bottom: 1px dashed #ddd;
+    margin: 20px 0;
+    padding-bottom: 10px;
+}

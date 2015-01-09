@@ -6,6 +6,7 @@ body {
 .container_wapper {
     width: 100%;
 }
+.pink{color:#eb5b6b;}
 .section_header  {
     height: 150px;
     background: url("../images/section-header.png") center center no-repeat;
@@ -61,7 +62,6 @@ body {
 }
 #templatemo_banner_top p ,
 #templatemo_banner_top a {
-    color: #666666;
     font-size: 12px;
     line-height: 30px;
 	margin: 0;
@@ -93,6 +93,7 @@ body {
 #templatemo_banner_slide img{max-width:100%;}
 
 /* templatemo_main_menu */
+.AreaL,.AreaR{margin-top:10px;}
 #templatemo_main_menu {
     position:relative;
     z-index: 1500;
@@ -166,10 +167,10 @@ body {
 	float: right;
     margin: 0;
 }
-.product_title p a{color:#666666;}
 .product_title p a.all_pro{color:#cf3341;}
 #templatemo_upcomming_event {
     background: #ffffff;
+	margin-top: 15px;
     overflow: hidden;
 }
 #templatemo_upcomming_event .event_box {   
@@ -187,6 +188,11 @@ body {
 	font-size:16px;
 	font-weight:bold;
 	display:block;
+}
+#templatemo_upcomming_event .event_box ul li a:hover{text-decoration:none;}
+#templatemo_upcomming_event .event_box ul li a:hover span.title{
+	color:#cf3341;
+	text-decoration:underline;
 }
 #templatemo_upcomming_event .event_box ul li span.intro{
 	color:#666666;
@@ -426,7 +432,7 @@ body {
     font-size: 14px;
 	font-weight: normal;
 }
-.form_detail ul li input.inputBg {
+.form_detail ul li input.inputBg,.combine_order select,.combine_order input,.combine_order .my_recommend textarea {
 	background:#f0f4f5;
 	height: 40px;
 	line-height: 40px;
@@ -776,7 +782,8 @@ body {
 	height:48px;
 	font-size:14px;
 }
-.theForm tr input,.theForm tr select,#order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,.nstep_products textarea{
+.theForm tr input,.theForm tr select,#order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,
+.nstep_products textarea,.account_deposit input,.account_deposit textarea{
 	background: none repeat scroll 0 0 #f0f4f5;
     border: medium none;
     border-radius: 2px;
@@ -788,7 +795,8 @@ body {
     width: 65%;
 }
 .theForm tr select, #order_addr tr select{width:21%;}
-.theForm tr input.save_adress, #order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input{
+.theForm tr input.save_adress, #order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,
+.su input,input.bnt_blue_1{
 	background: none repeat scroll 0 0 #595a6b;
     border: 0 none;
     border-radius: 4px;
@@ -799,8 +807,10 @@ body {
     line-height: 27px;
     text-align: center;
     width: 135px;
+	padding: 0;
 }
-.theForm tr input.save_adress:hover, #order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,.su input:hover{ background: none repeat scroll 0 0 #d1394a;}
+.theForm tr input.save_adress:hover, #order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,
+.su input:hover,input.bnt_blue_1:hover{ background: none repeat scroll 0 0 #d1394a;}
 .theForm tr span, #order_addr tr span{color:#ff0000;}
 #payment_table tr{
 	height:40px;
@@ -853,15 +863,13 @@ body {
 #templatemo_footer {
     background: none repeat scroll 0 0 #ffffff;
     border-top: 1px solid #cf3341;
+	margin:20px 0 0;
     padding: 15px 0;
 }
 #templatemo_footer p {
     text-align: left;
     padding: 0;
     margin: 0;
-}
-#templatemo_footer a {
-    color: #666666;
 }
 
 /*  Extra small devices (phones, less than 768px)  */
@@ -966,4 +974,101 @@ body {
 
 .market {
     text-decoration: line-through;
+}
+
+/*----user center---*/
+.userMenu .info_title {
+    border-bottom: 1px solid #eee;
+    color: #cf3341;
+    font-size: 18px;
+}
+.userMenu ul li{
+	border-bottom: 1px solid #eee;
+    font-size: 14px;
+    line-height: 30px;
+    list-style: inside none disc;
+    padding-left: 26px;
+}
+.userMenu ul li a.curs{color: #cf3341;}
+.userCenterBox{
+	font-size: 14px;
+}
+.welcome_user .f5{font-size: 18px;}
+.welcome_user .f4{
+	color: #cf3341;
+    font-weight: bold;
+    padding: 0 5px;
+}
+.goodsInfo {
+    float: left;
+    padding: 20px 20px 20px 0;
+    width: 40%;
+	line-height: 30px;
+}
+.goodsInfo h5 span{
+	color: #666;
+    font-size: 18px;
+    padding: 18px 0 0;
+}
+.goodsInfo a,.welcome_user a{text-decoration:underline;}
+
+.combine_order{
+	clear: both;
+    margin-top: 30px;
+}
+.userCenterBox h5{
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    margin: 8px 0 10px;
+    padding-bottom: 7px;
+}
+#templatemo_info table tr th {
+    background: none repeat scroll 0 0 #f7f7f7;
+    color: #666;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+table.order_list tr{
+    height: 30px;
+}
+table.order_list tr th {
+    background: none repeat scroll 0 0 #f7f7f7;
+    color: #666;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+table.order_list tr td {
+    text-align: center;
+}
+table.order_list tr .f6 a{color: #eb5b6b;}
+.combine_order td{
+	padding:5px;
+}
+.combine_order .my_recommend input,.combine_order .my_recommend select{
+	width:50%;
+}
+.combine_order .my_recommend textarea{
+	height: 125px;
+    padding: 5px;
+    width: 90%;
+}
+.combine_order .addbouns input{
+	float: none;
+    padding: 5px 10px;
+    width: 25%;
+}
+.pagebar span b{
+	color: #cf3341;
+}
+.account_deposit textarea {
+    height: 100px;
+    margin-top: 10px;
+}
+.deposit_info{
+	clear:both;
+	margin-top:20px;
 }

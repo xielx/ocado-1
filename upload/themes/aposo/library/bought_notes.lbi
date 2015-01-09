@@ -27,7 +27,7 @@
         <!--{else}-->
 
         <!--翻页 start-->
-         <div id="buy_pager" class="pagebar">
+         <div id="buy_pager" class="pagebar" style="text-align:right; margin-right:10px;">
           <span class="f_l f6" style="margin-right:10px;">{$lang.total} <b>{$pager.record_count}</b> {$lang.user_comment_num}</span>
           <!-- {if $pager.page_first} --><a href="{$pager.page_first}">1 ...</a><!-- {/if} -->
           <!-- {if $pager.page_prev} --><a class="prev" href="{$pager.page_prev}">{$lang.page_prev}</a><!-- {/if} -->

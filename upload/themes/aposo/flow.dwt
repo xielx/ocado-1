@@ -38,7 +38,7 @@
 </div>
 <!--当前位置 end-->
 <div class="blank"></div>
-<div class="block">
+<div class="block container">
   <!-- {if $step eq "cart"} -->
   <!-- 购物车内容 -->
   {* 包含脚本文件 *}

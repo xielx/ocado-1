@@ -18,7 +18,7 @@
 <!--{else}-->
 
 <!--翻页 start-->
- <div id="pager" class="pagebar">
+ <div id="pager" class="pagebar" style="text-align:right; margin-right:10px;">
   <span class="f_l f6" style="margin-right:10px;">{$lang.pager_1}<b>{$pager.record_count}</b> {$lang.pager_2}</span>
   <!-- {if $pager.page_first} --><a href="{$pager.page_first}">{$lang.page_first} ...</a><!-- {/if} -->
   <!-- {if $pager.page_prev} --><a class="prev" href="{$pager.page_prev}">{$lang.page_prev}</a><!-- {/if} -->
