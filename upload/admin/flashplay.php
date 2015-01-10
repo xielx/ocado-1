@@ -330,11 +330,11 @@ elseif ($_REQUEST['act']== 'custom_list')
     $smarty->assign('ad_list', $ad_list['ad']);
 
     assign_query_info();
-        $width_height = get_width_height();
-//        if(isset($width_height['width'])|| isset($width_height['height']))
-//        {
-            $smarty->assign('width_height', sprintf($_LANG['width_height'], $width_height['width'], $width_height['height']));
-//        }
+    $width_height = get_width_height();
+    if(isset($width_height['width'])|| isset($width_height['height']))
+    {
+        $smarty->assign('width_height', sprintf($_LANG['width_height'], $width_height['width'], $width_height['height']));
+    }
     $smarty->assign('full_page', 1);
     $smarty->assign('current', 'cus');
     $smarty->assign('group_list', $group_list);
@@ -603,8 +603,8 @@ elseif ($_REQUEST['act'] == 'custom_edit')
     $ad = $GLOBALS['db']->getRow($sql);
 
     assign_query_info();
-    $width_height = get_width_height();
-    $smarty->assign('width_height', sprintf($_LANG['width_height'], $width_height['width'], $width_height['height']));
+    // $width_height = get_width_height();
+    $smarty->assign('width_height', sprintf($_LANG['width_height'], "1200px", '505px'));
 
     $smarty->assign('group_selected', $_CFG['index_ad']);
     $smarty->assign('uri', $uri);
@@ -654,6 +654,7 @@ elseif ($_REQUEST['act'] == 'custom_update')
     }
 
     /* 接收文件 */
+    $src = "";
     if ($ad_img['ad_img']['name'] && $ad_img['ad_img']['size'] > 0)
     {
         /* 检查文件合法性 */
@@ -695,7 +696,12 @@ elseif ($_REQUEST['act'] == 'custom_update')
         case '0' :
 
         case '1' :
-            $filter['content'] = !is_file(ROOT_PATH . $src) && (trim($src) == '') ? $ad_info['content'] : $src;
+            $filter['content'] = $ad_info['content'];
+            if(!empty($src) && is_file(ROOT_PATH. $src) || trim($src) != '') {
+                $filter['content'] = $src;
+            }
+
+            // $filter['content'] = !is_file(ROOT_PATH . $src) && (trim($src) == '') ? $ad_info['content'] : $src;
         break;
 
         case '2' :
@@ -708,11 +714,12 @@ elseif ($_REQUEST['act'] == 'custom_update')
                 'ad_name' => $filter['ad']['ad_name'],
                 'content' => $filter['content'],
                 'url' => $filter['ad']['url'],
-                'ad_status' => $filter['ad']['ad_status']
+                'ad_status' => isset($filter['ad']['ad_status'])? $filter['ad']['ad_status']: ""
                );
     $db->autoExecute($ecs->table('ad_custom'), $ad, 'UPDATE', 'ad_id = ' . $ad_info['ad_id'], 'SILENT');
 
     /* 修改状态 */
+    $filter['ad']['ad_status'] = 1;
     modfiy_ad_status($ad_info['ad_id'], $filter['ad']['ad_status']);
 
     /* 状态为启用 清除模板编译文件 */
