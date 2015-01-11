@@ -1,20 +1,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<div class="box">
- <div class="box_1">
-  <div id="category_tree">
-    <!--{foreach from=$categories item=cat}-->
-     <dl>
-     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
-     <!--{foreach from=$cat.cat_id item=child}-->
-     <dd><a href="{$child.url}">{$child.name|escape:html}</a></dd>
-       <!--{foreach from=$child.cat_id item=childer}-->
-       <dd>&nbsp;&nbsp;<a href="{$childer.url}">{$childer.name|escape:html}</a></dd>
-       <!--{/foreach}-->
-     <!--{/foreach}-->
-       
-       </dl>
-    <!--{/foreach}--> 
-  </div>
- </div>
+
+<div class="col-md-12">
+  <div class="classify">
+          <div class="classify_text">蛋糕分类:</div>
+          <ul>
+              <!--{foreach from=$categories item=cat}-->
+              <li <!-- {if $category == $cat.id} -->class="active"<!-- {/if} -->><a href="{$cat.url}">{$cat.name|escape:html}</a>
+               <!--{foreach from=$cat.cat_id item=child}-->
+               <li><a href="{$child.url}">{$child.name|escape:html}</a></li>
+                 <!--{foreach from=$child.cat_id item=childer}-->
+                 <li>&nbsp;&nbsp;<a href="{$childer.url}">{$childer.name|escape:html}</a></li>
+                 <!--{/foreach}-->
+               <!--{/foreach}-->
+              </li>
+              <!--{/foreach}-->
+          </ul>
+    </div>
 </div>
-<div class="blank5"></div>
+
+<!-- <div class="blank5"></div> -->
