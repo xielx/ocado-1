@@ -268,17 +268,29 @@
   <!-- {/if} -->
 
   <!-- {if $collection_goods} -->
-  <div class="flowBox">
-    <h6><span>{$lang.label_collection}</span></h6>
-    <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" >
-      <!-- {foreach from=$collection_goods item=goods} -->
-        <tr>
-          <td><a href="goods.php?id={$goods.goods_id}" class="f6">{$goods.goods_name}</a></td>
-          <td align="center" width="100"><a href="javascript:addToCart({$goods.goods_id})" class="f6">{$lang.collect_to_flow}</a></td>
-        </tr>
-      <!-- {/foreach} -->
-    </table>
-      <!-- {/if} -->
+  <div id="templatemo_shopping_cart" class="container_wapper">
+    <div class="container">
+      <div class="row">
+        <div class="order_cart_main">
+
+          <div class="flowBox cart-container">
+            <div class="title">
+              <h2>{$lang.label_collection}
+              </h2>
+            </div>
+            <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" >
+              <!-- {foreach from=$collection_goods item=goods} -->
+                <tr>
+                  <td><a href="goods.php?id={$goods.goods_id}" class="f6">{$goods.goods_name}</a></td>
+                  <td align="center" width="100"><a href="javascript:addToCart({$goods.goods_id})" class="f6">{$lang.collect_to_flow}</a></td>
+                </tr>
+              <!-- {/foreach} -->
+            </table>
+              <!-- {/if} -->
+                </div>
+        </div>
+      </div>
+    </div>
   </div>
     <div class="blank5"></div>
   <!-- {/if} -->
@@ -592,9 +604,10 @@
         <tbody>
               <!-- {foreach from=$shipping_list item=shipping} 循环配送方式 -->
               <tr>
-                <td valign="top"><input name="shipping" type="radio" value="{$shipping.shipping_id}" {if $order.shipping_id eq $shipping.shipping_id}checked="true"{/if} supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />
+                <td valign="top">
+                  <input name="shipping" id="shipping_type_{$shipping.shipping_id}" type="radio" value="{$shipping.shipping_id}" {if $order.shipping_id eq $shipping.shipping_id}checked="true"{/if} supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />
                 </td>
-                <td valign="top"><strong>{$shipping.shipping_name}</strong></td>
+                <td valign="top"><strong><label for="shipping_type_{$shipping.shipping_id}">{$shipping.shipping_name}</label></strong></td>
                 <td valign="top">{$shipping.shipping_desc}</td>
                 <td align="right" valign="top">{$shipping.format_shipping_fee}</td>
                 <td align="right" valign="top">{$shipping.free_money}</td>
@@ -631,8 +644,10 @@
             <!-- {foreach from=$payment_list item=payment} -->
             <!-- 循环支付方式 -->
             <tr>
-              <td valign="top"><input type="radio" name="payment" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id}checked{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if}/></td>
-              <td valign="top"><strong>{$payment.pay_name}</strong></td>
+              <td valign="top">
+                <input type="radio" name="payment" id="payment_{$payment.pay_id}" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id}checked{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if}/>
+              </td>
+              <td valign="top"><strong><label for="payment_{$payment.pay_id}">{$payment.pay_name}</label></strong></td>
               <td valign="top">{$payment.pay_desc}</td>
               <td align="right" valign="top">{$payment.format_pay_fee}</td>
             </tr>
@@ -805,10 +820,12 @@
             <!-- {if $how_oos_list} 是否使用缺货处理 -->
             <tr>
               <td><strong>{$lang.booking_process}:</strong></td>
-              <td><!-- {foreach from=$how_oos_list key=how_oos_id item=how_oos_name} -->
-                <label>
-                <input name="how_oos" type="radio" value="{$how_oos_id}" {if $order.how_oos eq $how_oos_id}checked{/if} onclick="changeOOS(this)" />
-                {$how_oos_name}</label>
+              <td>
+                <!-- {foreach from=$how_oos_list key=how_oos_id item=how_oos_name} -->
+                  <label for="how_oos_{$how_oos_id}">
+                    <input name="how_oos" id="how_oos_{$how_oos_id}" type="radio" value="{$how_oos_id}" {if $order.how_oos eq $how_oos_id}checked{/if} onclick="changeOOS(this)" />
+                  {$how_oos_name}
+                  </label>&nbsp;&nbsp;
                 <!-- {/foreach} -->
               </td>
             </tr>
@@ -839,50 +856,100 @@
 
         <!-- {if $step eq "done"} -->
         <!-- 订单提交成功 -->
-        <div class="flowBox" style="margin:30px auto 70px auto;">
-         <h6 style="text-align:center; height:30px; line-height:30px;">{$lang.remember_order_number}: <font style="color:red">{$order.order_sn}</font></h6>
-          <table width="99%" align="center" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff" style="border:1px solid #ddd; margin:20px auto;" >
-            <tr>
-              <td align="center" bgcolor="#FFFFFF">
-              <!--{if $order.shipping_name}-->{$lang.select_shipping}: <strong>{$order.shipping_name}</strong>，<!--{/if}-->{$lang.select_payment}: <strong>{$order.pay_name}</strong>。{$lang.order_amount}: <strong>{$total.amount_formated}</strong>
-              </td>
-            </tr>
-            <tr>
-              <td align="center" bgcolor="#FFFFFF">{$order.pay_desc}</td>
-            </tr>
-            <!-- {if $pay_online} -->
-            <!-- 如果是线上支付则显示支付按钮 -->
-            <tr>
-              <td align="center" bgcolor="#FFFFFF">{$pay_online}</td>
-            </tr>
-            <!-- {/if} -->
-          </table>
-          <!--{if $virtual_card}-->
-          <div style="text-align:center;overflow:hidden;border:1px solid #E2C822;background:#FFF9D7;margin:10px;padding:10px 50px 30px;">
-          <!--{foreach from=$virtual_card item=vgoods}-->
-            <h3 style="color:#2359B1; font-size:12px;">{$vgoods.goods_name}</h3>
-            <!--{foreach from=$vgoods.info item=card}-->
-              <ul style="list-style:none;padding:0;margin:0;clear:both">
-              <!--{if $card.card_sn}-->
-              <li style="margin-right:50px;float:left;">
-              <strong>{$lang.card_sn}:</strong><span style="color:red;">{$card.card_sn}</span>
-              </li><!--{/if}-->
-              <!--{if $card.card_password}-->
-              <li style="margin-right:50px;float:left;">
-              <strong>{$lang.card_password}:</strong><span style="color:red;">{$card.card_password}</span>
-              </li><!--{/if}-->
-              <!--{if $card.end_date}-->
-              <li style="float:left;">
-              <strong>{$lang.end_date}:</strong>{$card.end_date}
-              </li><!--{/if}-->
-              </ul>
-            <!--{/foreach}-->
-          <!--{/foreach}-->
+  
+        <div class="container_wapper" id="templatemo_shopping_cart">
+          <div class="container">
+            <div class="row">
+              <div class="order_cart_main">
+
+                <div class="order_step">
+                  <div class="step1">我的购物车</div>
+                  <div class="step2">填写核对订单信息</div>
+                  <div class="step3 step3_active">成功提交订单</div>
+                </div>
+
+                <div id="cart_container" class="cart-container">
+                  <div class="order_ok">
+                    
+                    <div class="order_ok_img"></div>
+                      <div class="information">
+                          <div class="number">
+                            {$lang.remember_order_number}：<font style="color:red">{$order.order_sn}</font><br />
+                            <span class="red">【有奖晒单分享】</span>
+                            当您收到蛋糕后，拍摄蛋糕照片发在新浪微博或微信朋友圈里，并发截图给味多美微博或微信，就有机会获得惊喜好礼！
+                          </div>
+                          <div class="info">
+
+                            <!--{if $order.shipping_name}-->
+                              {$lang.select_shipping}: <span class="red">{$order.shipping_name}</span>，
+                            <!--{/if}-->
+                            {$lang.select_payment}: <span class="red">{$order.pay_name}</span>。
+                            {$lang.order_amount}: <span class="red">{$total.amount_formated}</span>
+                            
+                            {$order.pay_desc}<br />
+                            <!-- {if $pay_online} -->
+                            <!-- 如果是线上支付则显示支付按钮 -->
+                            {$pay_online}
+                            <!-- {/if} -->
+
+                            <!--{if $virtual_card}-->
+                            <div style="text-align:center;overflow:hidden;border:1px solid #E2C822;background:#FFF9D7;margin:10px;padding:10px 50px 30px;">
+                            <!--{foreach from=$virtual_card item=vgoods}-->
+                              <h3 style="color:#2359B1; font-size:12px;">{$vgoods.goods_name}</h3>
+                              <!--{foreach from=$vgoods.info item=card}-->
+                                <ul style="list-style:none;padding:0;margin:0;clear:both">
+                                
+                                  <!--{if $card.card_sn}-->
+                                  <li style="margin-right:50px;float:left;">
+                                  <strong>{$lang.card_sn}:</strong><span style="color:red;">{$card.card_sn}</span>
+                                  </li>
+                                  <!--{/if}-->
+
+                                  <!--{if $card.card_password}-->
+                                  <li style="margin-right:50px;float:left;">
+                                  <strong>{$lang.card_password}:</strong><span style="color:red;">{$card.card_password}</span>
+                                  </li>
+                                  <!--{/if}-->
+                                  <!--{if $card.end_date}-->
+                                  <li style="float:left;">
+                                  <strong>{$lang.end_date}:</strong>{$card.end_date}
+                                  </li>
+                                  <!--{/if}-->
+
+                                </ul>
+                              <!--{/foreach}-->
+                            <!--{/foreach}-->
+                            </div>
+                            <!--{/if}-->
+
+
+                          </div>
+
+                          <div class="operate">
+                            {$order_submit_back}
+                          </div>
+
+                          <!-- <div class="su"><input type="button" onclick="" value="立即使用支付宝支付"></div> -->
+
+
+
+                      </div>
+                  </div>
+                  
+
+
+                </div>
+
+              </div>
+            </div>
           </div>
-          <!--{/if}-->
-          <p style="text-align:center; margin-bottom:20px;">{$order_submit_back}</p>
         </div>
+
+
+        
+
         <!-- {/if} -->
+
         <!-- {if $step eq "login"} -->
         {insert_scripts files='utils.js,user.js'}
         <script type="text/javascript">
