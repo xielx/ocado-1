@@ -1,12 +1,15 @@
+
+
 body {
     font-family:"微软雅黑", Helvetica, Arial, sans-serif;
 }
+
 .templatemo_clear { clear: both; }
 .red{color:#d1394a;}
+.pink{color:#eb5b6b;}
 .container_wapper {
     width: 100%;
 }
-.pink{color:#eb5b6b;}
 .section_header  {
     height: 150px;
     background: url("../images/section-header.png") center center no-repeat;
@@ -167,6 +170,7 @@ body {
 	float: right;
     margin: 0;
 }
+.product_title p a{color:#666666;}
 .product_title p a.all_pro{color:#cf3341;}
 #templatemo_upcomming_event {
     background: #ffffff;
@@ -249,7 +253,8 @@ body {
     height: 88px;
     width: 88px;
 }
-.samll_img_box ul.pro_small_img li a.cur img {
+.samll_img_box ul.pro_small_img li a.cur img,
+.samll_img_box ul.pro_small_img li.cur img {
     border: 1px solid #cf3341;
 }
 .pro_copy{
@@ -432,7 +437,9 @@ body {
     font-size: 14px;
 	font-weight: normal;
 }
-.form_detail ul li input.inputBg,.combine_order select,.combine_order input,.combine_order .my_recommend textarea {
+
+combine_order select,.combine_order input,.combine_order .my_recommend textarea,
+.form_detail ul li input.inputBg {
 	background:#f0f4f5;
 	height: 40px;
 	line-height: 40px;
@@ -515,7 +522,8 @@ body {
 	text-align:left;
 }
 .form_detail ul li.Agreement label{font-weight:normal;}
-#formLogin ul li.Agreement a{float:right;}
+#formLogin ul li.Agreement a,
+#login_form ul li.Agreement a{float:right;}
 .form_detail ul li.Agreement input{
 	margin: 0 10px 0 0;
     vertical-align: middle;
@@ -608,7 +616,7 @@ body {
 .list .submit_goods a:hover,.list .submit_goods a.active,.cart-main .submit a:hover,.cart-main .submit a.active,.operate a:hover{background: none repeat scroll 0 0 #d1394a;}
 
 /* templatemo_shop_cart */
-#templatemo_shopping_cart{
+#templatemo_shopping_cart,#templatemo_info{
 	overflow:hidden;
 	margin-bottom:30px;
 }
@@ -778,12 +786,14 @@ body {
 	border-bottom: 1px solid #eee;
     padding-bottom: 7px;
 }
-.theForm tr,#order_addr tr{
+.theForm tr,
+#order_addr tr,#templatemo_info #order_addr tr{
 	height:48px;
 	font-size:14px;
 }
-.theForm tr input,.theForm tr select,#order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,
-.nstep_products textarea,.account_deposit input,.account_deposit textarea{
+.theForm tr input,.theForm tr select,
+#order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,
+.nstep_products textarea,.add_bonus input,.deposit_info input.inputBg,.deposit_info textarea{
 	background: none repeat scroll 0 0 #f0f4f5;
     border: medium none;
     border-radius: 2px;
@@ -794,9 +804,11 @@ body {
     padding: 5px 10px;
     width: 65%;
 }
-.theForm tr select, #order_addr tr select{width:21%;}
-.theForm tr input.save_adress, #order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,
-.su input,input.bnt_blue_1{
+.theForm tr select, 
+#order_addr tr select{width:21%;}
+.theForm tr input.save_adress,input.bnt_blue_1
+#order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input,
+#templatemo_info input.combine_btn,.add_bonus input.save_adress,.deposit_info input.save_adress{
 	background: none repeat scroll 0 0 #595a6b;
     border: 0 none;
     border-radius: 4px;
@@ -809,9 +821,17 @@ body {
     width: 135px;
 	padding: 0;
 }
-.theForm tr input.save_adress:hover, #order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,
-.su input:hover,input.bnt_blue_1:hover{ background: none repeat scroll 0 0 #d1394a;}
-.theForm tr span, #order_addr tr span{color:#ff0000;}
+#order_addr tr input.save_adress:hover,
+.submit_order input.save_adress:hover,
+.theForm tr input.save_adress:hover, .theForm tr span, input.bnt_blue_1:hover
+.su input:hover,
+#order_addr tr input.save_adress:hover,.
+submit_order input.save_adress:hover,
+#templatemo_info input.combine_btn:hover,.
+add_bonus input.save_adress:hover,.
+deposit_info input.save_adress:hover
+{ background: none repeat scroll 0 0 #d1394a;}
+#order_addr tr span{color:#ff0000;}
 #payment_table tr{
 	height:40px;
 	font-size:14px;
@@ -837,7 +857,7 @@ body {
 	border-radius:0;
 	width:80px;
 }
-.nstep_products textarea{
+.nstep_products textarea,.deposit_info textarea{
 	height: 100px;
     margin-top: 10px;
 }
@@ -856,6 +876,98 @@ body {
 .su{
 	clear:both;
 	margin:20px 0 0 0;
+}
+
+/* user center */
+.welcome_user{
+
+}
+.welcome_user p.wel{
+	font-size:18px;
+}
+.welcome_user span.name{
+	color: #cf3341;
+	padding:0 5px;
+	font-weight:bold;
+}
+.goodsInfo  {
+    float: left;
+    padding: 0 20px 20px 0;
+    width: 40%;
+}
+.goodsInfo  .Invitation_txt {
+    color: #666;
+    font-size: 18px;
+    padding: 18px 0 0 0;
+}
+.goods_detail{line-height:30px;}
+#templatemo_info #order_addr table tr td {
+    text-align: left;
+}
+#templatemo_info #order_addr{margin-bottom:30px;}
+
+/* bonus */
+.blank{
+	clear:both;
+	margin-top:30px;
+}
+.add_bonus input{
+	width:25%;
+}
+.operate_account{
+	margin-bottom: 15px;
+}
+#templatemo_info .deposit_info tr td {
+    text-align: left;
+}
+#templatemo_info .deposit_info tr {
+    height: 40px;
+}
+
+/* order_list */
+.order_staus,.combine_order,.welcome_user,.goodsInfo {font-size:14px;}
+#templatemo_info,#templatemo_shopping_cart{
+	margin:10px auto 30px;
+}
+#templatemo_info .info_title,#templatemo_shopping_cart .info_title{
+	color:#cf3341;
+	border-bottom: 1px solid #eee;
+    font-size: 18px;
+}
+#templatemo_info ul.info_detail,#templatemo_shopping_cart ul.info_detail{margin-bottom: 20px;}
+#templatemo_info ul.info_detail li,#templatemo_shopping_cart ul.info_detail li{
+	border-bottom: 1px solid #eee;
+	font-size: 14px;
+    line-height: 30px;
+    list-style: inside none disc;
+    padding-left: 26px;
+}
+#templatemo_info ul.info_detail li a.active,#templatemo_shopping_cart ul.info_detail li a.active{color:#cf3341;}
+#templatemo_info .title h2{
+	border-bottom: 1px solid #eee;
+    font-size: 16px;
+    margin: 0 0 10px;
+    padding-bottom: 7px;
+}
+#templatemo_info table tr{
+	height:30px;
+}
+#templatemo_info table tr th {
+    background: none repeat scroll 0 0 #f7f7f7;
+    color: #666;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#templatemo_info table tr td{text-align:center;}
+.combine_order{
+	clear:both;
+	margin-top:30px;
+}
+#templatemo_info input.combine_btn{
+	height:28px;
+	width:90px;
 }
 
 /* templatemo_footer */
@@ -925,7 +1037,8 @@ body {
 		width: 100%;
 		padding: 15px;
     }
-	#formLogin,#reg_form,#forget_form,.login_title{
+	#formLogin,
+	#login_form,#reg_form,#forget_form,.login_title{
 		margin: 40px auto;
 		width: 100%;
 	}
@@ -935,10 +1048,12 @@ body {
 		clear:both;
 	}
 	.cart-main .p-pic img{max-width:100%;}
-	.theForm tr input, #order_addr tr input{
+	.theForm tr input, 
+	#order_addr tr input{
         width: 100%;
     }
-	.theForm tr select, #order_addr tr select{width:32%;}
+	.theForm tr select, 
+	#order_addr tr select{width:32%;}
 
 }
 @media (max-width: 480px ){

@@ -800,8 +800,13 @@ body {
     text-align: center;
     width: 135px;
 }
-#order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,.su input:hover,
-#templatemo_info input.combine_btn:hover,.add_bonus input.save_adress:hover,.deposit_info input.save_adress:hover{ background: none repeat scroll 0 0 #d1394a;}
+#order_addr tr input.save_adress:hover,
+.submit_order input.save_adress:hover,
+.su input:hover,
+#templatemo_info input.combine_btn:hover,.
+add_bonus input.save_adress:hover,.
+deposit_info input.save_adress:hover
+{ background: none repeat scroll 0 0 #d1394a;}
 #order_addr tr span{color:#ff0000;}
 #payment_table tr{
 	height:40px;
