@@ -1,10 +1,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {insert_scripts files='transport.js,utils.js'}
 <div id="ECS_ORDERTOTAL">
-<table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+<table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" class="total_cost">
   <!-- {if $smarty.session.user_id > 0 and ($config.use_integral or $config.use_bonus)} -->
   <tr>
-    <td align="right" bgcolor="#ffffff">
+    <td>
     {$lang.complete_acquisition} 
       <!-- {if $config.use_integral} 是否使用积分-->
       <font class="f4_b">{$total.will_get_integral}</font> {$points_name}
@@ -16,7 +16,7 @@
   </tr>
   <!-- {/if} -->
   <tr>
-    <td align="right" bgcolor="#ffffff">
+    <td>
       {$lang.goods_all_price}: <font class="f4_b">{$total.goods_price_formated}</font>
       <!-- {if $total.discount gt 0} 折扣 -->
       - {$lang.discount}: <font class="f4_b">{$total.discount_formated}</font>
@@ -42,7 +42,7 @@
   </tr>
   <!-- {if $total.surplus > 0 or $total.integral > 0 or $total.bonus > 0} 使用余额或积分或红包 -->
   <tr>
-    <td align="right" bgcolor="#ffffff">
+    <td>
       <!-- {if $total.surplus > 0} 使用余额 -->
       - {$lang.use_surplus}: <font class="f4_b">{$total.surplus_formated}</font>
       <!-- {/if} -->
@@ -55,7 +55,7 @@
   </tr>
   <!-- {/if} 使用余额或积分或红包 -->
   <tr>
-    <td align="right" bgcolor="#ffffff"> {$lang.total_fee}: <font class="f4_b">{$total.amount_formated}</font>
+    <td> <strong>{$lang.total_fee}: </strong><font class="f4_b">{$total.amount_formated}</font>
   {if $is_group_buy}<br />
   {$lang.notice_gb_order_amount}{/if}
   <!--{if $total.exchange_integral }消耗积分--><br />

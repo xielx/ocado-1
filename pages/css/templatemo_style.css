@@ -786,7 +786,8 @@ body {
     padding: 5px 10px;
     width: 65%;
 }
-#order_addr tr select{width:21%;}
+#order_addr tr select,
+.order_addr tr select{width:21%;}
 #order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input,
 #templatemo_info input.combine_btn,.add_bonus input.save_adress,.deposit_info input.save_adress{
 	background: none repeat scroll 0 0 #595a6b;
