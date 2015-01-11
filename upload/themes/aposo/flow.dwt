@@ -884,12 +884,14 @@
                               {$lang.select_shipping}: <span class="red">{$order.shipping_name}</span>，
                             <!--{/if}-->
                             {$lang.select_payment}: <span class="red">{$order.pay_name}</span>。
-                            {$lang.order_amount}: <span class="red">{$total.amount_formated}</span>
+                            {$lang.order_amount}: <span class="red">{$total.amount_formated}</span><br />
                             
                             {$order.pay_desc}<br />
                             <!-- {if $pay_online} -->
                             <!-- 如果是线上支付则显示支付按钮 -->
-                            {$pay_online}
+                            <div class="operate">
+                              {$pay_online}
+                            </div>
                             <!-- {/if} -->
 
                             <!--{if $virtual_card}-->
@@ -931,12 +933,8 @@
 
                           <!-- <div class="su"><input type="button" onclick="" value="立即使用支付宝支付"></div> -->
 
-
-
                       </div>
                   </div>
-                  
-
 
                 </div>
 
@@ -944,9 +942,6 @@
             </div>
           </div>
         </div>
-
-
-        
 
         <!-- {/if} -->
 
