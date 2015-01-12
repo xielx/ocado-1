@@ -40,7 +40,7 @@
             <div class="col-xs-12">
             <div class="login_title">
             <p class="top_border">
-                        <span class="glyphicon glyphicon- user"></span>{$lang.system_info}
+                        <span class="glyphicon glyphicon-user"></span>{$lang.system_info}
                 </p>
          </div>
             <form id="forget_form" action="forget-password-01.html" class="form_detail">

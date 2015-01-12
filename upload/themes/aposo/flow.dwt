@@ -52,6 +52,7 @@
 
 <div id="templatemo_shopping_cart" class="container_wapper">
   <div class="container">
+  <div class="col-xs-12">
     <div class="row">
       <div class="order_cart_main">
         <div class="order_step">
@@ -158,13 +159,13 @@
               <tfoot>
                 <tr>            
                   <!-- 订单价格 -->
-                  <td class="total_price" colspan="7" align="right">
+                  <td class="total_price" colspan="8" align="right">
                   <!-- {if $discount gt 0} --><span class="cost">{$your_discount}</span><br /><!-- {/if} -->
                   <span class="cost">{$shopping_money}</span><!-- {if $show_marketprice} -->，<span class="cost">{$market_price_desc}</span><!-- {/if} -->
               </td>
                 </tr>
                 <tr>
-                  <td colspan="7" align="right">
+                  <td colspan="8" align="right">
                     <!-- <input type="button" value="{$lang.clear_cart}" class="bnt_blue_1" onclick="location.href='flow.php?step=clear'" />
                     <input name="submit" type="submit" class="bnt_blue_1" value="{$lang.update_cart}" /> -->
                     
@@ -189,6 +190,7 @@
           </form>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -269,6 +271,7 @@
   <!-- {if $collection_goods} -->
   <div id="templatemo_shopping_cart" class="container_wapper">
     <div class="container">
+    <div class="col-xs-12">
       <div class="row">
         <div class="order_cart_main">
 
@@ -288,6 +291,7 @@
               <!-- {/if} -->
                 </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -858,6 +862,7 @@
   
         <div class="container_wapper" id="templatemo_shopping_cart">
           <div class="container">
+          <div class="col-xs-12">
             <div class="row">
               <div class="order_cart_main">
 
@@ -938,6 +943,7 @@
                 </div>
 
               </div>
+            </div>
             </div>
           </div>
         </div>

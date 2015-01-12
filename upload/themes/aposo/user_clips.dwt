@@ -213,7 +213,7 @@
                 <!-- {else} -->
                 <a  href="javascript:if (confirm('{$lang.add_to_attention}')) location.href='user.php?act=add_to_attention&rec_id={$goods.rec_id}'" class="f6 pink">{$lang.attention}</a>
                 <!-- {/if} -->
-                <a href="javascript:addToCart({$goods.goods_id})" class="f6 pink">{$lang.add_to_cart}</a> <a href="javascript:if (confirm('{$lang.remove_collection_confirm}')) location.href='user.php?act=delete_collection&collection_id={$goods.rec_id}'" class="f6">{$lang.drop}</a></td>
+                <a href="javascript:addToCart({$goods.goods_id})" class="f6 pink">{$lang.add_to_cart}</a> <a href="javascript:if (confirm('{$lang.remove_collection_confirm}')) location.href='user.php?act=delete_collection&collection_id={$goods.rec_id}'" class="f6 pink">{$lang.drop}</a></td>
             </tr>
             <!--{/foreach} -->
           </table>

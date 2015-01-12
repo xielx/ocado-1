@@ -67,11 +67,14 @@ body {
 #templatemo_banner_top a {
     font-size: 12px;
     line-height: 30px;
-	margin: 0;
+	margin: 0 2px;
 }
 /*#templatemo_banner_top p span{padding-right:20px;}*/
-#templatemo_banner_top p.right {
-    text-align: left;
+#templatemo_banner_top p.right span.order_line {
+	padding:0 20px 0 10px;
+}
+#templatemo_banner_top p.right span img{
+	padding-left:10px;
 }
 
 /* templatemo_banner_logo */
@@ -231,6 +234,56 @@ body {
 }
 #templatemo_upcomming_event #next_event_btn a {
     float: left;
+}
+.pic_detail{ 
+	position: relative;
+  }
+.cart_bg{
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+	top: 0;
+	position: absolute;
+	background: #f4f4f4;
+	background: rgba(244, 244, 244, 0.6);
+	width: 95%;
+	height: 100%;
+	color: #FFF;
+	filter: dropshadow(color=#f4f4f4, offx=2, offy=2);
+	-webkit-transition: opacity .25s linear;
+	-moz-transition: opacity .25s linear;
+	-o-transition: opacity .25s linear;
+	-ms-transition: opacity .25s linear;
+	transition: opacity .25s linear;
+	padding-top:26px;
+}
+.event_box:hover .cart_bg{
+	display:block;
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	opacity:1;
+}
+.pic_detail a img{
+	margin:0;
+	display:blodk;
+}
+.cart_bg a{
+	background: none repeat scroll 0 0 #333333;
+    border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+	line-height: 36px;
+    height: 36px;
+    margin: 12px auto;
+    width: 118px
+}
+.cart_bg a span{padding: 0 10px 0 0;}
+.cart_bg a:hover{
+	background:#d1394a;
+	text-decoration:none;
 }
 
 /* Product_details_box */
@@ -438,8 +491,8 @@ body {
 	font-weight: normal;
 }
 
-combine_order select,.combine_order input,.combine_order .my_recommend textarea,
-.form_detail ul li input.inputBg {
+.combine_order select,.combine_order input,.combine_order .my_recommend textarea,
+.form_detail ul li input.inputBg,.account_deposit input.inputBg,.account_deposit textarea {
 	background:#f0f4f5;
 	height: 40px;
 	line-height: 40px;
@@ -449,7 +502,7 @@ combine_order select,.combine_order input,.combine_order .my_recommend textarea,
 	margin: 0;
 	border: none;
 	width: 100%;
-	padding: 5px 10px 5px 45px;
+	padding: 5px 10px 5px 10px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
@@ -458,6 +511,7 @@ combine_order select,.combine_order input,.combine_order .my_recommend textarea,
 	border: 1px solid #e06d98;
 	background:#ffffff;
 }
+#templatemo_login .form_detail ul li input.inputBg{padding:5px 10px 5px 45px;}
 .form_detail ul li input.login_btn,.form_detail ul li a.start_shop{
 	background: none repeat scroll 0 0 #595a6b;
     border-radius: 4px;
@@ -808,7 +862,8 @@ combine_order select,.combine_order input,.combine_order .my_recommend textarea,
 #order_addr tr select{width:21%;}
 .theForm tr input.save_adress,input.bnt_blue_1
 #order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input,
-#templatemo_info input.combine_btn,.add_bonus input.save_adress,.deposit_info input.save_adress{
+#templatemo_info input.combine_btn,.add_bonus input.save_adress,.deposit_info input.save_adress,
+.combine_order input.bnt_blue_1,.deposit_info input.bnt_blue_1,.account_deposit input.bnt_blue_1{
 	background: none repeat scroll 0 0 #595a6b;
     border: 0 none;
     border-radius: 4px;
@@ -821,16 +876,13 @@ combine_order select,.combine_order input,.combine_order .my_recommend textarea,
     width: 135px;
 	padding: 0;
 }
-#order_addr tr input.save_adress:hover,
-.submit_order input.save_adress:hover,
-.theForm tr input.save_adress:hover, .theForm tr span, input.bnt_blue_1:hover
-.su input:hover,
-#order_addr tr input.save_adress:hover,.
-submit_order input.save_adress:hover,
-#templatemo_info input.combine_btn:hover,.
-add_bonus input.save_adress:hover,.
-deposit_info input.save_adress:hover
-{ background: none repeat scroll 0 0 #d1394a;}
+#order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,
+.theForm tr input.save_adress:hover, .theForm tr span, input.bnt_blue_1:hover,
+.su input:hover,#order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,
+#templatemo_info input.combine_btn:hover,.add_bonus input.save_adress:hover,
+.deposit_info input.save_adress:hover,.combine_order input.bnt_blue_1:hover,
+.deposit_info input.bnt_blue_1:hover,.account_deposit input.bnt_blue_1:hover{ 
+background: none repeat scroll 0 0 #d1394a;}
 #order_addr tr span{color:#ff0000;}
 #payment_table tr{
 	height:40px;
@@ -861,7 +913,10 @@ deposit_info input.save_adress:hover
 	height: 100px;
     margin-top: 10px;
 }
-
+.flowBox tr td span{
+	background:none;
+	color:#d1394a;
+}
 /* check ok */
 .order_cart_main .order_step .step3_active{
 	background: url("../images/order_01.png") no-repeat scroll 0 -275px;
@@ -1125,7 +1180,7 @@ deposit_info input.save_adress:hover
     font-size: 18px;
     padding: 18px 0 0;
 }
-.goodsInfo a,.welcome_user a{text-decoration:underline;}
+.goodsInfo a,.welcome_user a{/*text-decoration:underline;*/}
 
 .combine_order{
 	clear: both;
@@ -1163,13 +1218,13 @@ table.order_list tr .f6 a{color: #eb5b6b;}
 .combine_order td{
 	padding:5px;
 }
-.combine_order .my_recommend input,.combine_order .my_recommend select{
+.combine_order .my_recommend input,.combine_order .my_recommend select,.account_deposit input.inputBg,.account_deposit textarea{
 	width:50%;
 }
 .combine_order .my_recommend textarea{
 	height: 125px;
     padding: 5px;
-    width: 90%;
+    width: 100%;
 }
 .combine_order .addbouns input{
 	float: none;

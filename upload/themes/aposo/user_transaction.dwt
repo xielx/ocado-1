@@ -632,8 +632,7 @@
           {/foreach}
         </script>
         <h5><span>{$lang.user_balance}</span></h5>
-        <div class="blank"></div>
-         <table width="100%" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;">
+         <table width="100%" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;margin-top:20px;">
           <tr>
             <td align="center"><a href="user.php?act=account_deposit" class="f6 pink">{$lang.surplus_type_0}</a> | <a href="user.php?act=account_raply" class="f6 pink">{$lang.surplus_type_1}</a> | <a href="user.php?act=account_detail" class="f6 pink">{$lang.add_surplus_log}</a> | <a href="user.php?act=account_log" class="f6 pink">{$lang.view_application}</a> </td>
           </tr>
@@ -649,7 +648,7 @@
           </tr>
           <tr>
             <td>{$lang.process_notic}:</td>
-            <td align="left"><textarea name="user_note" cols="55" rows="6" style="border:1px solid #ccc;">{$order.user_note|escape}</textarea></td>
+            <td align="left"><textarea name="user_note" cols="55" rows="6">{$order.user_note|escape}</textarea></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
@@ -672,17 +671,17 @@
             </tr>
             <tr>
               <td>{$lang.process_notic}:</td>
-              <td align="left"><textarea name="user_note" cols="55" rows="6" style="border:1px solid #ccc;">{$order.user_note|escape}</textarea></td>
+              <td align="left"><textarea name="user_note" cols="55" rows="6">{$order.user_note|escape}</textarea></td>
             </tr>
           </table>
-          <table width="100%" border="0" cellpadding="5" cellspacing="1" class="deposit_info">
-            <tr align="center">
-              <td  colspan="3" align="left"><b>{$lang.payment}:</b></td>
+          <table width="100%" border="0" cellpadding="5" cellspacing="1" class="deposit_info order_list">
+            <tr>
+              <td colspan="3" style="text-align:left;"><b>{$lang.payment}:</b></td>
             </tr>
             <tr align="center">
-              <td>{$lang.pay_name}</td>
-              <td width="60%">{$lang.pay_desc}</td>
-              <td width="17%">{$lang.pay_fee}</td>
+              <th>{$lang.pay_name}</th>
+              <th width="60%">{$lang.pay_desc}</th>
+              <th width="17%">{$lang.pay_fee}</th>
             </tr>
             <!-- {foreach from=$payment item=list} -->
             <tr>
