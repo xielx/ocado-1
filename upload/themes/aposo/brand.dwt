@@ -59,7 +59,7 @@
 <!-- TemplateBeginEditable name="左边广告区域（宽200px）" -->
 <!-- TemplateEndEditable -->
     <!--AD end-->
-    <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+    
   </div>
   <!--left end-->
   <!--right start-->
@@ -138,13 +138,17 @@
 <!-- {/if} -->
 
  <!-- #EndLibraryItem -->
+ 
   <!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem -->
   <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 
 
   </div>  
+
+  <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
   <!--right end-->
+
 </div>
 <div class="blank5"></div>
 <!--帮助-->
