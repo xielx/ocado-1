@@ -92,7 +92,14 @@ function insert_history()
             $goods['url'] = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
 
             array_push($history_str, '<div class="col-sm-6 col-md-3">');
-                array_push($history_str, '<div class="event_box event_animate_left"><a href="'.$goods['url'].'" target="_blank"><img src="'.$goods['goods_thumb'].'" alt="" class="img-responsive" /></a>');
+                array_push($history_str, '<div class="event_box event_animate_left">');
+                    array_push($history_str, '<div class="pic_detail">');
+                        array_push($history_str, '<a href="'.$goods['url'].'" target="_blank"><img src="'.$goods['goods_thumb'].'" alt="" class="img-responsive" /></a>');
+                        array_push($history_str, '<div class="cart_bg">');
+                          array_push($history_str, '<a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</a>');
+                          array_push($history_str, '<a href="'. $goods['url']. '"><span class="glyphicon glyphicon-search"></span>查看详情</a>');
+                        array_push($history_str, '</div>');
+                    array_push($history_str, '</div>');
                     array_push($history_str, '<ul>');
                         array_push($history_str, '<li><a href="'.$goods['url'].'" target="_blank"><span class="title">巧克力黑金砖</span></a><a href="'.$goods['url'].'" target="_blank"><span class="intro">会员价： <span class="price">￥280</span> </span></a></li>');
                     array_push($history_str, '</ul>');
