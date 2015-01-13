@@ -373,6 +373,30 @@ $(document).ready(function(){
 </div>
 <!--{/if}-->
 <!--友情链接 end-->
+
+<!-- tab -->
+<div id="templatemo_products_tab">
+	<div class="container">
+    	<div class="row">
+            <div class="col-xs-12">
+            	<div class="tab_change">
+                	<ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">商品标签</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">购买记录</a></li>
+                        <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">用户评论</a></li>
+                    </ul>
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="home">商品标签商品标签</div>
+                      <div role="tabpanel" class="tab-pane fade" id="profile">购买记录购买记录</div>
+                      <div role="tabpanel" class="tab-pane fade" id="messages">用户评论用户评论</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="blank"></div>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 </body>

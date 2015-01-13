@@ -343,7 +343,6 @@ body {
     height: 28px;
     line-height: 28px;
     margin-right: 5px;
-    padding: 0 30px;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
@@ -354,6 +353,7 @@ body {
 }
 .pro_sku ul li label {
 	cursor: pointer;
+	padding: 0 30px;
 }
 .pro_desc p{
 	color: #9b9b9b;
@@ -442,6 +442,32 @@ body {
 .select_view ul.ingred_det li span.kw{
 	color: #d1394a;
 	padding-left:10px;
+}
+/* tab change*/
+.tab_change ul.nav-tabs li a{
+	font-size:14px;
+	color:#333333;
+}
+.tab_change .nav-tabs > li.active > a, .tab_change .nav-tabs > li.active > a:hover, .tab_change .nav-tabs > li.active > a:focus{
+	border:0;
+}
+.tab_change .nav-tabs > li > a{
+	border:0;
+}
+.tab_change ul.nav-tabs li.active{
+	border-bottom:5px solid #d1394a;
+}
+.tab_change .nav>li>a:hover,.tab_change .nav>li>a:focus {
+    background: none;
+	border:0;
+	text-decoration:underline;
+}
+.tab_change .nav-tabs > li.active > a, .tab_change .nav-tabs > li.active > a:hover, .tab_change .nav-tabs > li.active > a:focus{
+	background:none;
+}
+.tab-content{
+	clear:both;
+	margin:20px 0;
 }
 
 /* templatemo_login */
