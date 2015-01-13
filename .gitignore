@@ -12,3 +12,4 @@ upload/includes/config.php
 tmtags*
 .phpintel*
 .project
+.~lock*
