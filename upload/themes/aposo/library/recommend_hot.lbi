@@ -11,7 +11,7 @@
               <a href="{$goods.url}" title="{$goods.name|escape:html}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="img-responsive" /></a>
               <div class="cart_bg">
                 <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</a>
-                <a href="#"><span class="glyphicon glyphicon-search"></span>查看详情</a>
+                <a href="{$goods.url}"><span class="glyphicon glyphicon-search"></span>查看详情</a>
               </div>
           </div>
           <ul>

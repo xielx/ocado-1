@@ -21,7 +21,7 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-    {insert_scripts files='html5shiv.js,respond.js'}
+	{insert_scripts files='html5shiv.js,respond.js'}
   <![endif]-->
 
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
@@ -229,120 +229,137 @@ $(document).ready(function(){
 </div>
 <!-- detail info end -->
 
+
+
+
+	<!-- tab -->
+<div id="templatemo_products_tab">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="tab_change">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">商品标签</a></li>
+						<li role="presentation"><a href="#profile" role="tab" data-toggle="tab">购买记录</a></li>
+						<li role="presentation"><a href="#messages" role="tab" data-toggle="tab">用户评论</a></li>
+					</ul>
+					<div class="tab-content">
+						<!-- start of tab 1 -->
+						<div role="tabpanel" class="tab-pane fade in active" id="home">
+
+						<div class="box">
+						<div class="box_1">
+							<h3><span class="text">{$lang.goods_tag}</span></h3>
+							<div class="boxCenterList clearfix ie6">
+								<form name="tagForm" action="javascript:;" onSubmit="return submitTag(this)" id="tagForm">
+									<p id="ECS_TAGS" style="margin-bottom:5px;">
+										<!-- 标记{foreach from=$tags item=tag}-->
+										<a href="search.php?keywords={$tag.tag_words|escape:url}" style="color:#006ace; text-decoration:none; margin-right:5px;">{$tag.tag_words|escape:html}[{$tag.tag_count}]</a>
+										<!-- 结束标记{/foreach} -->
+									</p>
+									<p>
+										<input type="text" name="tag" id="tag" class="inputBg" size="35" />
+										<input type="submit" value="添 加" class="bnt_blue" style="border:none;" />
+										<input type="hidden" name="goods_id" value="{$goods.goods_id}"  />
+									</p>
+									<script type="text/javascript">
+									//<![CDATA[
+									{literal}
+									/**
+									 * 用户添加标记的处理函数
+									 */
+									function submitTag(frm)
+									{
+										try
+										{
+											var tag = frm.elements['tag'].value;
+											var idx = frm.elements['goods_id'].value;
+
+											if (tag.length > 0 && parseInt(idx) > 0)
+											{
+												Ajax.call('user.php?act=add_tag', "id=" + idx + "&tag=" + tag, submitTagResponse, "POST", "JSON");
+											}
+										}
+										catch (e) { alert(e); }
+
+										return false;
+									}
+
+									function submitTagResponse(result)
+									{
+										var div = document.getElementById('ECS_TAGS');
+
+										if (result.error > 0)
+										{
+											alert(result.message);
+										}
+										else
+										{
+											try
+											{
+												div.innerHTML = '';
+												var tags = result.content;
+
+												for (i = 0; i < tags.length; i++)
+												{
+													div.innerHTML += '<a href="search.php?keywords='+tags[i].word+'" style="color:#006ace; text-decoration:none; margin-right:5px;">' +tags[i].word + '[' + tags[i].count + ']<\/a>&nbsp;&nbsp; ';
+												}
+											}
+											catch (e) { alert(e); }
+										}
+									}
+									{/literal}
+									//]]>
+									</script>
+								</form>
+							</div>
+						 </div>
+						</div>
+						<div class="blank5"></div>
+						
+
+					  </div>
+					  <!-- end of tab1 -->
+
+					  <!-- start of tab2 -->
+					  <div role="tabpanel" class="tab-pane fade" id="profile">
+						<!-- #BeginLibraryItem "/library/bought_note_guide.lbi" -->
+
+						{insert_scripts files='transport.js,utils.js'}
+						<div id="ECS_BOUGHT">{* ECSHOP 提醒您：动态载入bought_notes.lbi，显示当前商品的购买记录 *}{insert name='bought_notes' id=$id}</div>
+						 <!-- #EndLibraryItem -->
+				
+					  </div>
+					  <!-- end of tab 2 -->
+
+					  <!-- start of tab3 -->
+					  <div role="tabpanel" class="tab-pane fade" id="messages">
+						<!-- #BeginLibraryItem "/library/comments.lbi" -->
+						{insert_scripts files='transport.js,utils.js'}
+						<div id="ECS_COMMENT"> {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}{insert name='comments' type=$type id=$id}</div>
+						 <!-- #EndLibraryItem -->
+					  </div>
+					  <!-- end of tab3 -->
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- tabs end -->
+
+<!-- #BeginLibraryItem "/library/bought_goods.lbi" --><!-- #EndLibraryItem -->
+
 <!-- history start -->
 <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
 <!-- history end -->
-	
-	<!--right start-->
-		 <div class="box">
-		 <div class="box_1">
-			<h3><span class="text">{$lang.goods_tag}</span></h3>
-			<div class="boxCenterList clearfix ie6">
-				<form name="tagForm" action="javascript:;" onSubmit="return submitTag(this)" id="tagForm">
-					<p id="ECS_TAGS" style="margin-bottom:5px;">
-						<!-- 标记{foreach from=$tags item=tag}-->
-						<a href="search.php?keywords={$tag.tag_words|escape:url}" style="color:#006ace; text-decoration:none; margin-right:5px;">{$tag.tag_words|escape:html}[{$tag.tag_count}]</a>
-						<!-- 结束标记{/foreach} -->
-					</p>
-					<p>
-						<input type="text" name="tag" id="tag" class="inputBg" size="35" />
-						<input type="submit" value="添 加" class="bnt_blue" style="border:none;" />
-						<input type="hidden" name="goods_id" value="{$goods.goods_id}"  />
-					</p>
-					<script type="text/javascript">
-					//<![CDATA[
-					{literal}
-					/**
-					 * 用户添加标记的处理函数
-					 */
-					function submitTag(frm)
-					{
-						try
-						{
-							var tag = frm.elements['tag'].value;
-							var idx = frm.elements['goods_id'].value;
-
-							if (tag.length > 0 && parseInt(idx) > 0)
-							{
-								Ajax.call('user.php?act=add_tag', "id=" + idx + "&tag=" + tag, submitTagResponse, "POST", "JSON");
-							}
-						}
-						catch (e) { alert(e); }
-
-						return false;
-					}
-
-					function submitTagResponse(result)
-					{
-						var div = document.getElementById('ECS_TAGS');
-
-						if (result.error > 0)
-						{
-							alert(result.message);
-						}
-						else
-						{
-							try
-							{
-								div.innerHTML = '';
-								var tags = result.content;
-
-								for (i = 0; i < tags.length; i++)
-								{
-									div.innerHTML += '<a href="search.php?keywords='+tags[i].word+'" style="color:#006ace; text-decoration:none; margin-right:5px;">' +tags[i].word + '[' + tags[i].count + ']<\/a>&nbsp;&nbsp; ';
-								}
-							}
-							catch (e) { alert(e); }
-						}
-					}
-					{/literal}
-					//]]>
-					</script>
-				</form>
-			</div>
-		 </div>
-		</div>
-		<div class="blank5"></div>
-
- <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/bought_goods.lbi" -->
-
-<!-- {if $bought_goods} -->
-		 <div class="box">
-		 <div class="box_1">
-			<h3><span class="text">{$lang.shopping_and_other}</span></h3>
-			<div class="boxCenterList clearfix ie6">
-			 <!--{foreach from=$bought_goods item=bought_goods_data}-->
-				<div class="goodsItem">
-				 <a href="{$bought_goods_data.url}"><img src="{$bought_goods_data.goods_thumb}" alt="{$bought_goods_data.goods_name}"  class="goodsimg" /></a><br />
-				 <p><a href="{$bought_goods_data.url}" title="{$bought_goods_data.goods_name}">{$bought_goods_data.short_name}</a></p> 
-				 <!-- {if $bought_goods_data.promote_price neq 0} -->
-				<font class="shop_s">{$bought_goods_data.formated_promote_price}</font>
-				<!-- {else} -->
-				<font class="shop_s">{$bought_goods_data.shop_price}</font>
-				<!-- {/if} -->
-				</div>
-				<!-- {/foreach} -->
-			</div>
-		 </div>
-		</div>
-		<div class="blank5"></div>
-		<!-- {/if} -->
- <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/bought_note_guide.lbi" -->
-
-{insert_scripts files='transport.js,utils.js'}
-<div id="ECS_BOUGHT">{* ECSHOP 提醒您：动态载入bought_notes.lbi，显示当前商品的购买记录 *}{insert name='bought_notes' id=$id}</div>
- <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/comments.lbi" -->
-
-{insert_scripts files='transport.js,utils.js'}
-<div id="ECS_COMMENT"> {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}{insert name='comments' type=$type id=$id}</div>
-
- <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 	</div>
 	<!--right end-->
+
 </div>
 <div class="blank5"></div>
 <!--帮助-->
@@ -374,28 +391,7 @@ $(document).ready(function(){
 <!--{/if}-->
 <!--友情链接 end-->
 
-<!-- tab -->
-<div id="templatemo_products_tab">
-	<div class="container">
-    	<div class="row">
-            <div class="col-xs-12">
-            	<div class="tab_change">
-                	<ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">商品标签</a></li>
-                        <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">购买记录</a></li>
-                        <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">用户评论</a></li>
-                    </ul>
-                    <div class="tab-content">
-                      <div role="tabpanel" class="tab-pane fade in active" id="home">商品标签商品标签</div>
-                      <div role="tabpanel" class="tab-pane fade" id="profile">购买记录购买记录</div>
-                      <div role="tabpanel" class="tab-pane fade" id="messages">用户评论用户评论</div>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="blank"></div>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
