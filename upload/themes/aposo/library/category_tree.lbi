@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<div class="col-md-12">
+
   <div class="classify">
           <div class="classify_text">蛋糕分类:</div>
           <ul>
@@ -16,6 +16,6 @@
               <!--{/foreach}-->
           </ul>
     </div>
-</div>
+
 
 <!-- <div class="blank5"></div> -->

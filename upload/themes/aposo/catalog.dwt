@@ -36,15 +36,14 @@
  </div>
 </div>
 <!--当前位置 end-->
-<div class="blank"></div>
-<div class="block">
+<div class="block container">
   <div class="box">
- <div class="box_1">
+ <div class="box_1 col-md-12">
   <h3><span>{$lang.all_category}</span></h3>
   <div class="boxCenterList RelaArticle clearfix">
     <!--{foreach from=$cat_list item=cat}-->
             <div style="white-space:nowrap; padding-left:{$cat.level*2}em;
-              {if $cat.has_children eq 0}float:left;padding-left: 1em;{else}clear:both;font-weight:bold;padding-top: 10px;{/if}
+              {if $cat.has_children eq 0}float:left;{else}clear:both;font-weight:bold;padding-top: 10px;{/if}
               "><a href="{$cat.url}">{$cat.cat_name}({$cat.goods_num})</a></div>
             <!--{/foreach}-->
 

@@ -7,7 +7,7 @@
        <form name="tagForm" action="javascript:;" onSubmit="return submitTag(this)" id="tagForm">
         <p id="ECS_TAGS" style="margin-bottom:5px;">
           <!-- 标记{foreach from=$tags item=tag}-->
-          <a href="search.php?keywords={$tag.tag_words|escape:url}" style="color:#006ace; text-decoration:none; margin-right:5px;">{$tag.tag_words|escape:html}[{$tag.tag_count}]</a>
+          <a href="search.php?keywords={$tag.tag_words|escape:url}" style="color:#d1394a; text-decoration:none; margin-right:5px;">{$tag.tag_words|escape:html}[{$tag.tag_count}]</a>
           <!-- 结束标记{/foreach} -->
         </p>
         <p>
@@ -55,7 +55,7 @@
 
                       for (i = 0; i < tags.length; i++)
                       {
-                        div.innerHTML += '<a href="search.php?keywords='+tags[i].word+'" style="color:#006ace; text-decoration:none; margin-right:5px;">' +tags[i].word + '[' + tags[i].count + ']<\/a>&nbsp;&nbsp; ';
+                        div.innerHTML += '<a href="search.php?keywords='+tags[i].word+'" style="color:##d1394a; text-decoration:none; margin-right:5px;">' +tags[i].word + '[' + tags[i].count + ']<\/a>&nbsp;&nbsp; ';
                       }
                     }
                     catch (e) { alert(e); }

@@ -29,7 +29,8 @@ var process_request = "{$lang.process_request}";
 							<a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
 						<!-- {/foreach} -->
 						<span class="order_line">订购热线：{$service_phone}</span> 
-						<span><img src="images/weixin.png" alt=""><img src="images/weibo.png" alt=""></span></p>
+						<span><img src="images/weixin.png" alt="">
+                        <img src="images/weibo.png" alt=""></span></p>
 				</div>
 				<!-- {/if} -->
 			</div>

@@ -60,7 +60,7 @@
                 <!-- {/if} -->
                 <li class="Agreement">
                     <label for="remember"><input type="checkbox" checked id="remember" name="remember" value="1" />记住账号</label>
-                    <a href="user.php?act=get_password" class="grey">忘记密码 ?</a>
+                    <a href="user.php?act=get_password" class="grey pink">忘记密码 ?</a>
                 </li>
                 <li>
                     <input type="submit" value="登录" class="login_btn" id="login_btn" />
@@ -88,7 +88,7 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="login_title">
-                 <p class="top_border"> <span class="glyphicon glyphicon-user"></span>会员注册<span class="click_login">（ 如已有帐号，请 <a href="user.php?act=login">点此登录</a> ）</span> </p>
+                 <p class="top_border"> <span class="glyphicon glyphicon-user"></span>会员注册<span class="click_login">（ 如已有帐号，请 <a class="pink" href="user.php?act=login">点此登录</a> ）</span> </p>
             </div>
             <form id="reg_form" class="form_detail" action="user.php" method="post" name="formUser" onsubmit="return register();">
               <div class="reg_form">
@@ -154,7 +154,7 @@
                   <!--{/if}-->
 
                   <li class="Agreement">
-                    <p><input type="checkbox" class="x-check" id="xieyi_check" checked="checked" name="agreement"><label for="xieyi_check">我已阅读并同意</label> <a href="article.php?cat_id=-1" target="_blank">会员注册协议</a></p>
+                    <p><input type="checkbox" class="x-check" id="xieyi_check" checked="checked" name="agreement"><label for="xieyi_check">我已阅读并同意</label> <a class="pink" href="article.php?cat_id=-1" target="_blank">会员注册协议</a></p>
                   </li>
                   <li>
                     <div class="btn_c_box">

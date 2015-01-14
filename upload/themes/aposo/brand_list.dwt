@@ -38,10 +38,10 @@
  </div>
 </div>
 <!--当前位置 end-->
-<div class="blank"></div>
+
 <div class="block clearfix container">
   <!--left start-->
-  <div class="AreaL">
+  <div class="AreaL col-md-12">
    <!-- TemplateBeginEditable name="左边区域" -->
 <!-- #BeginLibraryItem "/library/cart.lbi" -->
 
@@ -80,7 +80,7 @@
   </div>
   <!--left end-->
   <!--right start-->
-  <div class="AreaR">
+  <div class="AreaR col-md-12">
      <!-- TemplateBeginEditable name="通栏广告区域（宽750px）" -->
      <!-- TemplateEndEditable -->
      <div class="blank5"></div>

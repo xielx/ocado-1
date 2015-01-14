@@ -39,10 +39,9 @@
  </div>
 </div>
 <!--当前位置 end-->
-<div class="blank"></div>
 <div class="block clearfix container">
   <!--left start-->
-  <div class="AreaL">
+  <div class="AreaL col-md-12">
     <!-- TemplateBeginEditable name="左边区域" -->
 <!-- #BeginLibraryItem "/library/cart.lbi" -->
 
@@ -61,7 +60,7 @@
   </div>
   <!--left end-->
   <!--right start-->
-  <div class="AreaR">
+  <div class="AreaR col-md-12">
 	 <!--组合搜索 开始-->
 	  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
 	  <div class="box">

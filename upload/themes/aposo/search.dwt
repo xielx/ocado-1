@@ -36,10 +36,9 @@
  </div>
 </div>
 <!--当前位置 end-->
-<div class="blank"></div>
 <div class="block clearfix container">
   <!--left start-->
-  <div class="AreaL">
+  <div class="AreaL col-md-12">
     <!-- TemplateBeginEditable name="左边区域" -->
     <!-- #BeginLibraryItem "/library/cart.lbi" --><!-- #EndLibraryItem -->
     <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
@@ -55,7 +54,7 @@
   </div>
   <!--left end-->
   <!--right start-->
-  <div class="AreaR">
+  <div class="AreaR col-md-12">
   <!-- {if $action eq "form"} -->
   <!--  搜索的表单 -->
   <div class="box">

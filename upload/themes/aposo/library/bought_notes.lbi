@@ -5,8 +5,8 @@
       <h3><span class="text">{$lang.bought_notes}</span>({$lang.later_bought_amounts}<font class="f1">{$pager.record_count}</font>)</h3>
       <div class="boxCenterList">
        <!-- {if $notes} -->
-       <table width="100%" cellpadding="4">
-       <tr style="background:url(images/lineBg.gif) repeat-x left bottom;text-align:center; color:#006bd0; font-weight:bold;"><td width="25%" align="left" style="padding-left:20px">{$lang.username}</td><td width="10%">{$lang.number}</td><td width="45%">{$lang.bought_time}</td><td width="20%">{$lang.order_status}</td></tr>
+       <table width="100%" cellpadding="4" class="comment_list">
+       <tr><th width="25%" align="left" style="padding-left:20px">{$lang.username}</th><th width="10%">{$lang.number}</th><th width="45%">{$lang.bought_time}</th><th width="20%">{$lang.order_status}</th></tr>
        <!-- {foreach from=$notes item=note} -->
        <tr align="center"><td align="left" style="padding-left:20px"><!-- {if $note.user_name} -->{$note.user_name|escape:html}<!-- {else} -->{$lang.anonymous}<!-- {/if} --></td><td>{$note.goods_number}</td><td>{$note.add_time}</td><td><!--{if $note.order_status}-->{$lang.turnover}<!--{else}-->{$lang.is_cancel}<!--{/if}--></td></tr>
        <!-- {/foreach} -->
@@ -15,7 +15,7 @@
         {$lang.no_notes}
         <!--{/if}-->
        <!--翻页 start-->
-       <div id="buy_pagebar" class="f_r" style="margin-top:10px">
+       <div id="buy_pagebar" class="f_r">
         <form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
         <!-- {if $pager.styleid eq 0 } -->
         <div id="buy_pager">

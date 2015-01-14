@@ -255,7 +255,7 @@ body {
 	-o-transition: opacity .25s linear;
 	-ms-transition: opacity .25s linear;
 	transition: opacity .25s linear;
-	padding-top:26px;
+	padding-top:55px;
 }
 .event_box:hover .cart_bg{
 	display:block;
@@ -445,7 +445,7 @@ body {
 }
 /* tab change*/
 .tab_change ul.nav-tabs li a{
-	font-size:14px;
+	font-size:16px;
 	color:#333333;
 }
 .tab_change .nav-tabs > li.active > a, .tab_change .nav-tabs > li.active > a:hover, .tab_change .nav-tabs > li.active > a:focus{
@@ -468,6 +468,51 @@ body {
 .tab-content{
 	clear:both;
 	margin:20px 0;
+}
+.tab-pane h3,.comments,.commentsList{
+	font-size: 14px;
+}
+.comment_list tr{
+	line-height:30px;
+}
+.comment_list tr th{
+	color: #d1394a;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+.tab-content #buy_pagebar{
+	border-top: 1px solid #ddd;
+    color: #999;
+    margin-top: 10px;
+    text-align: right;
+	padding-top:10px;
+}
+.tab-content #buy_pagebar a,.boxCenterList #pagebar a{color:#999;}
+.tab-content #buy_pagebar a:hover,.boxCenterList #pagebar a:hover{color: #d1394a;background:none;}
+
+.comments .comment_line{
+	border-bottom:1px solid #ddd;
+}
+.comments td{
+	padding:10px 0 0;
+}
+.comments .comment_line td{
+	padding:0 0 10px;
+}
+.comments td,.comments td img{vertical-align: top;}
+.comments td .f3{
+	font-size:12px;
+	color:#999;
+}
+.boxCenterList #pagebar{
+	color: #999;
+    margin-top: 10px;
+    text-align: right;
+	padding-top:10px;
+}
+.comment_table td{
+	padding:5px 0;
 }
 
 /* templatemo_login */
@@ -631,7 +676,7 @@ body {
 	float: left;
 	font-weight:bold;
     font-size: 12px;
-    line-height: 21px;
+    line-height: 23px;
     width: 60px;
 }
 .classify ul{
@@ -643,11 +688,11 @@ body {
     font-size: 12px;
     margin: 0 10px;
 }
-.classify ul li a{
+.classify ul li a,.boxCenterList a{
 	color:#666666;
 	padding:2px 5px;
 }
-.classify ul li a:hover,.classify ul li.active a{
+.classify ul li a:hover,.classify ul li.active a,.boxCenterList a:hover{
 	background:#cf3341;
 	color:#ffffff;
 }
@@ -873,23 +918,25 @@ body {
 }
 .theForm tr input,.theForm tr select,
 #order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,
-.nstep_products textarea,.add_bonus input,.deposit_info input.inputBg,.deposit_info textarea{
+.nstep_products textarea,.add_bonus input,.deposit_info input.inputBg,.deposit_info textarea,#tagForm input.inputBg,
+.commentsList input.inputBorder,.commentsList textarea{
 	background: none repeat scroll 0 0 #f0f4f5;
     border: medium none;
     border-radius: 2px;
     color: #767676;
-    height: 40px;
-    line-height: 40px;
+    height: 38px;
+    line-height: 38px;
     margin: 0;
     padding: 5px 10px;
     width: 65%;
 }
 .theForm tr select, 
-#order_addr tr select{width:21%;}
+#order_addr tr select,#tagForm input.inputBg{width:21%;}
 .theForm tr input.save_adress,input.bnt_blue_1
 #order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input,
 #templatemo_info input.combine_btn,.add_bonus input.save_adress,.deposit_info input.save_adress,
-.combine_order input.bnt_blue_1,.deposit_info input.bnt_blue_1,.account_deposit input.bnt_blue_1{
+.combine_order input.bnt_blue_1,.deposit_info input.bnt_blue_1,.account_deposit input.bnt_blue_1,
+#tagForm input.bnt_blue,.commentsList input.f_r{
 	background: none repeat scroll 0 0 #595a6b;
     border: 0 none;
     border-radius: 4px;
@@ -907,7 +954,8 @@ body {
 .su input:hover,#order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,
 #templatemo_info input.combine_btn:hover,.add_bonus input.save_adress:hover,
 .deposit_info input.save_adress:hover,.combine_order input.bnt_blue_1:hover,
-.deposit_info input.bnt_blue_1:hover,.account_deposit input.bnt_blue_1:hover{ 
+.deposit_info input.bnt_blue_1:hover,.account_deposit input.bnt_blue_1:hover,
+#tagForm input.bnt_blue:hover,.commentsList input.f_r:hover{ 
 background: none repeat scroll 0 0 #d1394a;}
 #order_addr tr span{color:#ff0000;}
 #payment_table tr{
@@ -935,7 +983,7 @@ background: none repeat scroll 0 0 #d1394a;}
 	border-radius:0;
 	width:80px;
 }
-.nstep_products textarea,.deposit_info textarea{
+.nstep_products textarea,.deposit_info textarea,.commentsList textarea{
 	height: 100px;
     margin-top: 10px;
 }
