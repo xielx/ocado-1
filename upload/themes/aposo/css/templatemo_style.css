@@ -255,7 +255,7 @@ body {
 	-o-transition: opacity .25s linear;
 	-ms-transition: opacity .25s linear;
 	transition: opacity .25s linear;
-	padding-top:55px;
+	padding-top:26px;
 }
 .event_box:hover .cart_bg{
 	display:block;
