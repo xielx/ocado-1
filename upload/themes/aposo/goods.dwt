@@ -51,6 +51,8 @@ function reg(str){
 	$id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
 }
 
+
+
 </script>
 </head>
 <body>
@@ -99,9 +101,7 @@ $(document).ready(function(){
 
 				<!-- #BeginLibraryItem "/library/goods_gallery.lbi" --><!-- #EndLibraryItem -->
 
-				<div class="pro_copy">
-					{$goods.goods_desc}
-				</div>
+				
 			</div>
 			<form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
 			<div class="col-md-6">
@@ -199,26 +199,12 @@ $(document).ready(function(){
 							<li> <a href="javascript:addToCart({$goods.goods_id});">加入购物车</a> </li>
 							<li> <a href="javascript:collect({$goods.goods_id});">加入收藏</a> </li>
 							<!-- {if $affiliate.on} -->
-							<li> <a href="javascript:collect({$goods.goods_id});">推荐给好友</a> </li>
+							<!-- <li> <a href="javascript:collect({$goods.goods_id});">推荐给好友</a> </li> -->
 							<!-- {/if} -->
 						</ul>
 					</div>
 
-					<div class="select_view">
-						<ul>
-							<li class="ingred">优质原材料<br/>Best Ingredient</li>
-						</ul>
-						<ul class="view_list">
-							<li><img src="http://www.mcake.com/postsystem/docroot/images/goods/mater/2014081311103875350.jpg"><span>比利时白巧克力</span></li>
-							<li><img src="http://www.mcake.com/postsystem/docroot/images/goods/mater/2014081311071089296.jpg"><span>法国果茸</span></li>
-							<li><img src="http://www.mcake.com/postsystem/docroot/images/goods/mater/2014081310573865350.jpg"><span>法国奶油</span></li>
-						</ul>
-						<ul class="ingred_det">
-							<li> <span>Texture</span> <span>口感</span> <span class="kw">入口即化</span> </li>
-							<li> <span>Flavor</span> <span>口味</span> <span class="kw">水果</span> </li>
-							<li> <span>Base</span> <span>口味基底</span> <span class="kw">Mousse</span> </li>
-						</ul>
-					</div>
+					
 
 				</div>
 			</div>
@@ -229,9 +215,6 @@ $(document).ready(function(){
 </div>
 <!-- detail info end -->
 
-
-
-
 	<!-- tab -->
 <div id="templatemo_products_tab">
 	<div class="container">
@@ -239,13 +222,33 @@ $(document).ready(function(){
 			<div class="col-xs-12">
 				<div class="tab_change">
 					<ul class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">商品标签</a></li>
+						<li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">商品描述</a></li>
 						<li role="presentation"><a href="#profile" role="tab" data-toggle="tab">购买记录</a></li>
 						<li role="presentation"><a href="#messages" role="tab" data-toggle="tab">用户评论</a></li>
 					</ul>
 					<div class="tab-content">
 						<!-- start of tab 1 -->
 						<div role="tabpanel" class="tab-pane fade in active" id="home">
+						
+						<div class="pro_copy">
+							{$goods.goods_desc}
+						</div>
+
+						<div class="select_view">
+							<ul>
+								<li class="ingred">优质原材料<br/>Best Ingredient</li>
+							</ul>
+							<ul class="view_list">
+								<li><img src="http://www.mcake.com/postsystem/docroot/images/goods/mater/2014081311103875350.jpg"><span>比利时白巧克力</span></li>
+								<li><img src="http://www.mcake.com/postsystem/docroot/images/goods/mater/2014081311071089296.jpg"><span>法国果茸</span></li>
+								<li><img src="http://www.mcake.com/postsystem/docroot/images/goods/mater/2014081310573865350.jpg"><span>法国奶油</span></li>
+							</ul>
+							<ul class="ingred_det">
+								<li> <span>Texture</span> <span>口感</span> <span class="kw">入口即化</span> </li>
+								<li> <span>Flavor</span> <span>口味</span> <span class="kw">水果</span> </li>
+								<li> <span>Base</span> <span>口味基底</span> <span class="kw">Mousse</span> </li>
+							</ul>
+						</div>
 
 						<div class="box">
 						<div class="box_1">

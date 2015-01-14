@@ -43,7 +43,7 @@ $_LANG['best_goods'] = '精品推荐';
 $_LANG['new_goods'] = '新品上市';
 $_LANG['hot_goods'] = '热销商品';
 $_LANG['view_cart'] = '查看购物车';
-$_LANG['catalog'] = '所有分类';
+$_LANG['catalog'] = '蛋糕名录';
 $_LANG['regist_login'] = '注册/登录';
 $_LANG['profile'] = '个人资料';
 $_LANG['query_info'] = "共执行 %d 个查询，用时 %f 秒，在线 %d 人";
@@ -112,7 +112,7 @@ $_LANG['keywords'] = '关键字';
 $_LANG['sc_ds'] = '搜索简介';
 $_LANG['button_search'] = '立即搜索';
 $_LANG['no_search_result'] = '无法搜索到您要找的商品！';
-$_LANG['all_category'] = '所有分类';
+$_LANG['all_category'] = '蛋糕名录';
 $_LANG['all_brand'] = '所有品牌';
 $_LANG['all_option'] = '请选择';
 $_LANG['extension'] = '扩展选项';
@@ -508,7 +508,7 @@ $_LANG['reg_now'] = '立即注册';
 /* 商品品牌页 */
 $_LANG['official_site'] = '官方网站：';
 $_LANG['brand_category'] = '分类浏览：';
-$_LANG['all_category'] = '所有分类';
+$_LANG['all_category'] = '蛋糕名录';
 
 /* 商品分类页 */
 $_LANG['goods_filter'] = '商品筛选';
