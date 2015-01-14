@@ -96,7 +96,7 @@ function insert_history()
                     array_push($history_str, '<div class="pic_detail">');
                         array_push($history_str, '<a href="'.$goods['url'].'" target="_blank"><img src="'.$goods['goods_thumb'].'" alt="" class="img-responsive" /></a>');
                         array_push($history_str, '<div class="cart_bg">');
-                          // array_push($history_str, '<a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</a>');
+                          array_push($history_str, '<a href="javascript: addToCart(\''. $row['goods_id']. '\');"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</a>');
                           array_push($history_str, '<a href="'. $goods['url']. '"><span class="glyphicon glyphicon-search"></span>查看详情</a>');
                         array_push($history_str, '</div>');
                     array_push($history_str, '</div>');
