@@ -369,11 +369,11 @@ elseif ($_REQUEST['act']== 'custom_add')
     $smarty->assign('ad_list', $ad_list['ad']);
 
     assign_query_info();
-        $width_height = get_width_height();
-//        if(isset($width_height['width'])|| isset($width_height['height']))
-//        {
-            $smarty->assign('width_height', sprintf($_LANG['width_height'], $width_height['width'], $width_height['height']));
-//        }
+//  $width_height = get_width_height();
+//  if(isset($width_height['width'])|| isset($width_height['height']))
+//  {
+//      $smarty->assign('width_height', sprintf($_LANG['width_height'], $width_height['width'], $width_height['height']));
+//  }
     $smarty->assign('full_page', 1);
     $smarty->assign('current', 'cus');
     $smarty->assign('group_list', $group_list);
@@ -477,6 +477,7 @@ elseif ($_REQUEST['act'] == 'custom_insert')
             $filter['content'] = $filter['content']['htmls'];
         break;
     }
+    $filter['ad']['ad_status'] = 1;
     $ad = array('ad_type' => $filter['ad']['ad_type'],
                 'ad_name' => $filter['ad']['ad_name'],
                 'add_time' => GMTIME_UTC,
