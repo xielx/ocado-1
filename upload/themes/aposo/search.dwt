@@ -50,7 +50,6 @@
     <!-- TemplateBeginEditable name="左边广告区域（宽200px）" -->
     <!-- TemplateEndEditable -->
     <!--AD end-->
-    <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
   </div>
   <!--left end-->
   <!--right start-->
@@ -194,7 +193,6 @@
           <!--{/if}-->
            </h3>
         <!--{if $goods_list}-->
-
           <form action="compare.php" method="post" name="compareForm" id="compareForm" onsubmit="return compareGoods(this);">
           <!-- {if $pager.display == 'list'} -->
               <div class="goodsList">
@@ -331,6 +329,7 @@
       <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
    <!-- {/if} -->
 
+    <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
   </div>
   <!--right end-->
 </div>
