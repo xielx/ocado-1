@@ -39,7 +39,7 @@
 <div class="block container">
   <div class="box">
  <div class="box_1 col-md-12">
-  <h3><span>{$lang.all_category}</span></h3>
+  <!-- <h3><span>{$lang.all_category}</span></h3> -->
   <div class="boxCenterList RelaArticle clearfix">
     <!--{foreach from=$cat_list item=cat}-->
             <div style="white-space:nowrap; padding-left:{$cat.level*2}em;
