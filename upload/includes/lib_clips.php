@@ -277,7 +277,6 @@ function get_booking_list($user_id, $num, $start)
                            'dispose_note' => $row['dispose_note'],
                            'url'          => build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']));
     }
-
     return $booking;
 }
 

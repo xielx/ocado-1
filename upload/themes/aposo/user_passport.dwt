@@ -311,13 +311,13 @@
                         <span>{$lang.passwd_question}：{$passwd_question}</span>
                      </li>
                      <li>
-                        <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="">{$lang.passwd_answer}</label></div>
-                        <input type="text" maxlengt="20" class="inputBg" size="25" name="passwd_answer">
+                        <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label style="display: none;" for="">{$lang.passwd_answer}</label></div>
+                        <input type="text" maxlengt="20" class="inputBg" size="25" name="passwd_answer" placeholder="{$lang.passwd_answer}">
                      </li>
                     <!-- {if $enabled_captcha} -->
                      <li>
-                        <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="">{$lang.comment_captcha}</label></div>
-                        <input type="text" size="8" name="captcha" class="inputBg" />
+                        <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label style="display: none;" for="">{$lang.comment_captcha}</label></div>
+                        <input type="text" size="8" name="captcha" class="inputBg" placeholder="{$lang.comment_captcha}" />
                         <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" />
                      </li>
                      <!-- {/if} -->
@@ -357,12 +357,12 @@
                 <!--登录开始-->
                 <ul>
                      <li>
-                <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="password1">{$lang.new_password}</label></div>
-                    <input type="password" class="inputBg" size="25" name="new_password" id="new_password">
+                <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label style="display: none; " for="password1">{$lang.new_password}</label></div>
+                    <input type="password" class="inputBg" size="25" name="new_password" id="new_password" placeholder="{$lang.new_password}">
                 </li>
                  <li>
-                    <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label for="conform_password">{$lang.confirm_password}</label></div>
-                    <input type="password" class="inputBg" size="25" name="confirm_password" id="conform_password">
+                    <div class="input_content"><span class="glyphicon glyphicon-lock"></span><label style="display: none; " for="conform_password">{$lang.confirm_password}</label></div>
+                    <input type="password" class="inputBg" size="25" name="confirm_password" id="conform_password" placeholder="{$lang.confirm_password}">
                 </li>
                     <li>
                         <input type="hidden" name="act" value="act_edit_password" />
