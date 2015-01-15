@@ -1958,6 +1958,8 @@ function get_navigator($ctype = '', $catlist = array())
 
     $cur_url = substr(strrchr($_SERVER['REQUEST_URI'],'/'),1);
 
+
+
     if (intval($GLOBALS['_CFG']['rewrite']))
     {
         if(strpos($cur_url, '-'))
@@ -1970,7 +1972,7 @@ function get_navigator($ctype = '', $catlist = array())
     {
         $cur_url = substr(strrchr($_SERVER['REQUEST_URI'],'/'),1);
     }
-
+    
     $noindex = false;
     $active = 0;
     $navlist = array(
@@ -1993,7 +1995,8 @@ function get_navigator($ctype = '', $catlist = array())
     foreach($navlist['middle'] as $k=>$v)
     {
         $condition = empty($ctype) ? (strpos($cur_url, $v['url']) === 0) : (strpos($cur_url, $v['url']) === 0 && strlen($cur_url) == strlen($v['url']));
-        if ($condition)
+
+        if ($condition || ( substr($cur_url, 0, 11) == 'search.php?' && substr($v['url'], 0, 11) == 'search.php?' ))
         {
             $navlist['middle'][$k]['active'] = 1;
             $noindex = true;
@@ -2020,7 +2023,6 @@ function get_navigator($ctype = '', $catlist = array())
     if ($noindex == false) {
         $navlist['config']['index'] = 1;
     }
-
     return $navlist;
 }
 
