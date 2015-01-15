@@ -1,7 +1,7 @@
 <link href="themes/aposo/css/jssor_slider.css" rel="stylesheet">
-<div class="container" style="width:1040px; margin-top:15px;">
-	<div id="templatemo_banner_slide" class="container_wapper" style="display: none; position: relative; margin: 0 auto; width: 1030px; height: 380px; overflow: hidden;">
-		<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1030px; height: 442px; overflow: hidden;">
+<div class="container" style=" margin-top:15px;">
+	<div id="templatemo_banner_slide" class="container_wapper" style="display: none; position: relative; margin: 0 auto; width: 1040px; height: 380px; overflow: hidden;">
+		<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1040px; height: 442px; overflow: hidden;">
 			<!-- {foreach name=index_ad_block from=$ad item=adv} -->
 			 <div>
 				<a href="{$adv.url}">
