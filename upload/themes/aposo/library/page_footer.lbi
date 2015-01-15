@@ -32,3 +32,9 @@
     </div>
   </div>
 </div>
+
+{* 包含脚本文件 *}
+{insert_scripts files='jquery.min.js,common.js,index.js'}
+<script src="themes/aposo/js/bootstrap.min.js"></script>
+<script src="themes/aposo/js/jquery.mobile.customized.min.js"></script>
+<script src="themes/aposo/js/templatemo_script.js"></script>
