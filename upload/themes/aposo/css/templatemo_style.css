@@ -695,6 +695,12 @@ body {
 	background:#cf3341;
 	color:#ffffff;
 }
+#tagForm #ECS_TAGS a{
+    color:#d1394a; 
+}
+#tagForm #ECS_TAGS a:hover{
+    color:#FFF; 
+}
 .list .goods{
 	border-bottom: 1px solid #efeeee;
     clear: both;
