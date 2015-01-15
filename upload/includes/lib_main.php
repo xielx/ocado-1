@@ -2023,6 +2023,7 @@ function get_navigator($ctype = '', $catlist = array())
     if ($noindex == false) {
         $navlist['config']['index'] = 1;
     }
+
     return $navlist;
 }
 
