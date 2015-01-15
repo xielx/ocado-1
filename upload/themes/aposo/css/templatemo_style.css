@@ -116,7 +116,6 @@ body {
 #templatemo_main_menu .nav-justified li a {
     font-size: 15px;
     color: #ffffff;
-	font-weight:bold;
 }
 #templatemo_main_menu .nav-justified li a.current,
 #templatemo_main_menu .nav-justified li a:hover, 
@@ -1254,8 +1253,15 @@ background: none repeat scroll 0 0 #d1394a;}
     font-size: 18px;
     padding: 18px 0 0;
 }
-.goodsInfo a,.welcome_user a{/*text-decoration:underline;*/}
-
+.goodsInfo a,.welcome_user a{
+	color: #eb5b6b;
+	/*text-decoration:underline;*/
+}
+.goodsInfo a:hover,.welcome_user a:hover{
+	background:none;
+	color:#cf3341;
+	text-decoration:underline;
+}
 .combine_order{
 	clear: both;
     margin-top: 30px;
@@ -1316,3 +1322,66 @@ table.order_list tr .f6 a{color: #eb5b6b;}
 	clear:both;
 	margin-top:20px;
 }
+
+/* category */
+.goodsList ul {
+    border-bottom: 1px solid #efeeee;
+    clear: both;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.goodsList .goodsName{
+	font-size:14px;
+}
+.goodsList .goodsName a,.goodsList .goodsName .market,.goodsList .goodsName .shop{
+	color: #cf3341;
+    font-size: 16px;
+}
+.goodsList .action{
+	margin-top: 20px;
+    text-align: right;
+}
+.goodsList .action a{
+    background: none repeat scroll 0 0 #595a6b;
+    border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 35px;
+	margin-bottom:10px;
+    line-height: 35px;
+    text-align: center;
+    width: 125px;
+}
+.goodsList .action a:hover{background: none repeat scroll 0 0 #d1394a;}
+.pro_brief{
+	height: 78px;
+    overflow: hidden;
+}
+.box_1 h3.goods_filter,.box_1 h3.jp_recommend{
+    margin: 0 0 10px;
+}
+.pro_title{
+	text-align:center;
+}
+.pro_title a{
+	color: #666666;
+    font-size: 16px;
+    font-weight: bold;
+}
+.pro_title .f1{
+	color: #cf3341;
+    font-size: 16px;
+}
+.sort{text-align:right;}
+#show_best_area .more{
+	float: right;
+    margin-top: -27px;
+}
+h3.jp_recommend select{
+	font-size:12px;
+}
+h3.jp_recommend input{ vertical-align: middle;}
