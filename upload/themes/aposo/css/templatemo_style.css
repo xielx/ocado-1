@@ -52,8 +52,8 @@ body {
 }
 #templatemo_mobile_menu_wap .nav-stacked li:hover a,
 #templatemo_mobile_menu_wap .nav-stacked li a.active {
-    background-color: #67cbf2;
-    color: #000;
+    background-color: #eb5b6b;
+    color: #ffffff;
 }
 #templatemo_mobile_menu_wap .nav-stacked li a.focus {
     background-color: transparent;
@@ -75,6 +75,27 @@ body {
 }
 #templatemo_banner_top p.right span img{
 	padding-left:10px;
+}
+#templatemo_banner_top p.right span.wx,#templatemo_banner_top p.right span.wb{
+	position:relative;
+}
+#templatemo_banner_top p.right span.pop_img1,#templatemo_banner_top p.right span.pop_img2{
+	display:none;
+}
+#templatemo_banner_top p.right span.wx:hover img,#templatemo_banner_top p.right span.wb:hover img{cursor:pointer;}
+#templatemo_banner_top p.right span.wx:hover span.pop_img1{
+	display: block;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    z-index: 9999;
+}
+#templatemo_banner_top p.right span.wb:hover span.pop_img2{
+	display: block;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    z-index: 9999;
 }
 
 /* templatemo_banner_logo */
@@ -182,6 +203,7 @@ body {
 #templatemo_upcomming_event .event_box {   
     position: relative;
     text-align: center;
+	width:225px;
 }
 #templatemo_upcomming_event .event_box ul {
     list-style: none;    
@@ -245,7 +267,7 @@ body {
 	position: absolute;
 	background: #f4f4f4;
 	background: rgba(244, 244, 244, 0.6);
-	width: 95%;
+	width: 100%;
 	height: 100%;
 	color: #FFF;
 	filter: dropshadow(color=#f4f4f4, offx=2, offy=2);
@@ -263,7 +285,7 @@ body {
 	opacity:1;
 }
 .pic_detail a img{
-	margin:0;
+	/*margin:0;*/
 	display:blodk;
 }
 .cart_bg a{
@@ -293,17 +315,19 @@ body {
 .samll_img_box ul.pro_small_img{
 	margin: 10px 0 0;
     overflow: hidden;
+	text-align: center;
 }
 .samll_img_box ul.pro_small_img li {
     cursor: pointer;
-    float: left;
+    display:inline;
     list-style: outside none none;
-    margin:0 15px 10px 0;
+    margin:0 15px 0 0;
 }
 .samll_img_box ul.pro_small_img li img {
     border: 1px solid #999999;
     height: 88px;
     width: 88px;
+	margin-bottom:5px;
 }
 .samll_img_box ul.pro_small_img li a.cur img,
 .samll_img_box ul.pro_small_img li.cur img {
@@ -468,7 +492,10 @@ body {
 	clear:both;
 	margin:20px 0;
 }
-.tab-pane h3,.comments,.commentsList{
+/*.tab-pane h3,.comments,.commentsList{
+	font-size: 14px;
+}*/
+.tab-pane h3{
 	font-size: 14px;
 }
 .comment_list tr{
@@ -562,7 +589,8 @@ body {
 }
 
 .combine_order select,.combine_order input,.combine_order .my_recommend textarea,
-.form_detail ul li input.inputBg,.account_deposit input.inputBg,.account_deposit textarea {
+.form_detail ul li input.inputBg,.account_deposit input.inputBg,.account_deposit textarea,
+.info_detail input.inputBg,.info_detail select,.info_detail textarea{
 	background:#f0f4f5;
 	height: 40px;
 	line-height: 40px;
@@ -730,7 +758,7 @@ body {
 .list .submit_goods{
 	margin:10px 0;
 }
-.list .submit_goods a,.cart-main .submit a,.operate a{
+.list .submit_goods a,.cart-main .submit a,.operate a,.my_fav a.collect_flow{
 	background: none repeat scroll 0 0 #595a6b;
     border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -743,8 +771,8 @@ body {
     text-align: center;
     width: 125px;
 }
-.list .submit_goods a:hover,.list .submit_goods a.active,.cart-main .submit a:hover,.cart-main .submit a.active,.operate a:hover{background: none repeat scroll 0 0 #d1394a;}
-
+.list .submit_goods a:hover,.list .submit_goods a.active,.cart-main .submit a:hover,.cart-main .submit a.active,.operate a:hover,.my_fav a.collect_flow:hover{background: none repeat scroll 0 0 #d1394a;}
+.my_fav a.collect_flow{margin-bottom:8px;}
 /* templatemo_shop_cart */
 #templatemo_shopping_cart,#templatemo_info{
 	overflow:hidden;
@@ -790,7 +818,7 @@ body {
     font-size: 20px;
 }
 .cart-main{
-	font-size:14px;
+	/*font-size:14px;*/
 	color:#666666;
 }
 .cart-main thead tr{
@@ -896,6 +924,7 @@ body {
     height: 22px;
     width: 22px;
 }
+#formCart .submit{margin-bottom:10px;}
 
 /* check out */
 .order_cart_main .order_step .step2_active{
@@ -919,7 +948,7 @@ body {
 .theForm tr,
 #order_addr tr,#templatemo_info #order_addr tr{
 	height:48px;
-	font-size:14px;
+	/*font-size:14px;*/
 }
 .theForm tr input,.theForm tr select,
 #order_addr tr input,#order_addr tr select,.order_dispatching input.inputBg,.nstep_products input.inputBg,
@@ -936,12 +965,14 @@ body {
     width: 65%;
 }
 .theForm tr select, 
-#order_addr tr select,#tagForm input.inputBg{width:21%;}
+#order_addr tr select{width:21%;}
+#tagForm input.inputBg{width:45%;}
 .theForm tr input.save_adress,input.bnt_blue_1
 #order_addr tr input.save_adress,.submit_order input.save_adress,.nstep_products input.bnt_blue_1,.su input,
 #templatemo_info input.combine_btn,.add_bonus input.save_adress,.deposit_info input.save_adress,
 .combine_order input.bnt_blue_1,.deposit_info input.bnt_blue_1,.account_deposit input.bnt_blue_1,
-#tagForm input.bnt_blue,.commentsList input.f_r{
+#tagForm input.bnt_blue,.commentsList input.f_r,.info_detail input.bnt_blue_1,.info_detail input.bnt_bonus,
+.info_detail input.bnt_blue_2,.info_detail input.bnt_blue,.welcome_user a.remove{
 	background: none repeat scroll 0 0 #595a6b;
     border: 0 none;
     border-radius: 4px;
@@ -953,6 +984,7 @@ body {
     text-align: center;
     width: 135px;
 	padding: 0;
+	margin-bottom: 5px;
 }
 #order_addr tr input.save_adress:hover,.submit_order input.save_adress:hover,
 .theForm tr input.save_adress:hover, .theForm tr span, input.bnt_blue_1:hover,
@@ -960,8 +992,10 @@ body {
 #templatemo_info input.combine_btn:hover,.add_bonus input.save_adress:hover,
 .deposit_info input.save_adress:hover,.combine_order input.bnt_blue_1:hover,
 .deposit_info input.bnt_blue_1:hover,.account_deposit input.bnt_blue_1:hover,
-#tagForm input.bnt_blue:hover,.commentsList input.f_r:hover{ 
+#tagForm input.bnt_blue:hover,.commentsList input.f_r:hover,.info_detail input.bnt_blue:hover,
+.info_detail input.bnt_blue_2:hover,.info_detail input.bnt_bonus:hover{ 
 background: none repeat scroll 0 0 #d1394a;}
+#tagForm input.bnt_blue{width:80px;}
 #order_addr tr span{color:#ff0000;}
 #payment_table tr{
 	height:40px;
@@ -969,7 +1003,7 @@ background: none repeat scroll 0 0 #d1394a;}
 }
 .order_dispatching,.nstep_products,.total_cost{
 	clear: both;
-    font-size: 14px;
+    /*font-size: 14px;*/
     line-height: 40px;
     overflow: hidden;
 }
@@ -1059,7 +1093,7 @@ background: none repeat scroll 0 0 #d1394a;}
 }
 
 /* order_list */
-.order_staus,.combine_order,.welcome_user,.goodsInfo {font-size:14px;}
+.order_staus,.combine_order,.welcome_user,.goodsInfo {/*font-size:14px;*/}
 #templatemo_info,#templatemo_shopping_cart{
 	margin:10px auto 30px;
 }
@@ -1188,6 +1222,9 @@ background: none repeat scroll 0 0 #d1394a;}
     }
 	.theForm tr select, 
 	#order_addr tr select{width:32%;}
+	#templatemo_upcomming_event .event_box {
+		margin: 0 auto;
+	}
 
 }
 @media (max-width: 480px ){
@@ -1196,8 +1233,25 @@ background: none repeat scroll 0 0 #d1394a;}
 		clear:both;
 		margin: 15px 0 0 0;
 	}
+	#templatemo_upcomming_event .col-xs-6 {
+		width: 100%;
+	}
+	#templatemo_upcomming_event .event_box {
+		margin: 0 auto;
+	}
 }
-@media (max-width: 479px ){.cart-main .p-pic{display:none;}}
+@media (max-width: 479px ){
+	.cart-main .p-pic{display:none;}
+	#templatemo_banner_top .col-md-7{width: 66%;}
+	#templatemo_banner_top .col-md-5{width: 80%;}
+	#templatemo_banner_top p.right span.wx:hover span.pop_img1{
+    right: -120px;
+}
+#templatemo_banner_top p.right span.wb:hover span.pop_img2{
+    right: -120px;
+}
+
+}
 @media (max-width: 380px ){
 	.pass_email ul li {
 	 display: block;
@@ -1240,7 +1294,7 @@ background: none repeat scroll 0 0 #d1394a;}
 }
 .userMenu ul li a.curs{color: #cf3341;}
 .userCenterBox{
-	font-size: 14px;
+	/*font-size: 14px;*/
 }
 .welcome_user .f5{font-size: 18px;}
 .welcome_user .f4{
@@ -1304,7 +1358,10 @@ table.order_list tr .f6 a{color: #eb5b6b;}
 .combine_order td{
 	padding:5px;
 }
-.combine_order .my_recommend input,.combine_order .my_recommend select,.account_deposit input.inputBg,.account_deposit textarea{
+/*.combine_order .my_recommend input,.combine_order .my_recommend select,.account_deposit input.inputBg,.account_deposit textarea{
+	width:50%;
+}*/
+.combine_order .my_recommend input,.combine_order .my_recommend select{
 	width:50%;
 }
 .combine_order .my_recommend textarea{
@@ -1317,6 +1374,7 @@ table.order_list tr .f6 a{color: #eb5b6b;}
     padding: 5px 10px;
     width: 25%;
 }
+.combine_order .addbouns input.bnt_blue_1{width:15%;}
 .pagebar span b{
 	color: #cf3341;
 }
@@ -1338,7 +1396,7 @@ table.order_list tr .f6 a{color: #eb5b6b;}
     padding-bottom: 20px;
 }
 .goodsList .goodsName{
-	font-size:14px;
+	/*font-size:14px;*/
 }
 .goodsList .goodsName a,.goodsList .goodsName .market,.goodsList .goodsName .shop{
 	color: #cf3341;
@@ -1391,3 +1449,27 @@ h3.jp_recommend select{
 	font-size:12px;
 }
 h3.jp_recommend input{ vertical-align: middle;}
+
+/*user center*/
+.info_detail tr{height:48px;}
+.info_detail input.inputBg,.info_detail select,.info_detail textarea{width:80%;}
+.info_detail textarea{height:100px;}
+.info_detail .birthday_select select{
+	margin-right: 10px;
+    width: 25%;
+}
+.info_detail .adress_select select{width:19%;}
+.boxCenterList .order_list a,.boxCenterList a.pink,.cart-container .title h2 a.pink{ color: #eb5b6b;}
+.boxCenterList .order_list a:hover,.boxCenterList a.pink:hover,.cart-container .title h2 a.pink:hover{
+	background:none;
+	color:#cf3341;
+}
+.welcome_user a.remove{
+	padding: 3px 25px
+}
+.welcome_user a.remove:hover{background: #cf3341;color:#ffffff;}
+.welcome_user .msgBottomBorder{
+	border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 5px 0 13px;
+}

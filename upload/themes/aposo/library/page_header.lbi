@@ -29,8 +29,15 @@ var process_request = "{$lang.process_request}";
 							<a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
 						<!-- {/foreach} -->
 						<span class="order_line">订购热线：{$service_phone}</span> 
-						<span><img src="images/weixin.png" alt="">
-                        <img src="images/weibo.png" alt=""></span></p>
+						<span class="wx">
+                            <img src="images/weixin.png" alt="">
+                            <span class="pop_img1"><img src="images/wx.jpg"/></span>
+                        </span>
+                        <span class="wb">
+                            <img src="images/weibo.png" alt="">
+                            <span class="pop_img2"><img src="images/wx.jpg"/></span>
+                        </span>
+                      </p>
 				</div>
 				<!-- {/if} -->
 			</div>
@@ -39,7 +46,9 @@ var process_request = "{$lang.process_request}";
 	<div id="templatemo_banner_logo" class="container_wapper">
 		<div class="container">
 			<div class="row">
-					<img src="images/logo.png" alt="logo" />
+            	<div class="col-md-12">
+					<a href="/"><img src="images/logo.png" alt="logo" /></a>
+                </div>
 			</div>
 		</div>
 	</div>

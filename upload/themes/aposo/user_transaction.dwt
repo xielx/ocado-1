@@ -65,14 +65,14 @@
       <h5><span>{$lang.profile}</span></h5>
       <div class="blank"></div>
      <form name="formEdit" action="user.php" method="post" onSubmit="return userEdit()">
-      <table width="100%" border="0" cellpadding="5" cellspacing="1">
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" class="info_detail">
                 <tr>
-                  <td width="28%" align="right">{$lang.birthday}： </td>
-                  <td width="72%" align="left"> {html_select_date field_order=YMD prefix=birthday start_year=-60 end_year=+1 display_days=true month_format=%m day_value_format=%02d time=$profile.birthday} </td>
+                  <td width="15%" align="">{$lang.birthday}： </td>
+                  <td width="" align="left" class="birthday_select"> {html_select_date field_order=YMD prefix=birthday start_year=-60 end_year=+1 display_days=true month_format=%m day_value_format=%02d time=$profile.birthday} </td>
                 </tr>
                 <tr>
-                  <td width="28%" align="right">{$lang.sex}： </td>
-                  <td width="72%" align="left"><input type="radio" name="sex" value="0" {if $profile.sex==0}checked="checked"{/if} />
+                  <td width="" align="">{$lang.sex}： </td>
+                  <td width="" align="left"><input type="radio" name="sex" value="0" {if $profile.sex==0}checked="checked"{/if} />
                     {$lang.secrecy}&nbsp;&nbsp;
                     <input type="radio" name="sex" value="1" {if $profile.sex==1}checked="checked"{/if} />
                     {$lang.male}&nbsp;&nbsp;
@@ -80,14 +80,14 @@
                   {$lang.female}&nbsp;&nbsp; </td>
                 </tr>
                 <tr>
-                  <td width="28%" align="right">{$lang.email}： </td>
-                  <td width="72%" align="left"><input name="email" type="text" value="{$profile.email}" size="25" class="inputBg" /><span style="color:#FF0000"> *</span></td>
+                  <td width="" align="">{$lang.email}：<span style="color:#FF0000"> *</span> </td>
+                  <td width="" align="left"><input name="email" type="text" value="{$profile.email}" size="25" class="inputBg" /></td>
                 </tr>
 		{foreach from=$extend_info_list item=field}
 		<!-- {if $field.id eq 6} -->
 		<tr>
-		  <td width="28%" align="right">{$lang.passwd_question}：</td>
-		  <td width="72%" align="left">
+		  <td width="" align="">{$lang.passwd_question}：</td>
+		  <td width="" align="left">
 		  <select name='sel_question'>
 		  <option value='0'>{$lang.sel_question}</option>
 		  {html_options options=$passwd_questions selected=$profile.passwd_question}
@@ -95,43 +95,45 @@
 		  </td>
 		</tr>
 		<tr>
-		  <td width="28%" align="right" <!-- {if $field.is_need} -->id="passwd_quesetion"<!--{/if}-->>{$lang.passwd_answer}：</td>
-		  <td width="72%" align="left">
-		  <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' value="{$profile.passwd_answer}"/><!-- {if $field.is_need} --><span style="color:#FF0000"> *</span><!-- {/if} -->
+		  <td width="" align="" <!-- {if $field.is_need} -->id="passwd_quesetion"<!--{/if}-->>{$lang.passwd_answer}：<span style="color:#FF0000"> *</span></td>
+		  <td width="" align="left">
+		  <input name="passwd_answer" type="text" size="25" class="inputBg" maxlengt='20' value="{$profile.passwd_answer}"/><!-- {if $field.is_need} --><!-- {/if} -->
 		  </td>
 		</tr>
 		<!-- {else} -->
 		<tr>
-			<td width="28%" align="right" <!-- {if $field.is_need} -->id="extend_field{$field.id}i"<!--{/if}-->>{$field.reg_field_name}：</td>
-			<td width="72%" align="left">
-			<input name="extend_field{$field.id}" type="text" class="inputBg" value="{$field.content}"/><!-- {if $field.is_need} --><span style="color:#FF0000"> *</span><!-- {/if} -->
+			<td width="" align="" <!-- {if $field.is_need} -->id="extend_field{$field.id}i"<!--{/if}-->>{$field.reg_field_name}：<span style="color:#FF0000"> *</span></td>
+			<td width="" align="left">
+			<input name="extend_field{$field.id}" type="text" class="inputBg" value="{$field.content}"/><!-- {if $field.is_need} --><!-- {/if} -->
 			</td>
 		</tr>
 		<!-- {/if} -->
 		{/foreach}
                 <tr>
-                  <td colspan="2" align="center"><input name="act" type="hidden" value="act_edit_profile" />
+                  <td>&nbsp;</td>
+                  <td align=""><input name="act" type="hidden" value="act_edit_profile" />
                     <input name="submit" type="submit" value="{$lang.confirm_edit}" class="bnt_blue_1" style="border:none;" />
                   </td>
                 </tr>
        </table>
     </form>
      <form name="formPassword" action="user.php" method="post" onSubmit="return editPassword()" >
-     <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+     <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" class="info_detail">
         <tr>
-          <td width="28%" align="right">{$lang.old_password}：</td>
-          <td width="76%" align="left"><input name="old_password" type="password" size="25"  class="inputBg" /></td>
+          <td width="15%" align="">{$lang.old_password}：</td>
+          <td width="" align="left"><input name="old_password" type="password" size="25"  class="inputBg" /></td>
         </tr>
         <tr>
-          <td width="28%" align="right">{$lang.new_password}：</td>
+          <td width="" align="">{$lang.new_password}：</td>
           <td align="left"><input name="new_password" type="password" size="25"  class="inputBg" /></td>
         </tr>
         <tr>
-          <td width="28%" align="right">{$lang.confirm_password}：</td>
+          <td width="" align="">{$lang.confirm_password}：</td>
           <td align="left"><input name="comfirm_password" type="password" size="25"  class="inputBg" /></td>
         </tr>
         <tr>
-          <td colspan="2" align="center"><input name="act" type="hidden" value="act_edit_password" />
+          <td>&nbsp;</td>
+          <td align=""><input name="act" type="hidden" value="act_edit_password" />
             <input name="submit" type="submit" class="bnt_blue_1" style="border:none;" value="{$lang.confirm_edit}" />
           </td>
         </tr>
@@ -288,31 +290,31 @@
         <div class="blank"></div>
          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
         <tr>
-          <td width="15%" align="right">{$lang.detail_order_sn}：</td>
+          <td width="15%" align="">{$lang.detail_order_sn}：</td>
           <td align="left">{$order.order_sn}
           <!-- {if $order.extension_code eq "group_buy"} -->
-					<a href="./group_buy.php?act=view&id={$order.extension_id}" class="f6"><strong>{$lang.order_is_group_buy}</strong></a>
+					<a href="./group_buy.php?act=view&id={$order.extension_id}" class="f6 pink"><strong>{$lang.order_is_group_buy}</strong></a>
 					<!-- {elseif $order.extension_code eq "exchange_goods"} -->
-					<a href="./exchange.php?act=view&id={$order.extension_id}" class="f6"><strong>{$lang.order_is_exchange}</strong></a>
+					<a href="./exchange.php?act=view&id={$order.extension_id}" class="f6 pink"><strong>{$lang.order_is_exchange}</strong></a>
 					<!--{/if}-->  
-					<a href="user.php?act=message_list&order_id={$order.order_id}" class="f6">[{$lang.business_message}]</a>
+					<a href="user.php?act=message_list&order_id={$order.order_id}" class="f6 pink">[{$lang.business_message}]</a>
 					</td>
         </tr>
         <tr>
-          <td align="right">{$lang.detail_order_status}：</td>
+          <td align="">{$lang.detail_order_status}：</td>
           <td align="left">{$order.order_status}&nbsp;&nbsp;&nbsp;&nbsp;{$order.confirm_time}</td>
         </tr>
         <tr>
-          <td align="right">{$lang.detail_pay_status}：</td>
+          <td align="">{$lang.detail_pay_status}：</td>
           <td align="left">{$order.pay_status}&nbsp;&nbsp;&nbsp;&nbsp;{if $order.order_amount gt 0}{$order.pay_online}{/if}{$order.pay_time}</td>
         </tr>
         <tr>
-          <td align="right">{$lang.detail_shipping_status}：</td>
+          <td align="">{$lang.detail_shipping_status}：</td>
           <td align="left">{$order.shipping_status}&nbsp;&nbsp;&nbsp;&nbsp;{$order.shipping_time}</td>
         </tr>
         <!-- {if $order.invoice_no}-->
         <tr>
-          <td align="right">{$lang.consignment}：</td>
+          <td align="">{$lang.consignment}：</td>
           <td align="left">{$order.invoice_no}</td>
         </tr>
         <!--{/if}-->
@@ -329,8 +331,8 @@
           <td colspan="3" align="left">
           <!--{foreach from=$virtual_card item=vgoods}-->
             <!--{foreach from=$vgoods.info item=card}-->
-              <!--{if $card.card_sn}-->{$lang.card_sn}:<span style="color:red;">{$card.card_sn}</span><!--{/if}-->
-              <!--{if $card.card_password}-->{$lang.card_password}:<span style="color:red;">{$card.card_password}</span><!--{/if}-->
+              <!--{if $card.card_sn}-->{$lang.card_sn}:<span style="color:#cf3341;">{$card.card_sn}</span><!--{/if}-->
+              <!--{if $card.card_password}-->{$lang.card_password}:<span style="color:#cf3341;">{$card.card_password}</span><!--{/if}-->
               <!--{if $card.end_date}-->{$lang.end_date}:{$card.end_date}<!--{/if}--><br />
             <!--{/foreach}-->
           <!--{/foreach}-->
@@ -341,11 +343,11 @@
         <div class="blank"></div>
         <h5><span>{$lang.goods_list}</span>
         <!-- {if $allow_to_cart} -->
-        <a href="javascript:;" onclick="returnToCart({$order.order_id})" class="f6">{$lang.return_to_cart}</a>
+        <a class="pink" style="font-size:12px; float:right;" href="javascript:;" onclick="returnToCart({$order.order_id})" class="f6">{$lang.return_to_cart}</a>
         <!-- {/if} -->
         </h5>
         <div class="blank"></div>
-         <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+         <table width="100%" border="0" cellpadding="5" cellspacing="1" class="order_list">
           <tr>
             <th width="23%" align="center">{$lang.goods_name}</th>
             <th width="29%" align="center">{$lang.goods_attr}</th>
@@ -375,13 +377,13 @@
               </td>
             <td align="left">{$goods.goods_attr|nl2br}</td>
             <!--<td align="right">{$goods.market_price}</td>-->
-            <td align="right">{$goods.goods_price}</td>
+            <td align="center">{$goods.goods_price}</td>
             <td align="center">{$goods.goods_number}</td>
-            <td align="right">{$goods.subtotal}</td>
+            <td align="center">{$goods.subtotal}</td>
           </tr>
           <!-- {/foreach} -->
           <tr>
-            <td colspan="8" align="right">
+            <td colspan="8" align="right" style="text-align:right; font-weight:bold;">
             {$lang.shopping_money}<!-- {if $order.extension_code eq "group_buy"} -->{$lang.gb_deposit}<!-- {/if} -->: {$order.formated_goods_amount}
             </td>
           </tr>
@@ -389,9 +391,9 @@
          <div class="blank"></div>
         <h5><span>{$lang.fee_total}</span></h5>
         <div class="blank"></div>
-         <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+         <table width="100%" border="0" cellpadding="5" cellspacing="1">
           <tr>
-            <td align="right">
+            <td align="right" style="font-weight:bold;">
                 {$lang.goods_all_price}<!-- {if $order.extension_code eq "group_buy"} -->{$lang.gb_deposit}<!-- {/if} -->: {$order.formated_goods_amount}
               <!-- {if $order.discount gt 0} 折扣 -->
               - {$lang.discount}: {$order.formated_discount}
@@ -416,7 +418,7 @@
               <!-- {/if} -->        </td>
           </tr>
           <tr>
-            <td align="right">
+            <td align="right" style="font-weight:bold;">
               <!-- {if $order.money_paid > 0} -->
               - {$lang.order_money_paid}: {$order.formated_money_paid}
               <!-- {/if} -->
@@ -431,7 +433,7 @@
               <!-- {/if} -->        </td>
           </tr>
           <tr>
-            <td align="right">{$lang.order_amount}: {$order.formated_order_amount}
+            <td align="right" style="font-weight:bold;">{$lang.order_amount}: {$order.formated_order_amount}
             <!-- {if $order.extension_code eq "group_buy"} --><br />
             {$lang.notice_gb_order_amount}<!-- {/if} --></td>
           </tr>
@@ -498,31 +500,37 @@
           <!-- {else} -->
           <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
             <tr>
-              <td width="15%" align="right">{$lang.consignee_name}：</td>
-              <td width="35%" align="left">{$order.consignee}</td>
-              <td width="15%" align="right" >{$lang.email_address}：</td>
-              <td width="35%" align="left">{$order.email}</td>
+              <td width="15%" align="">{$lang.consignee_name}：</td>
+              <td width="85%" align="left">{$order.consignee}</td>
+            </tr>
+            <tr>
+              <td width="15%" align="" >{$lang.email_address}：</td>
+              <td width="85%" align="left">{$order.email}</td>
             </tr>
             <!-- {if $order.exist_real_goods} -->
             <tr>
-              <td align="right">{$lang.detailed_address}：</td>
-              <td colspan="3" align="left">{$order.address}
+              <td align="">{$lang.detailed_address}：</td>
+              <td align="left">{$order.address}
                 <!-- {if $order.zipcode} -->
                 [{$lang.postalcode}: {$order.zipcode}]
                 <!-- {/if} --></td>
             </tr>
             <!-- {/if}-->
             <tr>
-              <td align="right">{$lang.phone}：</td>
+              <td align="">{$lang.phone}：</td>
               <td align="left">{$order.tel} </td>
-              <td align="right">{$lang.backup_phone}：</td>
+            </tr>
+            <tr>
+              <td align="">{$lang.backup_phone}：</td>
               <td align="left">{$order.mobile}</td>
             </tr>
             <!-- {if $order.exist_real_goods} -->
             <tr>
-              <td align="right" >{$lang.sign_building}：</td>
+              <td align="" >{$lang.sign_building}：</td>
               <td align="left">{$order.sign_building} </td>
-              <td align="right" >{$lang.deliver_goods_time}：</td>
+            </tr>
+            <tr>
+              <td align="" >{$lang.deliver_goods_time}：</td>
               <td align="left">{$order.best_time}</td>
             </tr>
             <!--{/if}-->
@@ -564,32 +572,32 @@
         <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
           <!-- {if $order.shipping_id > 0} -->
           <tr>
-            <td width="15%" align="right">{$lang.shipping}：</td>
+            <td width="15%" align="">{$lang.shipping}：</td>
             <td colspan="3" width="85%" align="left">{$order.shipping_name}</td>
           </tr>
           <!-- {/if} -->
 
           <tr>
-            <td width="15%" align="right">{$lang.payment}：</td>
+            <td width="15%" align="">{$lang.payment}：</td>
             <td colspan="3" align="left">{$order.pay_name}</td>
           </tr>
           <!--{if $order.insure_fee > 0}-->
           <!--{/if}-->
           <!-- {if $order.pack_name} 是否使用包装 -->
           <tr>
-            <td width="15%" align="right">{$lang.use_pack}：</td>
+            <td width="15%" align="">{$lang.use_pack}：</td>
             <td colspan="3" align="left">{$order.pack_name}</td>
           </tr>
           <!-- {/if} 是否使用包装 -->
           <!-- {if $order.card_name} 是否使用贺卡 -->
           <tr>
-            <td width="15%" align="right">{$lang.use_card}：</td>
+            <td width="15%" align="">{$lang.use_card}：</td>
             <td colspan="3" align="left">{$order.card_name}</td>
           </tr>
           <!-- {/if} -->
           <!-- {if $order.card_message} 是否使用贺卡 -->
           <tr>
-            <td width="15%" align="right">{$lang.bless_note}：</td>
+            <td width="15%" align="">{$lang.bless_note}：</td>
             <td colspan="3" align="left">{$order.card_message}</td>
           </tr>
           <!-- {/if} 是否使用贺卡 -->
@@ -597,7 +605,7 @@
           <!-- {/if} -->
           <!-- {if $order.integral > 0} 是否使用积分 -->
           <tr>
-            <td width="15%" align="right">{$lang.use_integral}：</td>
+            <td width="15%" align="">{$lang.use_integral}：</td>
             <td colspan="3" align="left">{$order.integral}</td>
           </tr>
           <!-- {/if} 是否使用积分 -->
@@ -605,7 +613,7 @@
           <!-- {/if} -->
           <!-- {if $order.inv_payee && $order.inv_content} 是否开发票 -->
           <tr>
-            <td width="15%" align="right">{$lang.invoice_title}：</td>
+            <td width="15%" align="">{$lang.invoice_title}：</td>
             <td width="36%" align="left">{$order.inv_payee}</td>
             <td width="19%" align="right">{$lang.invoice_content}：</td>
             <td width="25%" align="left">{$order.inv_content}</td>
@@ -613,12 +621,12 @@
           <!-- {/if} -->
           <!-- {if $order.postscript} 是否有订单附言 -->
           <tr>
-            <td width="15%" align="right">{$lang.order_postscript}：</td>
+            <td width="15%" align="">{$lang.order_postscript}：</td>
             <td colspan="3" align="left">{$order.postscript}</td>
           </tr>
           <!-- {/if} -->
           <tr>
-            <td width="15%" align="right">{$lang.booking_process}：</td>
+            <td width="15%" align="">{$lang.booking_process}：</td>
             <td colspan="3" align="left">{$order.how_oos_name}</td>
           </tr>
         </table>
@@ -803,10 +811,10 @@
             </script>
             <!-- {foreach from=$consignee_list item=consignee key=sn} -->
             <form action="user.php" method="post" name="theForm" onsubmit="return checkConsignee(this)">
-              <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+              <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" class="info_detail">
                 <tr>
-                  <td align="right">{$lang.country_province}：</td>
-                  <td colspan="3" align="left"><select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')">
+                  <td align="">{$lang.country_province}：<span style="color:#ff0000;">{$lang.require_field}</span></td>
+                  <td class="birthday_select adress_select" align="left"><select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')">
                       <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
                       <!-- {foreach from=$country_list item=country} -->
                       <option value="{$country.region_id}" {if $consignee.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
@@ -830,39 +838,48 @@
                       <option value="{$district.region_id}" {if $consignee.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
                       <!-- {/foreach} -->
                     </select>
-                  {$lang.require_field} </td>
+                  </td>
                 </tr>
                 <tr>
-                  <td align="right">{$lang.consignee_name}：</td>
+                  <td align="">{$lang.consignee_name}：<span style="color:#ff0000;">{$lang.require_field}</span></td>
                   <td align="left"><input name="consignee" type="text" class="inputBg" id="consignee_{$sn}" value="{$consignee.consignee|escape}" />
-                  {$lang.require_field} </td>
-                  <td align="right">{$lang.email_address}：</td>
-                  <td align="left"><input name="email" type="text" class="inputBg" id="email_{$sn}" value="{$consignee.email|escape}" />
-                  {$lang.require_field}</td>
-                </tr>
+                  </td>
+                 </tr>
+                 
                 <tr>
-                  <td align="right">{$lang.detailed_address}：</td>
+                  <td align="">{$lang.detailed_address}：<span style="color:#ff0000;">{$lang.require_field}</span></td>
                   <td align="left"><input name="address" type="text" class="inputBg" id="address_{$sn}" value="{$consignee.address|escape}" />
-                  {$lang.require_field}</td>
-                  <td align="right">{$lang.postalcode}：</td>
+                  </td>
+                 </tr>
+                 <tr>
+                  <td align="">{$lang.postalcode}：</td>
                   <td align="left"><input name="zipcode" type="text" class="inputBg" id="zipcode_{$sn}" value="{$consignee.zipcode|escape}" /></td>
                 </tr>
                 <tr>
-                  <td align="right">{$lang.phone}：</td>
+                  <td align="">{$lang.phone}：<span style="color:#ff0000;">{$lang.require_field}</span></td>
                   <td align="left"><input name="tel" type="text" class="inputBg" id="tel_{$sn}" value="{$consignee.tel|escape}" />
-                  {$lang.require_field}</td>
-                  <td align="right">{$lang.backup_phone}：</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="">{$lang.backup_phone}：</td>
                   <td align="left"><input name="mobile" type="text" class="inputBg" id="mobile_{$sn}" value="{$consignee.mobile|escape}" /></td>
                 </tr>
                 <tr>
-                  <td align="right">{$lang.sign_building}：</td>
+                  <td align="">{$lang.email_address}：<span style="color:#ff0000;">{$lang.require_field}</span></td>
+                  <td align="left"><input name="email" type="text" class="inputBg" id="email_{$sn}" value="{$consignee.email|escape}" />
+                   </td>
+               </tr>
+                <tr>
+                  <td align="">{$lang.sign_building}：</td>
                   <td align="left"><input name="sign_building" type="text" class="inputBg" id="sign_building_{$sn}" value="{$consignee.sign_building|escape}" /></td>
-                  <td align="right">{$lang.deliver_goods_time}：</td>
+                </tr>
+                <tr>
+                  <td align="">{$lang.deliver_goods_time}：</td>
                   <td align="left"><input name="best_time" type="text"  class="inputBg" id="best_time_{$sn}" value="{$consignee.best_time|escape}" /></td>
                 </tr>
                 <tr>
-                  <td align="right">&nbsp;</td>
-                  <td colspan="3" align="center"><!-- {if $consignee.consignee && $consignee.email} -->
+                  <td align="">&nbsp;</td>
+                  <td align=""><!-- {if $consignee.consignee && $consignee.email} -->
                     <input type="submit" name="submit" class="bnt_blue_1" value="{$lang.confirm_edit}" />
                     <input name="button" type="button" class="bnt_blue"  onclick="if (confirm('{$lang.confirm_drop_address}'))location.href='user.php?act=drop_consignee&id={$consignee.address_id}'" value="{$lang.drop}" />
                     <!-- {else} -->

@@ -5,7 +5,7 @@
     <div class="row">
   <!--{foreach from=$hot_goods item=goods}-->
 
-      <div class="col-sm-6 col-md-3">
+      <div class="col-md-3 col-sm-4 col-xs-6">
         <div class="event_box event_animate_left">
         <div class="pic_detail">
               <a href="{$goods.url}" title="{$goods.name|escape:html}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="img-responsive" /></a>

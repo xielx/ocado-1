@@ -23,7 +23,7 @@
        			</td>
        		</tr>
             <tr class="comment_line">
-            	<td> {$comment.content}
+            	<td colspan="3"> {$comment.content}
 					<!-- {if $comment.re_content} -->
 	        		<p><font class="f1">{$lang.admin_username}</font>{$comment.re_content}</p>
 					<!-- {/if} --></td>

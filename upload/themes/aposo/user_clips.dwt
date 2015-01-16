@@ -89,7 +89,7 @@
           <div class="blank"></div>
           <!--{foreach from=$message_list item=message key=key} -->
           <div class="f_l"> <b>{$message.msg_type}:</b>&nbsp;&nbsp;<font class="f4">{$message.msg_title}</font> ({$message.msg_time}) </div>
-          <div class="f_r"> <a href="user.php?act=del_msg&amp;id={$key}&amp;order_id={$message.order_id}" title="{$lang.drop}" onclick="if (!confirm('{$lang.confirm_remove_msg}')) return false;" class="f6">{$lang.drop}</a> </div>
+          <div class="f_r"> <a class="remove" href="user.php?act=del_msg&amp;id={$key}&amp;order_id={$message.order_id}" title="{$lang.drop}" onclick="if (!confirm('{$lang.confirm_remove_msg}')) return false;" class="f6">{$lang.drop}</a> </div>
           <div class="msgBottomBorder"> {$message.msg_content}
             <!-- {if $message.message_img} 如果上传了图片-->
             <div align="right"> <a href="data/feedbackimg/{$message.message_img}" target="_bank" class="f6">{$lang.view_upload_file}</a> </div>
@@ -104,19 +104,19 @@
           <!-- {if $message_list}-->
           <div class="f_r"> <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
           <!-- {/if}-->
-          <div class="blank"></div>
+         
           <form action="user.php" method="post" enctype="multipart/form-data" name="formMsg" onSubmit="return submitMsg()">
-            <table width="100%" border="0" cellpadding="3">
+            <table width="100%" border="0" cellpadding="3"  class="info_detail">
               {if $order_info}
               <tr>
-                <td align="right">{$lang.order_number}</td>
-                <td><a href ="{$order_info.url}"><img src="images/note.gif" />{$order_info.order_sn}</a>
+                <td align="">{$lang.order_number}</td>
+                <td><a href ="{$order_info.url}">{$order_info.order_sn}</a>
                   <input name="msg_type" type="hidden" value="5" />
                   <input name="order_id" type="hidden" value="{$order_info.order_id}" class="inputBg" /></td>
               </tr>
               {else}
               <tr>
-                <td align="right">{$lang.message_type}：</td>
+                <td align="">{$lang.message_type}：</td>
                 <td><input name="msg_type" type="radio" value="0" checked="checked" />
                   {$lang.type[0]}
                   <input type="radio" name="msg_type" value="1" />
@@ -130,16 +130,16 @@
               </tr>
               {/if}
               <tr>
-                <td align="right">{$lang.message_title}：</td>
+                <td align="">{$lang.message_title}：</td>
                 <td><input name="msg_title" type="text" size="30" class="inputBg" /></td>
               </tr>
               <tr>
-                <td align="right" valign="top">{$lang.message_content}：</td>
+                <td align="" valign="top">{$lang.message_content}：</td>
                 <td><textarea name="msg_content" cols="50" rows="4" wrap="virtual" class="B_blue"></textarea></td>
               </tr>
               <tr>
-                <td align="right">{$lang.upload_img}：</td>
-                <td><input type="file" name="message_img"  size="45"  class="inputBg" /></td>
+                <td align="">{$lang.upload_img}：</td>
+                <td><input type="file" name="message_img"  size="45"  class="inputBg" style="font-size:12px;" /></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -161,8 +161,8 @@
           <div class="blank"></div>
           <!--{foreach from=$comment_list item=comment} -->
           <div class="f_l"> <b>{if $comment.comment_type eq '0'}{$lang.goods_comment}{else}{$lang.article_comment}{/if}: </b><font class="f4">{$comment.cmt_name}</font>&nbsp;&nbsp;({$comment.formated_add_time}) </div>
-          <div class="f_r"> <a href="user.php?act=del_cmt&amp;id={$comment.comment_id}" title="{$lang.drop}" onclick="if (!confirm('{$lang.confirm_remove_msg}')) return false;" class="f6">{$lang.drop}</a> </div>
-          <div class="msgBottomBorder"> {$comment.content|escape}<br />
+          
+          <div class="msgBottomBorder"> {$comment.content|escape}<br /><div class="f_r"> <a class="remove" href="user.php?act=del_cmt&amp;id={$comment.comment_id}" title="{$lang.drop}" onclick="if (!confirm('{$lang.confirm_remove_msg}')) return false;" class="f6">{$lang.drop}</a> </div>
             <!--{if $comment.reply_content}-->
             <b>{$lang.reply_comment}：</b><br />
             {$comment.reply_content}
@@ -182,7 +182,7 @@
           <div class="blank"></div>
           <!-- {if $tags} -->
           <!-- 标签云开始 {foreach from=$tags item=tag}-->
-          <a href="search.php?keywords={$tag.tag_words|escape:url}" class="f6">{$tag.tag_words|escape:html}</a> <a href="user.php?act=act_del_tag&amp;tag_words={$tag.tag_words|escape:url}" onclick="if (!confirm('{$lang.confirm_drop_tag}')) return false;" title="{$lang.drop}"><img src="images/drop.gif" alt="{$lang.drop}" /></a>&nbsp;&nbsp;
+          <a href="search.php?keywords={$tag.tag_words|escape:url}" class="f6">{$tag.tag_words|escape:html}</a> <a class="remove" href="user.php?act=act_del_tag&amp;tag_words={$tag.tag_words|escape:url}" onclick="if (!confirm('{$lang.confirm_drop_tag}')) return false;" title="{$lang.drop}">删除</a>&nbsp;&nbsp;
           <!-- 标签云结束 {/foreach}-->
           <!-- {else} -->
           <span style="margin:2px 10px; font-size:14px; line-height:36px;">{$lang.no_tag}</span>
@@ -202,7 +202,7 @@
             </tr>
             <!--{foreach from=$goods_list item=goods}-->
             <tr>
-              <td bgcolor="#ffffff"><a href="{$goods.url}" class="f6 pink">{$goods.goods_name|escape:html}</a></td>
+              <td align="left" bgcolor="#ffffff"><a href="{$goods.url}" class="f6 pink">{$goods.goods_name|escape:html}</a></td>
               <td bgcolor="#ffffff"><!-- {if $goods.promote_price neq ""} -->
                 {$lang.promote_price}<span class="goods-price">{$goods.promote_price}</span>
                 <!-- {else}-->
@@ -322,13 +322,13 @@
           <!--{if $action eq 'booking_list'} -->
           <h5><span>{$lang.label_booking}</span></h5>
           <div class="blank"></div>
-          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+          <table width="100%" border="0" cellpadding="5" cellspacing="1" class="order_list">
             <tr align="center">
-              <td width="20%" bgcolor="#ffffff">{$lang.booking_goods_name}</td>
-              <td width="10%" bgcolor="#ffffff">{$lang.booking_amount}</td>
-              <td width="20%" bgcolor="#ffffff">{$lang.booking_time}</td>
-              <td width="35%" bgcolor="#ffffff">{$lang.process_desc}</td>
-              <td width="15%" bgcolor="#ffffff">{$lang.handle}</td>
+              <th width="20%">{$lang.booking_goods_name}</th>
+              <th width="10%">{$lang.booking_amount}</th>
+              <th width="20%">{$lang.booking_time}</th>
+              <th width="35%" >{$lang.process_desc}</th>
+              <th width="15%">{$lang.handle}</th>
             </tr>
             <!-- {foreach from=$booking_list item=item} -->
             <tr>

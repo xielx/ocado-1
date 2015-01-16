@@ -3,7 +3,7 @@
 <div id="templatemo_upcomming_event" class="container_wapper history_div">
 	<div class="container">
 		<div class="row">
-			<div class="">
+			<div class="col-sm-12 col-md-12">
 				<div class="product_title">
 					<h3>您最近浏览过</h3><a onclick="clear_history()">[清空]</a>
 				</div>
