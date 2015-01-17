@@ -40,7 +40,7 @@
   <!--left start-->
   <div class="AreaL col-md-12">
     <!-- TemplateBeginEditable name="左边区域" -->
-    <!-- #BeginLibraryItem "/library/cart.lbi" --><!-- #EndLibraryItem -->
+    <!-- # BeginLibraryItem "/library/cart.lbi" --><!-- #EndLibraryItem -->
     <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
     <!-- #BeginLibraryItem "/library/goods_related.lbi" --><!-- #EndLibraryItem -->
     <!-- #BeginLibraryItem "/library/goods_fittings.lbi" --><!-- #EndLibraryItem -->
@@ -155,7 +155,7 @@
       <h3 class="jp_recommend">
     <!--标题及显示方式-->
         <!-- {if $intromode eq 'best'} -->
-         <span style="float:left;">{$lang.best_goods}</span>
+         <span style="float:left;">商品列表{*$lang.best_goods*}</span>
          <!-- {elseif $intromode eq 'new'} -->
          <span style="float:left;">{$lang.new_goods}</span>
          <!-- {elseif $intromode eq 'hot'} -->
