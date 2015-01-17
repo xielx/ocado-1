@@ -7,7 +7,7 @@
       {if $cat_rec[1]}
       <h2><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, 0);">{$lang.all_goods}</a></h2>
       {foreach from=$cat_rec[1] item=rec_data}
-      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, {$rec_data.cat_id})">{$rec_data.cat_name}</a></h2>
+      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, '{$rec_data.cat_id}')">{$rec_data.cat_name}</a></h2>
       {/foreach}
       {/if}
   </div>
