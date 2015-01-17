@@ -170,14 +170,14 @@
                     <input name="submit" type="submit" class="bnt_blue_1" value="{$lang.update_cart}" /> -->
                     
                     <div class="submit">
-                      <a href="javascript: void(0);" onclick="javascript: $('#formCart').submit();" class="active">{$lang.update_cart}</a>
+                      <a href="javascript: void(0);" onclick="javascript: $('#formCart').submit();">{$lang.update_cart}</a>
                     </div>
                     <div class="submit">
-                      <a href="flow.php?step=clear" class="active">{$lang.clear_cart}</a>
+                      <a href="flow.php?step=clear">{$lang.clear_cart}</a>
                     </div>
 
                     <div class="submit">
-                      <a href="./" class="active">继续购物</a>
+                      <a href="./">继续购物</a>
                     </div>
                     <div class="submit">
                       <a href="flow.php?step=checkout">下单结算</a>
