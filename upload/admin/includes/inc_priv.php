@@ -131,7 +131,7 @@ if (!defined('IN_ECS'))
     $purview['02_db_manage']         = array('db_backup', 'db_renew');
     $purview['03_db_optimize']       = 'db_optimize';
     $purview['04_sql_query']         = 'sql_query';
-    $purview['convert']              = 'convert';
+    // $purview['convert']              = 'convert';
 
 //短信管理
     $purview['02_sms_my_info']       = 'my_info';

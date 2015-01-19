@@ -105,10 +105,7 @@
 </style>
 {insert_scripts files="../js/transport.orig.js"}
 <script type="text/javascript">
-onload = function()
-{
-  Ajax.call('index.php?is_ajax=1&act=license','', start_sendmail_Response, 'GET', 'JSON');
-}
+
 /**
  * 帮助系统调用
  */
@@ -121,29 +118,6 @@ function web_address()
   window.open('help.php?al='+arr[arr.length - 1],'_blank');
 }
 
-
-/**
- * 授权检测回调处理
- */
-function start_sendmail_Response(result)
-{
-  // 运行正常
-  if (result.error == 0)
-  {
-    var str = '';
-		if (result['content']['auth_str'])
-		{
-			str = '<a href="javascript:void(0);" target="_blank">' + result['content']['auth_str'];
-			if (result['content']['auth_type'])
-			{
-				str += '[' + result['content']['auth_type'] + ']';
-			}
-			str += '</a> ';
-		}
-
-    document.getElementById('license-div').innerHTML = str;
-  }
-}
 
 function modalDialog(url, name, width, height)
 {
@@ -191,8 +165,6 @@ var adminId = "{$admin_id}";
   <div id="license-div" style="bgcolor:#000000;"></div>
   <div id="submenu-div">
     <ul>
-      <li><a href="index.php?act=about_us" target="main-frame">{$lang.about}</a></li>
-      <li><a href="javascript:web_address();">{$lang.help}</a></li>
       <li><a href="../" target="_blank">{$lang.preview}</a></li>
       <li><a href="message.php?act=list" target="main-frame">{$lang.view_message}</a></li>
       <li><a href="privilege.php?act=modif" target="main-frame">{$lang.profile}</a></li>
