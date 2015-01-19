@@ -109,11 +109,11 @@
         <tr>
           <td align="">{$lang.comment_rank}：</td>
           <td>
-          <input name="comment_rank" type="radio" value="1" id="comment_rank1" /> <img src="../images/stars1.gif" />
-          <input name="comment_rank" type="radio" value="2" id="comment_rank2" /> <img src="../images/stars2.gif" />
-          <input name="comment_rank" type="radio" value="3" id="comment_rank3" /> <img src="../images/stars3.gif" />
-          <input name="comment_rank" type="radio" value="4" id="comment_rank4" /> <img src="../images/stars4.gif" />
-          <input name="comment_rank" type="radio" value="5" checked="checked" id="comment_rank5" /> <img src="../images/stars5.gif" />
+          <input name="comment_rank" type="radio" value="1" id="comment_rank1" /> <label for="comment_rank1"><img src="../images/stars1.gif" /></label>
+          <input name="comment_rank" type="radio" value="2" id="comment_rank2" /> <label for="comment_rank2"><img src="../images/stars2.gif" /></label>
+          <input name="comment_rank" type="radio" value="3" id="comment_rank3" /> <label for="comment_rank3"><img src="../images/stars3.gif" /></label>
+          <input name="comment_rank" type="radio" value="4" id="comment_rank4" /> <label for="comment_rank4"><img src="../images/stars4.gif" /></label>
+          <input name="comment_rank" type="radio" value="5" checked="checked" id="comment_rank5" /> <label for="comment_rank5"><img src="../images/stars5.gif" /></label>
           </td>
         </tr>
         <tr>
@@ -180,7 +180,7 @@ function submitComment(frm)
 
 //  if (cmt.username.length == 0)
 //  {
-//     alert(cmt_empty_username);
+//     hint(cmt_empty_username);
 //     return false;
 //  }
 
@@ -188,25 +188,25 @@ function submitComment(frm)
   {
      if (!(Utils.isEmail(cmt.email)))
      {
-        alert(cmt_error_email);
+        hint(cmt_error_email);
         return false;
       }
    }
    else
    {
-        alert(cmt_empty_email);
+        hint(cmt_empty_email);
         return false;
    }
 
    if (cmt.content.length == 0)
    {
-      alert(cmt_empty_content);
+      hint(cmt_empty_content);
       return false;
    }
 
    if (cmt.enabled_captcha > 0 && cmt.captcha.length == 0 )
    {
-      alert(captcha_not_null);
+      hint(captcha_not_null);
       return false;
    }
 
@@ -222,7 +222,7 @@ function submitComment(frm)
   {
     if (result.message)
     {
-      alert(result.message);
+      hint(result.message);
     }
 
     if (result.error == 0)

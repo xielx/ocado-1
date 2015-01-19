@@ -74,7 +74,7 @@ function orderShippingSelectedResponse(result)
     }
     catch (ex)
     {
-      alert(ex.message);
+      hint(ex.message);
     }
   }
 
@@ -87,7 +87,7 @@ function orderShippingSelectedResponse(result)
   }
   catch (ex)
   {
-    alert(ex.message);
+    hint(ex.message);
   }
 
   orderSelectedResponse(result);
@@ -234,7 +234,7 @@ function orderSelectedResponse(result)
 {
   if (result.error)
   {
-    alert(result.error);
+    hint(result.error);
     location.href = './';
   }
 
@@ -366,7 +366,7 @@ function changeBonusResponse(obj)
 {
   if (obj.error)
   {
-    alert(obj.error);
+    hint(obj.error);
 
     try
     {
@@ -394,7 +394,7 @@ function validateBonusResponse(obj)
 
 if (obj.error)
   {
-    alert(obj.error);
+    hint(obj.error);
     orderSelectedResponse(obj.content);
     try
     {
@@ -487,13 +487,13 @@ function checkOrderForm(frm)
 
   if ( ! shippingSelected)
   {
-    alert(flow_no_shipping);
+    hint(flow_no_shipping);
     return false;
   }
 
   if ( ! paymentSelected)
   {
-    alert(flow_no_payment);
+    hint(flow_no_payment);
     return false;
   }
 
@@ -620,7 +620,7 @@ function checkConsignee(frm)
   if (err)
   {
     message = msg.join("\n");
-    alert(message);
+    hint(message);
   }
   return ! err;
 }

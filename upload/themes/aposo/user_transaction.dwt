@@ -881,7 +881,7 @@
                   <td align="">&nbsp;</td>
                   <td align=""><!-- {if $consignee.consignee && $consignee.email} -->
                     <input type="submit" name="submit" class="bnt_blue_1" value="{$lang.confirm_edit}" />
-                    <input name="button" type="button" class="bnt_blue"  onclick="if (confirm('{$lang.confirm_drop_address}'))location.href='user.php?act=drop_consignee&id={$consignee.address_id}'" value="{$lang.drop}" />
+                    <input name="button" type="button" class="bnt_blue"  onclick="confirm2jump('{$lang.confirm_drop_address}', 'user.php?act=drop_consignee&id={$consignee.address_id}')" value="{$lang.drop}" />
                     <!-- {else} -->
                     <input type="submit" name="submit" class="bnt_blue_2"  value="{$lang.add_address}"/>
                     <!-- {/if} -->

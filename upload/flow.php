@@ -164,7 +164,8 @@ if ($_REQUEST['step'] == 'add_to_cart')
         }
     }
 
-    $result['confirm_type'] = !empty($_CFG['cart_confirm']) ? $_CFG['cart_confirm'] : 2;
+    // $result['confirm_type'] = !empty($_CFG['cart_confirm']) ? $_CFG['cart_confirm'] : 2;
+    $result['confirm_type'] = "1";
     die($json->encode($result));
 }
 elseif ($_REQUEST['step'] == 'link_buy')
@@ -1946,7 +1947,7 @@ elseif ($_REQUEST['step'] == 'validate_bonus')
 //        die(sprintf($_LANG['bonus_min_amount_error'], price_format($bonus['min_goods_amount'], false)));
 //    }
 //    die(sprintf($_LANG['bonus_is_ok'], price_format($bonus['type_money'], false)));
-    $bonus_kill = price_format($bonus['type_money'], false);
+    $bonus_kill = price_format(@$bonus['type_money'], false);
 
     include_once('includes/cls_json.php');
     $result = array('error' => '', 'content' => '');
@@ -1973,7 +1974,7 @@ elseif ($_REQUEST['step'] == 'validate_bonus')
         $order = flow_order_info();
 
 
-        if (((!empty($bonus) && $bonus['user_id'] == $_SESSION['user_id']) || ($bonus['type_money'] > 0 && empty($bonus['user_id']))) && $bonus['order_id'] <= 0)
+        if (((!empty($bonus) && $bonus['user_id'] == $_SESSION['user_id']) || (@$bonus['type_money'] > 0 && empty($bonus['user_id']))) && $bonus['order_id'] <= 0)
         {
             //$order['bonus_kill'] = $bonus['type_money'];
             $now = gmtime();
@@ -1998,7 +1999,7 @@ elseif ($_REQUEST['step'] == 'validate_bonus')
         /* 计算订单的费用 */
         $total = order_fee($order, $cart_goods, $consignee);
 
-        if($total['goods_price']<$bonus['min_goods_amount'])
+        if($total['goods_price']<@$bonus['min_goods_amount'])
         {
          $order['bonus_id'] = '';
          /* 重新计算订单 */

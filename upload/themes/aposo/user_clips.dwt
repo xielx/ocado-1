@@ -89,7 +89,8 @@
           <div class="blank"></div>
           <!--{foreach from=$message_list item=message key=key} -->
           <div class="f_l"> <b>{$message.msg_type}:</b>&nbsp;&nbsp;<font class="f4">{$message.msg_title}</font> ({$message.msg_time}) </div>
-          <div class="f_r"> <a class="remove" href="user.php?act=del_msg&amp;id={$key}&amp;order_id={$message.order_id}" title="{$lang.drop}" onclick="if (!confirm('{$lang.confirm_remove_msg}')) return false;" class="f6">{$lang.drop}</a> </div>
+          <div class="f_r"> 
+            <a class="remove" href="javascript: void(0); " title="{$lang.drop}" onclick="confirm2jump('{$lang.confirm_remove_msg}', 'user.php?act=del_msg&amp;id={$key}&amp;order_id={$message.order_id}');" class="f6">{$lang.drop}</a> </div>
           <div class="msgBottomBorder"> {$message.msg_content}
             <!-- {if $message.message_img} 如果上传了图片-->
             <div align="right"> <a href="data/feedbackimg/{$message.message_img}" target="_bank" class="f6">{$lang.view_upload_file}</a> </div>
@@ -162,7 +163,7 @@
           <!--{foreach from=$comment_list item=comment} -->
           <div class="f_l"> <b>{if $comment.comment_type eq '0'}{$lang.goods_comment}{else}{$lang.article_comment}{/if}: </b><font class="f4">{$comment.cmt_name}</font>&nbsp;&nbsp;({$comment.formated_add_time}) </div>
           
-          <div class="msgBottomBorder"> {$comment.content|escape}<br /><div class="f_r"> <a class="remove" href="user.php?act=del_cmt&amp;id={$comment.comment_id}" title="{$lang.drop}" onclick="if (!confirm('{$lang.confirm_remove_msg}')) return false;" class="f6">{$lang.drop}</a> </div>
+          <div class="msgBottomBorder"> {$comment.content|escape}<br /><div class="f_r"> <a class="remove" href="javascript: void(0);" title="{$lang.drop}" onclick="confirm2jump('{$lang.confirm_remove_msg}', 'user.php?act=del_cmt&amp;id={$comment.comment_id}');" class="f6">{$lang.drop}</a> </div>
             <!--{if $comment.reply_content}-->
             <b>{$lang.reply_comment}：</b><br />
             {$comment.reply_content}
@@ -182,7 +183,7 @@
           <div class="blank"></div>
           <!-- {if $tags} -->
           <!-- 标签云开始 {foreach from=$tags item=tag}-->
-          <a href="search.php?keywords={$tag.tag_words|escape:url}" class="f6">{$tag.tag_words|escape:html}</a> <a class="remove" href="user.php?act=act_del_tag&amp;tag_words={$tag.tag_words|escape:url}" onclick="if (!confirm('{$lang.confirm_drop_tag}')) return false;" title="{$lang.drop}">删除</a>&nbsp;&nbsp;
+          <a href="search.php?keywords={$tag.tag_words|escape:url}" class="f6">{$tag.tag_words|escape:html}</a> <a class="remove" href="javascript: void(0);" onclick="javascript: confirm2jump('{$lang.confirm_drop_tag}', 'user.php?act=act_del_tag&amp;tag_words={$tag.tag_words|escape:url}');" title="{$lang.drop}">删除</a>&nbsp;&nbsp;
           <!-- 标签云结束 {/foreach}-->
           <!-- {else} -->
           <span style="margin:2px 10px; font-size:14px; line-height:36px;">{$lang.no_tag}</span>
@@ -209,11 +210,12 @@
                 {$lang.shop_price}<span class="goods-price">{$goods.shop_price}</span>
                 <!--{/if}--></td>
               <td align="center" bgcolor="#ffffff"><!-- {if $goods.is_attention} -->
-                <a href="javascript:if (confirm('{$lang.del_attention}')) location.href='user.php?act=del_attention&rec_id={$goods.rec_id}'" class="f6 pink">{$lang.no_attention}</a>
+                <a href="javascript: void(0);" onclick="javascript:confirm2jump('{$lang.del_attention}', 'user.php?act=del_attention&rec_id={$goods.rec_id}');" class="f6 pink">{$lang.no_attention}</a>
                 <!-- {else} -->
-                <a  href="javascript:if (confirm('{$lang.add_to_attention}')) location.href='user.php?act=add_to_attention&rec_id={$goods.rec_id}'" class="f6 pink">{$lang.attention}</a>
+                <a  href="javascript: void(0);" onclick="javascript: confirm2jump('{$lang.add_to_attention}', 'user.php?act=add_to_attention&rec_id={$goods.rec_id}');" class="f6 pink">{$lang.attention}</a>
                 <!-- {/if} -->
-                <a href="javascript:addToCart({$goods.goods_id})" class="f6 pink">{$lang.add_to_cart}</a> <a href="javascript:if (confirm('{$lang.remove_collection_confirm}')) location.href='user.php?act=delete_collection&collection_id={$goods.rec_id}'" class="f6 pink">{$lang.drop}</a></td>
+                <a href="javascript: void(0);" onclick="javascript:addToCart({$goods.goods_id})" class="f6 pink">{$lang.add_to_cart}</a> 
+                <a href="javascript: void(0);" onclick="javascript:confirm2jump('{$lang.remove_collection_confirm}', 'user.php?act=delete_collection&collection_id={$goods.rec_id}');" class="f6 pink">{$lang.drop}</a></td>
             </tr>
             <!--{/foreach} -->
           </table>
@@ -277,22 +279,22 @@
           // 检查输入
           if (isNaN(parseInt(elements['goods_num'].value)))
           {
-              alert('{$lang.goods_num_must_be_int}');
+              hint('{$lang.goods_num_must_be_int}');
               return;
           }
           if (elements['goods_num'].value < 1)
           {
-              alert('{$lang.goods_num_must_over_0}');
+              hint('{$lang.goods_num_must_over_0}');
               return;
           }
           if (isNaN(parseInt(elements['rows_num'].value)))
           {
-              alert('{$lang.rows_num_must_be_int}');
+              hint('{$lang.rows_num_must_be_int}');
               return;
           }
           if (elements['rows_num'].value < 1)
           {
-              alert('{$lang.rows_num_must_over_0}');
+              hint('{$lang.rows_num_must_over_0}');
               return;
           }
 
@@ -336,7 +338,7 @@
               <td align="center" bgcolor="#ffffff">{$item.goods_number}</td>
               <td align="center" bgcolor="#ffffff">{$item.booking_time}</td>
               <td align="left" bgcolor="#ffffff">{$item.dispose_note}</td>
-              <td align="center" bgcolor="#ffffff"><a href="javascript:if (confirm('{$lang.confirm_remove_account}')) location.href='user.php?act=act_del_booking&id={$item.rec_id}'" class="f6">{$lang.drop}</a></td>
+              <td align="center" bgcolor="#ffffff"><a href="javascript: void(0); " onclick="javascript: confirm2jump('{$lang.confirm_remove_account}', 'user.php?act=act_del_booking&id={$item.rec_id}');" class="f6">{$lang.drop}</a></td>
             </tr>
             <!--{/foreach}-->
           </table>
@@ -520,23 +522,23 @@ function selectPage(sel)
               <td bgcolor="#ffffff">javascript {$lang.affiliate_codetype}<br>
                 <textarea cols=30 rows=2 id="txt{$smarty.foreach.types.iteration}" style="border:1px solid #ccc;"><script src="{$shopurl}affiliate.php?charset={$ecs_charset}&gid={$goodsid}&u={$userid}&type={$val}"></script>
 </textarea>
-                [<a href="#" title="Copy To Clipboard" onClick="Javascript:copyToClipboard(document.getElementById('txt{$smarty.foreach.types.iteration}').value);alert('{$lang.copy_to_clipboard}');"  class="f6">{$lang.code_copy}</a>] <br>
+                [<a href="#" title="Copy To Clipboard" onClick="Javascript:copyToClipboard(document.getElementById('txt{$smarty.foreach.types.iteration}').value);hint('{$lang.copy_to_clipboard}');"  class="f6">{$lang.code_copy}</a>] <br>
                 iframe {$lang.affiliate_codetype}<br>
                 <textarea cols=30 rows=2 id="txt{$smarty.foreach.types.iteration}_iframe"  style="border:1px solid #ccc;"><iframe width="250" height="270" src="{$shopurl}affiliate.php?charset={$ecs_charset}&gid={$goodsid}&u={$userid}&type={$val}&display_mode=iframe" frameborder="0" scrolling="no"></iframe>
 </textarea>
-                [<a href="#" title="Copy To Clipboard" onClick="Javascript:copyToClipboard(document.getElementById('txt{$smarty.foreach.types.iteration}_iframe').value);alert('{$lang.copy_to_clipboard}');" class="f6">{$lang.code_copy}</a>] <br />
+                [<a href="#" title="Copy To Clipboard" onClick="Javascript:copyToClipboard(document.getElementById('txt{$smarty.foreach.types.iteration}_iframe').value);hint('{$lang.copy_to_clipboard}');" class="f6">{$lang.code_copy}</a>] <br />
                 {$lang.bbs}UBB {$lang.affiliate_codetype}<br />
                 <textarea cols=30 rows=2 id="txt{$smarty.foreach.types.iteration}_ubb"  style="border:1px solid #ccc;">{if $val != 5}[url={$shopurl}goods.php?id={$goodsid}&u={$userid}][img]{if $val < 3}{$goods.goods_thumb}{else}{$goods.goods_img}{/if}[/img][/url]{/if}
 
 [url={$shopurl}goods.php?id={$goodsid}&u={$userid}][b]{$goods.goods_name}[/b][/url]
 {if $val != 1 && $val != 3}[s]{$goods.market_price}[/s]{/if} [color=red]{$goods.shop_price}[/color]</textarea>
-                [<a href="#" title="Copy To Clipboard" onClick="Javascript:copyToClipboard(document.getElementById('txt{$smarty.foreach.types.iteration}_ubb').value);alert('{$lang.copy_to_clipboard}');"  class="f6">{$lang.code_copy}</a>]
+                [<a href="#" title="Copy To Clipboard" onClick="Javascript:copyToClipboard(document.getElementById('txt{$smarty.foreach.types.iteration}_ubb').value);hint('{$lang.copy_to_clipboard}');"  class="f6">{$lang.code_copy}</a>]
                 {if $val == 5}<br />
                 {$lang.im_code} {$lang.affiliate_codetype}<br />
                 <textarea cols=30 rows=2 id="txt{$smarty.foreach.types.iteration}_txt"  style="border:1px solid #ccc;">{$lang.show_good_to_you} {$goods.goods_name}
 
 {$shopurl}goods.php?id={$goodsid}&u={$userid}</textarea>
-                [<a href="#" title="Copy To Clipboard" onClick="Javascript:copyToClipboard(document.getElementById('txt{$smarty.foreach.types.iteration}_txt').value);alert('{$lang.copy_to_clipboard}');"  class="f6">{$lang.code_copy}</a>]{/if}</td>
+                [<a href="#" title="Copy To Clipboard" onClick="Javascript:copyToClipboard(document.getElementById('txt{$smarty.foreach.types.iteration}_txt').value);hint('{$lang.copy_to_clipboard}');"  class="f6">{$lang.code_copy}</a>]{/if}</td>
             </tr>
             <!-- {/foreach} -->
           </table>
@@ -560,7 +562,7 @@ copyToClipboard = function(txt)
   }
   catch (e)
   {
-    alert("{$lang.firefox_copy_alert}");
+    hint("{$lang.firefox_copy_alert}");
     return false;
   }
   var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);

@@ -283,7 +283,7 @@ $(document).ready(function(){
 												Ajax.call('user.php?act=add_tag', "id=" + idx + "&tag=" + tag, submitTagResponse, "POST", "JSON");
 											}
 										}
-										catch (e) { alert(e); }
+										catch (e) { hint(e); }
 
 										return false;
 									}
@@ -294,7 +294,7 @@ $(document).ready(function(){
 
 										if (result.error > 0)
 										{
-											alert(result.message);
+											hint(result.message);
 										}
 										else
 										{
@@ -308,7 +308,7 @@ $(document).ready(function(){
 													div.innerHTML += '<a href="search.php?keywords='+tags[i].word+'" style="color:#d1394a; text-decoration:none; margin-right:5px;">' +tags[i].word + '[' + tags[i].count + ']<\/a>&nbsp;&nbsp; ';
 												}
 											}
-											catch (e) { alert(e); }
+											catch (e) { hint(e); }
 										}
 									}
 									{/literal}
@@ -435,7 +435,7 @@ function changePriceResponse(res)
 {
 	if (res.err_msg.length > 0)
 	{
-		alert(res.err_msg);
+		hint(res.err_msg);
 	}
 	else
 	{

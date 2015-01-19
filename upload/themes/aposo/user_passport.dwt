@@ -206,7 +206,7 @@
                             <span class="glyphicon glyphicon-user"></span>找回密码
                         </p>
              </div>
-                 <div class="pass_email">
+                 <div style="display: none;" class="pass_email">
                     <ul><li><input type="radio" value="mob" name="lost_pass" id="pass_lost"><label for="pass_lost">密码问题找回密码</label></li>
             <li><input type="radio" value="email" name="lost_pass" id="email_lost" checked="checked"><label for="email_lost">注册邮件找回密码</label></li>
                     </ul>

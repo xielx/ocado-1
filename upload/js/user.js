@@ -41,7 +41,7 @@ function userEdit()
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
   else
@@ -86,7 +86,7 @@ function editPassword()
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
   else
@@ -121,7 +121,7 @@ function submitMsg()
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
   else
@@ -159,7 +159,7 @@ function submitPwdInfo()
 
   if (errorMsg.length > 0)
   {
-    alert(errorMsg);
+    hint(errorMsg);
     return false;
   }
 
@@ -193,7 +193,7 @@ function submitPwd()
 
   if (errorMsg.length > 0)
   {
-    alert(errorMsg);
+    hint(errorMsg);
     return false;
   }
   else
@@ -259,7 +259,7 @@ function addBooking()
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
 
@@ -288,7 +288,7 @@ function userLogin()
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
   else
@@ -547,7 +547,7 @@ function register()
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
   else
@@ -573,7 +573,7 @@ function saveOrderAddress(id)
 
   if (id == 0)
   {
-    alert(current_ss_not_unshipped);
+    hint(current_ss_not_unshipped);
     return false;
   }
   var msg = '';
@@ -588,7 +588,7 @@ function saveOrderAddress(id)
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
   else
@@ -629,7 +629,7 @@ function submitSurplus()
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
 
@@ -646,7 +646,7 @@ function submitSurplus()
 
     if (payment_id == 0)
     {
-      alert(payment_empty);
+      hint(payment_empty);
       return false;
     }
   }
@@ -664,7 +664,7 @@ function addBonus()
 
   if (bonus_sn.length == 0)
   {
-    alert(bonus_sn_empty);
+    hint(bonus_sn_empty);
     return false;
   }
   else
@@ -672,7 +672,7 @@ function addBonus()
     var reg = /^[0-9]{10}$/;
     if ( ! reg.test(bonus_sn))
     {
-      alert(bonus_sn_error);
+      hint(bonus_sn_error);
       return false;
     }
   }
@@ -709,7 +709,7 @@ function mergeOrder()
   }
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return false;
   }
   else
@@ -729,7 +729,7 @@ function returnToCart(orderId)
 
 function returnToCartResponse(result)
 {
-  alert(result.message);
+  hint(result.message);
 }
 
 /* *

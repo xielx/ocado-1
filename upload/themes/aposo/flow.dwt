@@ -146,9 +146,9 @@
 
                   <td align="right">{$goods.subtotal}</td>
                   <td align="center">
-                    <div class="del"><a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_goods&amp;id={$goods.rec_id}'; " title="{$lang.drop}"></a></div>
+                    <div class="del"><a href="javascript: void(0);" onclick="javascript: confirm2jump('{$lang.drop_goods_confirm}', 'flow.php?step=drop_goods&amp;id={$goods.rec_id}'); " title="{$lang.drop}"></a></div>
                     <!-- {if $smarty.session.user_id gt 0 && $goods.extension_code neq 'package_buy'} 如果登录了，可以加入收藏 -->
-                    <div class="collect"><a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_to_collect&amp;id={$goods.rec_id}'; " title="{$lang.drop_to_collect}"></a></div>
+                    <div class="collect"><a href="javascript: void(0);" onclick="javascript: confirm2jump('{$lang.drop_goods_confirm}', 'flow.php?step=drop_to_collect&amp;id={$goods.rec_id}'); " title="{$lang.drop_to_collect}"></a></div>
                     <!-- {/if} -->
                   </td>
 
@@ -244,10 +244,7 @@
             // 如果需要缺货登记，跳转
             if (result.error == 2)
             {
-              if (confirm(result.message))
-              {
-                location.href = 'user.php?act=add_booking&id=' + result.goods_id;
-              }
+              confirm2jump(result.message, 'user.php?act=add_booking&id=' + result.goods_id);
             }
             else if (result.error == 6)
             {
@@ -255,7 +252,7 @@
             }
             else
             {
-              alert(result.message);
+              hint(result.message);
             }
           }
           else
@@ -320,10 +317,7 @@
       // 如果需要缺货登记，跳转
       if (result.error == 2)
       {
-        if (confirm(result.message))
-        {
-          location.href = 'user.php?act=add_booking&id=' + result.goods_id;
-        }
+        confirm2jump(result.message, 'user.php?act=add_booking&id=' + result.goods_id);
       }
       else if (result.error == 6)
       {
@@ -331,7 +325,7 @@
       }
       else
       {
-        alert(result.message);
+        hint(result.message);
       }
     }
     else
@@ -960,12 +954,12 @@
         {literal}
         function checkLoginForm(frm) {
           if (Utils.isEmpty(frm.elements['username'].value)) {
-            alert(username_not_null);
+            hint(username_not_null);
             return false;
           }
 
           if (Utils.isEmpty(frm.elements['password'].value)) {
-            alert(password_not_null);
+            hint(password_not_null);
             return false;
           }
 
@@ -974,38 +968,38 @@
 
         function checkSignupForm(frm) {
           if (Utils.isEmpty(frm.elements['username'].value)) {
-            alert(username_not_null);
+            hint(username_not_null);
             return false;
           }
 
           if (Utils.trim(frm.elements['username'].value).match(/^\s*$|^c:\\con\\con$|[%,\'\*\"\s\t\<\>\&\\]/))
           {
-            alert(username_invalid);
+            hint(username_invalid);
             return false;
           }
 
           if (Utils.isEmpty(frm.elements['email'].value)) {
-            alert(email_not_null);
+            hint(email_not_null);
             return false;
           }
 
           if (!Utils.isEmail(frm.elements['email'].value)) {
-            alert(email_invalid);
+            hint(email_invalid);
             return false;
           }
 
           if (Utils.isEmpty(frm.elements['password'].value)) {
-            alert(password_not_null);
+            hint(password_not_null);
             return false;
           }
 
           if (frm.elements['password'].value.length < 6) {
-            alert(password_lt_six);
+            hint(password_lt_six);
             return false;
           }
 
           if (frm.elements['password'].value != frm.elements['confirm_password'].value) {
-            alert(password_not_same);
+            hint(password_not_same);
             return false;
           }
           return true;

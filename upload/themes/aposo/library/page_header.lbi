@@ -1,3 +1,4 @@
+<link href="themes/aposo/css/bootstrap-dialog.min.css" rel="stylesheet" />
 <script type="text/javascript">
 var process_request = "{$lang.process_request}";
 </script>
@@ -17,7 +18,7 @@ var process_request = "{$lang.process_request}";
 	<div id="templatemo_banner_top" class="container_wapper">
 		<div class="container">
 			<div class="row">
-				{insert_scripts files='jquery.min.js,jquery.json.js,transport.js,utils.js'}
+				{insert_scripts files='jquery.min.js,jquery.json.js,transport.js,utils.js,bootstrap.min.js,bootstrap-dialog.min.js'}
 				<div class="col-md-7">
 					<p>{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'}</p>
 				</div>
@@ -73,7 +74,7 @@ var process_request = "{$lang.process_request}";
 										var return_value = true;
 										if(!document.getElementById('keyword').value)
 										{
-											alert("{$lang.no_keywords}");
+											hint("{$lang.no_keywords}");
 											return_value = false;
 										}
 										return return_value;

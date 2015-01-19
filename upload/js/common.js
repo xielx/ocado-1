@@ -69,10 +69,8 @@ function addToCartResponse(result)
     // 如果需要缺货登记，跳转
     if (result.error == 2)
     {
-      if (confirm(result.message))
-      {
-        location.href = 'user.php?act=add_booking&id=' + result.goods_id + '&spec=' + result.product_spec;
-      }
+      confirm2jump(result.message, 'user.php?act=add_booking&id=' + result.goods_id + '&spec=' + result.product_spec, "马上登记", "算了" );
+      
     }
     // 没选规格，弹出属性选择框
     else if (result.error == 6)
@@ -81,7 +79,7 @@ function addToCartResponse(result)
     }
     else
     {
-      alert(result.message);
+      hint(result.message);
     }
   }
   else
@@ -102,10 +100,11 @@ function addToCartResponse(result)
       switch(result.confirm_type)
       {
         case '1' :
-          if (confirm(result.message)) location.href = cart_url;
+          confirm2jump(result.message, cart_url, "马上结算", "继续购物");
           break;
         case '2' :
-          if (!confirm(result.message)) location.href = cart_url;
+        // TODO>> change
+          !confirm(result.message, cart_url);
           break;
         case '3' :
           location.href = cart_url;
@@ -130,7 +129,7 @@ function collect(goodsId)
  */
 function collectResponse(result)
 {
-  alert(result.message);
+  hint(result.message);
 }
 
 /* *
@@ -149,7 +148,7 @@ function signInResponse(result)
   }
   else
   {
-    alert(content);
+    hint(content);
   }
 }
 
@@ -232,7 +231,7 @@ function bid(step)
 
   if (msg.length > 0)
   {
-    alert(msg);
+    hint(msg);
     return;
   }
 
@@ -256,7 +255,7 @@ function bidResponse(result)
   }
   else
   {
-    alert(result.content);
+    hint(result.content);
   }
 }
 onload = function()
@@ -563,7 +562,7 @@ function sendHashMail()
 
 function sendHashMailResponse(result)
 {
-  alert(result.message);
+  hint(result.message);
 }
 
 /* 订单查询 */
@@ -574,7 +573,7 @@ function orderQuery()
   var reg = /^[\.0-9]+/;
   if (order_sn.length < 10 || ! reg.test(order_sn))
   {
-    alert(invalid_order_sn);
+    hint(invalid_order_sn);
     return;
   }
   Ajax.call('user.php?act=order_query&order_sn=s' + order_sn, '', orderQueryResponse, 'GET', 'JSON');
@@ -584,7 +583,7 @@ function orderQueryResponse(result)
 {
   if (result.message.length > 0)
   {
-    alert(result.message);
+    hint(result.message);
   }
   if (result.error == 0)
   {
@@ -862,14 +861,11 @@ function addPackageToCartResponse(result)
   {
     if (result.error == 2)
     {
-      if (confirm(result.message))
-      {
-        location.href = 'user.php?act=add_booking&id=' + result.goods_id;
-      }
+      confirm2jump(result.message, 'user.php?act=add_booking&id=' + result.goods_id);
     }
     else
     {
-      alert(result.message);    
+      hint(result.message);
     }
   }
   else
@@ -890,10 +886,10 @@ function addPackageToCartResponse(result)
       switch(result.confirm_type)
       {
         case '1' :
-          if (confirm(result.message)) location.href = cart_url;
+          confirm2jump(result.message, cart_url, "马上结算", "继续购物");
           break;
         case '2' :
-          if (!confirm(result.message)) location.href = cart_url;
+          !confirm(result.message, cart_url);
           break;
         case '3' :
           location.href = cart_url;
@@ -1085,4 +1081,41 @@ function cancel_div()
     sel_obj[i].style.visibility = "";
     i++;
   }
+}
+
+
+var confirm2jump = function(msg, url, ok_button, cancel_button){
+  if(!ok_button) {
+    ok_button = "确定";
+  }
+  if(!cancel_button) {
+    cancel_button = "取消";
+  }
+  BootstrapDialog.show({
+    title: '系统提示',
+    closable: false,
+    message: msg,
+    buttons: [{
+      label: cancel_button,
+      action: function(dialog) {
+        dialog.close();
+      }
+    }, {
+      label: ok_button,
+      action: function(dialog) {
+        document.location.href = url;
+      }
+    }]
+  });
+
+
+};
+
+var hint = function(msg) {
+  BootstrapDialog.show({
+    title: '系统提示',
+    closable: true,
+    message: msg
+    
+  });
 }
