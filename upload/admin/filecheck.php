@@ -54,9 +54,9 @@ elseif ($step == 3)
     checkfiles('js/', '\.js|\.css');
     checkfiles('languages/', '\.php');
     checkfiles('plugins/', '\.php');
+    /*
     checkfiles('wap/', '\.php|\.wml');
     checkfiles('mobile/', '\.php');
-    /*
     checkfiles('themes/default/', '\.dwt|\.lbi|\.css');
     checkfiles('uc_client/', '\.php', 0);
     checkfiles('uc_client/control/', '\.php');
