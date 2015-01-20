@@ -64,7 +64,7 @@
       <h5><span>{$lang.profile}</span></h5>
       <div class="blank"></div>
      <form name="formEdit" action="user.php" method="post" onSubmit="return userEdit()">
-      <table width="98%" border="0" cellpadding="5" cellspacing="1" class="info_detail">
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" class="info_detail">
                 <tr>
                   <td width="15%" align="">{$lang.birthday}： </td>
                   <td width="" align="left" class="birthday_select"> {html_select_date field_order=YMD prefix=birthday start_year=-60 end_year=+1 display_days=true month_format=%m day_value_format=%02d time=$profile.birthday} </td>
@@ -117,7 +117,7 @@
        </table>
     </form>
      <form name="formPassword" action="user.php" method="post" onSubmit="return editPassword()" >
-     <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" class="info_detail">
+     <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" class="info_detail">
         <tr>
           <td width="15%" align="">{$lang.old_password}：</td>
           <td width="" align="left"><input name="old_password" type="password" size="25"  class="inputBg" /></td>
@@ -148,7 +148,7 @@
       </script>
       <h5><span>{$lang.label_bonus}</span></h5>
       <div class="blank"></div>
-       <table width="98%" border="0" cellpadding="5" cellspacing="1" class="order_list">
+       <table width="100%" border="0" cellpadding="5" cellspacing="1" class="order_list">
         <tr>
           <th>{$lang.bonus_sn}</th>
           <th>{$lang.bonus_name}</th>
@@ -195,7 +195,7 @@
        <!-- {if $action eq 'order_list'} -->
        <h5><span>{$lang.label_order}</span></h5>
        <div class="blank"></div>
-       <table width="98%" border="0" cellpadding="5" cellspacing="1" class="order_list">
+       <table width="100%" border="0" cellpadding="5" cellspacing="1" class="order_list">
           <tr align="center">
             <th>{$lang.order_number}</th>
             <th>{$lang.order_addtime}</th>
@@ -257,7 +257,7 @@
       <!-- {if $action eq 'track_packages'} -->
         <h5><span>{$lang.label_track_packages}</span></h5>
         <div class="blank"></div>
-        <table width="98%" border="0" cellpadding="5" cellspacing="1" id="order_table" class="order_list">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" id="order_table" class="order_list">
         <tr align="center">
           <th>{$lang.order_number}</th>
           <th>{$lang.handle}</th>
@@ -287,7 +287,7 @@
       <!--{if $action eq order_detail} -->
         <h5><span>{$lang.order_status}</span></h5>
         <div class="blank"></div>
-         <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+         <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
         <tr>
           <td width="15%" align="">{$lang.detail_order_sn}：</td>
           <td align="left">{$order.order_sn}
@@ -346,7 +346,7 @@
         <!-- {/if} -->
         </h5>
         <div class="blank"></div>
-         <table width="98%" border="0" cellpadding="5" cellspacing="1" class="order_list">
+         <table width="100%" border="0" cellpadding="5" cellspacing="1" class="order_list">
           <tr>
             <th width="23%" align="center">{$lang.goods_name}</th>
             <th width="29%" align="center">{$lang.goods_attr}</th>
@@ -453,7 +453,7 @@
         <div class="blank"></div>
          <!-- {if $order.allow_update_address gt 0} -->
           <form action="user.php" method="post" name="formAddress" id="formAddress">
-           <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+           <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
               <tr>
                 <td width="15%" align="right">{$lang.consignee_name}： </td>
                 <td width="35%" align="left"><input name="consignee" type="text"  class="inputBg" value="{$order.consignee|escape}" size="25">
@@ -538,7 +538,7 @@
           <div class="blank"></div>
         <h5><span>{$lang.payment}</span></h5>
         <div class="blank"></div>
-        <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
                 <tr>
                   <td>
                   {$lang.select_payment}: {$order.pay_name}。{$lang.order_amount}: <strong>{$order.formated_order_amount}</strong><br />
@@ -568,7 +568,7 @@
         <div class="blank"></div>
         <h5><span>{$lang.other_info}</span></h5>
         <div class="blank"></div>
-        <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
           <!-- {if $order.shipping_id > 0} -->
           <tr>
             <td width="15%" align="">{$lang.shipping}：</td>
@@ -639,7 +639,7 @@
           {/foreach}
         </script>
         <h5><span>{$lang.user_balance}</span></h5>
-         <table width="98%" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;margin-top:20px;">
+         <table width="100%" border="0" cellpadding="5" cellspacing="1" style="margin-bottom:10px;margin-top:20px;">
           <tr>
             <td align="center"><a href="user.php?act=account_deposit" class="f6 pink">{$lang.surplus_type_0}</a> | <a href="user.php?act=account_raply" class="f6 pink">{$lang.surplus_type_1}</a> | <a href="user.php?act=account_detail" class="f6 pink">{$lang.add_surplus_log}</a> | <a href="user.php?act=account_log" class="f6 pink">{$lang.view_application}</a> </td>
           </tr>
@@ -671,7 +671,7 @@
         <!-- {/if} -->
         <!-- {if $action eq "account_deposit"} -->
         <form name="formSurplus" method="post" action="user.php" onSubmit="return submitSurplus()">
-        <table width="98%" border="0" cellpadding="5" cellspacing="1" class="account_deposit">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" class="account_deposit">
             <tr>
               <td width="15%">{$lang.deposit_money}:</td>
               <td align="left"><input type="text" name="amount"  class="inputBg" value="{$order.amount|escape}" size="30" /></td>
@@ -711,7 +711,7 @@
         </form>
         <!-- {/if} -->
         <!-- {if $action eq "act_account"} -->
-        <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
           <tr>
             <td width="25%" align="right">{$lang.surplus_amount}</td>
             <td width="80%">{$amount}</td>
@@ -756,7 +756,7 @@
         <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
         <!-- {/if} -->
         <!-- {if $action eq "account_log"} -->
-        <table width="98%" border="0" cellpadding="5" cellspacing="1" class="order_list">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" class="order_list">
           <tr align="center">
             <th>{$lang.process_time}</th>
             <th>{$lang.surplus_pro_type}</tdth
@@ -810,7 +810,7 @@
             </script>
             <!-- {foreach from=$consignee_list item=consignee key=sn} -->
             <form action="user.php" method="post" name="theForm" onsubmit="return checkConsignee(this)">
-              <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" class="info_detail">
+              <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" class="info_detail">
                 <tr>
                   <td align="">{$lang.country_province}：<span style="color:#ff0000;">{$lang.require_field}</span></td>
                   <td class="birthday_select adress_select" align="left"><select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')">
@@ -899,7 +899,7 @@
              <div class="blank"></div>
        <!--{if $exchange_type eq 'ucenter'}-->
         <form action="user.php" method="post" name="transForm" onsubmit="return calcredit();">
-       <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+       <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
                 <tr>
                     <th width="120" align="right" valign="top">{$lang.cur_points}:</th>
                     <td>
@@ -991,7 +991,7 @@
        </script>
        <!--{else}-->
         <b>{$lang.cur_points}:</b>
-        <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
           <tr>
             <td width="30%" valign="top"><table border="0">
               <!--{foreach from=$bbs_points item=points}-->
@@ -1022,7 +1022,7 @@
         </ul>
 
         <form action="user.php" method="post" name="theForm">
-        <table width="98%" border="1" align="center" cellpadding="5" cellspacing="0" style="border-collapse:collapse;border:1px solid #DADADA;">
+        <table width="100%" border="1" align="center" cellpadding="5" cellspacing="0" style="border-collapse:collapse;border:1px solid #DADADA;">
           <tr style="background:#F1F1F1;">
             <th>{$lang.rule}</th>
             <th>{$lang.transform_num}</th>

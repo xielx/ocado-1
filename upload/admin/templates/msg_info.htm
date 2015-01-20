@@ -1,7 +1,7 @@
 <!-- $Id: msg_info.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
 {include file="pageheader.htm"}
 <div class="main-div">
-  <table width="98%">
+  <table width="100%">
     <tr>
       <td style="padding: 0px 20px">
         <h3>{$msg.msg_title|escape:"html"}</h3>
@@ -32,7 +32,7 @@
 
 {if $msg.reply_id}
 <div class="main-div">
-  <table width="98%">
+  <table width="100%">
     <tr>
       <td style="padding: 0px 20px">
         <h3>{$msg.reply_name} {$lang.from} {$msg.reply_time} {$lang.reply}:</h3>
@@ -52,7 +52,7 @@
 
 <div class="main-div">
 <form method="post" action="user_msg.php?act=action" name="theForm"  onsubmit="return validate()">
-<table border="0" width="98%">
+<table border="0" width="100%">
   <tr>
     <td>{$lang.email}:</td>
     <td><input name="user_email" id="user_email"  type="text" value="{$msg.reply_email}"></td>
