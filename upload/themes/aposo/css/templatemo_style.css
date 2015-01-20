@@ -18,7 +18,10 @@ body {
     margin-top: 50px;
     text-align: center;
 }
-
+.f4_b {
+    color: #fe596a;
+    font-weight: bold;
+}
 /* templatemo_mobile_menu_wap */
 #templatemo_mobile_menu_wap {
     width: 50px;
@@ -595,7 +598,7 @@ body {
 	height: 40px;
 	line-height: 40px;
 	float: left;
-	font-size: 14px;
+	font-size: 12px;
 	color: #767676;
 	margin: 0;
 	border: none;
@@ -972,13 +975,13 @@ body {
 #templatemo_info input.combine_btn,.add_bonus input.save_adress,.deposit_info input.save_adress,
 .combine_order input.bnt_blue_1,.deposit_info input.bnt_blue_1,.account_deposit input.bnt_blue_1,
 #tagForm input.bnt_blue,.commentsList input.f_r,.info_detail input.bnt_blue_1,.info_detail input.bnt_bonus,
-.info_detail input.bnt_blue_2,.info_detail input.bnt_blue,.welcome_user a.remove{
+.info_detail input.bnt_blue_2,.info_detail input.bnt_blue,.welcome_user a.remove,.info_detail input.submit,.info_detail input.reset{
 	background: none repeat scroll 0 0 #595a6b;
     border: 0 none;
     border-radius: 4px;
     color: #fff;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     height: 35px;
     line-height: 27px;
     text-align: center;
@@ -993,7 +996,8 @@ body {
 .deposit_info input.save_adress:hover,.combine_order input.bnt_blue_1:hover,
 .deposit_info input.bnt_blue_1:hover,.account_deposit input.bnt_blue_1:hover,
 #tagForm input.bnt_blue:hover,.commentsList input.f_r:hover,.info_detail input.bnt_blue:hover,
-.info_detail input.bnt_blue_2:hover,.info_detail input.bnt_bonus:hover{ 
+.info_detail input.bnt_blue_2:hover,.info_detail input.bnt_bonus:hover,
+.info_detail input.submit:hover,.info_detail input.reset:hover{ 
 background: none repeat scroll 0 0 #d1394a;}
 #tagForm input.bnt_blue{width:80px;}
 #order_addr tr span{color:#ff0000;}
@@ -1313,6 +1317,7 @@ background: none repeat scroll 0 0 #d1394a;}
     font-size: 18px;
     padding: 18px 0 0;
 }
+.welcome_user .msg_time{float:right;}
 .goodsInfo a,.welcome_user a{
 	color: #eb5b6b;
 	/*text-decoration:underline;*/
@@ -1471,5 +1476,22 @@ h3.jp_recommend input{ vertical-align: middle;}
 .welcome_user .msgBottomBorder{
 	border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
-    padding: 5px 0 13px;
+    padding: 10px 0 15px;
 }
+
+/*shopcart*/
+.bootstrap-dialog-footer-buttons button.btn,#speDiv a.f6{
+	background: none repeat scroll 0 0 #595a6b;
+    border: 0 none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    text-align: center;
+    width: 110px;
+}
+.bootstrap-dialog-footer-buttons button.btn:hover,#speDiv a.f6:hover{background:#d1394a;}

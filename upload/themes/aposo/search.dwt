@@ -287,7 +287,7 @@
               </li>
               <li class="action">
               <a href="javascript:collect({$goods.goods_id});" class="abg f6">{$lang.favourable_goods}</a>
-              <a href="javascript:addToCart({$goods.goods_id})"><img src="../images/bnt_buy_1.gif"></a>
+              <a href="javascript:addToCart({$goods.goods_id})">立即购买</a>
               </li>
               </ul>
               <!--{/foreach}-->

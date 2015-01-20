@@ -962,13 +962,13 @@ function openSpeDiv(message, goods_id, parent)
   newDiv.id = _id;
   newDiv.style.position = "absolute";
   newDiv.style.zIndex = "10000";
-  newDiv.style.width = "300px";
+  newDiv.style.width = "400px";
   newDiv.style.height = "260px";
   newDiv.style.top = (parseInt(scrollPos + 200)) + "px";
-  newDiv.style.left = (parseInt(document.body.offsetWidth) - 200) / 2 + "px"; // 屏幕居中
+  newDiv.style.left = (parseInt(document.body.offsetWidth) - 300) / 2 + "px"; // 屏幕居中
   newDiv.style.overflow = "auto"; 
   newDiv.style.background = "#FFF";
-  newDiv.style.border = "3px solid #59B0FF";
+  newDiv.style.border = "3px solid #cf3341";
   newDiv.style.padding = "5px";
 
   //生成层内内容
@@ -1002,7 +1002,7 @@ function openSpeDiv(message, goods_id, parent)
         newDiv.innerHTML += "<input type='hidden' name='spec_list' value='" + val_arr + "' />";
       }
   }
-  newDiv.innerHTML += "<br /><center>[<a href='javascript:submit_div(" + goods_id + "," + parent + ")' class='f6' >购买</a>]&nbsp;&nbsp;[<a href='javascript:cancel_div()' class='f6' >取消</a>]</center>";
+  newDiv.innerHTML += "<br /><div style='padding-left:16px;'><a href='javascript:submit_div(" + goods_id + "," + parent + ")' class='f6' >购买</a>&nbsp;&nbsp;<a href='javascript:cancel_div()' class='f6' >取消</a></div>";
   document.body.appendChild(newDiv);
 
 

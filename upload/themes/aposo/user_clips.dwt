@@ -107,7 +107,7 @@
           <!-- {/if}-->
          
           <form action="user.php" method="post" enctype="multipart/form-data" name="formMsg" onSubmit="return submitMsg()">
-            <table width="100%" border="0" cellpadding="3"  class="info_detail">
+            <table width="98%" border="0" cellpadding="3"  class="info_detail">
               {if $order_info}
               <tr>
                 <td align="">{$lang.order_number}</td>
@@ -161,9 +161,9 @@
           <h5><span>{$lang.label_comment}</span></h5>
           <div class="blank"></div>
           <!--{foreach from=$comment_list item=comment} -->
-          <div class="f_l"> <b>{if $comment.comment_type eq '0'}{$lang.goods_comment}{else}{$lang.article_comment}{/if}: </b><font class="f4">{$comment.cmt_name}</font>&nbsp;&nbsp;({$comment.formated_add_time}) </div>
+          <div class="f_l"> <b>{if $comment.comment_type eq '0'}{$lang.goods_comment}{else}{$lang.article_comment}{/if}: </b><font class="f4">{$comment.cmt_name}</font>&nbsp;&nbsp;<font class="msg_time">({$comment.formated_add_time})</font> </div>
           
-          <div class="msgBottomBorder"> {$comment.content|escape}<br /><div class="f_r"> <a class="remove" href="javascript: void(0);" title="{$lang.drop}" onclick="confirm2jump('{$lang.confirm_remove_msg}', 'user.php?act=del_cmt&amp;id={$comment.comment_id}');" class="f6">{$lang.drop}</a> </div>
+          <div class="msgBottomBorder"> {$comment.content|escape}<br /><br /><div class="f_r"> <a class="remove" href="javascript: void(0);" title="{$lang.drop}" onclick="confirm2jump('{$lang.confirm_remove_msg}', 'user.php?act=del_cmt&amp;id={$comment.comment_id}');" class="f6">{$lang.drop}</a> </div>
             <!--{if $comment.reply_content}-->
             <b>{$lang.reply_comment}：</b><br />
             {$comment.reply_content}
@@ -195,7 +195,7 @@
           {insert_scripts files='transport.js,utils.js'}
           <h5><span>{$lang.label_collection}</span></h5>
           <div class="blank"></div>
-          <table width="100%" border="0" cellpadding="5" cellspacing="1" class="order_list">
+          <table width="98%" border="0" cellpadding="5" cellspacing="1" class="order_list">
             <tr align="center">
               <th>{$lang.goods_name}</th>
               <th>{$lang.price}</th>
@@ -225,7 +225,7 @@
             <h5><span>{$lang.label_affiliate}</span></h5>
             <div class="blank"></div>
             <form name="theForm" method="post" action="">
-              <table width="100%" border="0" cellpadding="5" cellspacing="1" class="my_recommend">
+              <table width="98%" border="0" cellpadding="5" cellspacing="1" class="my_recommend">
                 <tr>
                   <td align="right" bgcolor="#ffffff">{$lang.label_need_image}</td>
                   <td bgcolor="#ffffff"><select name="need_image" id="need_image" class="inputBg">
@@ -324,7 +324,7 @@
           <!--{if $action eq 'booking_list'} -->
           <h5><span>{$lang.label_booking}</span></h5>
           <div class="blank"></div>
-          <table width="100%" border="0" cellpadding="5" cellspacing="1" class="order_list">
+          <table width="98%" border="0" cellpadding="5" cellspacing="1" class="order_list">
             <tr align="center">
               <th width="20%">{$lang.booking_goods_name}</th>
               <th width="10%">{$lang.booking_amount}</th>
@@ -355,34 +355,34 @@
           <h5><span>{$lang.add}{$lang.label_booking}</span></h5>
           <div class="blank"></div>
           <form action="user.php" method="post" name="formBooking" onsubmit="return addBooking();">
-            <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <table width="98%" border="0" cellpadding="5" cellspacing="1" class="info_detail">
               <tr>
-                <td align="right" bgcolor="#ffffff">{$lang.booking_goods_name}</td>
-                <td bgcolor="#ffffff">{$info.goods_name}</td>
+                <td>{$lang.booking_goods_name}</td>
+                <td>{$info.goods_name}</td>
               </tr>
               <tr>
-                <td align="right" bgcolor="#ffffff">{$lang.booking_amount}:</td>
-                <td bgcolor="#ffffff"><input name="number" type="text" value="{$info.goods_number}" class="inputBg" /></td>
+                <td>{$lang.booking_amount}:</td>
+                <td><input name="number" type="text" value="{$info.goods_number}" class="inputBg" /></td>
               </tr>
               <tr>
-                <td align="right" bgcolor="#ffffff">{$lang.describe}:</td>
-                <td bgcolor="#ffffff"><textarea name="desc" cols="50" rows="5" wrap="virtual" class="B_blue">{$goods_attr}{$info.goods_desc|escape}</textarea></td>
+                <td>{$lang.describe}:</td>
+                <td><textarea name="desc" cols="50" rows="5" wrap="virtual" class="B_blue">{$goods_attr}{$info.goods_desc|escape}</textarea></td>
               </tr>
               <tr>
-                <td align="right" bgcolor="#ffffff">{$lang.contact_username}:</td>
-                <td bgcolor="#ffffff"><input name="linkman" type="text" value="{$info.consignee|escape}" size="25"  class="inputBg"/></td>
+                <td>{$lang.contact_username}:</td>
+                <td><input name="linkman" type="text" value="{$info.consignee|escape}" size="25"  class="inputBg"/></td>
               </tr>
               <tr>
-                <td align="right" bgcolor="#ffffff">{$lang.email_address}:</td>
-                <td bgcolor="#ffffff"><input name="email" type="text" value="{$info.email|escape}" size="25" class="inputBg" /></td>
+                <td>{$lang.email_address}:</td>
+                <td><input name="email" type="text" value="{$info.email|escape}" size="25" class="inputBg" /></td>
               </tr>
               <tr>
-                <td align="right" bgcolor="#ffffff">{$lang.contact_phone}:</td>
-                <td bgcolor="#ffffff"><input name="tel" type="text" value="{$info.tel|escape}" size="25" class="inputBg" /></td>
+                <td>{$lang.contact_phone}:</td>
+                <td><input name="tel" type="text" value="{$info.tel|escape}" size="25" class="inputBg" /></td>
               </tr>
               <tr>
-                <td align="right" bgcolor="#ffffff">&nbsp;</td>
-                <td bgcolor="#ffffff"><input name="act" type="hidden" value="act_add_booking" />
+                <td>&nbsp;</td>
+                <td><input name="act" type="hidden" value="act_add_booking" />
                   <input name="id" type="hidden" value="{$info.id}" />
                   <input name="rec_id" type="hidden" value="{$info.rec_id}" />
                   <input type="submit" name="submit" class="submit" value="{$lang.submit_booking_goods}" />
@@ -403,7 +403,7 @@
           <div class="blank"></div>
           <h5><span><a name="myrecommend">{$lang.affiliate_member}</a></span></h5>
           <div class="blank"></div>
-          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+          <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
             <tr align="center">
               <td bgcolor="#ffffff">{$lang.affiliate_lever}</td>
               <td bgcolor="#ffffff">{$lang.affiliate_num}</td>
@@ -428,7 +428,7 @@
           <div class="blank"></div>
           <h5><span>分成规则</span></h5>
           <div class="blank"></div>
-          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+          <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
             <tr align="center">
               <td bgcolor="#ffffff">{$lang.order_number}</td>
               <td bgcolor="#ffffff">{$lang.affiliate_money}</td>
@@ -482,7 +482,7 @@ function selectPage(sel)
           <div class="blank"></div>
           <h5><span>{$lang.affiliate_code}</span></h5>
           <div class="blank"></div>
-          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+          <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
             <tr>
               <td width="30%" bgcolor="#ffffff"><a href="{$shopurl}?u={$userid}" target="_blank" class="f6">{$shopname}</a></td>
               <td bgcolor="#ffffff"><input size="40" onclick="this.select();" type="text" value="&lt;a href=&quot;{$shopurl}?u={$userid}&quot; target=&quot;_blank&quot;&gt;{$shopname}&lt;/a&gt;" style="border:1px solid #ccc;" />
@@ -511,7 +511,7 @@ function selectPage(sel)
         </style>
           <h5><span>{$lang.affiliate_code}</span></h5>
           <div class="blank"></div>
-          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+          <table width="98%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
             <tr align="center">
               <td bgcolor="#ffffff">{$lang.affiliate_view}</td>
               <td bgcolor="#ffffff">{$lang.affiliate_code}</td>
