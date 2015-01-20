@@ -71,9 +71,7 @@ if ($_REQUEST['act'] == 'list')
 
     if ($count > 0)
     {
-        $default_display_type = $_CFG['show_order_type'] == '0' ? 'list' : 'text';
-        $display  = (isset($_REQUEST['display']) && in_array(trim(strtolower($_REQUEST['display'])), array('list', 'text'))) ? trim($_REQUEST['display']) : (isset($_COOKIE['ECS']['display']) ? $_COOKIE['ECS']['display'] : $default_display_type);
-        $display  = in_array($display, array('list', 'text')) ? $display : 'text';
+        $display  = 'list';
         setcookie('ECS[display]', $display, gmtime() + 86400 * 7);
 
         /* 取得每页记录数 */
