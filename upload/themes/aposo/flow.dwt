@@ -1035,7 +1035,8 @@
           </tr>
                   <tr>
                   <td align="">&nbsp;</td>
-                    <td align=""><a href="user.php?act=qpassword_name" class="f6 pink">{$lang.get_password_by_question}</a>&nbsp;&nbsp;&nbsp;<a href="user.php?act=get_password" class="f6 pink">{$lang.get_password_by_mail}</a></td>
+                    <td align="">
+                      <a href="user.php?act=get_password" class="f6 pink">{$lang.get_password_by_mail}</a></td>
                   </tr>
                   <tr>
                   <td align="">&nbsp;</td>

@@ -4,5 +4,5 @@
  <a href="user.php?act=logout">{$lang.user_logout}</a>
 {else}
  {$lang.welcome}&nbsp;&nbsp;&nbsp;&nbsp;
- <a href="user.php">LOG IN 登录</a> | <a href="user.php?act=register">SIGN UP 注册</a> | <a href="user.php?act=order_list">订单</a>
+ <a href="user.php">LOG IN 登录</a> | <a href="user.php?act=register">SIGN UP 注册</a>
 {/if}

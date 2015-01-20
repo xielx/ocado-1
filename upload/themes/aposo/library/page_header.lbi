@@ -20,7 +20,7 @@ var process_request = "{$lang.process_request}";
 			<div class="row">
 				{insert_scripts files='jquery.min.js,jquery.json.js,transport.js,utils.js,bootstrap.min.js,bootstrap-dialog.min.js'}
 				<div class="col-md-7">
-					<p>{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'}</p>
+					<p>{insert name='member_info'}</p>
 				</div>
 				<!--{if $navigator_list.top}-->
 				<div class="col-md-5">
