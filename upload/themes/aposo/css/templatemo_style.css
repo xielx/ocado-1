@@ -593,7 +593,7 @@ body {
 
 .combine_order select,.combine_order input,.combine_order .my_recommend textarea,
 .form_detail ul li input.inputBg,.account_deposit input.inputBg,.account_deposit textarea,
-.info_detail input.inputBg,.info_detail select,.info_detail textarea{
+.info_detail input.inputBg,.info_detail select,.info_detail textarea,.table_login input.inputBg{
 	background:#f0f4f5;
 	height: 40px;
 	line-height: 40px;
@@ -975,7 +975,8 @@ body {
 #templatemo_info input.combine_btn,.add_bonus input.save_adress,.deposit_info input.save_adress,
 .combine_order input.bnt_blue_1,.deposit_info input.bnt_blue_1,.account_deposit input.bnt_blue_1,
 #tagForm input.bnt_blue,.commentsList input.f_r,.info_detail input.bnt_blue_1,.info_detail input.bnt_bonus,
-.info_detail input.bnt_blue_2,.info_detail input.bnt_blue,.welcome_user a.remove,.info_detail input.submit,.info_detail input.reset{
+.info_detail input.bnt_blue_2,.info_detail input.bnt_blue,.welcome_user a.remove,.info_detail input.submit,.info_detail input.reset,
+.table_login input.bnt_blue_1,.table_login input.bnt_blue,.table_login input.bnt_blue_2{
 	background: none repeat scroll 0 0 #595a6b;
     border: 0 none;
     border-radius: 4px;
@@ -997,7 +998,8 @@ body {
 .deposit_info input.bnt_blue_1:hover,.account_deposit input.bnt_blue_1:hover,
 #tagForm input.bnt_blue:hover,.commentsList input.f_r:hover,.info_detail input.bnt_blue:hover,
 .info_detail input.bnt_blue_2:hover,.info_detail input.bnt_bonus:hover,
-.info_detail input.submit:hover,.info_detail input.reset:hover{ 
+.info_detail input.submit:hover,.info_detail input.reset:hover,
+.table_login input.bnt_blue:hover,.table_login input.bnt_blue_2:hover{ 
 background: none repeat scroll 0 0 #d1394a;}
 #tagForm input.bnt_blue{width:80px;}
 #order_addr tr span{color:#ff0000;}
@@ -1456,7 +1458,7 @@ h3.jp_recommend select{
 h3.jp_recommend input{ vertical-align: middle;}
 
 /*user center*/
-.info_detail tr{height:48px;}
+.info_detail tr,.table_login tr{height:48px;}
 .info_detail input.inputBg,.info_detail select,.info_detail textarea{width:80%;}
 .info_detail textarea{height:100px;}
 .info_detail .birthday_select select{
@@ -1495,3 +1497,14 @@ h3.jp_recommend input{ vertical-align: middle;}
     width: 110px;
 }
 .bootstrap-dialog-footer-buttons button.btn:hover,#speDiv a.f6:hover{background:#d1394a;}
+
+/*login*/
+.login_table h6{
+	border-bottom: 1px solid #eee;
+    font-size: 16px;
+    margin: 8px 0 10px;
+    padding-bottom: 7px;
+}
+.table_login td{
+	border:0;
+}

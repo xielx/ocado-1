@@ -1007,36 +1007,39 @@
         {/literal}
         </script>
         <!-- 开始用户登录注册界面 -->
-        <div class="flowBox">
+        <div class="flowBox login_table">
         <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" >
           <tr>
-            <td width="50%" valign="top">
+            <td width="" valign="top">
             <h6><span>用户登录：</span></h6>
             <form action="flow.php?step=login" method="post" name="loginForm" id="loginForm" onsubmit="return checkLoginForm(this)">
-                <table width="90%" border="0" cellpadding="8" cellspacing="1" bgcolor="#B0D8FF" class="table">
+                <table width="90%" border="0" cellpadding="8" cellspacing="1" class="table_login">
                   <tr>
-                    <td><div align="right"><strong>{$lang.username}</strong></div></td>
+                    <td width="15%"><div align=""><strong>{$lang.username}</strong></div></td>
                     <td><input name="username" type="text" class="inputBg" id="username" /></td>
                   </tr>
                   <tr>
-                    <td><div align="right"><strong>{$lang.password}</strong></div></td>
+                    <td><div align=""><strong>{$lang.password}</strong></div></td>
                     <td><input name="password" class="inputBg" type="password" /></td>
                   </tr>
                   <!-- 判断是否启用验证码{if $enabled_login_captcha} -->
                   <tr>
-                    <td><div align="right"><strong>{$lang.comment_captcha}:</strong></div></td>
+                    <td><div align=""><strong>{$lang.comment_captcha}:</strong></div></td>
                     <td><input type="text" size="8" name="captcha" class="inputBg" />
                     <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /> </td>
                   </tr>
                   <!--{/if}-->
                   <tr>
-            <td colspan="2" ><input type="checkbox" value="1" name="remember" id="remember" /><label for="remember">{$lang.remember}</label></td>
+                  <td align="">&nbsp;</td>
+            <td><input style="vertical-align:middle;" type="checkbox" value="1" name="remember" id="remember" /><label style="padding-left:5px;" for="remember">{$lang.remember}</label></td>
           </tr>
                   <tr>
-                    <td colspan="2" align="center"><a href="user.php?act=qpassword_name" class="f6">{$lang.get_password_by_question}</a>&nbsp;&nbsp;&nbsp;<a href="user.php?act=get_password" class="f6">{$lang.get_password_by_mail}</a></td>
+                  <td align="">&nbsp;</td>
+                    <td align=""><a href="user.php?act=qpassword_name" class="f6 pink">{$lang.get_password_by_question}</a>&nbsp;&nbsp;&nbsp;<a href="user.php?act=get_password" class="f6 pink">{$lang.get_password_by_mail}</a></td>
                   </tr>
                   <tr>
-                    <td colspan="2"><div align="center">
+                  <td align="">&nbsp;</td>
+                    <td><div align="">
                         <input type="submit" class="bnt_blue" name="login" value="{$lang.forthwith_login}" />
                         <!-- {if $anonymous_buy eq 1} 是否允许未登录用户购物 -->
                         <input type="button" class="bnt_blue_2" value="{$lang.direct_shopping}" onclick="location.href='flow.php?step=consignee&amp;direct_shopping=1'" />
@@ -1046,41 +1049,43 @@
                   </tr>
                 </table>
               </form>
-
+			</tr>
+            <tr>
               </td>
             <td valign="top">
             <h6><span>用户注册：</span></h6>
             <form action="flow.php?step=login" method="post" name="formUser" id="registerForm" onsubmit="return checkSignupForm(this)">
-               <table width="98%" border="0" cellpadding="8" cellspacing="1" bgcolor="#B0D8FF" class="table">
+               <table width="90%" border="0" cellpadding="8" cellspacing="1" class="table_login">
                   <tr>
-                    <td align="right" width="25%"><strong>{$lang.username}</strong></td>
+                    <td width="15%" align="" width="25%"><strong>{$lang.username}</strong></td>
                     <td><input name="username" type="text" class="inputBg" id="username" onblur="is_registered(this.value);" /><br />
             <span id="username_notice" style="color:#FF0000"></span></td>
                   </tr>
                   <tr>
-                    <td align="right"><strong>{$lang.email_address}</strong></td>
+                    <td align=""><strong>{$lang.email_address}</strong></td>
                     <td><input name="email" type="text" class="inputBg" id="email" onblur="checkEmail(this.value);" /><br />
             <span id="email_notice" style="color:#FF0000"></span></td>
                   </tr>
                   <tr>
-                    <td align="right"><strong>{$lang.password}</strong></td>
+                    <td align=""><strong>{$lang.password}</strong></td>
                     <td><input name="password" class="inputBg" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" /><br />
             <span style="color:#FF0000" id="password_notice"></span></td>
                   </tr>
                   <tr>
-                    <td align="right"><strong>{$lang.confirm_password}</strong></td>
+                    <td align=""><strong>{$lang.confirm_password}</strong></td>
                     <td><input name="confirm_password" class="inputBg" type="password" id="confirm_password" onblur="check_conform_password(this.value);" /><br />
             <span style="color:#FF0000" id="conform_password_notice"></span></td>
                   </tr>
                   <!-- 判断是否启用验证码{if $enabled_register_captcha} -->
                   <tr>
-                    <td align="right"><strong>{$lang.comment_captcha}:</strong></td>
+                    <td align=""><strong>{$lang.comment_captcha}:</strong></td>
                     <td><input type="text" size="8" name="captcha" class="inputBg" />
                     <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" /> </td>
                   </tr>
                   <!--{/if}-->
                   <tr>
-                    <td colspan="2" align="center">
+                  	<td align="">&nbsp;</td>
+                    <td align="">
                         <input type="submit" name="Submit" class="bnt_blue_1" value="{$lang.forthwith_register}" />
                         <input name="act" type="hidden" value="signup" />
                     </td>
