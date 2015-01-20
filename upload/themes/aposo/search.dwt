@@ -25,7 +25,7 @@
   <![endif]-->
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
 {* 包含脚本文件 *}
-{insert_scripts files='utils.js,common.js,global.js,compare.js'}
+{insert_scripts files='utils.js,common.js,global.js'}
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->

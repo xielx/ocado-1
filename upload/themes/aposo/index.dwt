@@ -34,11 +34,11 @@
 					<div class="product_title">
 						<h3>热销产品</h3>
 						<p>
-						<a class="all_pro" href="catalog.php">全部产品</a> | 
+						<a class="all_pro" href="search.php?intro=best">全部产品</a> | 
 						<!--{foreach from=$categories item=cat}-->
 						<a href="{$cat.url}">{$cat.name|escape:html}</a> | 
 						<!--{/foreach}--> 
-						<a href="catalog.php">更多>></a> 
+						<a href="search.php?intro=best">更多>></a> 
 						</p>
 					</div>
 				</div>
