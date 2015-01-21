@@ -601,14 +601,14 @@
         <tbody>
               <!-- {foreach from=$shipping_list item=shipping} 循环配送方式 -->
               <tr>
-                <td valign="top">
+                <td valign="">
                   <input name="shipping" id="shipping_type_{$shipping.shipping_id}" type="radio" value="{$shipping.shipping_id}" {if $order.shipping_id eq $shipping.shipping_id}checked="true"{/if} supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />
                 </td>
-                <td valign="top"><strong><label for="shipping_type_{$shipping.shipping_id}">{$shipping.shipping_name}</label></strong></td>
-                <td valign="top">{$shipping.shipping_desc}</td>
-                <td align="right" valign="top">{$shipping.format_shipping_fee}</td>
-                <td align="right" valign="top">{$shipping.free_money}</td>
-                <td align="right" valign="top">{if $shipping.insure neq 0}{$shipping.insure_formated}{else}{$lang.not_support_insure}{/if}</td>
+                <td valign=""><strong><label for="shipping_type_{$shipping.shipping_id}">{$shipping.shipping_name}</label></strong></td>
+                <td valign="">{$shipping.shipping_desc}</td>
+                <td align="right" valign="">{$shipping.format_shipping_fee}</td>
+                <td align="right" valign="">{$shipping.free_money}</td>
+                <td align="right" valign="">{if $shipping.insure neq 0}{$shipping.insure_formated}{else}{$lang.not_support_insure}{/if}</td>
               </tr>
               <!-- {/foreach} 循环配送方式 -->
               <tr>
