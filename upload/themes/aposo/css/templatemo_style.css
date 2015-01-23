@@ -342,17 +342,19 @@ body {
 .pro_copy p{line-height:18px;}
 .Pro_parameters_box{
 	font-size: 14px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .pro_name{
 	border-bottom: 1px solid #dddddd;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
 }
 .pro_name span{
 	display:block;
 	font-size:18px;
 }
+.Pro_parameters_box table{font-size:12px;}
+.Pro_parameters_box .f1{color:#d1394a;}
 .pro_pire{
 	clear: both;
     margin: 15px 0 18px;
