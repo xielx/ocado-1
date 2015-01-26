@@ -106,7 +106,7 @@ $_LANG['package_price'] = '礼包价：';
 $_LANG['then_old_price'] = '节  省：';
 $_LANG['free_goods'] = '免运费商品';
 
-$_LANG['searchkeywords_notice'] = '匹配多个关键字全部，可用 "空格" 或 "AND" 连接。如 win32 AND unix<br />匹配多个关键字其中部分，可用"+"或 "OR" 连接。如 win32 OR unix';
+$_LANG['searchkeywords_notice'] = '匹配多个关键字全部，可用 "空格" 或 "AND" 连接。<br />匹配多个关键字其中部分，可用"+"或 "OR" 连接。';
 $_LANG['hidden_outstock'] = '隐藏已脱销的商品';
 $_LANG['keywords'] = '关键字';
 $_LANG['sc_ds'] = '搜索简介';

@@ -149,7 +149,7 @@ function selectPage(sel)
 <script type="text/javascript">
 window.onload = function()
 {
-  Compare.init();
+//  Compare.init();
   fixpng();
 }
 {foreach from=$lang.compare_js item=item key=key}

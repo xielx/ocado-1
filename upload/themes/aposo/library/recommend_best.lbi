@@ -11,7 +11,7 @@
       {/foreach}
       {/if}
   </div>
-  <div id="show_best_area" class="clearfix goodsBox"><div class="more"><a href="../search.php?intro=best"><img src="images/more.gif" /></a></div>
+  <div id="show_best_area" class="clearfix goodsBox"><div class="more"><a href="../search.php?action=form&goods_type=10"><img src="images/more.gif" /></a></div>
   <!-- {/if} -->
   <!--{foreach from=$best_goods item=goods}-->
   <div class="goodsItem col-sm-6 col-md-3">

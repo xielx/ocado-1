@@ -3,7 +3,7 @@
   <div class="classify">
           <div class="classify_text">蛋糕分类:</div>
           <ul>
-            <li <!-- {if $category == 0} -->class="active"<!-- {/if} -->><a href="search.php?intro=best">所有分类</a></li>
+            <li <!-- {if $category == 0} -->class="active"<!-- {/if} -->><a href="search.php?action=form&goods_type=10">所有分类</a></li>
               <!--{foreach from=$categories item=cat}-->
               <li <!-- {if $category == $cat.id} -->class="active"<!-- {/if} -->><a href="{$cat.url}">{$cat.name|escape:html}</a>
                <!--{foreach from=$cat.cat_id item=child}-->

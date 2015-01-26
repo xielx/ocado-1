@@ -150,7 +150,7 @@ else
                 }
             }
         }
-        if ($_REQUEST['sc_ds'])
+        if ($_REQUEST['sc_ds'] || 1)
         {
             $smarty->assign('scck',            'checked');
         }
