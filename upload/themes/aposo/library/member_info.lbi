@@ -1,8 +1,8 @@
 {if $user_info}
-{$lang.hello}，<font class="f4_b">{$user_info.username}</font>, {$lang.welcome_return}！
-<a href="user.php">{$lang.user_center}</a>|
- <a href="user.php?act=logout">{$lang.user_logout}</a>
+{$lang.hello}，<a href="user.php"><span class="f4_b">{$user_info.username}</span></a>, {$lang.welcome_return}！
+<a href="user.php?act=order_list">我的订单</a>|
+<a href="flow.php">购物车</a>|
+<a href="user.php?act=logout">{$lang.user_logout}</a>
 {else}
- {$lang.welcome}&nbsp;&nbsp;&nbsp;&nbsp;
  <a href="user.php">LOG IN 登录</a> | <a href="user.php?act=register">SIGN UP 注册</a>
 {/if}

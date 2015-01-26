@@ -20,16 +20,13 @@ var process_request = "{$lang.process_request}";
 			<div class="row">
 				{insert_scripts files='jquery.min.js,jquery.json.js,transport.js,utils.js,bootstrap.min.js,bootstrap-dialog.min.js'}
 				<div class="col-md-7">
-					<p>{insert name='member_info'}</p>
+					<span class="welcome">{$lang.welcome}</span>
+					<span class="order_line">订购热线：{$service_phone}</span> 
 				</div>
-				<!--{if $navigator_list.top}-->
 				<div class="col-md-5">
 					<p class="right">
-						<!-- <span class="glyphicon glyphicon-shopping-cart"></span><a href="#">0 件</a> -->
-						<!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
-							<a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
-						<!-- {/foreach} -->
-						<span class="order_line">订购热线：{$service_phone}</span> 
+						<span class="member_info">{insert name='member_info'}</span>
+
 						<span class="wx">
                             <img src="images/weixin.png" alt="">
                             <span class="pop_img1"><img src="images/wx.jpg"/></span>
@@ -40,7 +37,6 @@ var process_request = "{$lang.process_request}";
                         </span>
                       </p>
 				</div>
-				<!-- {/if} -->
 			</div>
 		</div>
 	</div>
