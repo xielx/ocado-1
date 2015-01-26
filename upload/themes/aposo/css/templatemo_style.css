@@ -1450,6 +1450,12 @@ table.order_list tr .f6 a{color: #eb5b6b;}
     font-size: 16px;
 }
 .sort{text-align:right;}
+.jp_recommend .sort select{
+	background: none repeat scroll 0 0 #f0f4f5;
+    border: 1px solid #ddd;
+    padding: 2px 10px;
+	vertical-align: middle;
+}
 #show_best_area .more{
 	float: right;
     margin-top: -27px;
