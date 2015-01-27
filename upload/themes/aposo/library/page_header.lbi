@@ -20,8 +20,8 @@ var process_request = "{$lang.process_request}";
 			<div class="row">
 				{insert_scripts files='jquery.min.js,jquery.json.js,transport.js,utils.js,bootstrap.min.js,bootstrap-dialog.min.js'}
 				<div class="col-md-7">
-					<span class="welcome">{$lang.welcome}</span>
-					<span class="order_line">订购热线：{$service_phone}</span> 
+					<p><span class="welcome">{$lang.welcome}</span>&nbsp;&nbsp;
+					<span class="order_line">订购热线：{$service_phone}</span> </p>
 				</div>
 				<div class="col-md-5">
 					<p class="right">

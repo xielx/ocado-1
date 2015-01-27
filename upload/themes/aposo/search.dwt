@@ -53,7 +53,7 @@
   </div>
   <!--left end-->
   <!--right start-->
-  <div class="AreaR col-md-12">
+  <div class="col-md-12">
   <!-- {if 1} -->
   <!--  搜索的表单 -->
   <div class="box">
@@ -61,7 +61,7 @@
     <h3><span>商品筛选</span></h3>
     <div class="boxCenterList">
       <form action="search.php" method="get" name="advancedSearchForm" id="advancedSearchForm">
-    <table border="0" align="center" cellpadding="3">
+    <table border="0" align="center" cellpadding="3" class="info_detail">
       <tr>
         <td valign="top">{$lang.keywords}：</td>
         <td>
@@ -73,7 +73,7 @@
       <tr>
         <td>{$lang.category}：</td>
         <td>
-          <select name="category" id="select" style="border:1px solid #ccc;">
+          <select name="category" id="select">
             <option value="0">所有分类</option>
             {$cat_list}
           </select>
@@ -109,13 +109,13 @@
       <!--{if $item.type eq 1}-->
       <tr>
         <td>{$item.attr}：</td>
-        <td colspan="3"><input name="attr[{$item.id}]" value="{$item.value}" class="inputBg" type="text" size="20" maxlength="120" /></td>
+        <td><input name="attr[{$item.id}]" value="{$item.value}" class="inputBg" type="text" size="20" maxlength="120" /></td>
       </tr>
       <!--{/if}-->
       <!--{if $item.type eq 2}-->
       <tr>
         <td>{$item.attr}：</td>
-        <td colspan="3"><input name="attr[{$item.id}][from]" class="inputBg" value="{$item.value.from}" type="text" size="5" maxlength="5" />
+        <td><input name="attr[{$item.id}][from]" class="inputBg" value="{$item.value.from}" type="text" size="5" maxlength="5" />
           -
           <input name="attr[{$item.id}][to]" value="{$item.value.to}"  class="inputBg" type="text" maxlength="5" /></td>
       </tr>
@@ -123,7 +123,7 @@
       <!--{if $item.type eq 3}-->
       <tr>
         <td>{$item.attr}：</td>
-        <td colspan="3"><select name="attr[{$item.id}]" style="border:1px solid #ccc;">
+        <td><select name="attr[{$item.id}]" style="border:1px solid #ccc;">
             <option value="0">{$lang.all_option}</option>
             {html_options options=$item.options selected=$item.value}
           </select></td>
@@ -141,7 +141,8 @@
       <!--{/if}-->
 
       <tr>
-        <td colspan="4" align="center"><input type="hidden" name="action" value="form" />
+        <td>&nbsp;</td>
+        <td align="center"><input type="hidden" name="action" value="form" />
           <input type="submit" name="Submit" class="bnt_blue_1" value="{$lang.button_search}" /></td>
       </tr>
     </table>
@@ -150,6 +151,7 @@
    </div>
   </div>
   <div class="blank5"></div>
+  <p>&nbsp;</p>
   <!-- {/if} -->
 
    <!-- {if isset($goods_list)} -->

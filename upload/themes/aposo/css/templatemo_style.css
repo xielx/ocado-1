@@ -72,6 +72,7 @@ body {
     line-height: 30px;
 	margin: 0 2px;
 }
+#templatemo_banner_top p span.order_line{font-weight:bold;}
 /*#templatemo_banner_top p span{padding-right:20px;}*/
 #templatemo_banner_top p.right span.order_line {
 	padding:0 20px 0 10px;
@@ -595,7 +596,8 @@ body {
 
 .combine_order select,.combine_order input,.combine_order .my_recommend textarea,
 .form_detail ul li input.inputBg,.account_deposit input.inputBg,.account_deposit textarea,
-.info_detail input.inputBg,.info_detail select,.info_detail textarea,.table_login input.inputBg{
+.info_detail input.inputBg,.info_detail select,.info_detail textarea,.table_login input.inputBg,
+.boxCenterList form input,.boxCenterList form select{
 	background:#f0f4f5;
 	height: 40px;
 	line-height: 40px;
@@ -609,6 +611,14 @@ body {
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
+}
+.boxCenterList .info_detail input.inputBg,.boxCenterList form select{
+	float: none;
+    width: 80%;
+}
+.boxCenterList form input#min_price,.boxCenterList form input#max_price{
+	float: none;
+    width: 39%;
 }
 .form_detail ul li input.inputBg:focus{
 	border: 1px solid #e06d98;
@@ -701,7 +711,7 @@ body {
 /* templatemo_catagory */
 .classify{
 	clear: both;
-    margin: 5px 0 10px;
+    margin: 5px 0 0;
     overflow: hidden;
 }
 .classify .classify_text{
