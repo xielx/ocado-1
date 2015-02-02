@@ -160,15 +160,15 @@
       <h3 class="jp_recommend">
     <!--标题及显示方式-->
         <!-- {if $intromode eq 'best'} -->
-         <span style="float:left;">商品列表{*$lang.best_goods*}</span>
+         <span>商品列表{*$lang.best_goods*}</span>
          <!-- {elseif $intromode eq 'new'} -->
-         <span style="float:left;">{$lang.new_goods}</span>
+         <span>{$lang.new_goods}</span>
          <!-- {elseif $intromode eq 'hot'} -->
-         <span style="float:left;">{$lang.hot_goods}</span>
+         <span>{$lang.hot_goods}</span>
          <!-- {elseif $intromode eq 'promotion'} -->
-         <span style="float:left;">{$lang.promotion_goods}</span>
+         <span>{$lang.promotion_goods}</span>
          <!-- {else} -->
-         <span style="float:left;">{$lang.search_result}</span>
+         <span>{$lang.search_result}</span>
          <!-- {/if} -->
           <!--{if $goods_list}-->
           <form action="search.php" method="post" class="sort" name="listform" id="form">
