@@ -3,6 +3,7 @@
 /* *
  * 添加商品到购物车 
  */
+var bool = 0;
 function addToCart(goodsId, parentId)
 {
   var goods        = new Object();
@@ -86,6 +87,7 @@ function addToCartResponse(result)
   {
     var cartInfo = document.getElementById('ECS_CARTINFO');
     var cart_url = 'flow.php?step=cart';
+    
     if (cartInfo)
     {
       cartInfo.innerHTML = result.content;
@@ -100,7 +102,13 @@ function addToCartResponse(result)
       switch(result.confirm_type)
       {
         case '1' :
-          confirm2jump(result.message, cart_url, "马上结算", "继续购物");
+          if(bool == 1) {
+            cart_url = 'flow.php?step=checkout';
+            location.href = cart_url;
+          }
+          else {
+            confirm2jump(result.message, cart_url, "马上结算", "继续购物");
+          }
           break;
         case '2' :
         // TODO>> change

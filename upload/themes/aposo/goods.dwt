@@ -197,7 +197,8 @@ $(document).ready(function(){
 					<div class="buy_btn_box">
 						<ul>
 							<li> <a href="javascript:addToCart({$goods.goods_id});">加入购物车</a> </li>
-							<li> <a href="javascript:collect({$goods.goods_id});">加入收藏</a> </li>
+							<li> <a href="javascript:bool=1; addToCart({$goods.goods_id});">立即购买</a> </li>
+							<!-- <li> <a href="javascript:collect({$goods.goods_id});">加入收藏</a> </li> -->
 							<!-- {if $affiliate.on} -->
 							<!-- <li> <a href="javascript:collect({$goods.goods_id});">推荐给好友</a> </li> -->
 							<!-- {/if} -->
