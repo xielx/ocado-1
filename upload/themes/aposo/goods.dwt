@@ -234,7 +234,7 @@ $(document).ready(function(){
 						<div class="pro_copy">
 							{$goods.goods_desc}
 						</div>
-
+						{if 0}
 						<div class="select_view">
 							<ul>
 								<li class="ingred">优质原材料<br/>Best Ingredient</li>
@@ -251,7 +251,7 @@ $(document).ready(function(){
 							</ul>
 						</div>
 
-						{if 0}
+						
 						<div class="box">
 						<div class="box_1">
 							<h3><span class="text">{$lang.goods_tag}</span></h3>
