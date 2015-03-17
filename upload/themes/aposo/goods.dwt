@@ -251,6 +251,7 @@ $(document).ready(function(){
 							</ul>
 						</div>
 
+						{if 0}
 						<div class="box">
 						<div class="box_1">
 							<h3><span class="text">{$lang.goods_tag}</span></h3>
@@ -320,7 +321,8 @@ $(document).ready(function(){
 						 </div>
 						</div>
 						<div class="blank5"></div>
-						
+						{/if}
+
 
 					  </div>
 					  <!-- end of tab1 -->
