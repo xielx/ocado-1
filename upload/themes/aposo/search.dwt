@@ -54,8 +54,9 @@
   <!--left end-->
   <!--right start-->
   <div class="col-md-12">
-  <!-- {if 1} -->
+  <!-- {if 0} -->
   <!--  搜索的表单 -->
+  
   <div class="box">
    <div class="box_1">
     <h3><span>商品筛选</span></h3>
